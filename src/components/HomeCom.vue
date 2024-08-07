@@ -3,7 +3,7 @@
     <NavbarCom />
     <MainComponent />
     <!-- <GalleryCom/> -->
-    <!-- <SliderCom /> -->
+    <SliderCom />
     <FooterCom />
   </div>
 </template>
@@ -13,7 +13,7 @@ import NavbarCom from "./NavbarCom.vue";
 import FooterCom from "./AppFooter.vue";
 import MainComponent from "./HomePageComponents/MainHomePage.vue";
 // import GalleryCom from "./HomePageComponents/Gallery.vue"
-// import SliderCom from "./HomePageComponents/SliderCom.vue";
+import SliderCom from "./HomePageComponents/SliderCom.vue";
 
 export default {
   components: {
@@ -21,7 +21,7 @@ export default {
     MainComponent,
     FooterCom,
     // GalleryCom,
-    // SliderCom,
+    SliderCom,
   },
 };
 </script>
