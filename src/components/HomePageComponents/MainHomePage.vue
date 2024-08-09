@@ -146,8 +146,240 @@ export default {
   },
 };
 </script>
-
 <style scoped>
+.Font-Size-Large {
+  font-size: 8vw !important;
+  line-height: 83px !important;
+}
+.bgTxtSet {
+  background-image: url(../../assets/txtbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.words {
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: left;
+  letter-spacing: 3px;
+}
+.words-1 span {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-animation: rotateWord 18s ease-in-out infinite 0s;
+  -ms-animation: rotateWord 18s ease-in-out infinite 0s;
+  animation: rotateWord 18s ease-in-out infinite 0s;
+}
+.words-1 span:nth-child(2) {
+  -webkit-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  animation-delay: 3s;
+}
+.words-1 span:nth-child(3) {
+  -webkit-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+.words-1 span:nth-child(4) {
+  -webkit-animation-delay: 9s;
+  -ms-animation-delay: 9s;
+  animation-delay: 9s;
+}
+.words-1 span:nth-child(5) {
+  -webkit-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  animation-delay: 12s;
+}
+.words-1 span:nth-child(6) {
+  -webkit-animation-delay: 15s;
+  -ms-animation-delay: 15s;
+  animation-delay: 15s;
+}
+@-webkit-keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -ms-transform: translateX(30px);
+  }
+  5% {
+    opacity: 1;
+    -ms-transform: translateX(0px);
+  }
+  17% {
+    opacity: 1;
+    -ms-transform: translateX(0px);
+  }
+  20% {
+    opacity: 0;
+    -ms-transform: translateX(-30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Font-Size-Large {
+    font-size: 12vw !important;
+    line-height: 60px !important;
+  }
+  .words {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .mainSectionTxt {
+    font-size: 6.5vw;
+    line-height: 50px;
+  }
+  .sentence span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Font-Size-Large {
+    font-size: 16vw !important;
+    line-height: 40px !important;
+  }
+  .words {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .mainSectionTxt {
+    font-size: 8vw;
+    line-height: 40px;
+  }
+  .sentence span {
+    font-size: 18px;
+  }
+}
+
+.hero_wrapper {
+  margin-left: 10%;
+}
+
+.hero_image {
+  background: #fff
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/250215/Artboard_1.png)
+    no-repeat right top;
+}
+
+.mainSectionTxt {
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5vw;
+  line-height: 73px;
+  font-weight: 600;
+}
+
+.dividerImg1 {
+  /* background-image: url(../../assets/midimg1.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
+  background-size: contain !important; */
+}
+
+.dividerImg2 {
+  /* background-image: url(../../assets/midimg2.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: left !important;
+  background-size: contain !important; */
+}
+
+.sliding-text {
+  overflow: hidden;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.slide-fade-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-fade-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-fade-leave {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+</style>
+
+<!-- <style scoped>
 .Font-Size-Large {
   font-size: 8vw !important;
   line-height: 83px !important;
@@ -358,4 +590,4 @@ export default {
   transform: translateX(-100%);
   opacity: 0;
 }
-</style>
+</style> -->

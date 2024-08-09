@@ -1,7 +1,7 @@
 <template>
-  <div style="background-color: white; height: 100vh;">
+  <div style="background-color: white; height: 100vh">
     <!-- show-arrows="hover" -->
-    <v-carousel hide-delimiters hide-delimiter-background>
+    <v-carousel height="650px" hide-delimiters hide-delimiter-background>
       <v-carousel-item>
         <v-sheet height="100%" style="background-color: white">
           <div
@@ -9,16 +9,16 @@
           >
             <v-container>
               <v-row>
-                <v-col cols="3"></v-col> 
+                <v-col cols="3"></v-col>
                 <v-col cols="6">
-                  <v-row>
+                  <v-row> 
                     <v-col cols="5"
                       ><div>
                         <p class="sliderTxt">
                           Discover the Benifits of Jackfruite Guys
                         </p>
                         <v-img src="../../assets/slider2.png"></v-img>
-                        <v-btn>GO</v-btn>
+                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
                     <v-col cols="7"
@@ -67,11 +67,24 @@ export default {
 }
 </style>
 <style scoped>
+.GoBtn {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  width: 100%;
+  background-color: #9ec43b;
+  box-shadow: none;
+  margin-top: 15px;
+  color: white !important;
+}
 .sliderTxt {
   color: #8d580a;
   font-family: "Poppins", sans-serif;
-  font-size: 32px;
-  line-height: 28px;
-  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  /* margin-top: -20px; */
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 </style>

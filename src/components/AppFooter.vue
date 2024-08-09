@@ -1,5 +1,11 @@
 <template>
-  <div style="background-color: #13a34c; margin-top: 20px; color: white">
+  <div
+    style="
+      background-color: #13a34c;
+      margin-top: 20%;
+      color: white;
+    "
+  >
     <v-row class="pt-16 mb-16">
       <v-col cols="6">
         <div class="d-flex justify-center position-relative">
