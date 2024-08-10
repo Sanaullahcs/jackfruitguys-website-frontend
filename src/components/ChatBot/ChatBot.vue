@@ -83,6 +83,11 @@ export default {
       this.isChatOpen = !this.isChatOpen;
     },
     async sendMessage() {
+        // let APIKEY = process.env.CHATGPTKEY;
+        // require('dotenv').config();
+        // console.log(process.env,'process');
+        // console.log("APIKEY",APIKEY);
+
       this.apiLoading = true;
       if (this.newMessage.trim() !== "") {
         // Push the user's message to the chat
@@ -245,6 +250,24 @@ export default {
 
 .chat-footer button:hover {
   background-color: #ADBB3A;
+}
+
+.chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-button v-btn {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+}
+
+.chatbot-button v-btn:hover {
+  background-color: rgb(24, 175, 186);
 }
 /* ============= */
 </style>
