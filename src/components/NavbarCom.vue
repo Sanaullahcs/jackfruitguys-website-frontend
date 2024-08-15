@@ -9,7 +9,7 @@
       <v-row align="center" justify="space-between">
         <v-col cols="2" class="logo-container">
           <v-img
-            src="@/assets/logo.png"
+            src="@/assets/images/logo.png"
             min-width="240px"
             alt="logo"
             contain

@@ -1,13 +1,20 @@
 <template>
   <div>
     <div class="chatbot-button">
-      <v-btn icon large color="rgb(24, 175, 186)" @click="toggleChat">
-        <v-icon>mdi-robot</v-icon>
+      <v-btn icon large color="white" @click="toggleChat">
+        <v-img
+          min-width="35px"
+          src="../../assets/images/singleLogo.png"
+        ></v-img>
       </v-btn>
       <div v-if="isChatOpen" class="chatbox-wrapper">
         <div class="chat-header">
           <div class="avatar">
-            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            <img src="https://via.placeholder.com/40" alt="Avatar" /><v-tooltip
+              activator="parent"
+              location="start"
+              >Tooltip</v-tooltip
+            >
           </div>
           <div class="header-info ms-4">
             <h3>Jackfruit Guys</h3>
@@ -23,7 +30,7 @@
             <p>{{ message.text }}</p>
           </div>
         </div>
-        <v-divider class="mx-4"></v-divider>
+        <v-divider color="black" class="mx-4 divider"></v-divider>
         <div class="chat-footer">
           <!-- <input
             type="text"
@@ -32,6 +39,7 @@
             placeholder="Type your message..."
           /> -->
           <v-text-field
+            class="prompt-field"
             color="#ADBB3A"
             :loading="apiLoading"
             v-model="newMessage"
@@ -70,10 +78,22 @@ export default {
       isChatOpen: false,
       apiLoading: false,
       messages: [
-        { text: "Hello, I'm an AI assistant for Jackfruit Guys. How can I help you today?", type: "received" },
-        { text: "I'm interested in learning more about your jackfruit products. What are the different varieties you offer?", type: "sent" },
-        { text: "We offer several varieties of jackfruit, including the Honey Gold, Black Gold, and Dang Gui. Each has a unique flavor profile and culinary uses. Would you like me to provide more details on the different types?", type: "received" },
-        { text: "Yes, please tell me more about the Honey Gold and Black Gold varieties.", type: "sent" }
+        {
+          text: "Hello, I'm an AI assistant for Jackfruit Guys. How can I help you today?",
+          type: "received",
+        },
+        {
+          text: "I'm interested in learning more about your jackfruit products. What are the different varieties you offer?",
+          type: "sent",
+        },
+        {
+          text: "We offer several varieties of jackfruit, including the Honey Gold, Black Gold, and Dang Gui. Each has a unique flavor profile and culinary uses. Would you like me to provide more details on the different types?",
+          type: "received",
+        },
+        {
+          text: "Yes, please tell me more about the Honey Gold and Black Gold varieties.",
+          type: "sent",
+        },
       ],
       newMessage: "",
     };
@@ -83,10 +103,10 @@ export default {
       this.isChatOpen = !this.isChatOpen;
     },
     async sendMessage() {
-        // let APIKEY = process.env.CHATGPTKEY;
-        // require('dotenv').config();
-        // console.log(process.env,'process');
-        // console.log("APIKEY",APIKEY);
+      // let APIKEY = process.env.CHATGPTKEY;
+      // require('dotenv').config();
+      // console.log(process.env,'process');
+      // console.log("APIKEY",APIKEY);
 
       this.apiLoading = true;
       if (this.newMessage.trim() !== "") {
@@ -140,7 +160,7 @@ export default {
 
 <style scoped>
 .open-chat-button {
-  background-color: #ADBB3A; /* green color */
+  background-color: #adbb3a; /* green color */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -151,11 +171,16 @@ export default {
   bottom: 20px;
   right: 20px;
 }
-
-.open-chat-button:hover {
-  background-color: #ADBB3A;
+.divider {
+  border-top: 2px solid black;
+  /* background: green; */
+  margin: 0px 51px;
+  min-height: 3px;
 }
-   
+.open-chat-button:hover {
+  background-color: #adbb3a;
+}
+
 .chatbox-wrapper {
   width: 400px;
   border: 1px solid #ccc;
@@ -167,6 +192,7 @@ export default {
   position: fixed;
   bottom: 80px; /* Adjust position if necessary */
   right: 20px; /* Adjust position if necessary */
+  height: 80%;
 }
 
 .chat-header {
@@ -214,12 +240,12 @@ export default {
 }
 
 .message.received {
-  background-color: #f1f1f1;
+  background-color: rgb(249, 186, 89);
   align-self: flex-start;
 }
 
 .message.sent {
-  background-color: #ADBB3A;
+  background-color: #adbb3a;
   color: white;
   align-self: flex-end;
 }
@@ -228,6 +254,7 @@ export default {
   display: flex;
   padding: 10px;
   /* border-top: 1px solid #ccc; */
+  /* background-color: red; */
 }
 
 .chat-footer input {
@@ -240,16 +267,16 @@ export default {
 }
 
 .chat-footer button {
-  background-color: #ADBB3A;
+  background-color: #adbb3a;
   border: none;
   color: white;
   padding: 10px;
-  border-radius: 5px;  
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .chat-footer button:hover {
-  background-color: #ADBB3A;
+  background-color: #adbb3a;
 }
 
 .chatbot-button {

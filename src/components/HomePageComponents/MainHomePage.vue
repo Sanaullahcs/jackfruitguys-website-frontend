@@ -74,7 +74,7 @@
             <MotionGroup preset="slideVisibleLeft" :duration="900">
               <v-img
                 style="min-width: 114px"
-                src="../../assets/midimg1.png"
+                src="../../assets/images/midimg1.png"
               ></v-img>
             </MotionGroup>
           </div>
@@ -89,7 +89,7 @@
             <MotionGroup preset="slideVisibleRight" :duration="900">
               <v-img
                 style="min-width: 112px"
-                src="../../assets/midimg2.png"
+                src="../../assets/images/midimg2.png"
               ></v-img>
             </MotionGroup>
           </div>

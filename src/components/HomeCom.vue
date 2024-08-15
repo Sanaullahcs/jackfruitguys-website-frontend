@@ -13,7 +13,7 @@
 import NavbarCom from "./NavbarCom.vue";
 import FooterCom from "./AppFooter.vue";
 import MainComponent from "./HomePageComponents/MainHomePage.vue";
-import ChatBot from "./ChatBot/ChatBot.vue"
+import ChatBot from "./ChatBot/ChatBot.vue";
 // import GalleryCom from "./HomePageComponents/Gallery.vue"
 import SliderCom from "./HomePageComponents/SliderCom.vue";
 
@@ -28,3 +28,6 @@ export default {
   },
 };
 </script>
+<style>
+@import "../assets/css/style.css"
+</style>
