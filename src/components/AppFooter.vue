@@ -9,11 +9,11 @@
     <v-row class="pt-16 mb-16">
       <v-col cols="6">
         <div class="d-flex justify-center position-relative">
-          <v-img max-width="285px" src="../assets/footerLogo.png"></v-img>
+          <v-img max-width="285px" src="../assets/images/footerLogo.png"></v-img>
           <v-img
             max-width="185px"
             class="bg-footer-img"
-            src="../assets/footerimg.png"
+            src="../assets/images/footerimg.png"
           ></v-img>
         </div>
       </v-col>

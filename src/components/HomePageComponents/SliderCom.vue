@@ -17,13 +17,13 @@
                         <p class="sliderTxt">
                           Discover the Benifits of Jackfruite Guys
                         </p>
-                        <v-img src="../../assets/slider2.png"></v-img>
+                        <v-img src="../../assets/images/slider2.png"></v-img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
                     <v-col cols="7"
                       ><div>
-                        <v-img src="../../assets/slider1.png"></v-img></div
+                        <v-img src="../../assets/images/slider1.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
