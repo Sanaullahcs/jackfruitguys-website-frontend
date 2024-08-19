@@ -1,15 +1,12 @@
 <template>
-  <div
-    style="
-      background-color: #13a34c;
-      margin-top: 20%;
-      color: white;
-    "
-  >
+  <div style="background-color: #13a34c; margin-top: 20%; color: white">
     <v-row class="pt-16 mb-16">
-      <v-col cols="6">
+      <v-col cols="12" lg="6" md="6" sm="12">
         <div class="d-flex justify-center position-relative">
-          <v-img max-width="285px" src="../assets/images/footerLogo.png"></v-img>
+          <v-img
+            max-width="285px"
+            src="../assets/images/footerLogo.png"
+          ></v-img>
           <v-img
             max-width="185px"
             class="bg-footer-img"
@@ -17,8 +14,8 @@
           ></v-img>
         </div>
       </v-col>
-      <v-col cols="3">
-        <div class="mt-10">
+      <v-col cols="12" lg="3" md="3" sm="12">
+        <div class="mt-10 pa-5">
           <p class="footerHead">Get in Touch</p>
           <p class="footerText">
             <bold class="font-weight-500">Email:</bold> info@jackfruitguys.com
@@ -34,8 +31,8 @@
           </p>
         </div>
       </v-col>
-      <v-col cols="3">
-        <div class="mt-10">
+      <v-col cols="12" lg="3" md="3" sm="12">
+        <div class="mt-10 pa-5">
           <p class="footerHead">Follow Us</p>
           <p class="footerText">Twitter</p>
           <p class="footerText">Instagram</p>

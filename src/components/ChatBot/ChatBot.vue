@@ -21,7 +21,7 @@
             <p>AI Chatbot</p>
           </div>
         </div>
-        <div class="chat-body">
+        <div class="chat-body" ref="chatBody">
           <div
             v-for="(message, index) in messages"
             :key="index"
@@ -98,11 +98,28 @@ export default {
       newMessage: "",
     };
   },
+  // watch: {
+  //   messages(newVal, oldVal) {
+  //     if (newVal.length > oldVal.length) {
+  //       console.log("A new message has been added:", newVal[newVal.length - 1]);
+  //     }
+  //     console.log("scroling to the bottom in wtch");
+  //     this.$nextTick(() => {
+  //       this.scrollToBottom();
+  //     });
+  //   },
+  // },
   methods: {
+    scrollToBottom() {
+      console.log("scroling to the bottom");
+      const chatBody = this.$refs.chatBody;
+      chatBody.scrollTop = chatBody.scrollHeight;
+    },
     toggleChat() {
       this.isChatOpen = !this.isChatOpen;
     },
     async sendMessage() {
+      this.scrollToBottom();
       // let APIKEY = process.env.CHATGPTKEY;
       // require('dotenv').config();
       // console.log(process.env,'process');
@@ -133,7 +150,7 @@ export default {
             {
               headers: {
                 "Content-Type": "application/json",
-                Authorization: ` Bearer ${APIKEY}`, // Replace with your API key
+                Authorization: ` Bearer ${api}`, // Replace with your API key
               },
             }
           );
