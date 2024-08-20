@@ -1,5 +1,5 @@
 <template>
-    <div style="color: black;">
+    <div>
         <v-row>
             <v-col>
                 <div>
@@ -7,7 +7,7 @@
                         About Us
                     </h2>
                     <p>At Jackfruit Guys, we are passionate about bringing the best quality jackfruit products to your table. Our journey began with a simple mission – to share the incredible taste and benefits of jackfruit with the world. Learn more about our story and our commitment to sustainability and quality.</p>
-                    <v-img src="../../assets/images/about1.png" min-width="100px" alt="logo"/>
+                    <img src="../../assets/images/about1.png" alt="">
                 </div>
             </v-col>
             <v-col></v-col>
