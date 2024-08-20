@@ -7,6 +7,7 @@
     <AboutCom/>
     <WhyJackfruits />
     <HealthOptions/>
+    <Contact/>
     <ChatBot />
     <FooterCom />
   </div>
@@ -20,12 +21,14 @@ import AboutCom from "./HomePageComponents/About.vue"
 import HealthOptions from "./HomePageComponents/HealthOptions.vue"
 import ChatBot from "./ChatBot/ChatBot.vue";
 import WhyJackfruits from "./HomePageComponents/WhyJackfruits.vue"
+import Contact from "./HomePageComponents/Contact.vue"
 // import GalleryCom from "./HomePageComponents/Gallery.vue"
 import SliderCom from "./HomePageComponents/SliderCom.vue";
 
 export default {
   components: {
     NavbarCom,
+    Contact,
     MainComponent,
     FooterCom,
     AboutCom,
