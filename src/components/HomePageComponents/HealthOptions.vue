@@ -1,8 +1,8 @@
 <template>
   <div class="bg-main">
-    <div>
+    <div class="py-16">
       <v-row>
-        <v-col>
+        <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
             <v-img
               class="mx-auto"
@@ -15,7 +15,7 @@
             </p>
           </div>
         </v-col>
-        <v-col>
+        <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
             <v-img
               src="../../assets/images/sus.png"
@@ -28,7 +28,7 @@
             </p>
           </div>
         </v-col>
-        <v-col>
+        <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
             <v-img
               class="mx-auto"
@@ -51,17 +51,15 @@
 }
 .header {
   font-family: "Poppins";
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 60px;
   letter-spacing: -0.03em;
   text-align: center;
 }
 .header-text {
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 27px;
   text-align: center;
 }
 </style>

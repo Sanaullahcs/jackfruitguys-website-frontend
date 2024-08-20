@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: white; height: 100vh">
+  <div style="background-color: white;">
     <!-- show-arrows="hover" -->
     <v-carousel height="650px" hide-delimiters hide-delimiter-background>
       <v-carousel-item>

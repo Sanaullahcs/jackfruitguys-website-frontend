@@ -1,8 +1,8 @@
 <template>
   <div class="text-black" style="background-color: #fef9eb">
-    <v-row>
+    <v-row class="py-8">
       <v-col>
-        <div>
+        <div class="ms-16">
           <h2 class="about">Why Jackfruit?</h2>
           <p class="about-txt">
             Jackfruit is not just delicious, it's incredibly nutritious too.
