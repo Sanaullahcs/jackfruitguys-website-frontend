@@ -4,6 +4,7 @@
     <MainComponent />
     <!-- <GalleryCom/> -->
     <SliderCom />
+    <AboutCom/>
     <ChatBot />
     <FooterCom />
   </div>
@@ -13,6 +14,7 @@
 import NavbarCom from "./NavbarCom.vue";
 import FooterCom from "./AppFooter.vue";
 import MainComponent from "./HomePageComponents/MainHomePage.vue";
+import AboutCom from "./HomePageComponents/About.vue"
 import ChatBot from "./ChatBot/ChatBot.vue";
 // import GalleryCom from "./HomePageComponents/Gallery.vue"
 import SliderCom from "./HomePageComponents/SliderCom.vue";
@@ -22,6 +24,7 @@ export default {
     NavbarCom,
     MainComponent,
     FooterCom,
+    AboutCom,
     ChatBot,
     // GalleryCom,
     SliderCom,
