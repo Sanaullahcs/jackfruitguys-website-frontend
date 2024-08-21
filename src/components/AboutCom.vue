@@ -28,13 +28,13 @@
           </div>
         </div>
       </v-col>
-      
+
       <!-- Image Section -->
-      <v-col cols="12" md="6" class="d-flex justify-center align-center">
+      <v-col cols="12" md="6" class="d-flex justify-md-start justify-center align-center">
         <v-img
           src="../assets/images/about2.png"
           class="about-side-img"
-          width="335px"
+          max-width="60%"
           alt="logo"
         />
       </v-col>
@@ -46,10 +46,10 @@
 .readmorebtn {
   background-color: #9ec43b;
   text-transform: capitalize;
-  width: 150px;
+  width: 150px !important;
   border-radius: 0;
-  position: absolute;
-  top: -15px;
+  position: absolute !important;
+  top: -25px;
   z-index: 2;
   right: 20px;
 }
@@ -91,7 +91,7 @@
     font-size: 28px;
     line-height: 1.2;
   }
-  
+
   .about-txt {
     font-size: 14px;
   }

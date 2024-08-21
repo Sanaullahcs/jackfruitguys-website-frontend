@@ -48,7 +48,7 @@
 .readmorebtn {
   background-color: #9ec43b;
   text-transform: capitalize;
-  width: 150px;
+  max-width: 150px;
   border-radius: 0;
 }
 

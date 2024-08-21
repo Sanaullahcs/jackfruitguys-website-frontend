@@ -11,7 +11,7 @@
         "
         cols="6"
       >
-        <div class="mainSectionTxt line-height-sm mt-16 pt-16 Font-Size-Large">
+        <div class="mainSectionTxt line-height-sm pt-16 Font-Size-Large">
           We <br />
           Care
         </div>
@@ -95,7 +95,7 @@
           </div>
           <div class="d-flex justify-start align-center" style="position: absolute; left: 0; z-index: 99;margin-top: 5%;">
             <MotionGroup preset="slideVisibleRight" :duration="1300">
-              <p class="mainSectionTxt Font-Size-Large">Living</p></MotionGroup
+              <p class="mainSectionTxt Font-Size-Large mt-5">Living</p></MotionGroup
             >
           </div>
         </div>
@@ -292,8 +292,8 @@ export default {
     line-height: 40px;
   }
   .mainSectionTxt {
-    font-size: 6.5vw;
-    line-height: 50px;
+    font-size: 33px !important;
+    line-height: 40px !important;
   }
   .sentence span {
     font-size: 20px;
@@ -310,8 +310,8 @@ export default {
     line-height: 30px;
   }
   .mainSectionTxt {
-    font-size: 8vw;
-    line-height: 40px;
+    font-size: 24px !important;
+    line-height: 30px !important;
   }
   .sentence span {
     font-size: 18px;

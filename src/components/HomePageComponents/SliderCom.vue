@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: white;">
+  <div style="background-color: #FFFFFF;">
     <!-- show-arrows="hover" -->
     <v-carousel height="650px" hide-delimiters hide-delimiter-background>
       <v-carousel-item>
@@ -9,25 +9,25 @@
           >
             <v-container>
               <v-row>
-                <v-col cols="3"></v-col>
-                <v-col cols="6">
+                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="6"> 
                   <v-row> 
-                    <v-col cols="6" lg="6" md="6" sm="6"
+                    <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
-                        <p class="sliderTxt">
+                        <p class="sliderTxt  mt-8">
                           Discover the Benifits of Jackfruite Guys
                         </p>
-                        <img src="../../assets/images/slider2.png" style="height: 50vh;object-fit: contain;"></img>
+                        <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
-                    <v-col cols="6" lg="6" md="6" sm="6"
-                      ><div>
+                    <v-col class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                      ><div class="d-sm-none d-lg-block">
                         <v-img src="../../assets/images/slider1.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="3"></v-col>
+                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
               </v-row>
             </v-container>
           </div>
@@ -40,25 +40,25 @@
           >
             <v-container>
               <v-row>
-                <v-col cols="3"></v-col>
-                <v-col cols="6">
+                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="6"> 
                   <v-row> 
-                    <v-col cols="6" lg="6" md="6" sm="6"
+                    <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
-                        <p class="sliderTxt">
+                        <p class="sliderTxt mt-8">
                           Discover the Benifits of Jackfruite Guys
                         </p>
-                        <img src="../../assets/images/slider2.png" style="height: 50vh;object-fit: contain;"></img>
+                        <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
-                    <v-col cols="6" lg="6" md="6" sm="6"
-                      ><div>
+                    <v-col class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                      ><div class="d-sm-none d-lg-block">
                         <v-img src="../../assets/images/slider1.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="3"></v-col>
+                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
               </v-row>
             </v-container>
           </div>
@@ -71,25 +71,25 @@
           >
             <v-container>
               <v-row>
-                <v-col cols="3"></v-col>
-                <v-col cols="6">
+                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="6"> 
                   <v-row> 
-                    <v-col cols="6" lg="6" md="6" sm="6"
+                    <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
-                        <p class="sliderTxt">
+                        <p class="sliderTxt  mt-8">
                           Discover the Benifits of Jackfruite Guys
                         </p>
-                        <img src="../../assets/images/slider2.png" style="height: 50vh;object-fit: contain;"></img>
+                        <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
-                    <v-col cols="6" lg="6" md="6" sm="6"
-                      ><div>
+                    <v-col class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                      ><div class="d-sm-none d-lg-block">
                         <v-img src="../../assets/images/slider1.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="3"></v-col>
+                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
               </v-row>
             </v-container>
           </div>
@@ -134,5 +134,10 @@ export default {
   /* margin-top: -20px; */
   margin-bottom: 20px;
   font-weight: 700;
+}
+@media (max-width:680px){
+  .disappearing{
+    display: none;
+  }
 }
 </style>
