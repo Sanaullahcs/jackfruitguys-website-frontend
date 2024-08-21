@@ -7,7 +7,7 @@
           <div
             class="d-flex fill-height justify-center align-center text-black mt-16 pt-16"
           >
-            <v-container>
+            <v-container style="margin-top: -125px;">
               <v-row>
                 <v-col cols="3" md="0" sm="0" xs="0"></v-col>
                 <v-col cols="6"> 
@@ -38,7 +38,7 @@
           <div
             class="d-flex fill-height justify-center align-center text-black mt-16 pt-16"
           >
-            <v-container>
+            <v-container style="margin-top: -125px;">
               <v-row>
                 <v-col cols="3" md="0" sm="0" xs="0"></v-col>
                 <v-col cols="6"> 
@@ -69,7 +69,7 @@
           <div
             class="d-flex fill-height justify-center align-center text-black mt-16 pt-16"
           >
-            <v-container>
+            <v-container style="margin-top: -125px;">
               <v-row>
                 <v-col cols="3" md="0" sm="0" xs="0"></v-col>
                 <v-col cols="6"> 

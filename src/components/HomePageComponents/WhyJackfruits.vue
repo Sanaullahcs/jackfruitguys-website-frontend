@@ -4,14 +4,14 @@
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="ms-md-16 px-4">
-          <h2 class="about">Why Jackfruit?</h2>
+          <h2 class="about my-5">Why Jackfruit?</h2>
           <p class="about-txt">
             Jackfruit is not just delicious, it's incredibly nutritious too.
             Learn about the numerous health benefits of jackfruit, including its
             high fiber content, vitamins, and antioxidants. Discover why
             jackfruit is the perfect addition to your diet.
           </p>
-          <v-btn elevation="0" class="readmorebtn">Read More</v-btn>
+          <v-btn elevation="0" class="readmorebtn my-5">Read More</v-btn>
         </div>
       </v-col>
       
