@@ -1,74 +1,76 @@
 <template>
   <v-container fluid class="pa-0">
-    <v-card class="ma-16">
-      <v-row no-gutters>
-        <!-- Left Image Section -->
-        <v-col cols="12" md="6" class="d-flex justify-center align-center">
-          <div class="image-section">
-            <img
-              src="@/assets/images/contact.png"
-              alt="Jackfruit Guys"
-              class="img-fluid"
-            />
-          </div>
-        </v-col>
+    <div class="margin-div">
+      <v-card class="margin-div ">
+        <v-row no-gutters>
+          <!-- Left Image Section -->
+          <v-col cols="12" md="6" class="d-flex justify-center align-center">
+            <div class="image-section">
+              <img
+                src="@/assets/images/contact.png"
+                alt="Jackfruit Guys"
+                class="img-fluid"
+              />
+            </div>
+          </v-col>
 
-        <!-- Right Form Section -->
-        <v-col
-          cols="12"
-          md="6"
-          class="d-flex justify-center align-center"
-          style="background-color: #87c540"
-        >
-          <div class="form-section pa-6">
-            <h2 class="white--text mb-4 contact-heading">
-              We'd love to hear from you!
-            </h2>
-            <v-form>
-              <v-text-field
-                label="Your Name"
-                outlined
-                dense
-                class="mb-4"
-                hide-details
-              ></v-text-field>
-              <v-text-field
-                label="Your Name"
-                outlined
-                dense
-                class="mb-4"
-                hide-details
-              ></v-text-field>
-              <v-text-field
-                label="Your Name"
-                outlined
-                dense
-                class="mb-4"
-                hide-details
-              ></v-text-field>
-              <v-text-field
-                label="Phone"
-                outlined
-                dense
-                class="mb-4"
-                hide-details
-              ></v-text-field>
-              <v-textarea
-                label="Message"
-                outlined
-                dense
-                rows="4"
-                class="mb-4"
-                hide-details
-              ></v-textarea>
-              <v-btn class="submit" color="white" elevation="0" text large
-                >Submit</v-btn
-              >
-            </v-form>
-          </div>
-        </v-col>
-      </v-row>
-    </v-card>
+          <!-- Right Form Section -->
+          <v-col
+            cols="12"
+            md="6"
+            class="d-flex justify-center align-center"
+            style="background-color: #87c540"
+          >
+            <div class="form-section pa-6">
+              <h2 class="white--text mb-4 contact-heading">
+                We'd love to hear from you!
+              </h2>
+              <v-form>
+                <v-text-field
+                  label="Your Name"
+                  outlined
+                  dense
+                  class="mb-4"
+                  hide-details
+                ></v-text-field>
+                <v-text-field
+                  label="Your Name"
+                  outlined
+                  dense
+                  class="mb-4"
+                  hide-details
+                ></v-text-field>
+                <v-text-field
+                  label="Your Name"
+                  outlined
+                  dense
+                  class="mb-4"
+                  hide-details
+                ></v-text-field>
+                <v-text-field
+                  label="Phone"
+                  outlined
+                  dense
+                  class="mb-4"
+                  hide-details
+                ></v-text-field>
+                <v-textarea
+                  label="Message"
+                  outlined
+                  dense
+                  rows="4"
+                  class="mb-4"
+                  hide-details
+                ></v-textarea>
+                <v-btn class="submit" color="white" elevation="0" text large
+                  >Submit</v-btn
+                >
+              </v-form>
+            </div>
+          </v-col>
+        </v-row>
+      </v-card>
+    </div>
   </v-container>
 </template>
 
@@ -107,5 +109,14 @@ export default {
 
 .v-text-field__details {
   display: none !important;
+}
+.margin-div {
+  margin: 64px;
+}
+@media (max-width: 960px) {
+  /* For medium screens and smaller */
+  .margin-div {
+    margin: 0;
+  }
 }
 </style>

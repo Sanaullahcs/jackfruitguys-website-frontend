@@ -11,7 +11,7 @@
         "
         cols="6"
       >
-        <div class="mainSectionTxt line-height-sm pt-16 Font-Size-Large">
+        <div class="line-height-sm pt-16 Font-Size-Large styling">
           We <br />
           Care
         </div>
@@ -93,9 +93,14 @@
               ></v-img>
             </MotionGroup>
           </div>
-          <div class="d-flex justify-start align-center" style="position: absolute; left: 0; z-index: 99;margin-top: 5%;">
+          <div
+            class="d-flex justify-start align-center"
+            style="position: absolute; left: 0; z-index: 99; margin-top: 5%"
+          >
             <MotionGroup preset="slideVisibleRight" :duration="1300">
-              <p class="mainSectionTxt Font-Size-Large mt-5">Living</p></MotionGroup
+              <p class="mainSectionTxt Font-Size-Large mt-5">
+                Living
+              </p></MotionGroup
             >
           </div>
         </div>
@@ -147,6 +152,11 @@ export default {
 };
 </script>
 <style scoped>
+.styling {
+  font-family: "Poppins", sans-serif;
+  line-height: 73px;
+  font-weight: 600;
+}
 .Font-Size-Large {
   font-size: 8vw !important;
   line-height: 83px !important;
