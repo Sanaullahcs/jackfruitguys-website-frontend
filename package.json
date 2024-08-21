@@ -13,6 +13,7 @@
     "axios": "^1.7.3",
     "core-js": "^3.37.1",
     "defu": "^6.1.4",
+    "dotenv": "^16.4.5",
     "roboto-fontface": "*",
     "slick-carousel": "^1.8.1",
     "vue": "^3.4.31",
