@@ -7,14 +7,15 @@
           src="../../assets/images/singleLogo.png"
         ></v-img>
       </v-btn>
-      <div v-if="isChatOpen" class="chatbox-wrapper">
+      <div v-motion-slide-bottom v-if="isChatOpen" class="chatbox-wrapper">
         <div class="chat-header">
           <div class="avatar">
-            <img src="https://via.placeholder.com/40" alt="Avatar" /><v-tooltip
-              activator="parent"
-              location="start"
-              >Tooltip</v-tooltip
-            >
+            <v-btn elevation="0" icon large color="white">
+              <v-img
+                min-width="35px"
+                src="../../assets/images/singleLogo.png"
+              ></v-img>
+            </v-btn>
           </div>
           <div class="header-info ms-4">
             <h3>Jackfruit Guys</h3>
@@ -27,33 +28,47 @@
             :key="index"
             :class="['message', message.type]"
           >
-            <p>{{ message.text }}</p>
+            <p class="chatMessage">{{ message.text }}</p>
           </div>
         </div>
-        <v-divider color="black" class="mx-4 divider"></v-divider>
+
         <div class="chat-footer">
+          <v-divider color="black" class="mx-4 divider"></v-divider>
           <!-- <input
             type="text"
             v-model="newMessage"
             @keyup.enter="sendMessage"
             placeholder="Type your message..."
           /> -->
-          <v-text-field
-            class="prompt-field"
-            color="#ADBB3A"
-            :loading="apiLoading"
-            v-model="newMessage"
-            @keyup.enter="sendMessage"
-            placeholder="Type your message..."
-          ></v-text-field>
-          <!-- <button @click="sendMessage"> -->
-          <!-- <FontAwesomeIcon :icon="['fas', 'paper-plane']" /> -->
-          <v-img
+          <div class="d-flex px-5">
+            <div class="textField-Holder">
+              <v-text-field
+                class="prompt-field"
+                color="#ADBB3A"
+                :loading="apiLoading"
+                v-model="newMessage"
+                @keyup.enter="sendMessage"
+                placeholder="Type your message..."
+                density="compact"
+              ></v-text-field>
+            </div>
+
+            <!-- <button @click="sendMessage"> -->
+            <!-- <FontAwesomeIcon :icon="['fas', 'paper-plane']" /> -->
+            <v-icon
+              left
+              class="mt-2 ml-1"
+              color="rgb(186, 218, 84)"
+              @click="sendMessage"
+              >mdi-send</v-icon
+            >
+          </div>
+          <!-- <v-img
             src="../../assets/images/send.png"
             @click="sendMessage"
             max-width="30px"
             class="mb-5 ml-2"
-          ></v-img>
+          ></v-img> -->
           <!-- </button> -->
         </div>
       </div>
@@ -82,18 +97,18 @@ export default {
           text: "Hello, I'm an AI assistant for Jackfruit Guys. How can I help you today?",
           type: "received",
         },
-        {
-          text: "I'm interested in learning more about your jackfruit products. What are the different varieties you offer?",
-          type: "sent",
-        },
-        {
-          text: "We offer several varieties of jackfruit, including the Honey Gold, Black Gold, and Dang Gui. Each has a unique flavor profile and culinary uses. Would you like me to provide more details on the different types?",
-          type: "received",
-        },
-        {
-          text: "Yes, please tell me more about the Honey Gold and Black Gold varieties.",
-          type: "sent",
-        },
+        // {
+        //   text: "I'm interested in learning more about your jackfruit products. What are the different varieties you offer?",
+        //   type: "sent",
+        // },
+        // {
+        //   text: "We offer several varieties of jackfruit, including the Honey Gold, Black Gold, and Dang Gui. Each has a unique flavor profile and culinary uses. Would you like me to provide more details on the different types?",
+        //   type: "received",
+        // },
+        // {
+        //   text: "Yes, please tell me more about the Honey Gold and Black Gold varieties.",
+        //   type: "sent",
+        // },
       ],
       newMessage: "",
     };
@@ -109,9 +124,16 @@ export default {
   //     });
   //   },
   // },
+  // updated() {
+  //   // Scroll to the bottom whenever the component updates
+  //   this.scrollToBottom();
+  // },
+  // mounted() {
+  //   // Scroll to the bottom when the component is mounted
+  //   this.scrollToBottom();
+  // },
   methods: {
     scrollToBottom() {
-      console.log("scroling to the bottom");
       const chatBody = this.$refs.chatBody;
       chatBody.scrollTop = chatBody.scrollHeight;
     },
@@ -120,12 +142,8 @@ export default {
     },
     async sendMessage() {
       this.scrollToBottom();
-      // let APIKEY = process.env.CHATGPTKEY;
-      // require('dotenv').config();
-      // console.log(process.env,'process');
-      // console.log("APIKEY",APIKEY);
-
       this.apiLoading = true;
+
       if (this.newMessage.trim() !== "") {
         // Push the user's message to the chat
         this.messages.push({ text: this.newMessage, type: "sent" });
@@ -136,21 +154,60 @@ export default {
         // Clear the input
         this.newMessage = "";
 
+        // Define keywords related to jackfruits
+        const jackfruitKeywords = [
+          "jackfruit",
+          "fruit",
+          "health benefits",
+          "recipe",
+          "varieties",
+          "buy",
+          "purchase",
+        ];
+
+        // Check if the prompt contains any jackfruit-related keywords
+        let isJackfruitRelated = false;
+        let isBuyingRelated = false;
+        for (const keyword of jackfruitKeywords) {
+          if (userMessage.toLowerCase().includes(keyword.toLowerCase())) {
+            isJackfruitRelated = true;
+            if (
+              userMessage.toLowerCase().includes("buy") ||
+              userMessage.toLowerCase().includes("purchase")
+            ) {
+              isBuyingRelated = true;
+            }
+            break;
+          }
+        }
+
+        // Define system message based on whether the prompt is related to jackfruits and buying
+        const systemMessage = isJackfruitRelated
+          ? isBuyingRelated
+            ? "You are a helpful assistant specialized in jackfruit-related information. If the user asks to buy jackfruits, refer them to the WhatsApp number +156546456. Also, let them know we have dried mangos available. For any other questions, respond with 'I'm sorry, I can only provide information about jackfruits. Please contact +139475345 for other inquiries.'"
+            : "You are a helpful assistant specialized in jackfruit-related information. Respond with 'I'm sorry, I can only provide information about jackfruits. Please contact +139475345 for other inquiries.'"
+          : "You are a helpful assistant specialized in jackfruit-related information. Respond with 'I'm sorry, I can only provide information about jackfruits. Please contact +139475345 for other inquiries.'";
+
         // Set loading to true
         this.loading = true;
-
+        // require('dotenv').config();
         // Call the ChatGPT API
+        // let API_KEY = process.env.VUE_APP_CHATGPT_KEY;
+        // console.log("API_KEY",API_KEY)
         try {
           const response = await axios.post(
             "https://api.openai.com/v1/chat/completions",
             {
-              model: "gpt-4o",
-              messages: [{ role: "user", content: userMessage }],
+              model: "gpt-4",
+              messages: [
+                { role: "system", content: systemMessage },
+                { role: "user", content: userMessage },
+              ],
             },
             {
               headers: {
                 "Content-Type": "application/json",
-                Authorization: ` Bearer ${api}`, // Replace with your API key
+                Authorization: `Bearer ${API_KEY}`, // Replace with your API key
               },
             }
           );
@@ -176,6 +233,17 @@ export default {
 </script>
 
 <style scoped>
+.textField-Holder {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+.prompt-field input {
+  font-size: 12px;
+}
+.chatMessage {
+  font-size: 14px;
+}
 .open-chat-button {
   background-color: #adbb3a; /* green color */
   border: none;
@@ -199,17 +267,18 @@ export default {
 }
 
 .chatbox-wrapper {
-  width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  width: 340px;
+  /* border: 1px solid transparent; */
+  border-radius: 40px;
   overflow: hidden;
   margin: 20px auto;
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
-  bottom: 80px; /* Adjust position if necessary */
+  bottom: 52px; /* Adjust position if necessary */
   right: 20px; /* Adjust position if necessary */
-  height: 80%;
+  min-height: 400px;
+  /* position: relative; */
 }
 
 .chat-header {
@@ -247,6 +316,7 @@ export default {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 30px;
 }
 
 .message {
@@ -269,9 +339,15 @@ export default {
 
 .chat-footer {
   display: flex;
-  padding: 10px;
+  padding-top: 10px;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
   /* border-top: 1px solid #ccc; */
   /* background-color: red; */
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 
 .chat-footer input {
@@ -314,4 +390,9 @@ export default {
   background-color: rgb(24, 175, 186);
 }
 /* ============= */
+@media screen and (max-width: 768px) {
+  .chatbox-wrapper {
+    width: 274px;
+  }
+}
 </style>
