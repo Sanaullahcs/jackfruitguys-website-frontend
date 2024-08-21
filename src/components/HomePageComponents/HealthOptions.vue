@@ -45,9 +45,9 @@
 </template>
 <style scoped>
 .bg-main {
-  /* background-image: url(../../assets/images/bg-health.png);
-  background-size: cover; */
-  background-color: black;
+  background-image: url(../../assets/images/bg-sus.png);
+  background-size: cover;
+  /* background-color: black; */
 }
 .header {
   font-family: "Poppins";
