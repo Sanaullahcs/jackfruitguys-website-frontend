@@ -135,7 +135,14 @@ export default {
   methods: {
     scrollToBottom() {
       const chatBody = this.$refs.chatBody;
-      chatBody.scrollTop = chatBody.scrollHeight;
+      this.$nextTick(() => {
+        if (chatBody) {
+          const myHeight = chatBody.scrollHeight;
+          chatBody.scrollTop = myHeight;
+          console.log("chatBody.scrollTop", chatBody.scrollTop);
+          console.log("chatBody.scrollHeight", chatBody.scrollHeight);
+        }
+      });
     },
     toggleChat() {
       this.isChatOpen = !this.isChatOpen;
