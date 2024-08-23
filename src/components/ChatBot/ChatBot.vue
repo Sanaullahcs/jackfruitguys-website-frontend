@@ -139,8 +139,7 @@ export default {
         if (chatBody) {
           const myHeight = chatBody.scrollHeight;
           chatBody.scrollTop = myHeight;
-          console.log("chatBody.scrollTop", chatBody.scrollTop);
-          console.log("chatBody.scrollHeight", chatBody.scrollHeight);
+         
         }
       });
     },
