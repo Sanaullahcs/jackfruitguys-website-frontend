@@ -3,111 +3,107 @@
     app
     color="white"
     elevation="0"
-    style="background-color: white; margin-bottom: 20px;"
+    style="background-color: white; margin-bottom: 20px"
   >
     <!-- <v-container> -->
-      <v-row align="center" justify="space-between">
-        <v-col cols="2" class="logo-container">
-          <v-img
-            src="@/assets/images/logo.png"
-            min-width="240px"
-            alt="logo"
-            contain
-            class="logo"
-          />
-          <!-- Make sure to replace with your logo path -->
-        </v-col>
-        <v-col class="d-none d-md-flex">
-          <v-row align="center" justify="center">
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'home' }"
-              @click="setActive('home')"
-            >
-              Home
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'sustainability' }"
-              @click="setActive('sustainability')"
-            >
-              Sustainability
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'benefits' }"
-              @click="setActive('benefits')"
-            >
-              Benefits
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'products' }"
-              @click="setActive('products')"
-            >
-              Products
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'experience' }"
-              @click="setActive('experience')"
-            >
-              Experience
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'presence' }"
-              @click="setActive('presence')"
-            >
-              Presence
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'partners' }"
-              @click="setActive('partners')"
-            >
-              Partners
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'contact' }"
-              @click="setActive('contact')"
-            >
-              Contact
-            </v-btn>
-          </v-row>
-        </v-col>
-        <v-col class="d-md-none d-flex justify-end">
-          <v-btn icon @click.stop="drawer = !drawer">
-            <v-icon>mdi-menu</v-icon>
+    <v-row align="center" justify="space-between">
+      <v-col cols="2" class="logo-container">
+        <v-img
+          src="@/assets/images/logo.png"
+          min-width="240px"
+          alt="logo"
+          contain
+          class="logo"
+        />
+        <!-- Make sure to replace with your logo path -->
+      </v-col>
+      <v-col class="d-none d-md-flex">
+        <v-row align="center" justify="center">
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'home' }"
+            @click="setActive('home')"
+          >
+            Home
           </v-btn>
-        </v-col>
-      </v-row>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'sustainability' }"
+            @click="setActive('sustainability')"
+          >
+            Sustainability
+          </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'benefits' }"
+            @click="setActive('benefits')"
+          >
+            Benefits
+          </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'products' }"
+            @click="setActive('products')"
+          >
+            Products
+          </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'experience' }"
+            @click="setActive('experience')"
+          >
+            Experience
+          </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'presence' }"
+            @click="setActive('presence')"
+          >
+            Presence
+          </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'partners' }"
+            @click="setActive('partners')"
+          >
+            Partners
+          </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'contact' }"
+            @click="setActive('contact')"
+          >
+            Contact
+          </v-btn>
+        </v-row>
+      </v-col>
+      <v-col class="d-md-none d-flex justify-end">
+        <v-btn icon @click.stop="drawer = !drawer">
+          <v-icon>mdi-menu</v-icon>
+        </v-btn>
+      </v-col>
+    </v-row>
     <!-- </v-container> -->
   </v-app-bar>
-  
-  <v-navigation-drawer
-    v-model="drawer"
-    app
-    temporary
-  >
-    <v-list class="pa-3" style="background-color: white;">
+
+  <v-navigation-drawer v-model="drawer" app temporary>
+    <v-list class="pa-3" style="background-color: white">
       <v-list-item
         v-for="button in buttons"
         :key="button"
@@ -127,15 +123,29 @@ export default {
     return {
       activeButton: "home", // Set default active button
       drawer: false, // For mobile menu
-      buttons: ["HOME", "SUSTAINABILITY", "BENEFITS", "PRODUCTS", "EXPERIENCE", "PRESENCE", "PARTNERS", "CONTACT"]
+      buttons: [
+        "HOME",
+        "SUSTAINABILITY",
+        "BENEFITS",
+        "PRODUCTS",
+        "EXPERIENCE",
+        "PRESENCE",
+        "PARTNERS",
+        "CONTACT",
+      ],
     };
   },
   methods: {
     setActive(button) {
       this.activeButton = button;
+      if (button === "sustainability") {
+        this.$router.push("/sustainability");
+      } else if ( button == "home"){
+        this.$router.push("/");
+      }
       this.drawer = false; // Close drawer on selection
-    }
-  }
+    },
+  },
 };
 </script>
 
