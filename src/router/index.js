@@ -5,6 +5,7 @@ import { routes } from 'vue-router/auto-routes'
 // Import your components (if not auto-imported)
 import Home from '../components/HomeCom.vue'
 import About from '../components/AboutCom.vue'
+import Sustainability from '../components/SustainableCom.vue'
 import Contact from '../components/ContactCom.vue'
 
 const router = createRouter({
@@ -13,6 +14,7 @@ const router = createRouter({
     ...setupLayouts(routes),
     { path: '/', component: Home },
     { path: '/about', component: About },
+    { path: '/sustainability', component: Sustainability },
     { path: '/contact', component: Contact }
   ],
 })
