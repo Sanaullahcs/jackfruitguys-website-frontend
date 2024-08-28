@@ -18,7 +18,6 @@ export default {
     NavbarCom,
     HeaderCom,
     FooterCom,
-    
     ChatBot,
     
   },
