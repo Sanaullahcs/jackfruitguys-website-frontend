@@ -3,11 +3,12 @@
     app
     color="white"
     elevation="0"
-    style="background-color: white; margin-bottom: 20px"
+    style="background-color: white; margin-bottom: 20px;"
   >
     <div class="w-100 mt-n1">
       <div class="d-flex justify-center pb-5">
         <v-img
+          v-motion-fade-visible
           src="@/assets/images/logo.png"
           min-width="240px"
           alt="logo"
@@ -165,6 +166,45 @@ export default {
         "Recipe",
       ],
     };
+  },
+  created() {
+    // Set active button based on the current URL
+    const path = this.$route.path;
+
+    switch (path) {
+      case "/":
+        this.activeButton = "home";
+        break;
+      case "/about":
+        this.activeButton = "about";
+        break;
+      case "/sustainability":
+        this.activeButton = "sustainability";
+        break;
+      case "/benefits":
+        this.activeButton = "benefits";
+        break;
+      case "/contact":
+        this.activeButton = "contact";
+        break;
+      case "/products":
+        this.activeButton = "products";
+        break;
+      case "/experience":
+        this.activeButton = "experience";
+        break;
+      case "/presence":
+        this.activeButton = "presence";
+        break;
+      case "/partner":
+        this.activeButton = "partner";
+        break;
+      case "/recipe":
+        this.activeButton = "recipe";
+        break;
+      default:
+        this.activeButton = ""; // Reset if no match
+    }
   },
   methods: {
     setActive(button) {

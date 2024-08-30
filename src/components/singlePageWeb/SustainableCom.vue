@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: white">
+  <div  class="mt-75" style="background-color: white">
     <NavbarCom />
     <HeaderCom />
     <ChatBot />
