@@ -41,6 +41,15 @@
             text
             elevation="0"
             class="mainBtn"
+            :class="{ active: activeButton === 'about' }"
+            @click="setActive('about')"
+          >
+            About Us
+          </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
             :class="{ active: activeButton === 'benefits' }"
             @click="setActive('benefits')"
           >
@@ -91,6 +100,15 @@
           >
             Contact
           </v-btn>
+          <v-btn
+            text
+            elevation="0"
+            class="mainBtn"
+            :class="{ active: activeButton === 'recipe' }"
+            @click="setActive('recipe')"
+          >
+          Recipes
+          </v-btn>
         </v-row>
       </v-col>
       <v-col class="d-md-none d-flex justify-end">
@@ -125,6 +143,7 @@ export default {
       drawer: false, // For mobile menu
       buttons: [
         "HOME",
+        "About",
         "SUSTAINABILITY",
         "BENEFITS",
         "PRODUCTS",
@@ -132,6 +151,7 @@ export default {
         "PRESENCE",
         "PARTNERS",
         "CONTACT",
+        "Recipe",
       ],
     };
   },

@@ -1,5 +1,29 @@
 <template>
-    <div>
-        this is the presende
+    <div style="background-color: white">
+      <NavbarCom />
+      <HeaderCom />
+      <ChatBot />
+      <FooterCom />
     </div>
-</template>
+  </template>
+  
+  <script>
+  import NavbarCom from "../NavbarCom.vue";
+  import FooterCom from "../AppFooter.vue";
+  import HeaderCom from "../PresencePage/Header.vue";
+  import ChatBot from "../ChatBot/ChatBot.vue";
+  
+  export default {
+    components: {
+      NavbarCom,
+      HeaderCom,
+      FooterCom,
+      ChatBot,
+      
+    },
+  };
+  </script>
+  <style>
+  @import "@/assets/css/style.css";
+  </style>
+  
