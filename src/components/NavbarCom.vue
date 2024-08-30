@@ -78,7 +78,7 @@
             elevation="0"
             class="mainBtn"
             :class="{ active: activeButton === 'partners' }"
-            @click="setActive('partners')"
+            @click="setActive('partner')"
           >
             Partners
           </v-btn>
@@ -137,14 +137,46 @@ export default {
   },
   methods: {
     setActive(button) {
-      this.activeButton = button;
-      if (button === "sustainability") {
-        this.$router.push("/sustainability");
-      } else if ( button == "home"){
-        this.$router.push("/");
-      }
-      this.drawer = false; // Close drawer on selection
-    },
+  this.activeButton = button;
+  
+  switch (button) {
+    case "home":
+      this.$router.push("/");
+      break;
+    case "about":
+      this.$router.push("/about");
+      break;
+    case "sustainability":
+      this.$router.push("/sustainability");
+      break;
+    case "benefits":
+      this.$router.push("/benefits");
+      break;
+    case "contact":
+      this.$router.push("/contact");
+      break;
+    case "products":
+      this.$router.push("/products");
+      break;
+    case "experience":
+      this.$router.push("/experience");
+      break;
+    case "presence":
+      this.$router.push("/presence");
+      break;
+    case "partner":
+      this.$router.push("/partner");
+      break;
+    case "recipe":
+      this.$router.push("/recipe");
+      break;
+    default:
+      console.error("Unknown button:", button);
+  }
+
+  this.drawer = false; // Close drawer on selection
+}
+
   },
 };
 </script>
