@@ -14,16 +14,16 @@
 </template>
 
 <script>
-import NavbarCom from "./NavbarCom.vue";
-import FooterCom from "./AppFooter.vue";
-import MainComponent from "./HomePageComponents/MainHomePage.vue";
-import AboutCom from "./HomePageComponents/About.vue"
-import HealthOptions from "./HomePageComponents/HealthOptions.vue"
-import ChatBot from "./ChatBot/ChatBot.vue";
-import WhyJackfruits from "./HomePageComponents/WhyJackfruits.vue"
-import Contact from "./HomePageComponents/Contact.vue"
+import NavbarCom from "../NavbarCom.vue";
+import FooterCom from "../AppFooter.vue";
+import MainComponent from "../HomePageComponents/MainHomePage.vue";
+import AboutCom from "../HomePageComponents/About.vue"
+import HealthOptions from "../HomePageComponents/HealthOptions.vue"
+import ChatBot from "../ChatBot/ChatBot.vue";
+import WhyJackfruits from "../HomePageComponents/WhyJackfruits.vue"
+import Contact from "../HomePageComponents/Contact.vue"
 // import GalleryCom from "./HomePageComponents/Gallery.vue"
-import SliderCom from "./HomePageComponents/SliderCom.vue";
+import SliderCom from "../HomePageComponents/SliderCom.vue";
 
 export default {
   components: {
@@ -41,5 +41,5 @@ export default {
 };
 </script>
 <style>
-@import "../assets/css/style.css"
+@import "@/assets/css/style.css"
 </style>

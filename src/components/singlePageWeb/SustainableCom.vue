@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import NavbarCom from "./NavbarCom.vue";
-import FooterCom from "./AppFooter.vue";
-import HeaderCom from "./SustainabilityPageComponents/Header.vue";
-import ChatBot from "./ChatBot/ChatBot.vue";
+import NavbarCom from "../NavbarCom.vue";
+import FooterCom from "../AppFooter.vue";
+import HeaderCom from "../SustainabilityPageComponents/Header.vue";
+import ChatBot from "../ChatBot/ChatBot.vue";
 
 export default {
   components: {
@@ -24,5 +24,5 @@ export default {
 };
 </script>
 <style>
-@import "../assets/css/style.css";
+@import "@/assets/css/style.css";
 </style>
