@@ -105,27 +105,14 @@
         <h3>Jackfruit "Chicken" Salad</h3>
 
         <ul>
-          <li>
-            Prepare the Jackfruit: Drain and rinse the jackfruit, then shred it
-            into smaller pieces using your hands or a fork.
-          </li>
-          <li>
-            Mix the Salad: In a large bowl, combine the shredded jackfruit,
-            celery, red onion, cranberries (or grapes), and nuts.
-          </li>
-          <li>
-            Prepare the Dressing: In a small bowl, whisk together the vegan
-            mayonnaise, Dijon mustard, lemon juice, apple cider vinegar, salt,
-            and pepper.
-          </li>
-          <li>
-            Combine and Serve: Pour the dressing over the jackfruit mixture and
-            toss until everything is evenly coated. Adjust seasoning to taste.
-            Serve the salad in lettuce wraps, on whole-grain bread, or in a
-            wrap.
-          </li>
-        </ul>
+    <li>Prepare the Jackfruit: Drain and rinse the jackfruit, then shred it into smaller pieces using your hands or a fork.</li>
+    <li>Mix the Salad: In a large bowl, combine the shredded jackfruit, celery, red onion, cranberries (or grapes), and nuts.</li>
+    <li>Prepare the Dressing: In a small bowl, whisk together the vegan mayonnaise, Dijon mustard, lemon juice, apple cider vinegar, salt, and pepper.</li>
+    <li>Combine and Serve: Pour the dressing over the jackfruit mixture and toss until everything is evenly coated. Adjust seasoning to taste. Serve the salad in lettuce wraps, on whole-grain bread, or in a wrap.</li>
+</ul>
+
       </div>
     </div>
+
   </div>
 </template>
