@@ -12,6 +12,7 @@ import Product from "../components/singlePageWeb/Product.vue";
 import Experience from "../components/singlePageWeb/Experience.vue";
 import Presence from "../components/singlePageWeb/Presence.vue";
 import Partners from "../components/singlePageWeb/Partners.vue";
+import Blogs from "../components/singlePageWeb/Blogs.vue";
 import Recipes from "../components/singlePageWeb/Recipes.vue";
 
 const router = createRouter({
@@ -27,6 +28,7 @@ const router = createRouter({
     { path: "/experience", component: Experience },
     { path: "/presence", component: Presence },
     { path: "/partner", component: Partners },
+    { path: "/blog", component: Blogs },
     { path: "/recipe", component: Recipes },
   ],
 });
