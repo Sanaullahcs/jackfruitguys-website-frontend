@@ -12,7 +12,9 @@ import Product from "../components/singlePageWeb/Product.vue";
 import Experience from "../components/singlePageWeb/Experience.vue";
 import Presence from "../components/singlePageWeb/Presence.vue";
 import Partners from "../components/singlePageWeb/Partners.vue";
+import Blogs from "../components/singlePageWeb/Blogs.vue";
 import Recipes from "../components/singlePageWeb/Recipes.vue";
+import BlogDetail from "../components/singlePageWeb/BlogDetailPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +29,13 @@ const router = createRouter({
     { path: "/experience", component: Experience },
     { path: "/presence", component: Presence },
     { path: "/partner", component: Partners },
+    { path: "/blog", component: Blogs },
+    {
+      path: "/blog/:id",
+      name: "BlogDetail",
+      component: BlogDetail,
+      props: true,
+    },
     { path: "/recipe", component: Recipes },
   ],
 });

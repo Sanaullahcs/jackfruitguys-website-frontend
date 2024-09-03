@@ -2,7 +2,7 @@
   <div class="mt-75" style="background-color: white">
     <NavbarCom />
     <HeaderCom />
-    <MainPresence />
+    <MainBlogDetail />
     <ChatBot />
     <FooterCom />
   </div>
@@ -10,15 +10,15 @@
 
 <script>
 import NavbarCom from "../NavbarCom.vue";
-import MainPresence from "../PresencePage/MainPresence.vue";
+import MainBlogDetail from "../BlogsPage/BlogDetail.vue";
 import FooterCom from "../AppFooter.vue";
-import HeaderCom from "../PresencePage/Header.vue";
+import HeaderCom from "../BlogsPage/Header.vue";
 import ChatBot from "../ChatBot/ChatBot.vue";
 
 export default {
   components: {
     NavbarCom,
-    MainPresence,
+    MainBlogDetail,
     HeaderCom,
     FooterCom,
     ChatBot,

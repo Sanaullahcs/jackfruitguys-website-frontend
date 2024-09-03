@@ -3,7 +3,7 @@
     app
     color="white"
     elevation="0"
-    style="background-color: white; margin-bottom: 20px;"
+    style="background-color: white; margin-bottom: 20px"
   >
     <div class="w-100 mt-n1">
       <div class="d-flex justify-center pb-5">
@@ -115,6 +115,15 @@
               text
               elevation="0"
               class="mainBtn"
+              :class="{ active: activeButton === 'blog' }"
+              @click="setActive('blog')"
+            >
+              Blogs
+            </v-btn>
+            <v-btn
+              text
+              elevation="0"
+              class="mainBtn"
               :class="{ active: activeButton === 'recipe' }"
               @click="setActive('recipe')"
             >
@@ -163,6 +172,7 @@ export default {
         "PRESENCE",
         "PARTNERS",
         "CONTACT",
+        "BLOGS",
         "Recipe",
       ],
     };
@@ -199,6 +209,9 @@ export default {
       case "/partner":
         this.activeButton = "partner";
         break;
+      case "/blog":
+        this.activeButton = "blog";
+        break;
       case "/recipe":
         this.activeButton = "recipe";
         break;
@@ -228,6 +241,9 @@ export default {
           break;
         case "products":
           this.$router.push("/products");
+          break;
+        case "blog":
+          this.$router.push("/blog");
           break;
         case "experience":
           this.$router.push("/experience");
