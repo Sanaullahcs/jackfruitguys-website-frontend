@@ -4,9 +4,9 @@
         <v-col v-for="blog in blogs" :key="blog.id" cols="6">
           <div @click="goToDetail(blog.id)">
             <v-img :src="getImageUrl(blog.image)"></v-img>
-            <h3>{{ blog.title }}</h3>
-            <p>{{ blog.description }}</p>
-            <p>Read More...</p>
+            <h3 class="jackfruitsHeadingSmall">{{ blog.title }}</h3>
+            <p class="jackfruitsText">{{ blog.description }}</p>
+            <p class="jackfruitsTextGreen">Read More...</p>
           </div>
         </v-col>
       </v-row>
