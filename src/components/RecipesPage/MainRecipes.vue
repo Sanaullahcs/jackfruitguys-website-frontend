@@ -1,7 +1,7 @@
 <template>
   <div class="text-black">
     <div>
-      <h1>Recipes</h1>
+      <h1 class="jackfruitsHeading">Recipes</h1>
       <p>
         Explore the delicious possibilities with jackfruit through our curated
         collection of recipes. Whether you’re looking for savory dishes, sweet
