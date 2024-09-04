@@ -21,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: contain;
 }
 .wave-wrapper {
   background-image: url(@/assets/images/wave.png);
