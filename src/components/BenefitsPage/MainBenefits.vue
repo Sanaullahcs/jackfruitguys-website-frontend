@@ -1,8 +1,8 @@
 <template>
   <div class="text-black">
     <div>
-      <h1>The Benefits of Jackfruit Guys!</h1>
-      <p>
+      <h1 class="jackfruitsHeading">The Benefits of Jackfruit Guys!</h1>
+      <p class="jackfruitsText">
         Jackfruit Guys offers delicious, nutrient-rich jackfruit products that
         boost health with essential vitamins, minerals, and fiber. Perfect for
         versatile cooking, our jackfruit serves as a tasty plant-based meat
@@ -11,8 +11,10 @@
       </p>
     </div>
     <div>
-      <h1>Jackfruit: A Meat Substitute Packed with Health Benefits.</h1>
-      <p>
+      <h1 class="jackfruitsHeading">
+        Jackfruit: A Meat Substitute Packed with Health Benefits.
+      </h1>
+      <p class="jackfruitsText">
         Jackfruit, the rising star of the plant-based world, isn't just a
         delicious alternative to meat. It's a nutritional powerhouse bursting
         with health benefits that can elevate your well-being. Here's why
@@ -23,7 +25,7 @@
       <v-row>
         <v-col cols="6">
           <div>
-            <ol>
+            <ol class="jackfruitsText">
               <li>
                 <b>High in Fiber:</b> Jackfruit is a fantastic source of dietary
                 fiber, crucial for gut health and promoting a feeling of
@@ -59,13 +61,13 @@
         <v-col cols="6">
           <div>
             <v-img src="../../assets/images/ben2.png"></v-img>
-            <p>
+            <p class="jackfruitsText">
               Incorporating jackfruit into your diet is a delicious way to boost
               your fiber intake, support healthy digestion, and explore a world
               of culinary possibilities. While some health benefits show
               promise, further research is ongoing
             </p>
-            <p>
+            <p class="jackfruitsTextGreen">
               Jackfruit is a fantastic addition to a balanced and wholesome
               diet.
             </p>
@@ -73,7 +75,7 @@
         </v-col>
         <v-col cols="6">
           <div>
-            <ol>
+            <ol class="jackfruitsText">
               <li>
                 <b>Potential Blood Sugar Management:</b> Studies suggest that
                 jackfruit possess properties that help regulate blood sugar
@@ -98,8 +100,10 @@
     </div>
     <div>
       <div>
-        <h1>Social Benefits of our mexican Jackfruit.</h1>
-        <p>
+        <h1 class="jackfruitsHeading">
+          Social Benefits of our mexican Jackfruit.
+        </h1>
+        <p class="jackfruitsText">
           Jackfruit boasts a range of social benefits that make it a responsible
           and impactful food choice. Here's how including jackfruit in your diet
           contributes to a better world:
@@ -109,7 +113,7 @@
         <v-row>
           <v-col cols="6">
             <div>
-              <ol>
+              <ol class="jackfruitsText">
                 <li>
                   <b>Supports Sustainable Farming:</b> Jackfruit trees are
                   incredibly productive, yielding high quantities of fruit with
@@ -148,10 +152,12 @@
           <v-col cols="6">
             <div>
               <v-img src="../../assets/images/ben3.png"></v-img>
-              <p>
+              <p class="jackfruitsText">
                 By incorporating jackfruit into your diet, you're not just
-                making a delicious choice, you're contributing to a
-                more sustainable, equitable, and food-secure future!
+                making a delicious choice, you're contributing to a more <span
+                  class="jackfruitsTextGreen"
+                  >sustainable, equitable, and food-secure future!</span
+                >
               </p>
             </div>
           </v-col>

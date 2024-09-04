@@ -1,8 +1,8 @@
 <template>
   <div class="text-black">
     <div>
-      <h1>Jackfruit: A Sustainable Choice for you and the Planet.</h1>
-      <p>
+      <h1 class="jackfruitsHeading">Jackfruit: A Sustainable Choice for you and the Planet.</h1>
+      <p class="jackfruitsText">
         Jackfruit isn't just a versatile meat substitute; it's a champion of
         sustainability. Here's how choosing jackfruit makes a positive impact on
         our planet
@@ -12,7 +12,7 @@
       <v-row>
         <v-col cols="6">
           <div>
-            <ol>
+            <ol class="jackfruitsText">
               <li>
                 <b>Low Environmental Footprint:</b> Compared to traditional meat
                 production, jackfruit requires significantly less land and water
@@ -56,7 +56,7 @@
         <v-col cols="6">
           <div>
             <v-img src="../../assets/images/sus1.png"></v-img>
-            <p>
+            <p class="jackfruitsTextGreen">
               By choosing jackfruit, you're not just satisfying your taste buds;
               you're making a conscious decision for a more sustainable future.
             </p>
@@ -65,8 +65,8 @@
       </v-row>
     </div>
     <div>
-      <h1>Carbon Footprint Comparison: Jackfruit vs. Other Options.</h1>
-      <p>
+      <h1 class="jackfruitsHeading">Carbon Footprint Comparison: Jackfruit vs. Other Options.</h1>
+      <p class="jackfruitsText">
         Here's a breakdown of the estimated carbon footprint for different
         protein sources compared to our Mexican Jackfruit:
       </p>
@@ -76,13 +76,13 @@
         <v-col cols="6">
           <div>
             <v-img src="../../assets/images/sus2.png"></v-img>
-            <p>
+            <p class="jackfruitsText">
               Choosing jackfruit over animal meat can significantly reduce your
               dietary carbon footprint. Jackfruit compares favorably to other
               plant-based options, especially those relying on
               resource-intensive crops like soy.
             </p>
-            <p>
+            <p class="jackfruitsTextGreen">
               By opting for jackfruit, you're contributing to a more sustainable
               food system with a lower environmental impact.
             </p>
@@ -91,7 +91,7 @@
         <v-col cols="6">
           <div>
             <ol>
-              <li>
+              <li class="jackfruitsText">
                 <b>Animal Meat Production (Beef):</b> Highest footprint, ranging
                 from 50-60 kg CO2e per kg of protein. This is due to factors
                 like animal feed production, land use changes for grazing, and
@@ -134,8 +134,8 @@
         <v-row>
           <v-col cols="6">
             <div>
-              <h1>Eco-Friendly Farming</h1>
-              <p>
+              <h1 class="jackfruitsHeading">Eco-Friendly Farming</h1>
+              <p class="jackfruitsText">
                 We believe in growing jackfruit the way nature intended—using
                 organic methods that preserve soil health and biodiversity. By
                 avoiding harmful pesticides and chemicals, we not only produce
@@ -157,8 +157,8 @@
           ></v-col>
           <v-col cols="6">
             <div>
-              <h1>Sustainable Packaging</h1>
-              <p>
+              <h1 class="jackfruitsHeading">Sustainable Packaging</h1>
+              <p class="jackfruitsText">
                 Our commitment to sustainability extends beyond the farm. We use
                 eco-friendly packaging made from recyclable and biodegradable
                 materials, minimizing waste and reducing our impact on
@@ -171,8 +171,8 @@
         <v-row>
           <v-col cols="6">
             <div>
-              <h1>Reducing Food Waste</h1>
-              <p>
+              <h1 class="jackfruitsHeading">Reducing Food Waste</h1>
+              <p class="jackfruitsText">
                 Jackfruit is a versatile superfood, and at Jact Fruit Guys, we
                 ensure that no part of the fruit goes to waste. We create
                 delicious products from every part of the jackfruit, turning
@@ -194,8 +194,8 @@
           ></v-col>
           <v-col cols="6">
             <div>
-              <h1>Our Goals</h1>
-              <p>
+              <h1 class="jackfruitsHeading">Our Goals</h1>
+              <p class="jackfruitsText">
                 We are always striving to do better. Our sustainability goals
                 include reducing our carbon footprint by 50% by 2030, achieving
                 zero waste in our production processes, and continuing to

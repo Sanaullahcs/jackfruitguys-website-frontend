@@ -1,8 +1,8 @@
 <template>
   <div class="text-black">
     <div>
-      <h1>Recipes</h1>
-      <p>
+      <h1 class="jackfruitsHeading">Recipes</h1>
+      <p class="jackfruitsText">
         Explore the delicious possibilities with jackfruit through our curated
         collection of recipes. Whether you’re looking for savory dishes, sweet
         treats, or innovative snacks, the Jackfruit Guys family has something
@@ -18,9 +18,9 @@
         <v-img src="../../assets/images/res1.png"></v-img>
       </div>
       <div>
-        <h3>Pulled Jackfruit BBQ Sandwiches</h3>
-        <p>Intructions:</p>
-        <ul>
+        <h3 class="jackfruitsHeadingSmall">Pulled Jackfruit BBQ Sandwiches</h3>
+        <p class="jackfruitsText">Intructions:</p>
+        <ul class="jackfruitsText">
           <li>
             Prepare the Jackfruit: Drain and rinse the jackfruit, then cut it
             into smaller pieces. Remove any hard seeds and set the jackfruit
@@ -102,9 +102,9 @@
         <v-img src="../../assets/images/res3.png"></v-img>
       </div>
       <div>
-        <h3>Jackfruit "Chicken" Salad</h3>
+        <h3 class="jackfruitsHeadingSmall">Jackfruit "Chicken" Salad</h3>
 
-        <ul>
+        <ul class="jackfruitsText">
           <li>
             Prepare the Jackfruit: Drain and rinse the jackfruit, then shred it
             into smaller pieces using your hands or a fork.
