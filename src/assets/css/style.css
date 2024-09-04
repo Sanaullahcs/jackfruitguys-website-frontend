@@ -54,6 +54,14 @@
   line-height: 45px;
   text-align: left;
 }
+.jackfruitsHeadingSmallGreen {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 800;
+  color: #9fc43d;
+  line-height: 45px;
+  text-align: left;
+}
 .jackfruitsText {
   font-family: Poppins;
   font-size: 16px;
