@@ -11,8 +11,10 @@
     </div>
     <div>
       <h1 class="jackfruitsHeading">Jackfruit Meat</h1>
-      <p>Unleash the Power of Plants: Our Jackfruit Meat Substitute.</p>
-      <p>
+      <p class="jackfruitsTextGreen">
+        Unleash the Power of Plants: Our Jackfruit Meat Substitute.
+      </p>
+      <p class="jackfruitsText">
         Looking for a delicious, versatile, and sustainable meat alternative?
         Look no further than our number one product, the incredible jackfruit
         meat substitute!
@@ -22,12 +24,12 @@
       <v-row>
         <v-col cols="6">
           <div>
-            <p>
+            <p class="jackfruitsText">
               Jackfruit isn't just a trendy ingredient; it's a game-changer for
               anyone seeking a plant-based protein option packed with flavor and
               benefits. Here's why ours is the perfect choice for you:
             </p>
-            <ul>
+            <ul class="jackfruitsText">
               <li>
                 <b>Unmatched Texture:</b> Our jackfruit boasts a satisfyingly
                 meaty texture that shreds beautifully, mimicking pulled pork or
@@ -66,19 +68,19 @@
     </div>
     <div>
       <div>
-        <h1>Jackfruit Dehydrated Pulp</h1>
-        <p>
+        <h1 class="jackfruitsHeading">Jackfruit Dehydrated Pulp</h1>
+        <p class="jackfruitsTextGreen">
           Dehydrated Jackfruit Pulp: A Nutritious, Versatile, and Eco-Friendly
           Superfood
         </p>
-        <p>
+        <p class="jackfruitsText">
           As sustainable and health-conscious food enthusiasts, we highly
           recommend incorporating dehydrated jackfruit pulp into your diet.
           Dehydrated jackfruit pulp is an excellent source of vitamins minerals
           fiber and antioxidants making it a perfect addition to any healthy
           diet.
         </p>
-        <p>
+        <p class="jackfruitsText">
           Additionally dehydrated jackfruit pulp is incredibly versatile and can
           be used in a variety of dishes including smoothies, curries, stir
           fries and even baked goods. Dehydrated jackfruit pulp is an
@@ -86,12 +88,12 @@
           land to cultivate it, making it an ideal ingredient for anyone seeking
           to adopt a more sustainable nutritious and flavorful diet
         </p>
-        <p>
+        <p class="jackfruitsText">
           ​ By incorporating Dehydrated Jackfruit Pulp into your meals, you can
           enjoy a delicious and guilt free experience while supporting a greener
           planet.
         </p>
-        <p>
+        <p class="jackfruitsText">
           ​ Overall dehydrated jackfruit pulp is an excellent addition to any
           healthy and conscious lifestyle, and we wholeheartedly recommend
           trying it out.
@@ -103,9 +105,11 @@
     </div>
     <div>
       <div>
-        <h1>The Whole Fresh Jackfruit</h1>
-        <p>Jackfruit: Unveiling Nature's Tropical Treasure</p>
-        <p>
+        <h1 class="jackfruitsHeading">The Whole Fresh Jackfruit</h1>
+        <p class="jackfruitsTextGreen">
+          Jackfruit: Unveiling Nature's Tropical Treasure
+        </p>
+        <p class="jackfruitsText">
           This whole fresh fruit is a true conversation starter! The largest
           tree-borne fruit in the world, jackfruit boasts a spiky green exterior
           that hides a treasure trove of tropical delight. When ripe, its flesh
@@ -114,7 +118,7 @@
           cubed for a refreshing snack, or explore its unique texture by pulling
           it into tender strands. Jackfruit: A Versatile Treat Awaits!
         </p>
-        <p>
+        <p class="jackfruitsText">
           This whole jackfruit is a culinary adventure waiting to happen!
           Embrace its tropical essence in smoothies, salads, or even ice cream.
           For the adventurous eater, explore pickling or preserving the
@@ -127,17 +131,19 @@
     </div>
     <div>
       <div>
-        <h1>Whole RIpE/Unripe Jackfruit</h1>
-        <p>Unleash Culinary Creativity: Whole Unripe Jackfruit</p>
-        <p>
+        <h1 class="jackfruitsHeading">Whole RIpE/Unripe Jackfruit</h1>
+        <p class="jackfruitsTextGreen">
+          Unleash Culinary Creativity: Whole Unripe Jackfruit
+        </p>
+        <p class="jackfruitsText">
           This whole unripe jackfruit is a chef's dream!  With its firm,
           apple-green exterior and starchy, neutral-flavored flesh, unripe
           jackfruit is a blank canvas for your culinary creations.  The unique
           texture shreds beautifully, making it the perfect base for savory
           dishes worldwide.
         </p>
-        <p>Jackfruit: More Than Just Ripe!</p>
-        <p>
+        <p class="jackfruitsTextGreen">Jackfruit: More Than Just Ripe!</p>
+        <p class="jackfruitsText">
           Embrace the versatility of unripe jackfruit!  Shred it for curries and
           stews, or use it to create delicious plant-based "pulled" dishes.
           Jackfruit absorbs spices beautifully, allowing you to explore bold
