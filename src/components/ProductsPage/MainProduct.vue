@@ -1,8 +1,8 @@
 <template>
   <div class="text-black">
     <div>
-      <h1>Our Products</h1>
-      <p>
+      <h1 class="jackfruitsHeading">Our Products</h1>
+      <p class="jackfruitsText">
         Welcome to Jackfruit Guys, where we offer a variety of premium jackfruit
         products to delight your taste buds and support your healthy lifestyle.
         Explore our selection and discover the versatility and benefits of
@@ -10,7 +10,7 @@
       </p>
     </div>
     <div>
-      <h1>Jackfruit Meat</h1>
+      <h1 class="jackfruitsHeading">Jackfruit Meat</h1>
       <p>Unleash the Power of Plants: Our Jackfruit Meat Substitute.</p>
       <p>
         Looking for a delicious, versatile, and sustainable meat alternative?
