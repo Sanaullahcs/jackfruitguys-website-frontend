@@ -1,8 +1,8 @@
 <template>
   <div class="text-black">
     <div>
-      <h1>Our Presence</h1>
-      <p>
+      <h1 class="jackfruitsHeading">Our Presence</h1>
+      <p class="jackfruitsText">
         Jackfruit Guys is your go-to source for premium jackfruit products. With
         a presence in Mexico, the USA, Germany, and Spain, we bring the finest
         jackfruit directly to your table. Our commitment to quality and
@@ -13,8 +13,8 @@
       <v-row>
         <v-col cols="6"
           ><div>
-            <h1>Our Roots in Mexico</h1>
-            <p>
+            <h1 class="jackfruitsHeading">Our Roots in Mexico</h1>
+            <p class="jackfruitsText">
               Mexico is where our journey began. The fertile lands here produce
               the highest quality jackfruit, harvested at peak ripeness by local
               farmers. Our deep connection to Mexico allows us to deliver fresh,
@@ -38,8 +38,8 @@
         ></v-col>
         <v-col cols="6"
           ><div>
-            <h1>Growing in the USA</h1>
-            <p>
+            <h1 class="jackfruitsHeading">Growing in the USA</h1>
+            <p class="jackfruitsText">
               Jackfruit Guys bring the tropical taste of jackfruit to the USA,
               offering fresh, high-quality products that meet American
               standards. We provide a delicious, nutritious option that's easy
@@ -54,8 +54,8 @@
       <v-row>
         <v-col cols="6"
           ><div>
-            <h1>Expanding in Germany</h1>
-            <p>
+            <h1 class="jackfruitsHeading">Expanding in Germany</h1>
+            <p class="jackfruitsText">
               Jackfruit Guys bring the versatility of jackfruit to Germany,
               meeting the demand for plant-based, sustainable options. Our
               high-quality products offer a tropical taste that aligns with
@@ -78,8 +78,8 @@
         ></v-col>
         <v-col cols="6"
           ><div>
-            <h1>Our Presence in Spain</h1>
-            <p>
+            <h1 class="jackfruitsHeading">Our Presence in Spain</h1>
+            <p class="jackfruitsText">
               Jackfruit Guys bring the vibrant flavors of jackfruit to Spain,
               where our products are embraced for their quality and taste. We
               offer a healthy, plant-based option that complements Spain’s rich
