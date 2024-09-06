@@ -1,6 +1,6 @@
 <template>
     <div  class="mt-75" style="background-color: white">
-      <NavbarCom />
+      <!-- <NavbarCom /> -->
       <HeaderCom />
       <ChatBot />
       <FooterCom />
@@ -8,14 +8,14 @@
   </template>
   
   <script>
-  import NavbarCom from "../NavbarCom.vue";
+  // import NavbarCom from "../NavbarCom.vue";
   import FooterCom from "../AppFooter.vue";
   import HeaderCom from "../ExperiencePage/Header.vue";
   import ChatBot from "../ChatBot/ChatBot.vue";
   
   export default {
     components: {
-      NavbarCom,
+      // NavbarCom,
       HeaderCom,
       FooterCom,
       ChatBot,

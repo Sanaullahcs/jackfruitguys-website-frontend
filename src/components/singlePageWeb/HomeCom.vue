@@ -1,6 +1,6 @@
 <template>
   <div  class="mt-75" style="background-color: white">
-    <NavbarCom />
+    <!-- <NavbarCom /> -->
     <MainComponent />
     <!-- <GalleryCom/> -->
     <SliderCom />
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import NavbarCom from "../NavbarCom.vue";
+// import NavbarCom from "../NavbarCom.vue";
 import FooterCom from "../AppFooter.vue";
 import MainComponent from "../HomePageComponents/MainHomePage.vue";
 import AboutCom from "../HomePageComponents/About.vue"
@@ -27,7 +27,7 @@ import SliderCom from "../HomePageComponents/SliderCom.vue";
 
 export default {
   components: {
-    NavbarCom,
+    // NavbarCom,
     Contact,
     MainComponent,
     FooterCom,
