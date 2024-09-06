@@ -15,7 +15,7 @@
   text-align: center;
 }
 .main-header {
-  background-image: url(@/assets/images/susHeader.png);
+  background-image: url(@/assets/images/susH.png);
   height: 350px;
   background-position: center;
   display: flex;
