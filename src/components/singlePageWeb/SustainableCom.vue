@@ -1,6 +1,6 @@
 <template>
   <div class="mt-75" style="background-color: white">
-    <NavbarCom />
+    <!-- <NavbarCom /> -->
     <HeaderCom />
     <Main />
     <ChatBot />
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import NavbarCom from "../NavbarCom.vue";
+// import NavbarCom from "../NavbarCom.vue";
 import Main from "../SustainabilityPageComponents/Main.vue";
 import FooterCom from "../AppFooter.vue";
 import HeaderCom from "../SustainabilityPageComponents/Header.vue";
@@ -17,7 +17,7 @@ import ChatBot from "../ChatBot/ChatBot.vue";
 
 export default {
   components: {
-    NavbarCom,
+    // NavbarCom,
     Main,
     HeaderCom,
     FooterCom,
