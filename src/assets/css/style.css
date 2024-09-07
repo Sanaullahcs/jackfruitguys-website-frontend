@@ -75,3 +75,6 @@
   color: #9fc43d;
   /* line-height: 36px; */
 }
+.max-700 {
+  max-width: 700px;
+}
