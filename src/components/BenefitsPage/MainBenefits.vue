@@ -1,20 +1,22 @@
 <template>
-  <div class="text-black">
-    <div>
-      <h1 class="jackfruitsHeading">The Benefits of Jackfruit Guys!</h1>
-      <p class="jackfruitsText">
-        Jackfruit Guys offers delicious, nutrient-rich jackfruit products that
-        boost health with essential vitamins, minerals, and fiber. Perfect for
-        versatile cooking, our jackfruit serves as a tasty plant-based meat
-        alternative. We prioritize sustainability and fair trade, supporting
-        eco-friendly farming and local communities.
-      </p>
-    </div>
-    <div>
-      <h1 class="jackfruitsHeading">
+  <div class="maxFooter py-10 text-black">
+    <h1 class="jackfruitsHeading max-700 mx-auto">
+      The Benefits of Jackfruit Guys!
+    </h1>
+    <p class="jackfruitsText max-700 mx-auto text-center">
+      Jackfruit Guys offers delicious, nutrient-rich jackfruit products that
+      boost health with essential vitamins, minerals, and fiber. Perfect for
+      versatile cooking, our jackfruit serves as a tasty plant-based meat
+      alternative. We prioritize sustainability and fair trade, supporting
+      eco-friendly farming and local communities.
+    </p>
+  </div>
+  <div class="text-black px-16">
+    <div class="py-10">
+      <h1 class="jackfruitsHeading max-700 mx-auto">
         Jackfruit: A Meat Substitute Packed with Health Benefits.
       </h1>
-      <p class="jackfruitsText">
+      <p class="jackfruitsText max-700 mx-auto text-center">
         Jackfruit, the rising star of the plant-based world, isn't just a
         delicious alternative to meat. It's a nutritional powerhouse bursting
         with health benefits that can elevate your well-being. Here's why
@@ -166,3 +168,10 @@
     </div>
   </div>
 </template>
+<style>
+.maxFooter {
+  background-image: url(../../assets/images/maxFooter.png);
+  background-position: bottom left;
+  background-size: 12%;
+}
+</style>
