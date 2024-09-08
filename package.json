@@ -17,6 +17,7 @@
     "roboto-fontface": "*",
     "slick-carousel": "^1.8.1",
     "vue": "^3.4.31",
+    "vue-gallery": "^2.0.5",
     "vue-slick-carousel": "^1.0.6",
     "vuetify": "^3.6.11"
   },
