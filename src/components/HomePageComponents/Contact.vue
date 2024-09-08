@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="pa-0">
     <div class="margin-div">
-      <v-card class="margin-div ">
+      <v-card class="margin-div">
         <v-row no-gutters>
           <!-- Left Image Section -->
           <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -95,12 +95,14 @@ export default {
 }
 .image-section {
   background-color: #f5f3dc; /* This color is similar to the one in your image */
+  height: 100%;
 }
 
 .img-fluid {
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .form-section {

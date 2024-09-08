@@ -1,8 +1,10 @@
 <template>
-  <div class="text-black" v-if="blog">
-    <v-img :src="getImageUrl(blog.image)"></v-img>
-    <h1 class="jackfruitsHeadingSmall">{{ blog.title }}</h1>
-    <p class="jackfruitsText">{{ blog.description }}</p>
+  <div class="pa-16">
+    <div class="text-black" v-if="blog">
+      <v-img :src="getImageUrl(blog.image)"></v-img>
+      <h1 class="jackfruitsHeadingSmall">{{ blog.title }}</h1>
+      <p class="jackfruitsText">{{ blog.description }}</p>
+    </div>
   </div>
 </template>
 
@@ -27,5 +29,5 @@ export default {
 };
 </script>
 <style>
-@import "../../assets/css/style.css"
+@import "../../assets/css/style.css";
 </style>
