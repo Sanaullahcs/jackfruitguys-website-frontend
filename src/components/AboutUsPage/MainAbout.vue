@@ -1,21 +1,23 @@
 <template>
-  <div class="text-black">
-    <div>
-      <h1 class="jackfruitsHeading">Welcome to Jackfruit Guys!</h1>
-      <p class="jackfruitsText">
+  <div class="text-black px-16">
+    <div class="py-5">
+      <h1 class="jackfruitsHeading max-700 mx-auto">
+        Welcome to Jackfruit Guys!
+      </h1>
+      <p class="jackfruitsText max-700 mx-auto text-center">
         Our story began with a simple yet powerful mission: to bring the
         incredible taste and benefits of jackfruit to people everywhere. What
         started as a small venture driven by a passion for this versatile fruit
         has grown into a thriving business dedicated to delivering the highest
         quality jackfruit products to your table.
       </p>
-      <div>
-        <v-img  src="../../assets/images/abo1.png"></v-img>
+      <div class="my-6">
+        <v-img src="../../assets/images/abo1.png"></v-img>
       </div>
     </div>
-    <div>
-      <h1 class="jackfruitsHeading">Our Mission</h1>
-      <p class="jackfruitsText">
+    <div class="my-5">
+      <h1 class="jackfruitsHeading max-700 mx-auto">Our Mission</h1>
+      <p class="jackfruitsText max-700 mx-auto text-center">
         Our mission is to introduce the incredible benefits of jackfruit to new
         audiences in Germany and Mexico, transforming the way people think about
         plant-based nutrition. By focusing on these key markets, we aim to make
@@ -25,15 +27,15 @@
         versatile and nutritious ingredient that can enhance a variety of
         culinary traditions in these countries.
       </p>
-      <v-img  src="../../assets/images/abo2.png"></v-img>
+      <v-img class="my-6" src="../../assets/images/abo2.png"></v-img>
     </div>
     <div>
-      <h1 class="jackfruitsHeading">Our Values</h1>
-      <p class="jackfruitsText">
+      <h1 class="jackfruitsHeading max-700 mx-auto">Our Values</h1>
+      <p class="jackfruitsText max-700 mx-auto text-center">
         At Jackfruit Guys, our values guide everything we do. We are committed
         to:
       </p>
-      <div>
+      <div class="mt-10">
         <v-row>
           <v-col cols="6"
             ><div>
@@ -74,14 +76,14 @@
           >
           <v-col cols="6"
             ><div>
-              <v-img  src="../../assets/images/abo3.png"></v-img></div
+              <v-img src="../../assets/images/abo3.png"></v-img></div
           ></v-col>
         </v-row>
       </div>
     </div>
-    <div>
-      <h1 class="jackfruitsHeading">Our Foundation</h1>
-      <p class="jackfruitsText">
+    <div class="my-6">
+      <h1 class="jackfruitsHeading max-700 mx-auto">Our Foundation</h1>
+      <p class="jackfruitsText max-700 mx-auto text-center">
         Jackfruit Guys was founded on a shared passion for sustainability and
         health, with the belief that jackfruit could revolutionize global diets.
         Our journey began as a small, dedicated family of jackfruit enthusiasts,
@@ -91,8 +93,8 @@
         quality, innovation, and community. Together, we are building a
         healthier, more sustainable future, one jackfruit at a time.
       </p>
-      <div>
-       <v-img src="../../assets/images/abo4.png"></v-img>
+      <div class="my-6">
+        <v-img src="../../assets/images/abo4.png"></v-img>
       </div>
     </div>
   </div>
