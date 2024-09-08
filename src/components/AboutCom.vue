@@ -103,6 +103,7 @@
 
   .image-section {
     text-align: center;
+    height: 100%;
   }
 
   .about-img {
