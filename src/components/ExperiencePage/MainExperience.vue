@@ -2,6 +2,7 @@
   <div class="px-16">
     <div>
       <div class="py-5">
+        
         <v-img
           src="../../assets/images/ex1.png"
           class="mx-auto"
