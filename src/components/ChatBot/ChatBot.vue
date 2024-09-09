@@ -139,7 +139,6 @@ export default {
         if (chatBody) {
           const myHeight = chatBody.scrollHeight;
           chatBody.scrollTop = myHeight;
-         
         }
       });
     },
@@ -283,7 +282,7 @@ export default {
   position: fixed;
   bottom: 52px; /* Adjust position if necessary */
   right: 20px; /* Adjust position if necessary */
-  min-height: 400px;
+  min-height: 336px;
   /* position: relative; */
 }
 
