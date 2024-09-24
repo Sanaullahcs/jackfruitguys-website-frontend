@@ -15,6 +15,7 @@ import Partners from "../components/singlePageWeb/Partners.vue";
 import Blogs from "../components/singlePageWeb/Blogs.vue";
 import Recipes from "../components/singlePageWeb/Recipes.vue";
 import BlogDetail from "../components/singlePageWeb/BlogDetailPage.vue";
+import JoinUs from "../components/singlePageWeb/JoinUs.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +38,7 @@ const router = createRouter({
       props: true,
     },
     { path: "/recipe", component: Recipes },
+    { path: "/join-us", component: JoinUs },
   ],
 });
 
