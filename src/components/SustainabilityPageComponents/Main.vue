@@ -227,7 +227,7 @@
 <style>
 @import "../../assets/css/style.css";
 </style>
-<style scoped>
+<style>
 .background-green {
   background-color: #9fc43d;
   background-image: url(../../assets/images/minFooter.png);
