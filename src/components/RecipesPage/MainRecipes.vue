@@ -16,7 +16,7 @@
     <div class="pink-bg pa-16">
       <div>
         <div class="my-3">
-          <v-img src="../../assets/images/res1.png"></v-img>
+          <v-img src="../../assets/images/pee1.png"></v-img>
         </div>
         <div>
           <h3 class="jackfruitsHeadingSmall">
