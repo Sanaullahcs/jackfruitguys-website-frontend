@@ -129,6 +129,15 @@
             >
               Recipes
             </v-btn>
+            <v-btn
+              text
+              elevation="0"
+              class="mainBtn"
+              :class="{ active: activeButton === 'join-us' }"
+              @click="setActive('join-us')"
+            >
+              Join Us
+            </v-btn>
           </v-row>
         </v-col>
         <v-col class="d-md-none d-flex justify-end">
@@ -174,6 +183,7 @@ export default {
         "CONTACT",
         "BLOGS",
         "Recipe",
+        "Join Us",
       ],
     };
   },
@@ -214,6 +224,9 @@ export default {
         break;
       case "/recipe":
         this.activeButton = "recipe";
+        break;
+        case "/join-us":
+        this.activeButton = "join-us";
         break;
       default:
         this.activeButton = ""; // Reset if no match
@@ -256,6 +269,9 @@ export default {
           break;
         case "recipe":
           this.$router.push("/recipe");
+          break;
+          case "join-us":
+          this.$router.push("/join-us");
           break;
         default:
           console.error("Unknown button:", button);
