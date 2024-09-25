@@ -19,6 +19,7 @@
           <v-img src="../../assets/images/res1.png"></v-img>
         </div>
         <div>
+          
           <h3 class="jackfruitsHeadingSmall">
             Pulled Jackfruit BBQ Sandwiches
           </h3>
