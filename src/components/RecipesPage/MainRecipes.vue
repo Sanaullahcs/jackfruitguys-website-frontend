@@ -21,6 +21,7 @@
         <div>
           
           <h3 class="jackfruitsHeadingSmall">
+            
             Pulled Jackfruit BBQ Sandwiches
           </h3>
           <p class="jackfruitsText">Intructions:</p>
