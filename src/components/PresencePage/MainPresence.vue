@@ -12,7 +12,7 @@
     <div class="pink-bg pa-16">
       <div>
         <v-row>
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Our Roots in Mexico</h1>
               <p class="jackfruitsText">
@@ -24,7 +24,7 @@
               </p>
             </div></v-col
           >
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div>
               <v-img src="../../assets/images/pre1.png"></v-img></div
           ></v-col>
@@ -33,11 +33,11 @@
       <!-- === -->
       <div>
         <v-row>
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div>
               <v-img src="../../assets/images/pre2.png"></v-img></div
           ></v-col>
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Growing in the USA</h1>
               <p class="jackfruitsText">
@@ -53,7 +53,7 @@
       <!-- === -->
       <div>
         <v-row>
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Expanding in Germany</h1>
               <p class="jackfruitsText">
@@ -64,7 +64,7 @@
               </p>
             </div></v-col
           >
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div>
               <v-img src="../../assets/images/pre3.png"></v-img></div
           ></v-col>
@@ -73,11 +73,11 @@
       <!-- == -->
       <div>
         <v-row>
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div>
               <v-img src="../../assets/images/pre4.png"></v-img></div
           ></v-col>
-          <v-col cols="6"
+          <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Our Presence in Spain</h1>
               <p class="jackfruitsText">
