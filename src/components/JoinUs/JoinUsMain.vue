@@ -34,7 +34,7 @@
     </div>
     <div>
       <v-row>
-        <v-col cols="6"
+        <v-col cols="12" lg="6" xl="6"
           ><div>
             <h2 class="jackfruitsHeading text-left max-700">
               Why Partner with Jackfruit Guys?
@@ -76,7 +76,7 @@
             </p>
           </div></v-col
         >
-        <v-col cols="6"
+        <v-col cols="12" lg="6" xl="6"
           ><div>
             <v-img src="../../assets/images/join2.png"></v-img></div
         ></v-col>
