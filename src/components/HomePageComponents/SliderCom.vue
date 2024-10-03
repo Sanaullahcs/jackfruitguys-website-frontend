@@ -5,10 +5,10 @@
       <v-carousel-item>
         <v-sheet height="100%" style="background-color: white">
           <div
-            class="d-flex fill-height justify-center align-center text-black mt-16 pt-16"
+            class="d-flex fill-height justify-center align-center text-black mt-n2"
           >
             <v-container style="margin-top: -125px;">
-              <v-row>
+              <v-row no-gutters>
                 <v-col cols="2" md="0" sm="0" xs="0"></v-col>
                 <v-col cols="8"> 
                   <v-row> 
