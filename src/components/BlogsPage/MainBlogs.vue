@@ -4,7 +4,7 @@
       <v-col
         v-for="blog in blogs"
         :key="blog.id"
-        cols="6"
+        cols="12" lg="6" xl="6"
         style="cursor: pointer"
       >
         <div @click="goToDetail(blog.id)">

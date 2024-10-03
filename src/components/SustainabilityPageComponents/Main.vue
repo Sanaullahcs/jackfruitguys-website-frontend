@@ -12,7 +12,7 @@
     </div>
     <div>
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" lg="6" xl="6">
           <div>
             <ul class="jackfruitsText">
               <li>
@@ -55,7 +55,7 @@
             </ul>
           </div>
         </v-col>
-        <v-col cols="6">
+        <v-col cols="12" lg="6" xl="6">
           <div>
             <v-img src="../../assets/images/sus1.png"></v-img>
             <p class="jackfruitsTextGreen my-3">
@@ -77,7 +77,7 @@
     </div>
     <div>
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" lg="6" xl="6">
           <div class="mb-8">
             <v-img src="../../assets/images/sus2.png"></v-img>
             <p class="jackfruitsText">
@@ -92,7 +92,7 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="6">
+        <v-col cols="12" lg="6" xl="6">
           <div>
             <ul>
               <li class="jackfruitsText">
@@ -136,7 +136,7 @@
     <div>
       <div>
         <v-row >
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Eco-Friendly Farming</h1>
               <p class="jackfruitsText">
@@ -149,17 +149,17 @@
               </p>
             </div></v-col
           >
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div>
               <v-img src="../../assets/images/sus3.png"></v-img></div
           ></v-col>
         </v-row>
         <v-row >
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div>
               <v-img src="../../assets/images/sus4.png"></v-img></div
           ></v-col>
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Sustainable Packaging</h1>
               <p class="jackfruitsText">
@@ -173,7 +173,7 @@
           >
         </v-row>
         <v-row >
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Reducing Food Waste</h1>
               <p class="jackfruitsText">
@@ -186,17 +186,17 @@
               </p>
             </div></v-col
           >
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div>
               <v-img src="../../assets/images/sus5.png"></v-img></div
           ></v-col>
         </v-row>
         <v-row >
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div>
               <v-img src="../../assets/images/sus6.png"></v-img></div
           ></v-col>
-          <v-col cols="6">
+          <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Our Goals</h1>
               <p class="jackfruitsText">

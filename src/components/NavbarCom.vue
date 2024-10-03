@@ -187,8 +187,64 @@ export default {
       ],
     };
   },
-  created() {
-    // Set active button based on the current URL
+  // created() {
+  //   // Set active button based on the current URL
+  //   const path = this.$route.path;
+  //   console.log("hello mfs")
+
+  //   switch (path) {
+  //     case "/":
+  //       this.activeButton = "home";
+  //       break;
+  //     case "/about":
+  //       this.activeButton = "about";
+  //       break;
+  //     case "/sustainability":
+  //       this.activeButton = "sustainability";
+  //       break;
+  //     case "/benefits":
+  //       this.activeButton = "benefits";
+  //       break;
+  //     case "/contact":
+  //       this.activeButton = "contact";
+  //       break;
+  //     case "/products":
+  //       this.activeButton = "products";
+  //       break;
+  //     case "/experience":
+  //       this.activeButton = "experience";
+  //       break;
+  //     case "/presence":
+  //       this.activeButton = "presence";
+  //       break;
+  //     case "/partner":
+  //       this.activeButton = "partner";
+  //       break;
+  //     case "/blog":
+  //       this.activeButton = "blog";
+  //       break;
+  //     case "/recipe":
+  //       this.activeButton = "recipe";
+  //       break;
+  //       case "/join-us":
+  //       this.activeButton = "join-us";
+  //       break;
+  //     default:
+  //       this.activeButton = ""; // Reset if no match
+  //   }
+  // },
+  mounted() {
+  // Set active button when the component is mounted
+  this.setActiveButton();
+},
+watch: {
+  // Watch for route changes and update the active button
+  $route() {
+    this.setActiveButton();
+  }
+},
+  methods: {
+    setActiveButton() {
     const path = this.$route.path;
 
     switch (path) {
@@ -225,14 +281,13 @@ export default {
       case "/recipe":
         this.activeButton = "recipe";
         break;
-        case "/join-us":
+      case "/join-us":
         this.activeButton = "join-us";
         break;
       default:
         this.activeButton = ""; // Reset if no match
     }
   },
-  methods: {
     setActive(button) {
       this.activeButton = button;
 
