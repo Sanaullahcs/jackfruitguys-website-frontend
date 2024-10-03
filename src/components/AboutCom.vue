@@ -4,7 +4,7 @@
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="about-content mx-auto">
-          <h2 class="about">About Us</h2>
+          <h2 class="jackfruitsHeading text-left">About Us</h2>
           <p class="about-txt">
             At Jackfruit Guys, we are passionate about bringing the best quality
             jackfruit products to your table. Our journey began with a simple
@@ -30,7 +30,11 @@
       </v-col>
 
       <!-- Image Section -->
-      <v-col cols="12" md="6" class="d-flex justify-md-start justify-center align-center">
+      <v-col
+        cols="12"
+        md="6"
+        class="d-flex justify-md-start justify-center align-center"
+      >
         <v-img
           src="../assets/images/about2.png"
           class="about-side-img"

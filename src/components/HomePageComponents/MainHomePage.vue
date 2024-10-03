@@ -32,18 +32,18 @@
           </div>
         </transition> -->
         <!-- "Organic.", "Social Projects.", "Healthy.", "Fair Trade.","Good Practice","Sustainable" -->
-        <div class="words words-1">
+        <div class="words words-1 mt-n9">
           <span class="mainSectionTxt bgTxtSet">Organic.</span>
-          <span class="mainSectionTxt bgTxtSet"
+          <span class="mainSectionTxt bgTxtSet mt-n6"
             >Social <br />
             Projects.</span
           >
           <span class="mainSectionTxt bgTxtSet">Healthy.</span>
-          <span class="mainSectionTxt bgTxtSet"
+          <span class="mainSectionTxt bgTxtSet mt-n6"
             >Fair <br />
             Trade.</span
           >
-          <span class="mainSectionTxt bgTxtSet"
+          <span class="mainSectionTxt bgTxtSet mt-n6"
             >Good <br />
             Practice.</span
           >
@@ -340,8 +340,8 @@ export default {
 
 .mainSectionTxt {
   font-family: "Poppins", sans-serif;
-  font-size: 4.5vw;
-  line-height: 73px;
+  font-size: 6.5vw;
+  line-height: 104px;
   font-weight: 600;
 }
 

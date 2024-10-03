@@ -32,7 +32,7 @@
     <div>
       <v-img src="../../assets/images/join1.png"></v-img>
     </div>
-    <div>
+    <div class="mt-10">
       <v-row>
         <v-col cols="12" lg="6" xl="6"
           ><div>
@@ -43,7 +43,7 @@
               At Jackfruit Guys, our values guide everything we do. We are
               committed to:
             </p>
-            <p class="jackfruitsText text-left max-900">
+            <p class="jackfruitsText text-left ml-5 max-900">
               Partnering with Jackfruit Guys means joining a unique bridge
               between farmers and consumers. We’re dedicated to transforming
               jackfruit into healthy, delicious products while ensuring that
@@ -55,7 +55,7 @@
               food industry. Join us and be part of a team that’s making a real
               impact from farm to table.
             </p>
-            <p class="jackfruitsText text-left max-900">
+            <p class="jackfruitsText text-left max-900 mt-5 mb-5">
               If you’re interested in learning more about how you can partner
               with us, please don’t hesitate to reach out. We’d love to discuss
               potential opportunities.
@@ -66,12 +66,14 @@
             <p class="jackfruitsText text-left max-900">
               sales@jackfruitguys.com
             </p>
-            <p class="jackfruitsText text-left max-900">+52 644 246 6071</p>
+            <p class="jackfruitsText text-left max-900 mb-5">
+              +52 644 246 6071
+            </p>
             <p class="jackfruitsText text-left max-900">
               info@jackfruitguys.com
             </p>
-            <p class="jackfruitsText text-left max-900">+1 818 423 3779</p>
-            <p class="jackfruitsText text-left max-900">
+            <p class="jackfruitsText text-left max-900 mb-5">+1 818 423 3779</p>
+            <p class="jackfruitsText text-left max-900 mb-5">
               <b>Let’s grow this exciting future, one opportunity at a time!</b>
             </p>
           </div></v-col
@@ -85,9 +87,9 @@
   </div>
   <div>
     <div
-      class="background-green py-16 text-center d-flex justify-space-between"
+      class="background-green py-16 text-center d-flex justify-space-between px-16"
     >
-      <h3 class="lastHeading">
+      <h3 class="lastHeading mt-4">
         Join us today and be part of something bigger!
       </h3>
       <v-btn class="contactbtn my-5" elevation="0">Contact Us</v-btn>
