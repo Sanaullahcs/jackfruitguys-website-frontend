@@ -341,11 +341,14 @@ watch: {
 .v-toolbar__content {
   height: 150px !important;
 }
+.mainBtn{
+  font-weight: 600 !important;
+}
 </style>
 <style scoped>
 .mainBtn {
   font-family: poppins-semibold, poppins, sans-serif;
-  font-weight: 400 !important;
+  /* font-weight: 400 !important; */
   font-size: 12px;
   background: white;
   margin-left: 4px;
