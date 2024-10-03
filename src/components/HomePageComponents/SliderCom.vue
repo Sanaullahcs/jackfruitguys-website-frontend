@@ -9,8 +9,8 @@
           >
             <v-container style="margin-top: -125px;">
               <v-row>
-                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
-                <v-col cols="6"> 
+                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="8"> 
                   <v-row> 
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
@@ -27,7 +27,7 @@
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
               </v-row>
             </v-container>
           </div>
@@ -40,8 +40,8 @@
           >
             <v-container style="margin-top: -125px;">
               <v-row>
-                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
-                <v-col cols="6"> 
+                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="8"> 
                   <v-row> 
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
@@ -58,7 +58,7 @@
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
               </v-row>
             </v-container>
           </div>
@@ -71,8 +71,8 @@
           >
             <v-container style="margin-top: -125px;">
               <v-row>
-                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
-                <v-col cols="6"> 
+                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="8"> 
                   <v-row> 
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
@@ -89,7 +89,7 @@
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="3" md="0" sm="0" xs="0"></v-col>
+                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
               </v-row>
             </v-container>
           </div>
