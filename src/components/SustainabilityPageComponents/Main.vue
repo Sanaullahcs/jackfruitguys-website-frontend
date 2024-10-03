@@ -138,7 +138,7 @@
         <v-row >
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
-              <h1 class="jackfruitsHeading text-left">Eco-Friendly Farming</h1>
+              <h1 class="jackfruitsHeading text-left">Eco-Friendly <br> Farming</h1>
               <p class="jackfruitsText">
                 We believe in growing jackfruit the way nature intended—using
                 organic methods that preserve soil health and biodiversity. By
@@ -161,7 +161,7 @@
           ></v-col>
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
-              <h1 class="jackfruitsHeading text-left">Sustainable Packaging</h1>
+              <h1 class="jackfruitsHeading text-left">Sustainable <br> Packaging</h1>
               <p class="jackfruitsText">
                 Our commitment to sustainability extends beyond the farm. We use
                 eco-friendly packaging made from recyclable and biodegradable
@@ -175,7 +175,7 @@
         <v-row >
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
-              <h1 class="jackfruitsHeading text-left">Reducing Food Waste</h1>
+              <h1 class="jackfruitsHeading text-left">Reducing <br> Food Waste</h1>
               <p class="jackfruitsText">
                 Jackfruit is a versatile superfood, and at Jact Fruit Guys, we
                 ensure that no part of the fruit goes to waste. We create
