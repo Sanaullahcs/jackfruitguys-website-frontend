@@ -17,31 +17,61 @@
       <v-col cols="12" lg="9" md="9" sm="12">
         <div class="footer-wrapper">
           <div>
-            <p class="footerLink">ABOUT</p>
+            <router-link class="text-decoration-none" to="/sustainability"
+              ><p class="footerLink">Sustainability</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">Sustainability</p>
+            <router-link class="text-decoration-none" to="/about"
+              ><p class="footerLink">About us</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">BENEFITS</p>
+            <router-link class="text-decoration-none" to="/benefits">
+              <p class="footerLink">BENEFITS</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">Products</p>
+            <router-link class="text-decoration-none" to="/products"
+              ><p class="footerLink">Products</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">Recipes</p>
+            <router-link class="text-decoration-none" to="/experience"
+              ><p class="footerLink">EXPERIENCE</p></router-link
+            >
+          </div>
+
+          <div>
+            <router-link  class="text-decoration-none" to="/presence">
+              <p class="footerLink">PRESENCE</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">EXPERIENCE</p>
+            <router-link class="text-decoration-none" to="/partner"
+              ><p class="footerLink">PARTNERS</p></router-link
+            >
+          </div>
+
+          <div>
+            <router-link class="text-decoration-none" to="/contact"
+              ><p class="footerLink">CONTACT</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">PRESENCE</p>
+            <router-link class="text-decoration-none" to="/blog"
+              ><p class="footerLink">Blogs</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">PARTNERS</p>
+            <router-link class="text-decoration-none" to="/recipe"
+              ><p class="footerLink">Recipes</p></router-link
+            >
           </div>
           <div>
-            <p class="footerLink">CONTACT</p>
+            <router-link class="text-decoration-none" to="/join-us"
+              ><p class="footerLink">Join us</p></router-link
+            >
           </div>
         </div>
       </v-col>
@@ -57,6 +87,9 @@
 <script setup></script>
 
 <style scoped>
+.text-decoration-none {
+  text-decoration: none;
+}
 .footer-wrapper {
   display: flex;
   gap: 10px;
@@ -75,7 +108,10 @@
   font-weight: 400;
 }
 .footerLink {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
+  color: white;
+  text-decoration: none;
+  text-transform: none;
 }
 .font-weight-500 {
   font-weight: 500;
