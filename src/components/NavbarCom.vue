@@ -150,15 +150,15 @@
     <!-- </v-container> -->
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" app temporary>
-    <v-list class="pa-3" style="background-color: white">
+  <v-navigation-drawer v-model="drawer" app temporary class="appNav">
+    <v-list class="pa-3 pt-16 mt-6" style="background-color: white">
       <v-list-item
         v-for="button in buttons"
         :key="button"
         @click="setActive(button)"
         :class="{ active: activeButton === button }"
       >
-        <v-list-item-title>{{ button }}</v-list-item-title>
+        <v-list-item-title>{{ toUpperCase(button) }}</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
@@ -172,18 +172,18 @@ export default {
       activeButton: "home", // Set default active button
       drawer: false, // For mobile menu
       buttons: [
-        "HOME",
-        "About",
-        "SUSTAINABILITY",
-        "BENEFITS",
-        "PRODUCTS",
-        "EXPERIENCE",
-        "PRESENCE",
-        "PARTNERS",
-        "CONTACT",
-        "BLOGS",
-        "Recipe",
-        "Join Us",
+        "home",
+        "about",
+        "sustainability",
+        "benefits",
+        "products",
+        "experience",
+        "presence",
+        "partners",
+        "contact",
+        "blogs",
+        "recipe",
+        "join-us",
       ],
     };
   },
@@ -234,60 +234,63 @@ export default {
   //   }
   // },
   mounted() {
-  // Set active button when the component is mounted
-  this.setActiveButton();
-},
-watch: {
-  // Watch for route changes and update the active button
-  $route() {
+    // Set active button when the component is mounted
     this.setActiveButton();
-  }
-},
-  methods: {
-    setActiveButton() {
-    const path = this.$route.path;
-
-    switch (path) {
-      case "/":
-        this.activeButton = "home";
-        break;
-      case "/about":
-        this.activeButton = "about";
-        break;
-      case "/sustainability":
-        this.activeButton = "sustainability";
-        break;
-      case "/benefits":
-        this.activeButton = "benefits";
-        break;
-      case "/contact":
-        this.activeButton = "contact";
-        break;
-      case "/products":
-        this.activeButton = "products";
-        break;
-      case "/experience":
-        this.activeButton = "experience";
-        break;
-      case "/presence":
-        this.activeButton = "presence";
-        break;
-      case "/partner":
-        this.activeButton = "partner";
-        break;
-      case "/blog":
-        this.activeButton = "blog";
-        break;
-      case "/recipe":
-        this.activeButton = "recipe";
-        break;
-      case "/join-us":
-        this.activeButton = "join-us";
-        break;
-      default:
-        this.activeButton = ""; // Reset if no match
-    }
   },
+  watch: {
+    // Watch for route changes and update the active button
+    $route() {
+      this.setActiveButton();
+    },
+  },
+  methods: {
+    toUpperCase(text) {
+      return text.toUpperCase();
+    },
+    setActiveButton() {
+      const path = this.$route.path;
+
+      switch (path) {
+        case "/":
+          this.activeButton = "home";
+          break;
+        case "/about":
+          this.activeButton = "about";
+          break;
+        case "/sustainability":
+          this.activeButton = "sustainability";
+          break;
+        case "/benefits":
+          this.activeButton = "benefits";
+          break;
+        case "/contact":
+          this.activeButton = "contact";
+          break;
+        case "/products":
+          this.activeButton = "products";
+          break;
+        case "/experience":
+          this.activeButton = "experience";
+          break;
+        case "/presence":
+          this.activeButton = "presence";
+          break;
+        case "/partner":
+          this.activeButton = "partner";
+          break;
+        case "/blog":
+          this.activeButton = "blog";
+          break;
+        case "/recipe":
+          this.activeButton = "recipe";
+          break;
+        case "/join-us":
+          this.activeButton = "join-us";
+          break;
+        default:
+          this.activeButton = ""; // Reset if no match
+      }
+    },
     setActive(button) {
       this.activeButton = button;
 
@@ -325,7 +328,7 @@ watch: {
         case "recipe":
           this.$router.push("/recipe");
           break;
-          case "join-us":
+        case "join-us":
           this.$router.push("/join-us");
           break;
         default:
@@ -341,11 +344,15 @@ watch: {
 .v-toolbar__content {
   height: 150px !important;
 }
-.mainBtn{
+.mainBtn {
   font-weight: 600 !important;
 }
 </style>
 <style scoped>
+.appNav {
+  background: white;
+  color: black;
+}
 .mainBtn {
   font-family: poppins-semibold, poppins, sans-serif;
   /* font-weight: 400 !important; */
