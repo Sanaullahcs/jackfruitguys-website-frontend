@@ -3,14 +3,15 @@
     app
     color="white"
     elevation="0"
-    style="background-color: white; margin-bottom: 20px"
+    style="background-color: red; margin-bottom: 20px;height: 127px;"
   >
-    <div class="w-100 mt-n1">
+    <div class="w-100 mt-n10">
       <div class="d-flex justify-center pb-5">
         <v-img
           v-motion-fade-visible
           src="@/assets/images/logo.png"
-          min-width="240px"
+          max-width="300px"
+          min-width="300px"
           alt="logo"
           contain
           class="logo"
@@ -355,21 +356,23 @@ export default {
 }
 .mainBtn {
   font-family: poppins-semibold, poppins, sans-serif;
+  overflow: hidden;
   /* font-weight: 400 !important; */
-  font-size: 12px;
+  font-size: 14px;
   background: white;
   margin-left: 4px;
   margin-top: 4px;
   margin-bottom: 4px;
   border-radius: 100px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
   background: rgba(159, 196, 60, 0);
   border: 1px solid #9fc43c;
   transition: all 0.3s ease;
   box-shadow: none;
+  height: 30px;
 }
 .mainBtn::before {
   content: "";
