@@ -5,13 +5,13 @@
         <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
             <v-img
-              class="mx-auto"
+              class="mx-auto mb-5"
               src="../../assets/images/health.png"
-              max-width="80px"
+              max-width="95px"
             ></v-img>
             <h1 class="header">Health</h1>
             <p class="header-text">
-              A Meat Substitute Packed with Health Benefits
+              A Meat Substitute Packed <br> with Health Benefits
             </p>
           </div>
         </v-col>
@@ -19,24 +19,24 @@
           <div>
             <v-img
               src="../../assets/images/sus.png"
-              class="mx-auto"
-              max-width="80px"
+              class="mx-auto mb-5"
+              max-width="95px"
             ></v-img>
             <h1 class="header">Sustainbility</h1>
             <p class="header-text">
-              A Sustainable Choice for you and the Planet
+              A Sustainable Choice for <br> you and the Planet
             </p>
           </div>
         </v-col>
         <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
             <v-img
-              class="mx-auto"
+              class="mx-auto mb-5"
               src="../../assets/images/in.png"
-              max-width="80px"
+              max-width="95px"
             ></v-img>
             <h1 class="header">Social</h1>
-            <p class="header-text">Social Benefits of our mexican Jackfruit</p>
+            <p class="header-text">Social Benefits of our <br> mexican Jackfruit</p>
           </div>
         </v-col>
       </v-row>

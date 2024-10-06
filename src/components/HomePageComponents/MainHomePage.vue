@@ -73,7 +73,7 @@
           <div>
             <MotionGroup preset="slideVisibleLeft" :duration="900">
               <v-img
-                style="min-width: 114px"
+                style="min-width: 199px"
                 src="../../assets/images/midimg1.png"
               ></v-img>
             </MotionGroup>
@@ -88,7 +88,7 @@
           <div class="mt-16">
             <MotionGroup preset="slideVisibleRight" :duration="900">
               <v-img
-                style="min-width: 112px"
+                style="min-width: 195px"
                 src="../../assets/images/midimg2.png"
               ></v-img>
             </MotionGroup>
@@ -158,8 +158,8 @@ export default {
   font-weight: 600;
 }
 .Font-Size-Large {
-  font-size: 8vw !important;
-  line-height: 83px !important;
+  font-size: 132px !important;
+  line-height: 103px !important;
 }
 .bgTxtSet {
   background-image: url(../../assets/txtbg.png);

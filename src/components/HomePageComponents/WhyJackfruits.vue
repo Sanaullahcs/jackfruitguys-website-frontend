@@ -4,7 +4,9 @@
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="ms-md-16 px-4">
-          <h2 class="jackfruitsHeading text-left my-5">Why Jackfruit?</h2>
+          <h2 class="jackfruitsHeading text-left my-5 fontSize50">
+            Why Jackfruit?
+          </h2>
           <p class="about-txt">
             Jackfruit is not just delicious, it's incredibly nutritious too.
             Learn about the numerous health benefits of jackfruit, including its
@@ -14,12 +16,12 @@
           <v-btn elevation="0" class="readmorebtn my-5">Read More</v-btn>
         </div>
       </v-col>
-      
+
       <!-- Image Section -->
       <v-col cols="12" md="6" class="d-flex justify-center">
         <v-img
           src="../../assets/images/whyjack.png"
-          class="img-responsive ml-auto"
+          class="img-responsive ml-auto mb-n8"
           max-width="70%"
         ></v-img>
       </v-col>
@@ -28,6 +30,10 @@
 </template>
 
 <style scoped>
+.fontSize50 {
+  font-size: 50px !important;
+  font-weight: 700;
+}
 .about {
   font-family: "Poppins";
   font-size: 34px;
@@ -48,8 +54,10 @@
 .readmorebtn {
   background-color: #9ec43b;
   text-transform: capitalize;
-  max-width: 150px;
-  border-radius: 0;
+  min-width: 180px;
+  min-height: 40px;
+  border-radius: 8;
+  font-size: 18px;
 }
 
 /* Responsive Styling */
@@ -58,15 +66,15 @@
     font-size: 28px;
     line-height: 1.2;
   }
-  
+
   .about-txt {
     font-size: 16px;
   }
-  
+
   .ms-md-16 {
     margin-left: 0 !important;
   }
-  
+
   .readmorebtn {
     width: 100%;
     text-align: center;

@@ -1,10 +1,10 @@
 <template>
-  <div style="color: black;" class="mb-16 pb-16">
+  <div style="color: black" class="mb-16 pb-16">
     <v-row class="mx-2 mx-md-16">
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="about-content mx-auto">
-          <h2 class="jackfruitsHeading text-left">About Us</h2>
+          <h2 class="jackfruitsHeading text-left fontSize50">About Us</h2>
           <p class="about-txt">
             At Jackfruit Guys, we are passionate about bringing the best quality
             jackfruit products to your table. Our journey began with a simple
@@ -12,7 +12,8 @@
             with the world. Learn more about our story and our commitment to
             sustainability and quality.
           </p>
-          <div class="position-relative mt-5 image-section">
+          <v-btn elevation="0" class="AboutUsButton">About Us</v-btn>
+          <!-- <div class="position-relative mt-5 image-section">
             <v-img
               style="z-index: 2"
               src="../assets/images/about1.png"
@@ -25,7 +26,7 @@
               alt="logo"
             />
             <v-btn elevation="0" class="readmorebtn">Read More</v-btn>
-          </div>
+          </div> -->
         </div>
       </v-col>
 
@@ -36,9 +37,9 @@
         class="d-flex justify-md-start justify-center align-center"
       >
         <v-img
-          src="../assets/images/about2.png"
+          src="../assets/images/about2.jpg"
           class="about-side-img"
-          max-width="60%"
+          max-width="100%"
           alt="logo"
         />
       </v-col>
@@ -47,6 +48,18 @@
 </template>
 
 <style scoped>
+.AboutUsButton {
+  background-color: #9ec43b;
+  text-transform: capitalize;
+  min-width: 180px;
+  min-height: 40px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+.fontSize50 {
+  font-size: 50px !important;
+  font-weight: 700;
+}
 .readmorebtn {
   background-color: #9ec43b;
   text-transform: capitalize;
@@ -78,7 +91,7 @@
 
 .about-txt {
   font-family: "Poppins";
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 30px;
   font-weight: 400;
   text-align: left;
