@@ -1,5 +1,5 @@
 <template>
-  <div class="text-black py-10">
+  <div class="text-black pt-10 ">
     <div class="maxFooter">
       <h1 class="jackfruitsHeading max-700 mx-auto">Recipes</h1>
       <p class="jackfruitsText max-700 mx-auto text-center pb-10">
