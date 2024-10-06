@@ -12,7 +12,7 @@
             with the world. Learn more about our story and our commitment to
             sustainability and quality.
           </p>
-          <div class="position-relative mt-5 image-section">
+          <!-- <div class="position-relative mt-5 image-section">
             <v-img
               style="z-index: 2"
               src="../assets/images/about1.png"
@@ -25,7 +25,7 @@
               alt="logo"
             />
             <v-btn elevation="0" class="readmorebtn">Read More</v-btn>
-          </div>
+          </div> -->
         </div>
       </v-col>
 
@@ -36,9 +36,9 @@
         class="d-flex justify-md-start justify-center align-center"
       >
         <v-img
-          src="../assets/images/about2.png"
+          src="../assets/images/about2.jpg"
           class="about-side-img"
-          max-width="60%"
+          max-width="100%"
           alt="logo"
         />
       </v-col>
