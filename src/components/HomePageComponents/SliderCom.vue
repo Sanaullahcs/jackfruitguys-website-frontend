@@ -15,7 +15,7 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">
-                          Discover the Benifits of Jackfruite Guys
+                          Discover the Benifits of Jackfruit Guys
                         </p>
                         <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
@@ -46,7 +46,7 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt mt-16 pt-15">
-                          Discover the Benifits of Jackfruite Guys
+                          Discover the Benifits of Jackfruit Guys
                         </p>
                         <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
@@ -77,7 +77,7 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">
-                          Discover the Benifits of Jackfruite Guys
+                          Discover the Benifits of Jackfruit Guys
                         </p>
                         <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
