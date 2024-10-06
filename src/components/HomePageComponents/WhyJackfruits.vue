@@ -19,8 +19,8 @@
       <v-col cols="12" md="6" class="d-flex justify-center">
         <v-img
           src="../../assets/images/whyjack.png"
-          class="img-responsive"
-          max-width="100%"
+          class="img-responsive ml-auto"
+          max-width="70%"
         ></v-img>
       </v-col>
     </v-row>

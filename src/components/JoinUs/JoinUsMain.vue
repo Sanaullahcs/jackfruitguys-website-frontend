@@ -1,7 +1,7 @@
 <template>
   <div class="text-black px-16">
     <div>
-      <h2 class="jackfruitsHeading mx-auto max-700">Join Our Community</h2>
+      <h2 class="jackfruitsHeading mx-auto max-700 mt-8">Join Our Community</h2>
       <p class="jackfruitsText mx-auto text-center mb-6 max-900">
         At Jackfruit Guys, we’re not just building a brand; we’re cultivating a
         movement centered around innovation, sustainability, and growth. Our

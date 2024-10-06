@@ -16,7 +16,7 @@
       </v-col>
       <v-col cols="12" lg="9" md="9" sm="12">
         <div class="footer-wrapper">
-          <div>
+          <div >
             <router-link class="text-decoration-none" to="/sustainability"
               ><p class="footerLink">Sustainability</p></router-link
             >
@@ -93,7 +93,7 @@
 .footer-wrapper {
   display: flex;
   gap: 10px;
-  margin: 30px 0px;
+  margin: 35px 0px;
   flex-wrap: wrap;
 }
 .footerHead {
@@ -111,6 +111,7 @@
   text-transform: uppercase !important;
   color: white;
   text-decoration: none;
+  font-size: 14px !important;
   text-transform: none;
 }
 .font-weight-500 {
