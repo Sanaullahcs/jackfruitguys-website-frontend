@@ -5,7 +5,7 @@
         <div class="d-flex justify-center position-relative">
           <v-img
             max-width="285px"
-            src="../assets/images/footerLogo.png"
+            src="../assets/images/logoFooterNew.svg"
           ></v-img>
           <!-- <v-img
             max-width="185px"
@@ -16,7 +16,7 @@
       </v-col>
       <v-col cols="12" lg="9" md="9" sm="12">
         <div class="footer-wrapper">
-          <div >
+          <div>
             <router-link class="text-decoration-none" to="/sustainability"
               ><p class="footerLink">Sustainability</p></router-link
             >
@@ -43,7 +43,7 @@
           </div>
 
           <div>
-            <router-link  class="text-decoration-none" to="/presence">
+            <router-link class="text-decoration-none" to="/presence">
               <p class="footerLink">PRESENCE</p></router-link
             >
           </div>
@@ -76,10 +76,36 @@
         </div>
       </v-col>
     </v-row>
-    <div style="background: #0e9242" class="px-16">
+    <div style="background: #0e9242" class="px-16 d-flex justify-space-between">
       <p class="footerText">
         Copyright 2024, Jackfruite Guys | All rights reserved.
       </p>
+      <div class="d-flex mt-4">
+        <span
+          ><v-img
+            max-width="12px"
+            min-width="12px"
+            class="mx-3"
+            src="../assets/images/fb.png"
+          ></v-img
+        ></span>
+        <span
+          ><v-img
+            max-width="20px"
+            class="mx-3"
+            min-width="20px"
+            src="../assets/images/insta.png"
+          ></v-img
+        ></span>
+        <span
+          ><v-img
+            max-width="20px"
+            class="mx-3"
+            min-width="23px"
+            src="../assets/images/x.png"
+          ></v-img
+        ></span>
+      </div>
     </div>
   </div>
 </template>
