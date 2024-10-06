@@ -51,12 +51,14 @@
 .AboutUsButton {
   background-color: #9ec43b;
   text-transform: capitalize;
-  max-width: 150px;
-  border-radius: 8;
+  min-width: 180px;
+  min-height: 40px;
+  border-radius: 8px;
   font-size: 18px;
 }
 .fontSize50 {
   font-size: 50px !important;
+  font-weight: 700;
 }
 .readmorebtn {
   background-color: #9ec43b;
