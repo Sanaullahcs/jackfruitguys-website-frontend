@@ -10,7 +10,7 @@
             <v-container style="margin-top: -125px;">
               <v-row no-gutters>
                 <v-col cols="2" md="0" sm="0" xs="0"></v-col>
-                <v-col cols="8"> 
+                <v-col  cols="8"> 
                   <v-row> 
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
@@ -21,9 +21,9 @@
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
-                    <v-col class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                    <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img src="../../assets/images/slider1.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -52,9 +52,9 @@
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
-                    <v-col class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                    <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img src="../../assets/images/slider1.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -83,9 +83,9 @@
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
-                    <v-col class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                    <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img src="../../assets/images/slider1.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -129,8 +129,8 @@ export default {
 .sliderTxt {
   color: #8d580a;
   font-family: "Poppins", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
+      font-size: 43px;
+    line-height: 39px;
   /* margin-top: -20px; */
   margin-bottom: 20px;
   font-weight: 700;
