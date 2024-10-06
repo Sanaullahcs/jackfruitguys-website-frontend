@@ -77,7 +77,21 @@
 }
 .max-700 {
   max-width: 700px;
-}.max-900 {
+}
+.max-900 {
   max-width: 900px;
 }
-
+.v-window__controls .v-window__left {
+  margin-left: 6%;
+  background: white;
+  box-shadow: none;
+  color: #9FC43D;
+  font-size: 40px;
+}
+.v-window__controls .v-window__right {
+  margin-right: 5%;
+  background: white;
+  box-shadow: none;
+  color: #9FC43D;
+  font-size: 40px;
+}

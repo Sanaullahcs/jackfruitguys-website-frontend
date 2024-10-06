@@ -9,12 +9,12 @@
           >
             <v-container style="margin-top: -125px;">
               <v-row no-gutters>
-                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
-                <v-col  cols="8"> 
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
+                <v-col style="margin: auto;"  cols="10"> 
                   <v-row> 
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
-                        <p class="sliderTxt  mt-8">
+                        <p class="sliderTxt  mt-16 pt-15">
                           Discover the Benifits of Jackfruite Guys
                         </p>
                         <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
@@ -27,7 +27,7 @@
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
               </v-row>
             </v-container>
           </div>
@@ -40,12 +40,12 @@
           >
             <v-container style="margin-top: -125px;">
               <v-row>
-                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
-                <v-col cols="8"> 
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
+                <v-col style="margin: auto;"  cols="10"> 
                   <v-row> 
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
-                        <p class="sliderTxt mt-8">
+                        <p class="sliderTxt mt-16 pt-15">
                           Discover the Benifits of Jackfruite Guys
                         </p>
                         <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
@@ -58,7 +58,7 @@
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
               </v-row>
             </v-container>
           </div>
@@ -71,12 +71,12 @@
           >
             <v-container style="margin-top: -125px;">
               <v-row>
-                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
-                <v-col cols="8"> 
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
+                <v-col style="margin: auto;"  cols="10"> 
                   <v-row> 
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
-                        <p class="sliderTxt  mt-8">
+                        <p class="sliderTxt  mt-16 pt-15">
                           Discover the Benifits of Jackfruite Guys
                         </p>
                         <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
@@ -89,7 +89,7 @@
                     ></v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="2" md="0" sm="0" xs="0"></v-col>
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
               </v-row>
             </v-container>
           </div>
