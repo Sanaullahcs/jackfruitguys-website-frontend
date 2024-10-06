@@ -85,13 +85,19 @@
   margin-left: 6%;
   background: white;
   box-shadow: none;
-  color: #9FC43D;
+  color: #9fc43d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 40px;
 }
 .v-window__controls .v-window__right {
   margin-right: 5%;
-  background: white;
+  background: transparent;
   box-shadow: none;
-  color: #9FC43D;
+  color: #9fc43d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 40px;
 }

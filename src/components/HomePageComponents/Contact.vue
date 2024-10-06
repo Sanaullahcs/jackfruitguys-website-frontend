@@ -34,14 +34,14 @@
                   hide-details
                 ></v-text-field>
                 <v-text-field
-                  label="Your Name"
+                  label="Company Name"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
                 ></v-text-field>
                 <v-text-field
-                  label="Your Name"
+                  label="Email"
                   outlined
                   dense
                   class="mb-4"

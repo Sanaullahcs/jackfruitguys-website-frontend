@@ -1,10 +1,11 @@
 <template>
   <div style="background-color: #13a34c; color: white">
-    <v-row class="pt-16 mb-16 px-16">
+    <v-row class="pt-16 mb-6 px-16">
       <v-col cols="12" lg="3" md="3" sm="12">
         <div class="d-flex justify-center position-relative">
           <v-img
-            max-width="285px"
+            max-width="180px"
+            class="mt-n10"
             src="../assets/images/logoFooterNew.svg"
           ></v-img>
           <!-- <v-img
@@ -129,7 +130,7 @@
 }
 .footerText {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 50px;
   font-weight: 400;
 }
