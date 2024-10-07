@@ -38,7 +38,8 @@
       >
         <v-img
           src="../assets/images/about2.jpg"
-          class="about-side-img"
+          class="about-side-img joinusimgCss"
+          max-height="80vh"
           max-width="100%"
           alt="logo"
         />
