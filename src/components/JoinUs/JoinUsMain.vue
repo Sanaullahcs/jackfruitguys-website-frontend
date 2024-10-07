@@ -30,7 +30,7 @@
       </p>
     </div>
     <div>
-      <v-img src="../../assets/images/join1.png"></v-img>
+      <v-img src="../../assets/images/uni1.webp"></v-img>
     </div>
     <div class="mt-10">
       <v-row>
@@ -80,7 +80,7 @@
         >
         <v-col cols="12" lg="6" xl="6"
           ><div>
-            <v-img src="../../assets/images/join2.png"></v-img></div
+            <v-img src="../../assets/images/uni2.webp"></v-img></div
         ></v-col>
       </v-row>
     </div>

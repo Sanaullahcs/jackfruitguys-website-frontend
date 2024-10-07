@@ -1,5 +1,5 @@
 <template>
-  <div class="text-black px-16 pink-bg">
+  <div class="text-black px-16 pink-bg  ">
     <div>
       <v-img src="../../assets/images/par1.png" class="text-center mx-auto" max-width="300px"></v-img>
       <h1 class="jackfruitsHeading">IELSM</h1>
