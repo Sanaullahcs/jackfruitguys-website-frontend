@@ -17,13 +17,13 @@
                         <p class="sliderTxt  mt-16 pt-15">
                           Discover the Benifits of Jackfruit Guys
                         </p>
-                        <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
+                        <img src="../../assets/images/add1.jpg" style=" height: 425px;object-fit: cover;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/sliderimg1.webp"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -46,15 +46,15 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt mt-16 pt-15">
-                          Discover the Benifits of Jackfruit Guys
+                           Explore our Jackfruit Delights Selection
                         </p>
-                        <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
+                        <img src="../../assets/images/sliderimg2.webp" style=" height: 425px;object-fit: cover;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/sliderimg3.webp"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -77,15 +77,87 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">
-                          Discover the Benifits of Jackfruit Guys
+                                                      
+                            Epic Xperience: Jackfruit Guys' Eventful Adventures
                         </p>
-                        <img src="../../assets/images/image.png" style="height: 50%;object-fit: contain;"></img>
+                        <img src="../../assets/images/sliderimg4.webp" style=" height: 425px;object-fit: cover;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/sliderimg5.webp"></v-img></div
+                    ></v-col>
+                  </v-row>
+                </v-col>
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
+              </v-row>
+            </v-container>
+          </div>
+        </v-sheet>
+      </v-carousel-item>
+      <v-carousel-item>
+        <v-sheet height="100%" style="background-color: white">
+          <div
+            class="d-flex fill-height justify-center align-center text-black mt-n2"
+          >
+            <v-container style="margin-top: -125px;">
+              <v-row>
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
+                <v-col style="margin: auto;"  cols="10"> 
+                  <v-row> 
+                    <v-col cols="12" lg="6" md="12" sm="12" xs="12"
+                      ><div class="d-flex flex-column">
+                        <p class="sliderTxt  mt-16 pt-15">     
+Around the World with Jackfruit Guys: Global Presence
+                        </p>
+                        <img src="../../assets/images/sliderimg6.webp" style=" height: 425px;object-fit: cover;"></img>
+                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
+                      </div></v-col
+                    >
+                    <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                      ><div class="d-sm-none d-lg-block">
+                        <v-img min-height="300px" height="100%" src="../../assets/images/sliderimg7.webp"></v-img></div
+                    ></v-col>
+                  </v-row>
+                </v-col>
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
+              </v-row>
+            </v-container>
+          </div>
+        </v-sheet>
+      </v-carousel-item>
+      <v-carousel-item>
+        <v-sheet height="100%" style="background-color: white">
+          <div
+            class="d-flex fill-height justify-center align-center text-black mt-n2"
+          >
+            <v-container style="margin-top: -125px;">
+              <v-row>
+                <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
+                <v-col style="margin: auto;"  cols="10"> 
+                  <v-row> 
+                    <v-col cols="12" lg="6" md="12" sm="12" xs="12"
+                      ><div class="d-flex flex-column">
+                        <p class="sliderTxt  mt-16 pt-15">
+                                                      
+                            
+Global Team: Jackfruit Guys' Collaborators
+                        </p>
+                        <img src="../../assets/images/sliderimg8.webp" style=" height: 425px;object-fit: contain;"></img>
+                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
+                      </div></v-col
+                    >
+                    <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
+                      ><div class="d-sm-none d-lg-block">
+                        <!-- <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img> -->
+                        <v-responsive style="max-height: 748px;">
+          <video  controls autoplay muted >
+            <source src="../../assets/images/videojackfruits.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </v-responsive>
+                        </div
                     ></v-col>
                   </v-row>
                 </v-col>

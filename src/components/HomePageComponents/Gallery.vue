@@ -1,8 +1,8 @@
 <template>
   <div class="stack">
-    <div class="stack__card" v-for="(card, index) in cards" :key="index">
+    <!-- <div class="stack__card" v-for="(card, index) in cards" :key="index">
       <img :src="card" alt="card image" class="card-img" />
-    </div>
+    </div> -->
   </div>
 </template>
 

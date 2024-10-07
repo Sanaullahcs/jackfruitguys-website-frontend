@@ -8,7 +8,7 @@
         style="cursor: pointer"
       >
         <div @click="goToDetail(blog.id)">
-          <v-img :src="getImageUrl(blog.image)"></v-img>
+          <v-img max-height="80vh" class="joinusimgCss" :src="getImageUrl(blog.image)"></v-img>
           <h3 class="jackfruitsHeadingSmall pt-3">{{ blog.title }}</h3>
           <p class="jackfruitsText py-5">
             {{ blog.description.slice(0, 150) }}...

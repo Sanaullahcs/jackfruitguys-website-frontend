@@ -146,7 +146,6 @@ export default {
       this.isChatOpen = !this.isChatOpen;
     },
     async sendMessage() {
-      this.scrollToBottom();
       this.apiLoading = true;
 
       if (this.newMessage.trim() !== "") {
@@ -197,8 +196,8 @@ export default {
         this.loading = true;
         // require('dotenv').config();
         // Call the ChatGPT API
-        // let API_KEY = process.env.VUE_APP_CHATGPT_KEY;
-        // console.log("API_KEY",API_KEY)
+        let API_KEY = process.env.VUE_APP_CHATGPT_KEY;
+        console.log("API_KEY",API_KEY)
         try {
           const response = await axios.post(
             "https://api.openai.com/v1/chat/completions",
@@ -230,6 +229,7 @@ export default {
           });
         } finally {
           this.apiLoading = false;
+          this.scrollToBottom();
         }
       }
     },
@@ -321,7 +321,7 @@ export default {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 
 .message {

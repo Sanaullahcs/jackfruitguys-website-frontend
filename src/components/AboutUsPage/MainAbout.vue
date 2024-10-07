@@ -12,7 +12,11 @@
         quality jackfruit products to your table.
       </p>
       <div class="my-6">
-        <v-img src="../../assets/images/abo1.png"></v-img>
+        <v-img
+          class="joinusimgCss"
+          max-height="80vh"
+          src="../../assets/images/aboutus1.webp"
+        ></v-img>
       </div>
     </div>
     <div class="my-5">
@@ -27,7 +31,11 @@
         versatile and nutritious ingredient that can enhance a variety of
         culinary traditions in these countries.
       </p>
-      <v-img class="my-6" src="../../assets/images/abo2.png"></v-img>
+      <v-img
+        class="joinusimgCss my-6"
+        max-height="80vh"
+        src="../../assets/images/abo2.png"
+      ></v-img>
     </div>
     <div>
       <h1 class="jackfruitsHeading max-700 mx-auto">Our Values</h1>
@@ -76,7 +84,11 @@
           >
           <v-col cols="12" lg="6" xl="6"
             ><div>
-              <v-img src="../../assets/images/abo3.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                src="../../assets/images/abo3.png"
+              ></v-img></div
           ></v-col>
         </v-row>
       </div>
@@ -94,7 +106,11 @@
         healthier, more sustainable future, one jackfruit at a time.
       </p>
       <div class="my-6">
-        <v-img src="../../assets/images/abo4.png"></v-img>
+        <v-img
+          class="joinusimgCss"
+          max-height="80vh"
+          src="../../assets/images/abo4.png"
+        ></v-img>
       </div>
     </div>
   </div>

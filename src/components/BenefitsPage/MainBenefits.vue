@@ -53,7 +53,11 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img src="../../assets/images/ben1.png"></v-img>
+            <v-img
+              class="joinusimgCss"
+              max-height="70vh"
+              src="../../assets/images/ben1.png"
+            ></v-img>
           </div>
         </v-col>
       </v-row>
@@ -62,8 +66,9 @@
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img src="../../assets/images/ben2.png"></v-img>
-            <p class="jackfruitsText">
+            <v-img  class="joinusimgCss"
+            max-height="70vh" src="../../assets/images/ben2.png"></v-img>
+            <p class="jackfruitsText mt-5">
               Incorporating jackfruit into your diet is a delicious way to boost
               your fiber intake, support healthy digestion, and explore a world
               of culinary possibilities. While some health benefits show
@@ -154,8 +159,9 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img src="../../assets/images/ben3.png"></v-img>
-            <p class="jackfruitsText mb-16">
+            <v-img  class="joinusimgCss"
+            max-height="80vh" src="../../assets/images/ben3.png"></v-img>
+            <p class="jackfruitsText mb-16 mt-16">
               By incorporating jackfruit into your diet, you're not just making
               a delicious choice, you're contributing to a more <span
                 class="jackfruitsTextGreen"

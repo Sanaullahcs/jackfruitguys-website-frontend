@@ -30,7 +30,12 @@
       </p>
     </div>
     <div>
-      <v-img src="../../assets/images/join1.png"></v-img>
+      <v-img
+        max-height="80vh"
+        class="joinusimgCss"
+        style="object-fit: cover"
+        src="../../assets/images/uni1.webp"
+      ></v-img>
     </div>
     <div class="mt-10">
       <v-row>
@@ -60,6 +65,17 @@
               with us, please don’t hesitate to reach out. We’d love to discuss
               potential opportunities.
             </p>
+
+            <p class="jackfruitsText text-left max-900 mb-5">
+              <b>Let’s grow this exciting future, one opportunity at a time!</b>
+            </p>
+          </div></v-col
+        >
+        <v-col cols="12" lg="6" xl="6"
+          ><div>
+            <v-img src="../../assets/images/uni2.webp"></v-img>
+          </div>
+          <div>
             <p class="jackfruitsText text-left max-900">
               <b>Contact us at: </b>
             </p>
@@ -73,15 +89,8 @@
               info@jackfruitguys.com
             </p>
             <p class="jackfruitsText text-left max-900 mb-5">+1 818 423 3779</p>
-            <p class="jackfruitsText text-left max-900 mb-5">
-              <b>Let’s grow this exciting future, one opportunity at a time!</b>
-            </p>
           </div></v-col
         >
-        <v-col cols="12" lg="6" xl="6"
-          ><div>
-            <v-img src="../../assets/images/join2.png"></v-img></div
-        ></v-col>
       </v-row>
     </div>
   </div>
@@ -96,3 +105,9 @@
     </div>
   </div>
 </template>
+
+<style>
+.joinusimgCss img {
+  object-fit: cover !important;
+}
+</style>

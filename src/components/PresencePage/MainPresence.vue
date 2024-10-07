@@ -26,7 +26,11 @@
           >
           <v-col cols="12" lg="6" xl="6"
             ><div>
-              <v-img src="../../assets/images/pre1.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="70vh"
+                src="../../assets/images/pre1.png"
+              ></v-img></div
           ></v-col>
         </v-row>
       </div>
@@ -35,7 +39,11 @@
         <v-row>
           <v-col cols="12" lg="6" xl="6"
             ><div>
-              <v-img src="../../assets/images/pre2.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="70vh"
+                src="../../assets/images/pre2.png"
+              ></v-img></div
           ></v-col>
           <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">
@@ -66,7 +74,11 @@
           >
           <v-col cols="12" lg="6" xl="6"
             ><div>
-              <v-img src="../../assets/images/pre3.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="70vh"
+                src="../../assets/images/pre3.png"
+              ></v-img></div
           ></v-col>
         </v-row>
       </div>
@@ -75,7 +87,11 @@
         <v-row>
           <v-col cols="12" lg="6" xl="6"
             ><div>
-              <v-img src="../../assets/images/pre4.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="70vh"
+                src="../../assets/images/pre4.png"
+              ></v-img></div
           ></v-col>
           <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">

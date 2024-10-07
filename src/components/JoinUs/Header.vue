@@ -15,7 +15,7 @@
     text-align: center;
   }
   .main-header {
-    background-image: url(@/assets/images/partnerHeader.png);
+    background-image: url(@/assets/images/newHeaderAdd.png);
     height: 350px;
     background-position: center;
     display: flex;

@@ -57,7 +57,11 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img src="../../assets/images/sus1.png"></v-img>
+            <v-img
+              class="joinusimgCss"
+              max-height="80vh"
+              src="../../assets/images/susi1.webp"
+            ></v-img>
             <p class="jackfruitsTextGreen my-3">
               By choosing jackfruit, you're not just satisfying your taste buds;
               you're making a conscious decision for a more sustainable future.
@@ -79,7 +83,11 @@
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div class="mb-8">
-            <v-img src="../../assets/images/sus2.png"></v-img>
+            <v-img
+              class="joinusimgCss"
+              max-height="80vh"
+              src="../../assets/images/sus2.png"
+            ></v-img>
             <p class="jackfruitsText">
               Choosing jackfruit over animal meat can significantly reduce your
               dietary carbon footprint. Jackfruit compares favorably to other
@@ -135,10 +143,13 @@
     </div>
     <div>
       <div>
-        <v-row >
+        <v-row>
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
-              <h1 class="jackfruitsHeading text-left">Eco-Friendly <br> Farming</h1>
+              <h1 class="jackfruitsHeading text-left">
+                Eco-Friendly <br />
+                Farming
+              </h1>
               <p class="jackfruitsText">
                 We believe in growing jackfruit the way nature intended—using
                 organic methods that preserve soil health and biodiversity. By
@@ -151,17 +162,28 @@
           >
           <v-col cols="12" lg="6" xl="6">
             <div>
-              <v-img src="../../assets/images/sus3.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                src="../../assets/images/sus3.png"
+              ></v-img></div
           ></v-col>
         </v-row>
-        <v-row >
+        <v-row>
           <v-col cols="12" lg="6" xl="6">
             <div>
-              <v-img src="../../assets/images/sus4.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                src="../../assets/images/sus4.png"
+              ></v-img></div
           ></v-col>
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
-              <h1 class="jackfruitsHeading text-left">Sustainable <br> Packaging</h1>
+              <h1 class="jackfruitsHeading text-left">
+                Sustainable <br />
+                Packaging
+              </h1>
               <p class="jackfruitsText">
                 Our commitment to sustainability extends beyond the farm. We use
                 eco-friendly packaging made from recyclable and biodegradable
@@ -172,10 +194,13 @@
             </div></v-col
           >
         </v-row>
-        <v-row >
+        <v-row>
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
-              <h1 class="jackfruitsHeading text-left">Reducing <br> Food Waste</h1>
+              <h1 class="jackfruitsHeading text-left">
+                Reducing <br />
+                Food Waste
+              </h1>
               <p class="jackfruitsText">
                 Jackfruit is a versatile superfood, and at Jact Fruit Guys, we
                 ensure that no part of the fruit goes to waste. We create
@@ -188,13 +213,21 @@
           >
           <v-col cols="12" lg="6" xl="6">
             <div>
-              <v-img src="../../assets/images/sus5.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                src="../../assets/images/sus5.png"
+              ></v-img></div
           ></v-col>
         </v-row>
-        <v-row >
+        <v-row>
           <v-col cols="12" lg="6" xl="6">
             <div>
-              <v-img src="../../assets/images/sus6.png"></v-img></div
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                src="../../assets/images/sus6.png"
+              ></v-img></div
           ></v-col>
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
