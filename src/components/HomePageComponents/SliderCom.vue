@@ -150,7 +150,14 @@ Global Team: Jackfruit Guys' Collaborators
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img></div
+                        <!-- <v-img min-height="300px" src="../../assets/images/slider1.png"></v-img> -->
+                        <v-responsive style="max-height: 748px;">
+          <video  controls autoplay muted >
+            <source src="../../assets/images/videojackfruits.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </v-responsive>
+                        </div
                     ></v-col>
                   </v-row>
                 </v-col>
