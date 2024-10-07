@@ -1,7 +1,11 @@
 <template>
-  <div class="text-black px-16 pink-bg  ">
+  <div class="text-black px-16 pink-bg">
     <div>
-      <v-img src="../../assets/images/par1.png" class="text-center mx-auto" max-width="300px"></v-img>
+      <v-img
+        src="../../assets/images/par1.png"
+        class="text-center mx-auto"
+        max-width="300px"
+      ></v-img>
       <h1 class="jackfruitsHeading">IELSM</h1>
       <p class="jackfruitsText max-700 mx-auto text-center pb-10">
         Breve descripción Helvetica Light is an easy-to-read font, with tall and
@@ -9,7 +13,13 @@
       </p>
     </div>
     <div>
-      <v-img src="../../assets/images/par2.png"></v-img>
+      <!-- <v-img src="../../assets/images/par2.png"></v-img> -->
+      <v-responsive aspect-ratio="16/9">
+        <video controls>
+          <source src="../../assets/images/videojackfruits.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </v-responsive>
       <div>
         <p class="jackfruitsText my-10">
           Jackfruit Guys, representing over 2000 producer families in Mexico,
