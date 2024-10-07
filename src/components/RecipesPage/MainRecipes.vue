@@ -16,7 +16,7 @@
     <div class="pink-bg pa-16">
       <div>
         <div class="my-3">
-          <v-img src="../../assets/images/recipe1.webp"></v-img>
+          <v-img max-height="80vh" class="joinusimgCss" src="../../assets/images/recipe1.webp"></v-img>
         </div>
         <div>
           <h3 class="jackfruitsHeadingSmall">JackFruit al Ajillo</h3>
@@ -58,7 +58,7 @@
       </div>
       <div>
         <div class="my-3">
-          <v-img src="../../assets/images/recipe4.webp"></v-img>
+          <v-img max-height="80vh" class="joinusimgCss" src="../../assets/images/recipe4.webp"></v-img>
         </div>
         <div>
           <h3 class="jackfruitsHeadingSmall">JackFruit Curry</h3>
@@ -106,7 +106,7 @@
       </div>
       <div>
         <div class="my-3">
-          <v-img src="../../assets/images/recipe2.webp"></v-img>
+          <v-img max-height="80vh" class="joinusimgCss" src="../../assets/images/recipe2.webp"></v-img>
         </div>
         <div>
           <h3 class="jackfruitsHeadingSmall">
@@ -173,7 +173,7 @@
       </div>
       <div>
         <div class="my-3">
-          <v-img src="../../assets/images/recipe3.webp"></v-img>
+          <v-img max-height="80vh" class="joinusimgCss" src="../../assets/images/recipe3.webp"></v-img>
         </div>
         <div>
           <h3 class="jackfruitsHeadingSmall">
@@ -216,7 +216,7 @@
       </div>
       <div>
         <div class="my-3">
-          <v-img src="../../assets/images/recipe5.webp"></v-img>
+          <v-img max-height="80vh" class="joinusimgCss" src="../../assets/images/recipe5.webp"></v-img>
         </div>
         <div>
           <h3 class="jackfruitsHeadingSmall">JackFruit Paella</h3>
@@ -275,7 +275,7 @@
       </div>
       <div>
         <div class="my-3">
-          <v-img src="../../assets/images/recipe6.webp"></v-img>
+          <v-img max-height="80vh" class="joinusimgCss" src="../../assets/images/recipe6.webp"></v-img>
         </div>
         <div>
           <h3 class="jackfruitsHeadingSmall">
