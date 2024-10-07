@@ -15,8 +15,11 @@
     <div>
       <!-- <v-img src="../../assets/images/par2.png"></v-img> -->
       <v-responsive aspect-ratio="16/9">
-        <video controls>
-          <source src="../../assets/images/videojackfruits.mp4" type="video/mp4" />
+        <video class="d-flex justify-center mx-auto" style="max-height: 100vh" controls>
+          <source
+            src="../../assets/images/videojackfruits.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </v-responsive>
