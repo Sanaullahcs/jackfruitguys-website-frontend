@@ -57,7 +57,7 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img src="../../assets/images/sus1.png"></v-img>
+            <v-img src="../../assets/images/susi1.webp"></v-img>
             <p class="jackfruitsTextGreen my-3">
               By choosing jackfruit, you're not just satisfying your taste buds;
               you're making a conscious decision for a more sustainable future.

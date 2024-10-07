@@ -12,7 +12,7 @@
         quality jackfruit products to your table.
       </p>
       <div class="my-6">
-        <v-img src="../../assets/images/abo1.png"></v-img>
+        <v-img src="../../assets/images/aboutus1.webp"></v-img>
       </div>
     </div>
     <div class="my-5">
