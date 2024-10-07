@@ -61,7 +61,7 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img src="../../assets/images/pro1.png"></v-img>
+            <v-img max-height="100vh" class="joinusimgCss" src="../../assets/images/pro1.png"></v-img>
           </div>
         </v-col>
       </v-row>
@@ -102,7 +102,7 @@
         </p>
       </div>
       <div>
-        <v-img src="../../assets/images/pro2.png"></v-img>
+        <v-img  max-height="80vh" class="joinusimgCss" src="../../assets/images/pro2.png"></v-img>
       </div>
     </div>
     <div class="pa-16 pink-bg">
@@ -128,7 +128,7 @@
         </p>
       </div>
       <div>
-        <v-img src="../../assets/images/pro4.png"></v-img>
+        <v-img  max-height="80vh" class="joinusimgCss" src="../../assets/images/pro4.png"></v-img>
       </div>
     </div>
     <div class="pa-16">
@@ -153,7 +153,7 @@
         </p>
       </div>
       <div>
-        <v-img src="../../assets/images/pro3.png"></v-img>
+        <v-img  max-height="80vh" class="joinusimgCss" src="../../assets/images/pro3.png"></v-img>
       </div>
     </div>
   </div>
