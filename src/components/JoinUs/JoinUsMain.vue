@@ -30,7 +30,12 @@
       </p>
     </div>
     <div>
-      <v-img src="../../assets/images/uni1.webp"></v-img>
+      <v-img
+        max-height="80vh"
+        class="joinusimgCss"
+        style="object-fit: cover"
+        src="../../assets/images/uni1.webp"
+      ></v-img>
     </div>
     <div class="mt-10">
       <v-row>
@@ -96,3 +101,9 @@
     </div>
   </div>
 </template>
+
+<style>
+.joinusimgCss img {
+  object-fit: cover !important;
+}
+</style>
