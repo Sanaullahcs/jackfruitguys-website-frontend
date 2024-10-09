@@ -88,7 +88,7 @@
             <v-img
               class="joinusimgCss"
               max-height="80vh"
-              src="../../assets/images/ben3.png"
+              :src="sectionTwo.image_1"
             ></v-img>
             <p
               class="jackfruitsText mb-16 mt-16"
