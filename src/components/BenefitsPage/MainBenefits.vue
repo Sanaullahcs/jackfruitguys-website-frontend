@@ -14,41 +14,17 @@
   <div class="text-black pink-bg px-16">
     <div class="py-10">
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        Jackfruit: A Meat Substitute Packed with Health Benefits.
+        {{ sectionOne.title }}
       </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        Jackfruit, the rising star of the plant-based world, isn't just a
-        delicious alternative to meat. It's a nutritional powerhouse bursting
-        with health benefits that can elevate your well-being. Here's why
-        incorporating jackfruit into your diet is a win for your body:
+        {{ sectionOne.subtitle }}
       </p>
     </div>
     <div>
       <v-row no-gutters>
         <v-col cols="12" lg="6" xl="6">
           <div class="pr-3">
-            <ul class="jackfruitsText">
-              <li class="my-5">
-                <b>High in Fiber:</b> Jackfruit is a fantastic source of dietary
-                fiber, crucial for gut health and promoting a feeling of
-                fullness. Fiber keeps you feeling satisfied for longer, aiding
-                in weight management and digestion
-              </li>
-              <li class="mb-5">
-                <b>Rich in Vitamins and Minerals:</b> Jackfruit boasts a treRich
-                in Vitamins and Minerals:asure trove of essential vitamins and
-                minerals. It's a good source of Vitamin C, which supports your
-                immune system, and potassium, which helps regulate blood
-                pressure. Additionally, jackfruit contains magnesium, folate,
-                and vitamin B6
-              </li>
-              <li class="mb-5">
-                <b>Low in Calories and Fat:</b> Jackfruit is naturally low in
-                calories and fat, making it a perfect choice for weight
-                management or healthy eating plans. This allows you to enjoy
-                satisfying meals without compromising your dietary goals
-              </li>
-            </ul>
+            <ul class="jackfruitsText" v-html="sectionOne.description_1"></ul>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
@@ -56,7 +32,7 @@
             <v-img
               class="joinusimgCss"
               max-height="70vh"
-              src="../../assets/images/ben1.png"
+              :src="sectionOne.image_1"
             ></v-img>
           </div>
         </v-col>
@@ -66,9 +42,12 @@
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img  class="joinusimgCss"
-            max-height="70vh" src="../../assets/images/ben2.png"></v-img>
-            <p class="jackfruitsText mt-5">
+            <v-img
+              class="joinusimgCss"
+              max-height="70vh"
+              :src="sectionOne.image_2"
+            ></v-img>
+            <!-- <p class="jackfruitsText mt-5">
               Incorporating jackfruit into your diet is a delicious way to boost
               your fiber intake, support healthy digestion, and explore a world
               of culinary possibilities. While some health benefits show
@@ -77,30 +56,12 @@
             <p class="jackfruitsTextGreen">
               Jackfruit is a fantastic addition to a balanced and wholesome
               diet.
-            </p>
+            </p> -->
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div class="pr-3">
-            <ul class="jackfruitsText">
-              <li class="my-5">
-                <b>Potential Blood Sugar Management:</b> Studies suggest that
-                jackfruit possess properties that help regulate blood sugar
-                levels. Its fiber content contributes to this effect by slowing
-                down the absorption of sugar in the bloodstream.
-              </li>
-              <li class="mb-5">
-                <b> Aids in Heart Health:</b> The presence of fiber and
-                potentially antioxidants in jackfruit contributes to heart
-                health by lowering LDL (bad) cholesterol levels
-              </li>
-              <li class="mb-5">
-                <b>Versatile for Diverse Diets:</b> Jackfruit's neutral flavor
-                and meaty texture make it adaptable to various dietary needs.
-                Vegans, vegetarians, and those seeking gluten-free options can
-                enjoy jackfruit as a satisfying and nutritious substitute
-              </li>
-            </ul>
+            <ul class="jackfruitsText" v-html="sectionOne.description_2"></ul>
           </div>
         </v-col>
       </v-row>
@@ -159,8 +120,11 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img  class="joinusimgCss"
-            max-height="80vh" src="../../assets/images/ben3.png"></v-img>
+            <v-img
+              class="joinusimgCss"
+              max-height="80vh"
+              src="../../assets/images/ben3.png"
+            ></v-img>
             <p class="jackfruitsText mb-16 mt-16">
               By incorporating jackfruit into your diet, you're not just making
               a delicious choice, you're contributing to a more <span
@@ -174,6 +138,48 @@
     </div>
   </div>
 </template>
+<script>
+import { HTTP } from "../../common/commom-http";
+import { APP_URL } from "../../common/commom-http";
+export default {
+  data() {
+    return {
+      sectionOne: {},
+      sectionTwo: {},
+      sectionThree: {},
+      sectionFour: {},
+    };
+  },
+  mounted() {
+    console.log("this is the http code ", HTTP);
+    console.log("this is the http code ", APP_URL);
+    this.getBenefits();
+  },
+  methods: {
+    async getBenefits() {
+      const payload = {
+        language_id: 1,
+      };
+      try {
+        const response = await HTTP.post("benefits", payload);
+        console.log("response of the about", response.data.data.AboutSection1);
+        this.sectionOne = response.data.data.BenefitsSection1;
+        // this.sectionTwo = response.data.data.AboutSection2;
+        // this.sectionThree = response.data.data.AboutSection3;
+        // this.sectionFour = response.data.data.AboutSection4;
+        // Updating the Image with the base url
+        this.sectionOne.image_1 = `${APP_URL}${this.sectionOne.image_1}`;
+        this.sectionOne.image_2 = `${APP_URL}${this.sectionOne.image_2}`;
+        // this.sectionTwo.image = `${APP_URL}${this.sectionTwo.image}`;
+        // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
+        // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  },
+};
+</script>
 <style>
 .maxFooter {
   background-image: url(../../assets/images/maxFooter.png);
