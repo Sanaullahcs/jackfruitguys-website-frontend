@@ -2,52 +2,44 @@
   <div class="text-black px-16">
     <div class="py-5">
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        Welcome to Jackfruit Guys!
+        {{ sectionOne.title }}
       </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        Our story began with a simple yet powerful mission: to bring the
-        incredible taste and benefits of jackfruit to people everywhere. What
-        started as a small venture driven by a passion for this versatile fruit
-        has grown into a thriving business dedicated to delivering the highest
-        quality jackfruit products to your table.
+        {{ sectionOne.description }}
       </p>
       <div class="my-6">
         <v-img
           class="joinusimgCss"
+          alt="images about"
           max-height="80vh"
-          src="../../assets/images/aboutus1.webp"
+          :src="sectionOne.image"
         ></v-img>
       </div>
     </div>
     <div class="my-5">
-      <h1 class="jackfruitsHeading max-700 mx-auto">Our Mission</h1>
-      <p class="jackfruitsText max-700 mx-auto text-center">
-        Our mission is to introduce the incredible benefits of jackfruit to new
-        audiences in Germany and Mexico, transforming the way people think about
-        plant-based nutrition. By focusing on these key markets, we aim to make
-        jackfruit a popular and accessible option for those seeking sustainable
-        and healthy food alternatives. Our goal is to create a positive impact
-        on both personal health and the environment by promoting jackfruit as a
-        versatile and nutritious ingredient that can enhance a variety of
-        culinary traditions in these countries.
-      </p>
+      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionTwo.title }}</h1>
+      <p
+        class="jackfruitsText max-700 mx-auto text-center"
+        v-html="sectionTwo.description"
+      ></p>
       <v-img
         class="joinusimgCss my-6"
         max-height="80vh"
-        src="../../assets/images/abo2.png"
+        :src="sectionTwo.image"
       ></v-img>
     </div>
     <div>
-      <h1 class="jackfruitsHeading max-700 mx-auto">Our Values</h1>
+      <h1 class="jackfruitsHeading max-700 mx-auto">
+        {{ sectionThree.title }}
+      </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        At Jackfruit Guys, our values guide everything we do. We are committed
-        to:
+        {{ sectionThree.subtitle }}
       </p>
       <div class="mt-10">
         <v-row>
           <v-col cols="12" lg="6" xl="6"
             ><div>
-              <p class="jackfruitsText">
+              <!-- <p class="jackfruitsText">
                 <b>Sustainability:</b> We believe in the power of plant-based
                 foods to create a more sustainable world. By promoting
                 jackfruit, we aim to reduce environmental impact and support
@@ -79,39 +71,77 @@
                 quality in our products, ensuring that every item we offer is
                 crafted with care and integrity. We believe in transparency and
                 honesty in all our operations.
-              </p>
-            </div></v-col
-          >
+              </p> -->
+              <p
+                class="jackfruitsText"
+                v-html="sectionThree.description"
+              ></p></div
+          ></v-col>
           <v-col cols="12" lg="6" xl="6"
             ><div>
               <v-img
                 class="joinusimgCss"
                 max-height="80vh"
-                src="../../assets/images/abo3.png"
+                :src="sectionThree.image"
               ></v-img></div
           ></v-col>
         </v-row>
       </div>
     </div>
     <div class="my-6">
-      <h1 class="jackfruitsHeading max-700 mx-auto">Our Foundation</h1>
-      <p class="jackfruitsText max-700 mx-auto text-center">
-        Jackfruit Guys was founded on a shared passion for sustainability and
-        health, with the belief that jackfruit could revolutionize global diets.
-        Our journey began as a small, dedicated family of jackfruit enthusiasts,
-        committed to bringing this versatile fruit to the world. Today, the
-        Jackfruit Guys family has grown, but our core mission remains the same:
-        to promote the benefits of jackfruit while maintaining our commitment to
-        quality, innovation, and community. Together, we are building a
-        healthier, more sustainable future, one jackfruit at a time.
-      </p>
+      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionFour.title }}</h1>
+      <p
+        class="jackfruitsText max-700 mx-auto text-center"
+        v-html="sectionFour.description"
+      ></p>
       <div class="my-6">
         <v-img
           class="joinusimgCss"
           max-height="80vh"
-          src="../../assets/images/abo4.png"
+          :src="sectionFour.image"
         ></v-img>
       </div>
     </div>
   </div>
 </template>
+<script>
+import { HTTP } from "../../common/commom-http";
+import { APP_URL } from "../../common/commom-http";
+export default {
+  data() {
+    return {
+      sectionOne: {},
+      sectionTwo: {},
+      sectionThree: {},
+      sectionFour: {},
+    };
+  },
+  mounted() {
+    console.log("this is the http code ", HTTP);
+    console.log("this is the http code ", APP_URL);
+    this.getAboutData();
+  },
+  methods: {
+    async getAboutData() {
+      const payload = {
+        language_id: 1,
+      };
+      try {
+        const response = await HTTP.post("about-us", payload);
+        console.log("response of the about", response.data.data.AboutSection1);
+        this.sectionOne = response.data.data.AboutSection1;
+        this.sectionTwo = response.data.data.AboutSection2;
+        this.sectionThree = response.data.data.AboutSection3;
+        this.sectionFour = response.data.data.AboutSection4;
+        // Updating the Image with the base url
+        this.sectionOne.image = `${APP_URL}${this.sectionOne.image}`;
+        this.sectionTwo.image = `${APP_URL}${this.sectionTwo.image}`;
+        this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
+        this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  },
+};
+</script>
