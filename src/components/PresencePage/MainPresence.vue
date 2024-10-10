@@ -9,49 +9,48 @@
     <div class="pink-bg pa-16">
       <div>
         <v-row v-for="(section, index) in sectionTwo" :key="index">
-  <!-- For even indices (0, 2, 4...), show text first, then image -->
-  <template v-if="index % 2 === 0">
-    <v-col cols="12" lg="6" xl="6">
-      <div class="d-flex flex-column justify-center h-100 pl-3">
-        <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
-        <p class="jackfruitsText">
-          {{ section.subtitle }}
-        </p>
-      </div>
-    </v-col>
-    <v-col cols="12" lg="6" xl="6">
-      <div>
-        <v-img
-          class="joinusimgCss"
-          max-height="70vh"
-          :src="section.media"
-        ></v-img>
-      </div>
-    </v-col>
-  </template>
+          <!-- For even indices (0, 2, 4...), show text first, then image -->
+          <template v-if="index % 2 === 0">
+            <v-col cols="12" lg="6" xl="6">
+              <div class="d-flex flex-column justify-center h-100 pl-3">
+                <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
+                <p class="jackfruitsText">
+                  {{ section.subtitle }}
+                </p>
+              </div>
+            </v-col>
+            <v-col cols="12" lg="6" xl="6">
+              <div>
+                <v-img
+                  class="joinusimgCss"
+                  max-height="70vh"
+                  :src="section.media"
+                ></v-img>
+              </div>
+            </v-col>
+          </template>
 
-  <!-- For odd indices (1, 3, 5...), show image first, then text -->
-  <template v-else>
-    <v-col cols="12" lg="6" xl="6">
-      <div>
-        <v-img
-          class="joinusimgCss"
-          max-height="70vh"
-          :src="section.media"
-        ></v-img>
-      </div>
-    </v-col>
-    <v-col cols="12" lg="6" xl="6">
-      <div class="d-flex flex-column justify-center h-100 pl-3">
-        <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
-        <p class="jackfruitsText">
-          {{ section.subtitle }}
-        </p>
-      </div>
-    </v-col>
-  </template>
-</v-row>
-
+          <!-- For odd indices (1, 3, 5...), show image first, then text -->
+          <template v-else>
+            <v-col cols="12" lg="6" xl="6">
+              <div>
+                <v-img
+                  class="joinusimgCss"
+                  max-height="70vh"
+                  :src="section.media"
+                ></v-img>
+              </div>
+            </v-col>
+            <v-col cols="12" lg="6" xl="6">
+              <div class="d-flex flex-column justify-center h-100 pl-3">
+                <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
+                <p class="jackfruitsText">
+                  {{ section.subtitle }}
+                </p>
+              </div>
+            </v-col>
+          </template>
+        </v-row>
 
         <!-- <v-row>
           <v-col cols="12" lg="6" xl="6"
