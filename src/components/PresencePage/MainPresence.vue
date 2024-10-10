@@ -1,17 +1,59 @@
 <template>
   <div class="text-black py-10">
     <div class="maxFooter">
-      <h1 class="jackfruitsHeading max-700 mx-auto">Our Presence</h1>
+      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionOne.title }}</h1>
       <p class="jackfruitsText max-700 mx-auto text-center pb-10">
-        Jackfruit Guys is your go-to source for premium jackfruit products. With
-        a presence in Mexico, the USA, Germany, and Spain, we bring the finest
-        jackfruit directly to your table. Our commitment to quality and
-        sustainability ensures you enjoy the best plant-based nutrition.
+        {{ sectionOne.subtitle }}
       </p>
     </div>
     <div class="pink-bg pa-16">
       <div>
-        <v-row>
+        <v-row v-for="(section, index) in sectionTwo" :key="index">
+  <!-- For even indices (0, 2, 4...), show text first, then image -->
+  <template v-if="index % 2 === 0">
+    <v-col cols="12" lg="6" xl="6">
+      <div class="d-flex flex-column justify-center h-100 pl-3">
+        <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
+        <p class="jackfruitsText">
+          {{ section.subtitle }}
+        </p>
+      </div>
+    </v-col>
+    <v-col cols="12" lg="6" xl="6">
+      <div>
+        <v-img
+          class="joinusimgCss"
+          max-height="70vh"
+          :src="section.media"
+        ></v-img>
+      </div>
+    </v-col>
+  </template>
+
+  <!-- For odd indices (1, 3, 5...), show image first, then text -->
+  <template v-else>
+    <v-col cols="12" lg="6" xl="6">
+      <div>
+        <v-img
+          class="joinusimgCss"
+          max-height="70vh"
+          :src="section.media"
+        ></v-img>
+      </div>
+    </v-col>
+    <v-col cols="12" lg="6" xl="6">
+      <div class="d-flex flex-column justify-center h-100 pl-3">
+        <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
+        <p class="jackfruitsText">
+          {{ section.subtitle }}
+        </p>
+      </div>
+    </v-col>
+  </template>
+</v-row>
+
+
+        <!-- <v-row>
           <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">Our Roots in Mexico</h1>
@@ -32,10 +74,10 @@
                 src="../../assets/images/pre1.png"
               ></v-img></div
           ></v-col>
-        </v-row>
+        </v-row> -->
       </div>
       <!-- === -->
-      <div>
+      <!-- <div>
         <v-row>
           <v-col cols="12" lg="6" xl="6"
             ><div>
@@ -57,9 +99,9 @@
             </div></v-col
           >
         </v-row>
-      </div>
+      </div> -->
       <!-- === -->
-      <div>
+      <!-- <div>
         <v-row>
           <v-col cols="12" lg="6" xl="6"
             ><div class="d-flex flex-column justify-center h-100 pl-3">
@@ -81,9 +123,9 @@
               ></v-img></div
           ></v-col>
         </v-row>
-      </div>
+      </div> -->
       <!-- == -->
-      <div>
+      <!-- <div>
         <v-row>
           <v-col cols="12" lg="6" xl="6"
             ><div>
@@ -106,7 +148,50 @@
             </div></v-col
           >
         </v-row>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
+<script>
+import { HTTP } from "../../common/commom-http";
+import { APP_URL } from "../../common/commom-http";
+export default {
+  data() {
+    return {
+      sectionOne: {},
+      sectionTwo: {},
+      sectionThree: {},
+      sectionFour: {},
+    };
+  },
+  mounted() {
+    console.log("this is the http code ", HTTP);
+    console.log("this is the http code ", APP_URL);
+    this.getAboutData();
+  },
+  methods: {
+    async getAboutData() {
+      const payload = {
+        language_id: 1,
+      };
+      try {
+        const response = await HTTP.post("persence", payload);
+        console.log("response of the about", response.data.data.AboutSection1);
+        this.sectionOne = response.data.data.presenceSection1;
+        this.sectionTwo = response.data.data.presenceSection2;
+        // this.sectionThree = response.data.data.AboutSection3;
+        // this.sectionFour = response.data.data.AboutSection4;
+        // Updating the Image with the base url
+        // this.sectionOne.image = `${APP_URL}${this.sectionOne.image}`;
+        this.sectionTwo.forEach((section) => {
+          section.media = `${APP_URL}${section.media}`;
+        });
+        // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
+        // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  },
+};
+</script>
