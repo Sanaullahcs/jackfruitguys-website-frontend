@@ -23,8 +23,6 @@
           </ol>
         </div>
       </div>
-      <!-- ============ -->
-     
     </div>
   </div>
 </template>
@@ -43,10 +41,10 @@ export default {
   mounted() {
     console.log("this is the http code ", HTTP);
     console.log("this is the http code ", APP_URL);
-    this.getAboutData();
+    this.getResData();
   },
   methods: {
-    async getAboutData() {
+    async getResData() {
       const payload = {
         language_id: 1,
       };
