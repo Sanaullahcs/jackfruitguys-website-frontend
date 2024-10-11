@@ -11,9 +11,8 @@
         "
         cols="6"
       >
-        <div class="line-height-sm pt-16 Font-Size-Large styling">
-          We <br />
-          Care
+        <div class="line-height-sm pt-16 Font-Size-Large styling w-50">
+          {{ sectionOne.section_1_title_1 }}
         </div>
       </v-col>
       <v-col
@@ -61,14 +60,14 @@
         <div class="d-flex justify-end align-center position-relative">
           <div style="position: absolute; right: 0; z-index: 99">
             <MotionGroup preset="slideVisibleLeft" :duration="1200"
-              ><p class="mainSectionTxt Font-Size-Large">
-                Healthy
+              ><p class="mainSectionTxt Font-Size-Large text-right">
+                {{ sectionOne.section_1_title_2 }}
               </p></MotionGroup
             >
 
-            <MotionGroup preset="slideVisibleLeft" :duration="1500"
+            <!-- <MotionGroup preset="slideVisibleLeft" :duration="1500"
               ><p class="mainSectionTxt Font-Size-Large">Happy</p></MotionGroup
-            >
+            > -->
           </div>
           <div>
             <MotionGroup preset="slideVisibleLeft" :duration="900">
@@ -99,7 +98,7 @@
           >
             <MotionGroup preset="slideVisibleRight" :duration="1300">
               <p class="mainSectionTxt Font-Size-Large mt-5">
-                Living
+                {{ sectionOne.section_1_title_3 }}
               </p></MotionGroup
             >
           </div>
@@ -118,6 +117,16 @@
 <script>
 export default {
   name: "MainComponent",
+  props: {
+    sectionOne: {
+      type: Object,
+      required: true, // Set to true if the prop is required
+    },
+    sectionTwo: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
       items: [

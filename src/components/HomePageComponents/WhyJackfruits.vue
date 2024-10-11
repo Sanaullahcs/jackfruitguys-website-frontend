@@ -5,14 +5,9 @@
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="ms-md-16 px-4">
           <h2 class="jackfruitsHeading text-left my-5 fontSize50">
-            Why Jackfruit?
+            {{ sectionFour.section_4_title }}
           </h2>
-          <p class="about-txt">
-            Jackfruit is not just delicious, it's incredibly nutritious too.
-            Learn about the numerous health benefits of jackfruit, including its
-            high fiber content, vitamins, and antioxidants. Discover why
-            jackfruit is the perfect addition to your diet.
-          </p>
+          <p class="about-txt" v-html="sectionFour.text"></p>
           <v-btn elevation="0" class="readmorebtn my-5">Read More</v-btn>
         </div>
       </v-col>
@@ -20,7 +15,7 @@
       <!-- Image Section -->
       <v-col cols="12" md="6" class="d-flex justify-center">
         <v-img
-          src="../../assets/images/whyjack.png"
+          :src="sectionFour.image"
           class="img-responsive ml-auto mb-n8"
           max-width="70%"
         ></v-img>
@@ -28,7 +23,19 @@
     </v-row>
   </div>
 </template>
-
+<script>
+export default {
+  props: {
+    sectionFour: {
+      type: Object,
+      required: true, // Set to true if the prop is required
+    },
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 <style scoped>
 .fontSize50 {
   font-size: 50px !important;

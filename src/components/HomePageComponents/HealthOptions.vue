@@ -6,25 +6,25 @@
           <div>
             <v-img
               class="mx-auto mb-5"
-              src="../../assets/images/health.png"
+              :src="sectionFive.image1"
               max-width="95px"
             ></v-img>
-            <h1 class="header">Health</h1>
+            <h1 class="header">{{ sectionFive.title1 }}</h1>
             <p class="header-text">
-              A Meat Substitute Packed <br> with Health Benefits
+              {{ sectionFive.description1 }}
             </p>
           </div>
         </v-col>
         <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
             <v-img
-              src="../../assets/images/sus.png"
+              :src="sectionFive.image2"
               class="mx-auto mb-5"
               max-width="95px"
             ></v-img>
-            <h1 class="header">Sustainbility</h1>
+            <h1 class="header">{{ sectionFive.title2 }}</h1>
             <p class="header-text">
-              A Sustainable Choice for <br> you and the Planet
+              {{ sectionFive.description2 }}
             </p>
           </div>
         </v-col>
@@ -32,17 +32,30 @@
           <div>
             <v-img
               class="mx-auto mb-5"
-              src="../../assets/images/in.png"
+              :src="sectionFive.image3"
               max-width="95px"
             ></v-img>
-            <h1 class="header">Social</h1>
-            <p class="header-text">Social Benefits of our <br> mexican Jackfruit</p>
+            <h1 class="header">{{ sectionFive.title2 }}</h1>
+            <p class="header-text">{{ sectionFive.description2 }}</p>
           </div>
         </v-col>
       </v-row>
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    sectionFive: {
+      type: Object,
+      required: true, // Set to true if the prop is required
+    },
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 <style scoped>
 .bg-main {
   background-image: url(../../assets/images/bg-sus.png);

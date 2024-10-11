@@ -4,14 +4,10 @@
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="about-content mx-auto">
-          <h2 class="jackfruitsHeading text-left fontSize50">About Us</h2>
-          <p class="about-txt">
-            At Jackfruit Guys, we are passionate about bringing the best quality
-            jackfruit products to your table. Our journey began with a simple
-            mission – to share the incredible taste and benefits of jackfruit
-            with the world. Learn more about our story and our commitment to
-            sustainability and quality.
-          </p>
+          <h2 class="jackfruitsHeading text-left fontSize50">
+            {{ sectionThree.section_3_title }}
+          </h2>
+          <p class="about-txt" v-html="sectionThree.text"></p>
           <v-btn elevation="0" class="AboutUsButton">About Us</v-btn>
           <!-- <div class="position-relative mt-5 image-section">
             <v-img
@@ -37,7 +33,7 @@
         class="d-flex justify-md-start justify-center align-center"
       >
         <v-img
-          src="../assets/images/about2.jpg"
+          :src="sectionThree.image"
           class="about-side-img joinusimgCss"
           max-height="80vh"
           max-width="100%"
@@ -47,7 +43,19 @@
     </v-row>
   </div>
 </template>
-
+<script>
+export default {
+  props: {
+    sectionThree: {
+      type: Object,
+      required: true, // Set to true if the prop is required
+    },
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 <style scoped>
 .AboutUsButton {
   background-color: #9ec43b;
