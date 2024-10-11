@@ -70,52 +70,17 @@
   <div class="bg-white px-16">
     <div class="py-10">
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        Social Benefits of our mexican Jackfruit.
+        {{ sectionTwo.title }}
       </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        Jackfruit boasts a range of social benefits that make it a responsible
-        and impactful food choice. Here's how including jackfruit in your diet
-        contributes to a better world:
+        {{ sectionTwo.subtitle }}
       </p>
     </div>
     <div>
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <ul class="jackfruitsText">
-              <li class="my-5">
-                <b>Supports Sustainable Farming:</b> Jackfruit trees are
-                incredibly productive, yielding high quantities of fruit with
-                minimal land use compared to traditional meat production. This
-                translates to less deforestation, soil erosion, and resource
-                depletion.
-              </li>
-              <li class="my-5">
-                <b>Empowers Local Communities:</b> Jackfruit cultivation is a
-                significant source of income for local Mexican farmers. Choosing
-                jackfruit supports these communities and encourages sustainable
-                agricultural practices.
-              </li>
-              <li class="my-5">
-                <b>Promotes Food Security:</b> Jackfruit's versatility and long
-                shelf life make it a valuable food source in regions facing food
-                insecurity. Its drought tolerance further strengthens its role
-                in ensuring consistent food availability.
-              </li>
-              <li class="my-5">
-                <b>Reduces Reliance on Factory Farming:</b> The rise of
-                jackfruit consumption lessens the demand for factory-farmed
-                meats, which are often associated with unethical animal
-                treatment and environmental pollution.
-              </li>
-              <li class="my-5">
-                <b>Creates Job Opportunities:</b> The growing popularity of
-                jackfruit creates new job opportunities throughout the supply
-                chain, from harvesting and processing to distribution and
-                preparation. This fosters economic development in areas where
-                jackfruit is cultivated.
-              </li>
-            </ul>
+            <ul class="jackfruitsText" v-html="sectionTwo.description_1"></ul>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
@@ -123,15 +88,12 @@
             <v-img
               class="joinusimgCss"
               max-height="80vh"
-              src="../../assets/images/ben3.png"
+              :src="sectionTwo.image_1"
             ></v-img>
-            <p class="jackfruitsText mb-16 mt-16">
-              By incorporating jackfruit into your diet, you're not just making
-              a delicious choice, you're contributing to a more <span
-                class="jackfruitsTextGreen"
-                >sustainable, equitable, and food-secure future!</span
-              >
-            </p>
+            <p
+              class="jackfruitsText mb-16 mt-16"
+              v-html="sectionTwo.description_2"
+            ></p>
           </div>
         </v-col>
       </v-row>
@@ -164,13 +126,13 @@ export default {
         const response = await HTTP.post("benefits", payload);
         console.log("response of the about", response.data.data.AboutSection1);
         this.sectionOne = response.data.data.BenefitsSection1;
-        // this.sectionTwo = response.data.data.AboutSection2;
+        this.sectionTwo = response.data.data.BenefitsSection2;
         // this.sectionThree = response.data.data.AboutSection3;
         // this.sectionFour = response.data.data.AboutSection4;
         // Updating the Image with the base url
         this.sectionOne.image_1 = `${APP_URL}${this.sectionOne.image_1}`;
         this.sectionOne.image_2 = `${APP_URL}${this.sectionOne.image_2}`;
-        // this.sectionTwo.image = `${APP_URL}${this.sectionTwo.image}`;
+        this.sectionTwo.image_1 = `${APP_URL}${this.sectionTwo.image_1}`;
         // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
         // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
       } catch (error) {

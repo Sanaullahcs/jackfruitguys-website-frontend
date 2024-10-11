@@ -2,28 +2,31 @@
   <div class="text-black px-16 pink-bg">
     <div>
       <v-img
-        src="../../assets/images/par1.png"
+        :src="sectionOne.image"
         class="text-center mx-auto"
         max-width="300px"
       ></v-img>
-      <h1 class="jackfruitsHeading">IELSM</h1>
+      <h1 class="jackfruitsHeading">{{ sectionOne.title }}</h1>
       <p class="jackfruitsText max-700 mx-auto text-center pb-10">
-        Breve descripción Helvetica Light is an easy-to-read font, with tall and
-        narrow letters.
+        {{ sectionOne.subtitle }}
       </p>
     </div>
     <div>
       <!-- <v-img src="../../assets/images/par2.png"></v-img> -->
       <v-responsive aspect-ratio="16/9">
-        <video class="d-flex justify-center mx-auto" style="max-height: 100vh" controls>
-          <source
-            src="../../assets/images/videojackfruits.mp4"
-            type="video/mp4"
-          />
+        <video
+          class="d-flex justify-center mx-auto"
+          style="max-height: 100vh"
+          controls
+        >
+          <source :src="sectionOne.video" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </v-responsive>
       <div>
+        <p class="jackfruitsText pb-10" v-html="sectionOne.description"></p>
+      </div>
+      <!-- <div>
         <p class="jackfruitsText my-10">
           Jackfruit Guys, representing over 2000 producer families in Mexico,
           has joined forces with IELSM, a company providing essential corporate
@@ -71,7 +74,52 @@
           between Jackfruit Guys and ielsm.com sets a remarkable example of how
           partnerships can drive positive change.
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
+<script>
+import { HTTP } from "../../common/commom-http";
+import { APP_URL } from "../../common/commom-http";
+export default {
+  data() {
+    return {
+      sectionOne: {},
+      sectionTwo: {},
+      sectionThree: {},
+      sectionFour: {},
+    };
+  },
+  mounted() {
+    console.log("this is the http code ", HTTP);
+    console.log("this is the http code ", APP_URL);
+    this.getAboutData();
+  },
+  methods: {
+    async getAboutData() {
+      const payload = {
+        language_id: 1,
+      };
+      try {
+        const response = await HTTP.post("partner", payload);
+        console.log(
+          "response of the about",
+          response.data.data.PartnerSection1
+        );
+        this.sectionOne = response.data.data.PartnerSection1;
+        // this.sectionTwo = response.data.data.AboutSection2;
+        // this.sectionThree = response.data.data.AboutSection3;
+        // this.sectionFour = response.data.data.AboutSection4;
+        // Updating the Image with the base url
+        this.sectionOne.image = `${APP_URL}${this.sectionOne.image}`;
+        this.sectionOne.video = `${APP_URL}${this.sectionOne.video}`;
+        // this.sectionTwo.image = `${APP_URL}${this.sectionTwo.image}`;
+        // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
+        // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  },
+};
+</script>
