@@ -3,7 +3,7 @@
     <div>
       <div class="py-5">
         <v-img
-          :src="sectionOne.footer_image"
+          :src="sectionOne?.footer_image"
           class="mx-auto"
           max-width="300px"
         ></v-img>
@@ -11,7 +11,7 @@
     </div>
     <div>
       <div>
-        <v-img :src="sectionOne.banner_image"></v-img>
+        <v-img :src="sectionOne?.banner_image"></v-img>
       </div>
     </div>
     <div>
