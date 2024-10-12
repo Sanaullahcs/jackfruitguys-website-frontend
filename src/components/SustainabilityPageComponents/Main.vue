@@ -2,57 +2,17 @@
   <div class="text-black px-16">
     <div>
       <h1 class="jackfruitsHeading mx-auto max-700">
-        Jackfruit: A Sustainable Choice for you and the Planet.
+        {{ sectionOne.title }}
       </h1>
       <p class="jackfruitsText mx-auto text-center mb-6 max-700">
-        Jackfruit isn't just a versatile meat substitute; it's a champion of
-        sustainability. Here's how choosing jackfruit makes a positive impact on
-        our planet
+        {{ sectionOne.subtitle }}
       </p>
     </div>
     <div>
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <ul class="jackfruitsText">
-              <li>
-                <b>Low Environmental Footprint:</b> Compared to traditional meat
-                production, jackfruit requires significantly less land and water
-                resources. Jackfruit trees are naturally productive, yielding
-                abundant fruit with no environmental impact.
-              </li>
-              <li>
-                <b>Low Environmental Footprint:</b> Compared to traditional meat
-                production, jackfruit requires significantly less land and water
-                resources. Jackfruit trees are naturally productive, yielding
-                abundant fruit with no environmental impact.
-              </li>
-              <li>
-                <b>Reduces Deforestation and Soil Erosion:</b> Unlike
-                resource-intensive livestock farming, jackfruit cultivation
-                promotes sustainable land use. It minimizes deforestation and
-                soil erosion, protecting precious ecosystems and promoting
-                biodiversity.
-              </li>
-              <li>
-                <b>Promotes Efficient Resource Utilization:</b> Jackfruit trees
-                are known for their drought tolerance, thriving in environments
-                where other crops struggle. This translates to less water waste
-                and efficient resource utilization in agriculture
-              </li>
-              <li>
-                <b> Renewable Food Source:</b> Jackfruit trees are perennial,
-                meaning they produce fruit for many years. This ensures a
-                reliable and renewable source of food, contributing to long-term
-                food security.
-              </li>
-              <li>
-                <b>Reduces Reliance on Factory Farming:</b> The rise of
-                jackfruit consumption lessens the demand for factory-farmed
-                meats, a major contributor to greenhouse gas emissions and
-                environmental pollution.
-              </li>
-            </ul>
+            <ul class="jackfruitsText" v-html="sectionOne.description_1"></ul>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
@@ -60,23 +20,22 @@
             <v-img
               class="joinusimgCss"
               max-height="80vh"
-              src="../../assets/images/susi1.webp"
+              :src="sectionOne.image_1"
             ></v-img>
-            <p class="jackfruitsTextGreen my-3">
-              By choosing jackfruit, you're not just satisfying your taste buds;
-              you're making a conscious decision for a more sustainable future.
-            </p>
+            <p
+              class="jackfruitsTextGreen my-3"
+              v-html="sectionOne.description_2"
+            ></p>
           </div>
         </v-col>
       </v-row>
     </div>
     <div class="mt-16 mb-8">
       <h1 class="jackfruitsHeading mx-auto max-700 text-center">
-        Carbon Footprint Comparison: Jackfruit vs. Other Options.
+        {{ sectionTwo.title }}
       </h1>
       <p class="jackfruitsText mx-auto max-700 text-center">
-        Here's a breakdown of the estimated carbon footprint for different
-        protein sources compared to our Mexican Jackfruit:
+        {{ sectionTwo.subtitle }}
       </p>
     </div>
     <div>
@@ -86,64 +45,73 @@
             <v-img
               class="joinusimgCss"
               max-height="80vh"
-              src="../../assets/images/sus2.png"
+              :src="sectionTwo.image_1"
             ></v-img>
-            <p class="jackfruitsText">
-              Choosing jackfruit over animal meat can significantly reduce your
-              dietary carbon footprint. Jackfruit compares favorably to other
-              plant-based options, especially those relying on
-              resource-intensive crops like soy.
-            </p>
-            <p class="jackfruitsTextGreen">
+            <p class="jackfruitsText" v-html="sectionTwo.description_2"></p>
+            <!-- <p class="jackfruitsTextGreen">
               By opting for jackfruit, you're contributing to a more sustainable
               food system with a lower environmental impact.
-            </p>
+            </p> -->
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <ul>
-              <li class="jackfruitsText">
-                <b>Animal Meat Production (Beef):</b> Highest footprint, ranging
-                from 50-60 kg CO2e per kg of protein. This is due to factors
-                like animal feed production, land use changes for grazing, and
-                methane emissions from livestock
-              </li>
-              <li>
-                <b>Lamb and Goat Meat:</b> Lower than beef, but still
-                significant at 20-40 kg CO2e per kg of protein
-              </li>
-              <li>
-                <b>Pork and Chicken:</b> Less impactful than red meat, with
-                footprints around 5-10 kg CO2e per kg of protein
-              </li>
-              <li>
-                <b>Plant-Based Meat Alternatives (Soy-based):</b> While
-                generally lower than meat, soy production can involve
-                deforestation and transportation emissions. Estimates range from
-                2-8 kg CO2e per kg of protein
-              </li>
-              <li>
-                <b> Renewable Food Source:</b> Jackfruit trees are perennial,
-                meaning they produce fruit for many years. This ensures a
-                reliable and renewable source of food, contributing to long-term
-                food security.
-              </li>
-              <li>
-                <b>Jackfruit Production:</b> Significantly lower footprint
-                compared to all the above options, estimated at 0.5-2 kg CO2e
-                per kg of protein. This is due to jackfruit trees' efficiency,
-                requiring less land and resources than livestock or even some
-                plant-based alternatives.
-              </li>
-            </ul>
+            <ul class="jackfruitsText" v-html="sectionTwo.description_1"></ul>
           </div>
         </v-col>
       </v-row>
     </div>
     <div>
       <div>
-        <v-row>
+        <v-row v-for="(item, index) in sectionThree" :key="item.id">
+          <!-- If the index is even, show text first then image -->
+          <template v-if="index % 2 === 0">
+            <v-col cols="12" lg="6" xl="6">
+              <div class="d-flex flex-column justify-center h-100 pl-3">
+                <h1 class="jackfruitsHeading text-left">
+                  {{ item.title }}
+                </h1>
+                <p class="jackfruitsText">
+                  {{ item.subtitle }}
+                </p>
+              </div>
+            </v-col>
+            <v-col cols="12" lg="6" xl="6">
+              <div>
+                <v-img
+                  class="joinusimgCss"
+                  max-height="80vh"
+                  :src="item.media"
+                ></v-img>
+              </div>
+            </v-col>
+          </template>
+
+          <!-- If the index is odd, show image first then text -->
+          <template v-else>
+            <v-col cols="12" lg="6" xl="6">
+              <div>
+                <v-img
+                  class="joinusimgCss"
+                  max-height="80vh"
+                  :src="item.media"
+                ></v-img>
+              </div>
+            </v-col>
+            <v-col cols="12" lg="6" xl="6">
+              <div class="d-flex flex-column justify-center h-100 pl-3">
+                <h1 class="jackfruitsHeading text-left">
+                  {{ item.title }}
+                </h1>
+                <p class="jackfruitsText">
+                  {{ item.subtitle }}
+                </p>
+              </div>
+            </v-col>
+          </template>
+        </v-row>
+
+        <!-- <v-row>
           <v-col cols="12" lg="6" xl="6">
             <div class="d-flex flex-column justify-center h-100 pl-3">
               <h1 class="jackfruitsHeading text-left">
@@ -242,21 +210,65 @@
               </p>
             </div></v-col
           >
-        </v-row>
+        </v-row> -->
       </div>
     </div>
   </div>
   <div class="background-green py-16 text-center">
-    <h3 class="lastHeading">Join Us in Making a Difference</h3>
+    <h3 class="lastHeading">{{ sectionFour.title }}</h3>
     <p class="jackfruitsText max-700 mx-auto">
-      Sustainability is a journey, and we invite you to join us. By choosing
-      Jact Fruit Guys, you’re not just enjoying delicious, nutritious
-      jackfruit—you’re supporting a company that cares about the planet and its
-      people. Together, we can make a difference, one jackfruit at a time.
+      {{ sectionFour.subtitle }}
     </p>
     <v-btn class="contactbtn my-5" elevation="0">Contact Us</v-btn>
   </div>
 </template>
+<script>
+import { HTTP } from "../../common/commom-http";
+import { APP_URL } from "../../common/commom-http";
+export default {
+  data() {
+    return {
+      sectionOne: {},
+      sectionTwo: {},
+      sectionThree: [],
+      sectionFour: {},
+    };
+  },
+  mounted() {
+    console.log("this is the http code ", HTTP);
+    console.log("this is the http code ", APP_URL);
+    this.getAboutData();
+  },
+  methods: {
+    async getAboutData() {
+      const payload = {
+        language_id: 1,
+      };
+      try {
+        const response = await HTTP.post("sustainability", payload);
+        console.log(
+          "response of the about",
+          response.data.data.sustainabilitySection1
+        );
+        this.sectionOne = response.data.data.sustainabilitySection1;
+        this.sectionTwo = response.data.data.SustainabilitySection2;
+        this.sectionThree = response.data.data.SustainabilitySection3;
+        this.sectionFour = response.data.data.SustainabilitySection4;
+        // Updating the Image with the base url
+        this.sectionOne.image_1 = `${APP_URL}${this.sectionOne.image_1}`;
+        this.sectionTwo.image_1 = `${APP_URL}${this.sectionTwo.image_1}`;
+        this.sectionThree.forEach((section) => {
+          section.media = `${APP_URL}${section.media}`;
+        });
+        // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
+        // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  },
+};
+</script>
 <style>
 @import "../../assets/css/style.css";
 </style>
