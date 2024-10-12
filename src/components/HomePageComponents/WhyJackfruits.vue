@@ -5,9 +5,9 @@
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="ms-md-16 px-4">
           <h2 class="jackfruitsHeading text-left my-5 fontSize50">
-            {{ sectionFour.section_4_title }}
+            {{ sectionFour?.section_4_title }}
           </h2>
-          <p class="about-txt" v-html="sectionFour.text"></p>
+          <p class="about-txt" v-html="sectionFour?.text"></p>
           <v-btn elevation="0" class="readmorebtn my-5">Read More</v-btn>
         </div>
       </v-col>
@@ -15,7 +15,7 @@
       <!-- Image Section -->
       <v-col cols="12" md="6" class="d-flex justify-center">
         <v-img
-          :src="sectionFour.image"
+          :src="sectionFour?.image"
           class="img-responsive ml-auto mb-n8"
           max-width="70%"
         ></v-img>
