@@ -2,7 +2,7 @@
   <div class="text-black px-16">
     <div>
       <h2 class="jackfruitsHeading mx-auto max-700 mt-8">
-        {{ sectionOne.title }}
+        {{ sectionOne?.title }}
       </h2>
       <!-- <p class="jackfruitsText mx-auto text-center mb-6 max-900">
         At Jackfruit Guys, we’re not just building a brand; we’re cultivating a
@@ -32,7 +32,7 @@
       </p> -->
       <p
         class="jackfruitsText mx-auto text-center mb-6 max-900"
-        v-html="sectionOne.description"
+        v-html="sectionOne?.description"
       ></p>
     </div>
     <div>
@@ -40,7 +40,7 @@
         max-height="80vh"
         class="joinusimgCss"
         style="object-fit: cover"
-        :src="sectionOne.image"
+        :src="sectionOne?.image"
       ></v-img>
     </div>
     <div class="mt-10">
@@ -48,11 +48,11 @@
         <v-col cols="12" lg="6" xl="6"
           ><div>
             <h2 class="jackfruitsHeading text-left max-700">
-              {{ sectionTwo.title }}
+              {{ sectionTwo?.title }}
             </h2>
             <p
               class="jackfruitsText text-left max-900"
-              v-html="sectionTwo.description"
+              v-html="sectionTwo?.description"
             ></p>
             <!-- <p class="jackfruitsText text-left ml-5 max-900">
               Partnering with Jackfruit Guys means joining a unique bridge
@@ -74,12 +74,12 @@
 
             <p
               class="jackfruitsText text-left max-900 mb-5"
-              v-html="sectionTwo.subtitle"
+              v-html="sectionTwo?.subtitle"
             ></p></div
         ></v-col>
         <v-col cols="12" lg="6" xl="6"
           ><div>
-            <v-img :src="sectionTwo.image"></v-img>
+            <v-img :src="sectionTwo?.image"></v-img>
           </div>
           <!-- <div>
             <p class="jackfruitsText text-left max-900">
