@@ -6,25 +6,25 @@
           <div>
             <v-img
               class="mx-auto mb-5"
-              :src="sectionFive.image1"
+              :src="sectionFive?.image1"
               max-width="95px"
             ></v-img>
-            <h1 class="header">{{ sectionFive.title1 }}</h1>
+            <h1 class="header">{{ sectionFive?.title1 }}</h1>
             <p class="header-text">
-              {{ sectionFive.description1 }}
+              {{ sectionFive?.description1 }}
             </p>
           </div>
         </v-col>
         <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
             <v-img
-              :src="sectionFive.image2"
+              :src="sectionFive?.image2"
               class="mx-auto mb-5"
               max-width="95px"
             ></v-img>
-            <h1 class="header">{{ sectionFive.title2 }}</h1>
+            <h1 class="header">{{ sectionFive?.title2 }}</h1>
             <p class="header-text">
-              {{ sectionFive.description2 }}
+              {{ sectionFive?.description2 }}
             </p>
           </div>
         </v-col>
@@ -32,11 +32,11 @@
           <div>
             <v-img
               class="mx-auto mb-5"
-              :src="sectionFive.image3"
+              :src="sectionFive?.image3"
               max-width="95px"
             ></v-img>
-            <h1 class="header">{{ sectionFive.title2 }}</h1>
-            <p class="header-text">{{ sectionFive.description2 }}</p>
+            <h1 class="header">{{ sectionFive?.title2 }}</h1>
+            <p class="header-text">{{ sectionFive?.description2 }}</p>
           </div>
         </v-col>
       </v-row>
