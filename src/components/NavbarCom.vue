@@ -20,12 +20,13 @@
           max-width="200px"
           v-model="selectedLanguage"
           :items="languages"
+          density="compact"
           @update:modelValue="updateLanguageInUrl"
-          label="Select Language"
           item-title="label"
           item-value="value"
-          outlined
-        ></v-select>
+          variant="outlined"
+        >
+      </v-select>
       </div>
       <!-- <v-container> -->
       <v-row align="center" justify="space-between">
@@ -268,7 +269,6 @@ export default {
       this.$router.push({ query: { language_id: this.selectedLanguage } });
     },
 
-
     toUpperCase(text) {
       return text.toUpperCase();
     },
@@ -366,6 +366,9 @@ export default {
 };
 </script>
 <style>
+.v-list{
+  background-color: white;
+}
 .v-toolbar__content {
   height: 150px !important;
 }
