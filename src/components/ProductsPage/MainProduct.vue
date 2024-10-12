@@ -131,14 +131,17 @@
         <p class="jackfruitsTextGreen max-700 mx-auto text-center">
           {{ sectionFive.subtitle_1 }}
         </p>
-        <p class="jackfruitsText max-900 mx-auto text-center py-3" v-html="sectionFive.description_1">
-         
-        </p>
+        <p
+          class="jackfruitsText max-900 mx-auto text-center py-3"
+          v-html="sectionFive.description_1"
+        ></p>
         <p class="jackfruitsTextGreen max-700 mx-auto text-center">
           {{ sectionFive.subtitle_2 }}
         </p>
-        <p class="jackfruitsText max-900 mx-auto text-center py-3" v-html="sectionFive.description_2">
-        </p>
+        <p
+          class="jackfruitsText max-900 mx-auto text-center py-3"
+          v-html="sectionFive.description_2"
+        ></p>
       </div>
       <div>
         <v-img
@@ -166,12 +169,21 @@ export default {
   mounted() {
     console.log("this is the http code ", HTTP);
     console.log("this is the http code ", APP_URL);
-    this.getProducts();
+    // this.getProducts();
+  },
+  watch: {
+    // Watch for changes in the route (URL)
+    "$route.query.language_id": {
+      handler(newValue) {
+        this.getProducts(newValue);
+      },
+      immediate: true, // Call the handler right away
+    },
   },
   methods: {
-    async getProducts() {
+    async getProducts(language_id = 1) {
       const payload = {
-        language_id: 1,
+        language_id: language_id || this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("product", payload);

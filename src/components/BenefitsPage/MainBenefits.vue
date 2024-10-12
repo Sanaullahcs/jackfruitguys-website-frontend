@@ -14,17 +14,17 @@
   <div class="text-black pink-bg px-16">
     <div class="py-10">
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionOne.title }}
+        {{ sectionOne?.title }}
       </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionOne.subtitle }}
+        {{ sectionOne?.subtitle }}
       </p>
     </div>
     <div>
       <v-row no-gutters>
         <v-col cols="12" lg="6" xl="6">
           <div class="pr-3">
-            <ul class="jackfruitsText" v-html="sectionOne.description_1"></ul>
+            <ul class="jackfruitsText" v-html="sectionOne?.description_1"></ul>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
@@ -32,7 +32,7 @@
             <v-img
               class="joinusimgCss"
               max-height="70vh"
-              :src="sectionOne.image_1"
+              :src="sectionOne?.image_1"
             ></v-img>
           </div>
         </v-col>
@@ -45,7 +45,7 @@
             <v-img
               class="joinusimgCss"
               max-height="70vh"
-              :src="sectionOne.image_2"
+              :src="sectionOne?.image_2"
             ></v-img>
             <!-- <p class="jackfruitsText mt-5">
               Incorporating jackfruit into your diet is a delicious way to boost
@@ -61,7 +61,7 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div class="pr-3">
-            <ul class="jackfruitsText" v-html="sectionOne.description_2"></ul>
+            <ul class="jackfruitsText" v-html="sectionOne?.description_2"></ul>
           </div>
         </v-col>
       </v-row>
@@ -70,17 +70,17 @@
   <div class="bg-white px-16">
     <div class="py-10">
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionTwo.title }}
+        {{ sectionTwo?.title }}
       </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionTwo.subtitle }}
+        {{ sectionTwo?.subtitle }}
       </p>
     </div>
     <div>
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <ul class="jackfruitsText" v-html="sectionTwo.description_1"></ul>
+            <ul class="jackfruitsText" v-html="sectionTwo?.description_1"></ul>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
@@ -88,11 +88,11 @@
             <v-img
               class="joinusimgCss"
               max-height="80vh"
-              :src="sectionTwo.image_1"
+              :src="sectionTwo?.image_1"
             ></v-img>
             <p
               class="jackfruitsText mb-16 mt-16"
-              v-html="sectionTwo.description_2"
+              v-html="sectionTwo?.description_2"
             ></p>
           </div>
         </v-col>
@@ -115,16 +115,25 @@ export default {
   mounted() {
     console.log("this is the http code ", HTTP);
     console.log("this is the http code ", APP_URL);
-    this.getBenefits();
+    // this.getBenefits();
+  },
+  watch: {
+    // Watch for changes in the route (URL)
+    "$route.query.language_id": {
+      handler(newValue) {
+        this.getBenefits(newValue);
+      },
+      immediate: true, // Call the handler right away
+    },
   },
   methods: {
-    async getBenefits() {
+    async getBenefits(language_id = 1) {
       const payload = {
-        language_id: 1,
+        language_id: language_id || this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("benefits", payload);
-        console.log("response of the about", response.data.data.AboutSection1);
+        console.log("response of the about", response.data.data.BenefitsSection1);
         this.sectionOne = response.data.data.BenefitsSection1;
         this.sectionTwo = response.data.data.BenefitsSection2;
         // this.sectionThree = response.data.data.AboutSection3;
