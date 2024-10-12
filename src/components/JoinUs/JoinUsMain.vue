@@ -1,8 +1,10 @@
 <template>
   <div class="text-black px-16">
     <div>
-      <h2 class="jackfruitsHeading mx-auto max-700 mt-8">Join Our Community</h2>
-      <p class="jackfruitsText mx-auto text-center mb-6 max-900">
+      <h2 class="jackfruitsHeading mx-auto max-700 mt-8">
+        {{ sectionOne.title }}
+      </h2>
+      <!-- <p class="jackfruitsText mx-auto text-center mb-6 max-900">
         At Jackfruit Guys, we’re not just building a brand; we’re cultivating a
         movement centered around innovation, sustainability, and growth. Our
         vision is to bring the incredible potential of jackfruit to the
@@ -27,14 +29,18 @@
         Together, we can elevate Jackfruit Guys to new heights—creating a
         lasting legacy in the plant-based food sector. Let’s grow this exciting
         future, one opportunity at a time!
-      </p>
+      </p> -->
+      <p
+        class="jackfruitsText mx-auto text-center mb-6 max-900"
+        v-html="sectionOne.description"
+      ></p>
     </div>
     <div>
       <v-img
         max-height="80vh"
         class="joinusimgCss"
         style="object-fit: cover"
-        src="../../assets/images/uni1.webp"
+        :src="sectionOne.image"
       ></v-img>
     </div>
     <div class="mt-10">
@@ -42,13 +48,13 @@
         <v-col cols="12" lg="6" xl="6"
           ><div>
             <h2 class="jackfruitsHeading text-left max-700">
-              Why Partner with Jackfruit Guys?
+              {{ sectionTwo.title }}
             </h2>
-            <p class="jackfruitsText text-left max-900">
-              At Jackfruit Guys, our values guide everything we do. We are
-              committed to:
-            </p>
-            <p class="jackfruitsText text-left ml-5 max-900">
+            <p
+              class="jackfruitsText text-left max-900"
+              v-html="sectionTwo.description"
+            ></p>
+            <!-- <p class="jackfruitsText text-left ml-5 max-900">
               Partnering with Jackfruit Guys means joining a unique bridge
               between farmers and consumers. We’re dedicated to transforming
               jackfruit into healthy, delicious products while ensuring that
@@ -64,18 +70,18 @@
               If you’re interested in learning more about how you can partner
               with us, please don’t hesitate to reach out. We’d love to discuss
               potential opportunities.
-            </p>
+            </p> -->
 
-            <p class="jackfruitsText text-left max-900 mb-5">
-              <b>Let’s grow this exciting future, one opportunity at a time!</b>
-            </p>
-          </div></v-col
-        >
+            <p
+              class="jackfruitsText text-left max-900 mb-5"
+              v-html="sectionTwo.subtitle"
+            ></p></div
+        ></v-col>
         <v-col cols="12" lg="6" xl="6"
           ><div>
-            <v-img src="../../assets/images/uni2.webp"></v-img>
+            <v-img :src="sectionTwo.image"></v-img>
           </div>
-          <div>
+          <!-- <div>
             <p class="jackfruitsText text-left max-900">
               <b>Contact us at: </b>
             </p>
@@ -89,8 +95,8 @@
               info@jackfruitguys.com
             </p>
             <p class="jackfruitsText text-left max-900 mb-5">+1 818 423 3779</p>
-          </div></v-col
-        >
+          </div> -->
+        </v-col>
       </v-row>
     </div>
   </div>
@@ -99,13 +105,53 @@
       class="background-green py-16 text-center d-flex justify-space-between px-16"
     >
       <h3 class="lastHeading mt-4">
-        Join us today and be part of something bigger!
+        {{ sectionThree.title }}
       </h3>
       <v-btn class="contactbtn my-5" elevation="0">Contact Us</v-btn>
     </div>
   </div>
 </template>
-
+<script>
+import { HTTP } from "../../common/commom-http";
+import { APP_URL } from "../../common/commom-http";
+export default {
+  data() {
+    return {
+      sectionOne: {},
+      sectionTwo: {},
+      sectionThree: {},
+      sectionFour: {},
+    };
+  },
+  mounted() {
+    console.log("this is the http code ", HTTP);
+    console.log("this is the http code ", APP_URL);
+    this.getAboutData();
+  },
+  methods: {
+    async getAboutData() {
+      const payload = {
+        language_id: 1,
+      };
+      try {
+        const response = await HTTP.post("join-us", payload);
+        console.log("response of the about", response.data.data.JoinUsSection1);
+        this.sectionOne = response.data.data.JoinUsSection1;
+        this.sectionTwo = response.data.data.JoinUsSection2;
+        this.sectionThree = response.data.data.JoinUsSection3;
+        // this.sectionFour = response.data.data.AboutSection4;
+        // Updating the Image with the base url
+        this.sectionOne.image = `${APP_URL}${this.sectionOne.image}`;
+        this.sectionTwo.image = `${APP_URL}${this.sectionTwo.image}`;
+        // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
+        // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  },
+};
+</script>
 <style>
 .joinusimgCss img {
   object-fit: cover !important;
