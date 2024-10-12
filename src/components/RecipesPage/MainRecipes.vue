@@ -41,12 +41,21 @@ export default {
   mounted() {
     console.log("this is the http code ", HTTP);
     console.log("this is the http code ", APP_URL);
-    this.getResData();
+    // this.getResData();
+  },
+  watch: {
+    // Watch for changes in the route (URL)
+    "$route.query.language_id": {
+      handler(newValue) {
+        this.getResData(newValue);
+      },
+      immediate: true, // Call the handler right away
+    },
   },
   methods: {
-    async getResData() {
+    async getResData(language_id = 1) {
       const payload = {
-        language_id: 1,
+        language_id: language_id || this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("recipes", payload);

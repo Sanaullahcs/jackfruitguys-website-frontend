@@ -2,38 +2,38 @@
   <div class="text-black px-16">
     <div class="py-5">
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionOne.title }}
+        {{ sectionOne?.title }}
       </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionOne.description }}
+        {{ sectionOne?.description }}
       </p>
       <div class="my-6">
         <v-img
           class="joinusimgCss"
           alt="images about"
           max-height="80vh"
-          :src="sectionOne.image"
+          :src="sectionOne?.image"
         ></v-img>
       </div>
     </div>
     <div class="my-5">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionTwo.title }}</h1>
+      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionTwo?.title }}</h1>
       <p
         class="jackfruitsText max-700 mx-auto text-center"
-        v-html="sectionTwo.description"
+        v-html="sectionTwo?.description"
       ></p>
       <v-img
         class="joinusimgCss my-6"
         max-height="80vh"
-        :src="sectionTwo.image"
+        :src="sectionTwo?.image"
       ></v-img>
     </div>
     <div>
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionThree.title }}
+        {{ sectionThree?.title }}
       </h1>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionThree.subtitle }}
+        {{ sectionThree?.subtitle }}
       </p>
       <div class="mt-10">
         <v-row>
@@ -74,7 +74,7 @@
               </p> -->
               <p
                 class="jackfruitsText"
-                v-html="sectionThree.description"
+                v-html="sectionThree?.description"
               ></p></div
           ></v-col>
           <v-col cols="12" lg="6" xl="6"
@@ -82,23 +82,23 @@
               <v-img
                 class="joinusimgCss"
                 max-height="80vh"
-                :src="sectionThree.image"
+                :src="sectionThree?.image"
               ></v-img></div
           ></v-col>
         </v-row>
       </div>
     </div>
     <div class="my-6">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionFour.title }}</h1>
+      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionFour?.title }}</h1>
       <p
         class="jackfruitsText max-700 mx-auto text-center"
-        v-html="sectionFour.description"
+        v-html="sectionFour?.description"
       ></p>
       <div class="my-6">
         <v-img
           class="joinusimgCss"
           max-height="80vh"
-          :src="sectionFour.image"
+          :src="sectionFour?.image"
         ></v-img>
       </div>
     </div>
@@ -116,15 +116,24 @@ export default {
       sectionFour: {},
     };
   },
+  watch: {
+    // Watch for changes in the route (URL)
+    "$route.query.language_id": {
+      handler(newValue) {
+        this.getAboutData(newValue);
+      },
+      immediate: true, // Call the handler right away
+    },
+  },
   mounted() {
     console.log("this is the http code ", HTTP);
     console.log("this is the http code ", APP_URL);
-    this.getAboutData();
+    // this.getAboutData();
   },
   methods: {
-    async getAboutData() {
+    async getAboutData(language_id = 1) {
       const payload = {
-        language_id: 1,
+        language_id: language_id || this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("about-us", payload);

@@ -3,7 +3,7 @@
     app
     color="white"
     elevation="0"
-    style="background-color: red; margin-bottom: 20px;height: 127px;"
+    style="background-color: red; margin-bottom: 20px; height: 127px"
   >
     <div class="w-100 mt-n10">
       <div class="d-flex justify-center pb-5">
@@ -16,6 +16,16 @@
           contain
           class="logo"
         />
+        <v-select
+          max-width="200px"
+          v-model="selectedLanguage"
+          :items="languages"
+          @update:modelValue="updateLanguageInUrl"
+          label="Select Language"
+          item-title="label"
+          item-value="value"
+          outlined
+        ></v-select>
       </div>
       <!-- <v-container> -->
       <v-row align="center" justify="space-between">
@@ -170,6 +180,13 @@ export default {
   name: "Navbar",
   data() {
     return {
+      selectedLanguage: null,
+      languages: [
+        { label: "English", value: 1 },
+        { label: "French", value: 2 },
+        { label: "German", value: 3 },
+        { label: "Spanish", value: 4 },
+      ],
       activeButton: "home", // Set default active button
       drawer: false, // For mobile menu
       buttons: [
@@ -245,6 +262,13 @@ export default {
     },
   },
   methods: {
+    updateLanguageInUrl() {
+      console.log("url update");
+      // Update the query param in the URL with the selected language value
+      this.$router.push({ query: { language_id: this.selectedLanguage } });
+    },
+
+
     toUpperCase(text) {
       return text.toUpperCase();
     },
