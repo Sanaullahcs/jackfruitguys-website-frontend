@@ -12,7 +12,7 @@
         cols="6"
       >
         <div class="line-height-sm pt-16 Font-Size-Large styling w-50">
-          {{ sectionOne.section_1_title_1 }}
+          {{ sectionOne?.section_1_title_1 }}
         </div>
       </v-col>
       <v-col
@@ -61,7 +61,7 @@
           <div style="position: absolute; right: 0; z-index: 99">
             <MotionGroup preset="slideVisibleLeft" :duration="1200"
               ><p class="mainSectionTxt Font-Size-Large text-right">
-                {{ sectionOne.section_1_title_2 }}
+                {{ sectionOne?.section_1_title_2 }}
               </p></MotionGroup
             >
 
@@ -98,7 +98,7 @@
           >
             <MotionGroup preset="slideVisibleRight" :duration="1300">
               <p class="mainSectionTxt Font-Size-Large mt-5">
-                {{ sectionOne.section_1_title_3 }}
+                {{ sectionOne?.section_1_title_3 }}
               </p></MotionGroup
             >
           </div>
