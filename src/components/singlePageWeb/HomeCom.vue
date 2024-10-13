@@ -50,7 +50,7 @@ export default {
   mounted() {
     console.log("this is the http code ", HTTP);
     console.log("this is the http code ", APP_URL);
-    // this.getAboutData();
+    this.getAboutData();
   },
   watch: {
     // Watch for changes in the route (URL)
