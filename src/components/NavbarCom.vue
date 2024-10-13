@@ -5,7 +5,7 @@
     elevation="0"
     style="background-color: red; margin-bottom: 20px; height: 127px"
   >
-    <div class="w-100 mt-n10">
+    <div class="w-100 mt-n10 position-relative">
       <div class="d-flex justify-center pb-5">
         <v-img
           v-motion-fade-visible
@@ -17,16 +17,19 @@
           class="logo"
         />
         <v-select
-          max-width="200px"
+          min-width="100px"
+          max-width="100px"
           v-model="selectedLanguage"
           :items="languages"
+          class="position-absolute"
+          style="right: 12px; top: 15px"
           density="compact"
           @update:modelValue="updateLanguageInUrl"
           item-title="label"
           item-value="value"
           variant="outlined"
         >
-      </v-select>
+        </v-select>
       </div>
       <!-- <v-container> -->
       <v-row align="center" justify="space-between">
@@ -181,7 +184,7 @@ export default {
   name: "Navbar",
   data() {
     return {
-      selectedLanguage: null,
+      selectedLanguage: "English",
       languages: [
         { label: "English", value: 1 },
         { label: "French", value: 2 },
@@ -366,7 +369,7 @@ export default {
 };
 </script>
 <style>
-.v-list{
+.v-list {
   background-color: white;
 }
 .v-toolbar__content {
