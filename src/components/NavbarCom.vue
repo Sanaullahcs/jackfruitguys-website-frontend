@@ -21,7 +21,7 @@
           max-width="100px"
           v-model="selectedLanguage"
           :items="languages"
-          class="position-absolute"
+          class="position-absolute week-selector"
           style="right: 12px; top: 15px"
           density="compact"
           @update:modelValue="updateLanguageInUrl"
@@ -369,6 +369,26 @@ export default {
 };
 </script>
 <style>
+.week-selector {
+  max-width: 75px !important;
+  min-width: 75px !important;
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+}
+
+.week-selector .v-select__selection-text {
+  font-size: 11px;
+  margin-top: -7px;
+}
+
+.week-selector .v-field {
+  height: 30px;
+  display: flex;
+}
+.week-selector .v-label {
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+}
 .v-list {
   background-color: white;
 }
@@ -377,6 +397,17 @@ export default {
 }
 .mainBtn {
   font-weight: 600 !important;
+}
+.v-list {
+  background-color: white !important;
+  color: black !important;
+  font-size: 14px;
+}
+.v-list .v-list-item-title {
+  font-size: 13px;
+}
+.v-list .v-list-item {
+  min-height: 36px !important;
 }
 </style>
 <style scoped>
@@ -394,8 +425,8 @@ export default {
   margin-top: 4px;
   margin-bottom: 4px;
   border-radius: 100px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
   /* padding-top: 5px;
   padding-bottom: 5px; */
   background: rgba(159, 196, 60, 0);
