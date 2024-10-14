@@ -58,20 +58,21 @@
               text
               elevation="0"
               class="mainBtn"
-              :class="{ active: activeButton === 'sustainability' }"
-              @click="setActive('sustainability')"
-            >
-              Sustainability
-            </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
               :class="{ active: activeButton === 'about' }"
               @click="setActive('about')"
             >
               About Us
             </v-btn>
+            <v-btn
+              text
+              elevation="0"
+              class="mainBtn"
+              :class="{ active: activeButton === 'sustainability' }"
+              @click="setActive('sustainability')"
+            >
+              Sustainability
+            </v-btn>
+
             <v-btn
               text
               elevation="0"
@@ -358,6 +359,7 @@ export default {
           break;
         case "join-us":
           this.$router.push("/join-us");
+          mjjj;
           break;
         default:
           console.error("Unknown button:", button);

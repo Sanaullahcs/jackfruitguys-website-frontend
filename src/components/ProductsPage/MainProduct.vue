@@ -1,18 +1,18 @@
 <template>
   <div class="text-black py-10">
     <div class="maxFooter">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionOne.title }}</h1>
+      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionOne?.title }}</h1>
       <p class="jackfruitsText max-700 mx-auto text-center pb-10">
-        {{ sectionOne.subtitle }}
+        {{ sectionOne?.subtitle }}
       </p>
     </div>
     <div class="pink-bg px-16">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionTwo.title }}</h1>
+      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionTwo?.title }}</h1>
       <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-        {{ sectionTwo.subtitle }}
+        {{ sectionTwo?.subtitle }}
       </p>
       <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionTwo.subtitle_2 }}
+        {{ sectionTwo?.subtitle_2 }}
       </p>
     </div>
     <div class="px-16 pink-bg py-10">
@@ -26,7 +26,7 @@
             </p> -->
             <ul
               class="jackfruitsText ps-10"
-              v-html="sectionTwo.description"
+              v-html="sectionTwo?.description"
             ></ul>
           </div>
         </v-col>
@@ -35,7 +35,7 @@
             <v-img
               max-height="100vh"
               class="joinusimgCss"
-              :src="sectionTwo.image"
+              :src="sectionTwo?.image"
             ></v-img>
           </div>
         </v-col>
@@ -44,10 +44,10 @@
     <div class="pa-16">
       <div>
         <h1 class="jackfruitsHeading max-700 mx-auto">
-          {{ sectionThree.title }}
+          {{ sectionThree?.title }}
         </h1>
         <p class="jackfruitsTextGreen max-700 mx-auto text-center py-3">
-          {{ sectionThree.subtitle }}
+          {{ sectionThree?.subtitle }}
         </p>
         <!-- <p class="jackfruitsText max-900 mx-auto text-center py-3">
           As sustainable and health-conscious food enthusiasts, we highly
@@ -76,24 +76,24 @@
         </p> -->
         <p
           class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionThree.description"
+          v-html="sectionThree?.description"
         ></p>
       </div>
       <div>
         <v-img
           max-height="80vh"
           class="joinusimgCss"
-          :src="sectionThree.image"
+          :src="sectionThree?.image"
         ></v-img>
       </div>
     </div>
     <div class="pa-16 pink-bg">
       <div>
         <h1 class="jackfruitsHeading max-700 mx-auto">
-          {{ sectionFour.title }}
+          {{ sectionFour?.title }}
         </h1>
         <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-          {{ sectionFour.subtitle }}
+          {{ sectionFour?.subtitle }}
         </p>
         <!-- <p class="jackfruitsText max-900 mx-auto text-center py-3">
           This whole fresh fruit is a true conversation starter! The largest
@@ -112,42 +112,42 @@
         </p> -->
         <p
           class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionFour.description"
+          v-html="sectionFour?.description"
         ></p>
       </div>
       <div>
         <v-img
           max-height="80vh"
           class="joinusimgCss"
-          :src="sectionFour.image"
+          :src="sectionFour?.image"
         ></v-img>
       </div>
     </div>
     <div class="pa-16">
       <div>
         <h1 class="jackfruitsHeading max-700 mx-auto">
-          {{ sectionFive.title }}
+          {{ sectionFive?.title }}
         </h1>
         <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-          {{ sectionFive.subtitle_1 }}
+          {{ sectionFive?.subtitle_1 }}
         </p>
         <p
           class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionFive.description_1"
+          v-html="sectionFive?.description_1"
         ></p>
         <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-          {{ sectionFive.subtitle_2 }}
+          {{ sectionFive?.subtitle_2 }}
         </p>
         <p
           class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionFive.description_2"
+          v-html="sectionFive?.description_2"
         ></p>
       </div>
       <div>
         <v-img
           max-height="80vh"
           class="joinusimgCss"
-          :src="sectionFive.image"
+          :src="sectionFive?.image"
         ></v-img>
       </div>
     </div>
