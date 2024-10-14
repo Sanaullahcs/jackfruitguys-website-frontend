@@ -32,7 +32,19 @@
         </transition> -->
         <!-- "Organic.", "Social Projects.", "Healthy.", "Fair Trade.","Good Practice","Sustainable" -->
         <div class="words words-1 mt-n9">
-          <span class="mainSectionTxt bgTxtSet">Organic.</span>
+          <!-- {{ sectionTwo }} -->
+          <span
+            v-for="(item, index) in sectionTwo"
+            :key="item.id"
+            :class="[
+              'mainSectionTxt',
+              'bgTxtSet',
+              { 'mt-n6': index % 2 !== 0 },
+            ]"
+          >
+            {{ item.text_name }}
+          </span>
+          <!-- <span class="mainSectionTxt bgTxtSet">Organic.</span>
           <span class="mainSectionTxt bgTxtSet mt-n6"
             >Social <br />
             Projects.</span
@@ -46,7 +58,7 @@
             >Good <br />
             Practice.</span
           >
-          <span class="mainSectionTxt bgTxtSet">Sustainable.</span>
+          <span class="mainSectionTxt bgTxtSet">Sustainable.</span> -->
         </div>
       </v-col>
     </v-row>

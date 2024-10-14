@@ -15,14 +15,18 @@
       <!-- <v-img src="../../assets/images/par2.png"></v-img> -->
       <v-responsive aspect-ratio="16/9">
         <video
+          v-if="sectionOne.video"
           class="d-flex justify-center mx-auto"
-          style="max-height: 100vh"
-          controls
+          style="max-height: 80vh;width: 100%;"
+          autoplay
+          muted
+          loop
         >
           <source :src="sectionOne.video" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </v-responsive>
+
       <div>
         <p class="jackfruitsText pb-10" v-html="sectionOne.description"></p>
       </div>
@@ -122,6 +126,7 @@ export default {
         // Updating the Image with the base url
         this.sectionOne.image = `${APP_URL}${this.sectionOne.image}`;
         this.sectionOne.video = `${APP_URL}${this.sectionOne.video}`;
+        console.log("this.sectionOne.video", this.sectionOne.video);
         // this.sectionTwo.image = `${APP_URL}${this.sectionTwo.image}`;
         // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
         // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;

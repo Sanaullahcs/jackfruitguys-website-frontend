@@ -184,12 +184,12 @@ export default {
   name: "Navbar",
   data() {
     return {
-      selectedLanguage: "English",
+      selectedLanguage: "EN",
       languages: [
-        { label: "English", value: 1 },
-        { label: "French", value: 2 },
-        { label: "German", value: 3 },
-        { label: "Spanish", value: 4 },
+        { label: "EN", value: 1 },
+        { label: "FR", value: 2 },
+        { label: "DE", value: 3 },
+        { label: "ES", value: 4 },
       ],
       activeButton: "home", // Set default active button
       drawer: false, // For mobile menu
