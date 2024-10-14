@@ -1,21 +1,34 @@
 /**
  * main.js
  *
- * Bootstraps Vuetify and other plugins then mounts the App`
+ * Bootstraps Vuetify and other plugins then mounts the App
  */
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
+import VueGtag from "vue-gtag"; // Import the Google Analytics plugin
 
 // Components
-import App from './App.vue'
-
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
-const app = createApp(App)
+// Import the router here
+import router from "@/router"; // Make sure you have a valid router setup
 
-registerPlugins(app)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(
+  VueGtag,
+  {
+    config: { id: "G-WCF0DLX13Y" }, // Replace with your Google Analytics Tracking ID
+  },
+  router // Pass the router here
+);
+
+registerPlugins(app);
+
+app.use(router); // Make sure to use the router in your app
+
+app.mount("#app");
