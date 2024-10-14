@@ -21,7 +21,7 @@
           max-width="100px"
           v-model="selectedLanguage"
           :items="languages"
-          class="position-absolute week-selector"
+          class="position-absolute flag-selector"
           style="right: 12px; top: 15px"
           density="compact"
           @update:modelValue="updateLanguageInUrl"
@@ -369,23 +369,23 @@ export default {
 };
 </script>
 <style>
-.week-selector {
+.flag-selector {
   max-width: 75px !important;
   min-width: 75px !important;
   font-family: "Nunito", sans-serif;
   padding: 0;
 }
 
-.week-selector .v-select__selection-text {
+.flag-selector .v-select__selection-text {
   font-size: 11px;
   margin-top: -7px;
 }
 
-.week-selector .v-field {
+.flag-selector .v-field {
   height: 30px;
   display: flex;
 }
-.week-selector .v-label {
+.flag-selector .v-label {
   font-size: 10px;
   font-family: "Nunito", sans-serif;
 }
