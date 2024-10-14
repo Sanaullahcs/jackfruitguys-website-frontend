@@ -25,46 +25,71 @@
               <h2 class="white--text mb-4 contact-heading">
                 We'd love to hear from you!
               </h2>
-              <v-form>
+              <v-form ref="form" v-model="isFormValid" @submit.prevent="submit">
                 <v-text-field
+                  v-model="form.name"
                   label="Your Name"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
+                  :rules="nameRules"
                 ></v-text-field>
                 <v-text-field
+                  v-model="form.company_name"
                   label="Company Name"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
+                  :rules="companyNameRules"
                 ></v-text-field>
                 <v-text-field
+                  v-model="form.email"
                   label="Email"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
+                  :rules="emailRules"
                 ></v-text-field>
                 <v-text-field
+                  v-model="form.phone"
                   label="Phone"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
+                  :rules="phoneRules"
                 ></v-text-field>
                 <v-textarea
+                  v-model="form.message"
                   label="Message"
                   outlined
                   dense
                   rows="4"
                   class="mb-4"
                   hide-details
+                  :rules="messageRules"
                 ></v-textarea>
-                <v-btn class="submit" color="white" elevation="0" text large
-                  >Submit</v-btn
+                <v-btn
+                  class="submit"
+                  color="white"
+                  elevation="0"
+                  text
+                  large
+                  :disabled="!isFormValid"
+                  @click="submit"
                 >
+                  <span v-if="logoutText">Submit</span>
+                  <span v-if="logoutLoader">
+                    <v-progress-circular
+                      :size="20"
+                      color="rgb(135, 197, 64)"
+                      indeterminate
+                    ></v-progress-circular>
+                  </span>
+                </v-btn>
               </v-form>
             </div>
           </v-col>
@@ -75,8 +100,71 @@
 </template>
 
 <script>
+import { HTTP } from "../../common/commom-http";
+
 export default {
   name: "ContactForm",
+  data() {
+    return {
+      isFormValid: false,
+      logoutText: true,
+      logoutLoader: false,
+      form: {
+        name: "",
+        company_name: "",
+        email: "",
+        phone: "",
+        message: "",
+      },
+      // Validation Rules
+      nameRules: [
+        (v) => !!v || "Name is required",
+        (v) => v.length >= 3 || "Name must be at least 3 characters",
+      ],
+      companyNameRules: [(v) => !!v || "Company name is required"],
+      emailRules: [
+        (v) => !!v || "Email is required",
+        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      ],
+      phoneRules: [
+        (v) => !!v || "Phone number is required",
+        (v) => /^\d{10,15}$/.test(v) || "Phone number must be valid",
+      ],
+      messageRules: [
+        (v) => !!v || "Message is required",
+        (v) => v.length >= 10 || "Message must be at least 10 characters",
+      ],
+    };
+  },
+  methods: {
+    async submit() {
+      if (this.$refs.form.validate()) {
+        this.logoutText = false;
+        this.logoutLoader = true;
+        try {
+          const response = await HTTP.post("contacts", this.form);
+          console.log("Form submitted successfully", response);
+          window.alert("Form Submitted");
+          this.resetForm();
+        } catch (error) {
+          console.error("Error submitting the form", error);
+          window.alert("Error submitting form");
+        } finally {
+          this.logoutText = true;
+          this.logoutLoader = false;
+        }
+      }
+    },
+    resetForm() {
+      this.form = {
+        name: "",
+        company_name: "",
+        email: "",
+        phone: "",
+        message: "",
+      };
+    },
+  },
 };
 </script>
 
