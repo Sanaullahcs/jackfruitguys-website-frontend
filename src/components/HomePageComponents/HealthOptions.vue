@@ -4,19 +4,42 @@
       <v-row>
         <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
-            <v-img
-              class="mx-auto mb-5"
-              :src="sectionFive?.image1"
-              max-width="95px"
-            ></v-img>
-            <h1 class="header">{{ sectionFive?.title1 }}</h1>
-            <p class="header-text">
-              {{ sectionFive?.description1 }}
-            </p>
+            <MotionGroup preset="slideVisibleBottom" :duration="1200">
+              <v-img
+                class="mx-auto mb-5"
+                :src="sectionFive?.image1"
+                max-width="95px"
+              ></v-img>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleBottom" :duration="1400">
+              <h1 class="header">{{ sectionFive?.title1 }}</h1>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleBottom" :duration="1600">
+              <p class="header-text">
+                {{ sectionFive?.description1 }}
+              </p>
+            </MotionGroup>
           </div>
         </v-col>
         <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
+            <MotionGroup preset="slideVisibleBottom" :duration="1200">
+              <v-img
+                class="mx-auto mb-5"
+                :src="sectionFive?.image2"
+                max-width="95px"
+              ></v-img>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleBottom" :duration="1400">
+              <h1 class="header">{{ sectionFive?.title2 }}</h1>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleBottom" :duration="1600">
+              <p class="header-text">
+                {{ sectionFive?.description2 }}
+              </p>
+            </MotionGroup>
+          </div>
+          <!-- <div>
             <v-img
               :src="sectionFive?.image2"
               class="mx-auto mb-5"
@@ -26,18 +49,35 @@
             <p class="header-text">
               {{ sectionFive?.description2 }}
             </p>
-          </div>
+          </div> -->
         </v-col>
         <v-col cols="12" lg="4" md="4" sm="12" xs="12">
           <div>
+            <MotionGroup preset="slideVisibleBottom" :duration="1200">
+              <v-img
+                class="mx-auto mb-5"
+                :src="sectionFive?.image3"
+                max-width="95px"
+              ></v-img>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleBottom" :duration="1400">
+            <h1 class="header">{{ sectionFive?.title3 }}</h1>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleBottom" :duration="1600">
+            <p class="header-text">
+              {{ sectionFive?.description3 }}
+            </p>
+            </MotionGroup>
+          </div>
+          <!-- <div>
             <v-img
               class="mx-auto mb-5"
               :src="sectionFive?.image3"
               max-width="95px"
             ></v-img>
-            <h1 class="header">{{ sectionFive?.title2 }}</h1>
-            <p class="header-text">{{ sectionFive?.description2 }}</p>
-          </div>
+            <h1 class="header">{{ sectionFive?.title3 }}</h1>
+            <p class="header-text">{{ sectionFive?.description3 }}</p>
+          </div> -->
         </v-col>
       </v-row>
     </div>

@@ -4,21 +4,29 @@
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
         <div class="ms-md-16 px-4">
-          <h2 class="jackfruitsHeading text-left my-5 fontSize50">
-            {{ sectionFour?.section_4_title }}
-          </h2>
-          <p class="about-txt" v-html="sectionFour?.text"></p>
-          <v-btn elevation="0" class="readmorebtn my-5">Read More</v-btn>
+          <MotionGroup preset="slideVisibleLeft" :duration="1200">
+            <h2 class="jackfruitsHeading text-left my-5 fontSize50">
+              {{ sectionFour?.section_4_title }}
+            </h2>
+          </MotionGroup>
+          <MotionGroup preset="slideVisibleLeft" :duration="1600">
+            <p class="about-txt" v-html="sectionFour?.text"></p>
+          </MotionGroup>
+          <MotionGroup preset="fadeVisible" :duration="1200">
+            <v-btn elevation="0" class="readmorebtn my-5">Read More</v-btn>
+          </MotionGroup>
         </div>
       </v-col>
 
       <!-- Image Section -->
       <v-col cols="12" md="6" class="d-flex justify-center">
-        <v-img
-          :src="sectionFour?.image"
-          class="img-responsive ml-auto mb-n8"
-          max-width="70%"
-        ></v-img>
+        <MotionGroup preset="slideVisibleBottom" :duration="1200">
+          <v-img
+            :src="sectionFour?.image"
+            class="img-responsive ml-auto mb-n8"
+            max-width="70%"
+          ></v-img>
+        </MotionGroup>
       </v-col>
     </v-row>
   </div>
