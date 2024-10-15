@@ -22,74 +22,89 @@
             style="background-color: #87c540"
           >
             <div class="form-section pa-6">
-              <h2 class="white--text mb-4 contact-heading">
-                We'd love to hear from you!
-              </h2>
+              <MotionGroup preset="slideVisibleLeft" :duration="1000">
+                <h2 class="white--text mb-4 contact-heading">
+                  We'd love to hear from you!
+                </h2>
+              </MotionGroup>
               <v-form ref="form" v-model="isFormValid" @submit.prevent="submit">
-                <v-text-field
-                  v-model="form.name"
-                  label="Your Name"
-                  outlined
-                  dense
-                  class="mb-4"
-                  hide-details
-                  :rules="nameRules"
-                ></v-text-field>
-                <v-text-field
-                  v-model="form.company_name"
-                  label="Company Name"
-                  outlined
-                  dense
-                  class="mb-4"
-                  hide-details
-                  :rules="companyNameRules"
-                ></v-text-field>
-                <v-text-field
-                  v-model="form.email"
-                  label="Email"
-                  outlined
-                  dense
-                  class="mb-4"
-                  hide-details
-                  :rules="emailRules"
-                ></v-text-field>
-                <v-text-field
-                  v-model="form.phone"
-                  label="Phone"
-                  outlined
-                  dense
-                  class="mb-4"
-                  hide-details
-                  :rules="phoneRules"
-                ></v-text-field>
-                <v-textarea
-                  v-model="form.message"
-                  label="Message"
-                  outlined
-                  dense
-                  rows="4"
-                  class="mb-4"
-                  hide-details
-                  :rules="messageRules"
-                ></v-textarea>
-                <v-btn
-                  class="submit"
-                  color="white"
-                  elevation="0"
-                  text
-                  large
-                  :disabled="!isFormValid"
-                  @click="submit"
-                >
-                  <span v-if="logoutText">Submit</span>
-                  <span v-if="logoutLoader">
-                    <v-progress-circular
-                      :size="20"
-                      color="rgb(135, 197, 64)"
-                      indeterminate
-                    ></v-progress-circular>
-                  </span>
-                </v-btn>
+                <MotionGroup preset="slideVisibleLeft" :duration="1200">
+                  <v-text-field
+                    v-model="form.name"
+                    label="Your Name"
+                    outlined
+                    dense
+                    class="mb-4"
+                    hide-details
+                    :rules="nameRules"
+                  ></v-text-field>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleLeft" :duration="1400">
+                  <v-text-field
+                    v-model="form.company_name"
+                    label="Company Name"
+                    outlined
+                    dense
+                    class="mb-4"
+                    hide-details
+                    :rules="companyNameRules"
+                  ></v-text-field>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleLeft" :duration="1600">
+                  <v-text-field
+                    v-model="form.email"
+                    label="Email"
+                    outlined
+                    dense
+                    class="mb-4"
+                    hide-details
+                    :rules="emailRules"
+                  ></v-text-field>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleLeft" :duration="1800">
+                  <v-text-field
+                    v-model="form.phone"
+                    label="Phone"
+                    outlined
+                    dense
+                    class="mb-4"
+                    hide-details
+                    :rules="phoneRules"
+                  ></v-text-field>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleLeft" :duration="2000">
+                  <v-textarea
+                    v-model="form.message"
+                    label="Message"
+                    outlined
+                    dense
+                    rows="4"
+                    class="mb-4"
+                    hide-details
+                    :rules="messageRules"
+                  ></v-textarea>
+                </MotionGroup>
+                <!-- <MotionGroup preset="slideVisibleLeft" :duration="1200"> -->
+                  <v-btn
+                  v-motion-slide-visible-left
+                    class="submit"
+                    color="white"
+                    elevation="0"
+                    text
+                    large
+                    :disabled="!isFormValid"
+                    @click="submit"
+                  >
+                    <span v-if="logoutText">Submit</span>
+                    <span v-if="logoutLoader">
+                      <v-progress-circular
+                        :size="20"
+                        color="rgb(135, 197, 64)"
+                        indeterminate
+                      ></v-progress-circular>
+                    </span>
+                  </v-btn>
+                <!-- </MotionGroup> -->
               </v-form>
             </div>
           </v-col>
