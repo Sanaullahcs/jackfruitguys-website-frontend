@@ -14,8 +14,9 @@
       <div class="my-6">
         <MotionGroup preset="slideVisibleBottom" :duration="1400">
           <v-img
-            class="joinusimgCss"
+            class="joinusimgCss mx-auto"
             alt="images about"
+            max-width="800px"
             max-height="80vh"
             :src="sectionOne?.image"
           ></v-img>
@@ -36,7 +37,8 @@
       </MotionGroup>
       <MotionGroup preset="slideVisibleBottom" :duration="1400">
         <v-img
-          class="joinusimgCss my-6"
+          class="joinusimgCss my-6 mx-auto"
+          max-width="800px"
           max-height="80vh"
           :src="sectionTwo?.image"
         ></v-img>
@@ -102,8 +104,9 @@
             ><div>
               <MotionGroup preset="slideVisibleRight" :duration="1000">
                 <v-img
-                  class="joinusimgCss"
+                  class="joinusimgCss mx-auto"
                   max-height="80vh"
+                  max-width="800px"
                   :src="sectionThree?.image"
                 ></v-img>
               </MotionGroup></div
@@ -126,8 +129,9 @@
       <div class="my-6">
         <MotionGroup preset="slideVisibleBottom" :duration="1400">
           <v-img
-            class="joinusimgCss"
+            class="joinusimgCss mx-auto"
             max-height="80vh"
+            max-width="800px"
             :src="sectionFour?.image"
           ></v-img>
         </MotionGroup>
