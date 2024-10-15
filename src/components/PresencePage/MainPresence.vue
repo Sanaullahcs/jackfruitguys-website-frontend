@@ -1,10 +1,16 @@
 <template>
   <div class="text-black py-10">
     <div class="maxFooter">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionOne.title }}</h1>
-      <p class="jackfruitsText max-700 mx-auto text-center pb-10">
-        {{ sectionOne.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionOne.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText max-700 mx-auto text-center pb-10">
+          {{ sectionOne.subtitle }}
+        </p>
+      </MotionGroup>
     </div>
     <div class="pink-bg pa-16">
       <div>
@@ -13,10 +19,16 @@
           <template v-if="index % 2 === 0">
             <v-col cols="12" lg="6" xl="6">
               <div class="d-flex flex-column justify-center h-100 pl-3">
-                <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
-                <p class="jackfruitsText">
-                  {{ section.subtitle }}
-                </p>
+                <MotionGroup preset="slideVisibleRight" :duration="1000">
+                  <h1 class="jackfruitsHeading text-left">
+                    {{ section.title }}
+                  </h1>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleRight" :duration="1200">
+                  <p class="jackfruitsText">
+                    {{ section.subtitle }}
+                  </p>
+                </MotionGroup>
               </div>
             </v-col>
             <v-col cols="12" lg="6" xl="6">
@@ -43,10 +55,16 @@
             </v-col>
             <v-col cols="12" lg="6" xl="6">
               <div class="d-flex flex-column justify-center h-100 pl-3">
-                <h1 class="jackfruitsHeading text-left">{{ section.title }}</h1>
-                <p class="jackfruitsText">
-                  {{ section.subtitle }}
-                </p>
+                <MotionGroup preset="slideVisibleLeft" :duration="1000">
+                  <h1 class="jackfruitsHeading text-left">
+                    {{ section.title }}
+                  </h1>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleLeft" :duration="1200">
+                  <p class="jackfruitsText">
+                    {{ section.subtitle }}
+                  </p>
+                </MotionGroup>
               </div>
             </v-col>
           </template>
