@@ -1,27 +1,35 @@
 <template>
   <div class="text-black px-16">
     <div>
-      <h1 class="jackfruitsHeading mx-auto max-700">
-        {{ sectionOne.title }}
-      </h1>
-      <p class="jackfruitsText mx-auto text-center mb-6 max-700">
-        {{ sectionOne.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading mx-auto max-700">
+          {{ sectionOne.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <p class="jackfruitsText mx-auto text-center mb-6 max-700">
+          {{ sectionOne.subtitle }}
+        </p>
+      </MotionGroup>
     </div>
     <div>
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <ul class="jackfruitsText" v-html="sectionOne.description_1"></ul>
+            <MotionGroup preset="slideVisibleLeft" :duration="1500">
+              <ul class="jackfruitsText" v-html="sectionOne.description_1"></ul>
+            </MotionGroup>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img
-              class="joinusimgCss"
-              max-height="80vh"
-              :src="sectionOne.image_1"
-            ></v-img>
+            <MotionGroup preset="slideVisibleRight" :duration="1500">
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                :src="sectionOne.image_1"
+              ></v-img>
+            </MotionGroup>
             <p
               class="jackfruitsTextGreen my-3"
               v-html="sectionOne.description_2"
@@ -31,23 +39,31 @@
       </v-row>
     </div>
     <div class="mt-16 mb-8">
-      <h1 class="jackfruitsHeading mx-auto max-700 text-center">
-        {{ sectionTwo.title }}
-      </h1>
-      <p class="jackfruitsText mx-auto max-700 text-center">
-        {{ sectionTwo.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading mx-auto max-700 text-center">
+          {{ sectionTwo.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText mx-auto max-700 text-center">
+          {{ sectionTwo.subtitle }}
+        </p>
+      </MotionGroup>
     </div>
     <div>
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div class="mb-8">
-            <v-img
-              class="joinusimgCss"
-              max-height="80vh"
-              :src="sectionTwo.image_1"
-            ></v-img>
-            <p class="jackfruitsText" v-html="sectionTwo.description_2"></p>
+            <MotionGroup preset="slideVisibleLeft" :duration="1000">
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                :src="sectionTwo.image_1"
+              ></v-img>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleLeft" :duration="1300">
+              <p class="jackfruitsText" v-html="sectionTwo.description_2"></p>
+            </MotionGroup>
             <!-- <p class="jackfruitsTextGreen">
               By opting for jackfruit, you're contributing to a more sustainable
               food system with a lower environmental impact.
@@ -56,7 +72,9 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <ul class="jackfruitsText" v-html="sectionTwo.description_1"></ul>
+            <MotionGroup preset="slideVisibleRight" :duration="1000">
+              <ul class="jackfruitsText" v-html="sectionTwo.description_1"></ul>
+            </MotionGroup>
           </div>
         </v-col>
       </v-row>
@@ -68,21 +86,27 @@
           <template v-if="index % 2 === 0">
             <v-col cols="12" lg="6" xl="6">
               <div class="d-flex flex-column justify-center h-100 pl-3">
-                <h1 class="jackfruitsHeading text-left">
-                  {{ item.title }}
-                </h1>
-                <p class="jackfruitsText">
-                  {{ item.subtitle }}
-                </p>
+                <MotionGroup preset="slideVisibleRight" :duration="1000">
+                  <h1 class="jackfruitsHeading text-left">
+                    {{ item.title }}
+                  </h1>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleRight" :duration="1000">
+                  <p class="jackfruitsText">
+                    {{ item.subtitle }}
+                  </p>
+                </MotionGroup>
               </div>
             </v-col>
             <v-col cols="12" lg="6" xl="6">
               <div>
-                <v-img
-                  class="joinusimgCss"
-                  max-height="80vh"
-                  :src="item.media"
-                ></v-img>
+                <MotionGroup preset="fadeVisible" :duration="1200">
+                  <v-img
+                    class="joinusimgCss"
+                    max-height="80vh"
+                    :src="item.media"
+                  ></v-img>
+                </MotionGroup>
               </div>
             </v-col>
           </template>
@@ -91,21 +115,27 @@
           <template v-else>
             <v-col cols="12" lg="6" xl="6">
               <div>
-                <v-img
-                  class="joinusimgCss"
-                  max-height="80vh"
-                  :src="item.media"
-                ></v-img>
+                <MotionGroup preset="fadeVisible" :duration="1200">
+                  <v-img
+                    class="joinusimgCss"
+                    max-height="80vh"
+                    :src="item.media"
+                  ></v-img>
+                </MotionGroup>
               </div>
             </v-col>
             <v-col cols="12" lg="6" xl="6">
               <div class="d-flex flex-column justify-center h-100 pl-3">
-                <h1 class="jackfruitsHeading text-left">
-                  {{ item.title }}
-                </h1>
-                <p class="jackfruitsText">
-                  {{ item.subtitle }}
-                </p>
+                <MotionGroup preset="slideVisibleLeft" :duration="1000">
+                  <h1 class="jackfruitsHeading text-left">
+                    {{ item.title }}
+                  </h1>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleLeft" :duration="1200">
+                  <p class="jackfruitsText">
+                    {{ item.subtitle }}
+                  </p>
+                </MotionGroup>
               </div>
             </v-col>
           </template>
@@ -215,10 +245,17 @@
     </div>
   </div>
   <div class="background-green py-16 text-center">
-    <h3 class="lastHeading">{{ sectionFour.title }}</h3>
-    <p class="jackfruitsText max-700 mx-auto">
-      {{ sectionFour.subtitle }}
-    </p>
+    <MotionGroup preset="slideVisibleBotttom" :duration="1000">
+      <h3 class="lastHeading">{{ sectionFour.title }}</h3>
+    </MotionGroup>
+    <MotionGroup
+      preset="slideVisibleBottom"
+      :duration="1200"
+    >
+      <p class="jackfruitsText max-700 mx-auto">
+        {{ sectionFour.subtitle }}
+      </p>
+    </MotionGroup>
     <v-btn class="contactbtn my-5" elevation="0">Contact Us</v-btn>
   </div>
 </template>
