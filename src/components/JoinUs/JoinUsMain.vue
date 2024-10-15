@@ -1,9 +1,11 @@
 <template>
   <div class="text-black px-16">
     <div>
-      <h2 class="jackfruitsHeading mx-auto max-700 mt-8">
-        {{ sectionOne?.title }}
-      </h2>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h2 class="jackfruitsHeading mx-auto max-700 mt-8">
+          {{ sectionOne?.title }}
+        </h2>
+      </MotionGroup>
       <!-- <p class="jackfruitsText mx-auto text-center mb-6 max-900">
         At Jackfruit Guys, we’re not just building a brand; we’re cultivating a
         movement centered around innovation, sustainability, and growth. Our
@@ -30,30 +32,38 @@
         lasting legacy in the plant-based food sector. Let’s grow this exciting
         future, one opportunity at a time!
       </p> -->
-      <p
-        class="jackfruitsText mx-auto text-center mb-6 max-900"
-        v-html="sectionOne?.description"
-      ></p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p
+          class="jackfruitsText mx-auto text-center mb-6 max-900"
+          v-html="sectionOne?.description"
+        ></p>
+      </MotionGroup>
     </div>
     <div>
-      <v-img
-        max-height="80vh"
-        class="joinusimgCss"
-        style="object-fit: cover"
-        :src="sectionOne?.image"
-      ></v-img>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <v-img
+          max-height="80vh"
+          class="joinusimgCss"
+          style="object-fit: cover"
+          :src="sectionOne?.image"
+        ></v-img>
+      </MotionGroup>
     </div>
     <div class="mt-10">
       <v-row>
         <v-col cols="12" lg="6" xl="6"
           ><div>
-            <h2 class="jackfruitsHeading text-left max-700">
-              {{ sectionTwo?.title }}
-            </h2>
-            <p
-              class="jackfruitsText text-left max-900"
-              v-html="sectionTwo?.description"
-            ></p>
+            <MotionGroup preset="slideVisibleLeft" :duration="1000">
+              <h2 class="jackfruitsHeading text-left max-700">
+                {{ sectionTwo?.title }}
+              </h2>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleLeft" :duration="1300">
+              <p
+                class="jackfruitsText text-left max-900"
+                v-html="sectionTwo?.description"
+              ></p>
+            </MotionGroup>
             <!-- <p class="jackfruitsText text-left ml-5 max-900">
               Partnering with Jackfruit Guys means joining a unique bridge
               between farmers and consumers. We’re dedicated to transforming

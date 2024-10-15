@@ -3,13 +3,20 @@
     <v-row class="mx-2 mx-md-16">
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
-        <div class="about-content mx-auto">
-          <h2 class="jackfruitsHeading text-left fontSize50">
-            {{ sectionThree.section_3_title }}
-          </h2>
-          <p class="about-txt" v-html="sectionThree.text"></p>
-          <v-btn elevation="0" class="AboutUsButton">About Us</v-btn>
-          <!-- <div class="position-relative mt-5 image-section">
+       
+          <div class="about-content mx-auto">
+            <MotionGroup preset="slideVisibleLeft" :duration="1200">
+            <h2 class="jackfruitsHeading text-left fontSize50">
+              {{ sectionThree.section_3_title }}
+            </h2>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleLeft" :duration="1600">
+            <p class="about-txt" v-html="sectionThree.text"></p>
+            </MotionGroup>
+            <MotionGroup preset="fadeVisible" :duration="1200">
+            <v-btn elevation="0" class="AboutUsButton">About Us</v-btn>
+            </MotionGroup>
+            <!-- <div class="position-relative mt-5 image-section">
             <v-img
               style="z-index: 2"
               src="../assets/images/about1.png"
@@ -23,7 +30,7 @@
             />
             <v-btn elevation="0" class="readmorebtn">Read More</v-btn>
           </div> -->
-        </div>
+          </div>
       </v-col>
 
       <!-- Image Section -->
@@ -32,13 +39,15 @@
         md="6"
         class="d-flex justify-md-start justify-center align-center"
       >
-        <v-img
-          :src="sectionThree.image"
-          class="about-side-img joinusimgCss"
-          max-height="80vh"
-          max-width="100%"
-          alt="logo"
-        />
+        <MotionGroup preset="slideVisibleRight" :duration="1200">
+          <v-img
+            :src="sectionThree.image"
+            class="about-side-img joinusimgCss"
+            max-height="80vh"
+            max-width="100%"
+            alt="logo"
+          />
+        </MotionGroup>
       </v-col>
     </v-row>
   </div>

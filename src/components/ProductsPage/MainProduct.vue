@@ -1,19 +1,33 @@
 <template>
   <div class="text-black py-10">
     <div class="maxFooter">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionOne?.title }}</h1>
-      <p class="jackfruitsText max-700 mx-auto text-center pb-10">
-        {{ sectionOne?.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionOne?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText max-700 mx-auto text-center pb-10">
+          {{ sectionOne?.subtitle }}
+        </p>
+      </MotionGroup>
     </div>
     <div class="pink-bg px-16">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionTwo?.title }}</h1>
-      <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-        {{ sectionTwo?.subtitle }}
-      </p>
-      <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionTwo?.subtitle_2 }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionTwo?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsTextGreen max-700 mx-auto text-center">
+          {{ sectionTwo?.subtitle }}
+        </p>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1400">
+        <p class="jackfruitsText max-700 mx-auto text-center">
+          {{ sectionTwo?.subtitle_2 }}
+        </p>
+      </MotionGroup>
     </div>
     <div class="px-16 pink-bg py-10">
       <v-row>
@@ -24,31 +38,39 @@
               anyone seeking a plant-based protein option packed with flavor and
               benefits. Here's why ours is the perfect choice for you:
             </p> -->
-            <ul
-              class="jackfruitsText ps-10"
-              v-html="sectionTwo?.description"
-            ></ul>
+            <MotionGroup preset="slideVisibleLeft" :duration="1000">
+              <ul
+                class="jackfruitsText ps-10"
+                v-html="sectionTwo?.description"
+              ></ul>
+            </MotionGroup>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img
-              max-height="100vh"
-              class="joinusimgCss"
-              :src="sectionTwo?.image"
-            ></v-img>
+            <MotionGroup preset="slideVisibleRight" :duration="1000">
+              <v-img
+                max-height="100vh"
+                class="joinusimgCss"
+                :src="sectionTwo?.image"
+              ></v-img>
+            </MotionGroup>
           </div>
         </v-col>
       </v-row>
     </div>
     <div class="pa-16">
       <div>
-        <h1 class="jackfruitsHeading max-700 mx-auto">
-          {{ sectionThree?.title }}
-        </h1>
-        <p class="jackfruitsTextGreen max-700 mx-auto text-center py-3">
-          {{ sectionThree?.subtitle }}
-        </p>
+        <MotionGroup preset="slideVisibleBottom" :duration="1000">
+          <h1 class="jackfruitsHeading max-700 mx-auto">
+            {{ sectionThree?.title }}
+          </h1>
+        </MotionGroup>
+        <MotionGroup preset="slideVisibleBottom" :duration="1300">
+          <p class="jackfruitsTextGreen max-700 mx-auto text-center py-3">
+            {{ sectionThree?.subtitle }}
+          </p>
+        </MotionGroup>
         <!-- <p class="jackfruitsText max-900 mx-auto text-center py-3">
           As sustainable and health-conscious food enthusiasts, we highly
           recommend incorporating dehydrated jackfruit pulp into your diet.
@@ -74,27 +96,35 @@
           healthy and conscious lifestyle, and we wholeheartedly recommend
           trying it out.
         </p> -->
-        <p
-          class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionThree?.description"
-        ></p>
+        <MotionGroup preset="slideVisibleBottom" :duration="1500">
+          <p
+            class="jackfruitsText max-900 mx-auto text-center py-3"
+            v-html="sectionThree?.description"
+          ></p>
+        </MotionGroup>
       </div>
       <div>
-        <v-img
-          max-height="80vh"
-          class="joinusimgCss"
-          :src="sectionThree?.image"
-        ></v-img>
+        <MotionGroup preset="slideVisibleLeft" :duration="1000">
+          <v-img
+            max-height="80vh"
+            class="joinusimgCss"
+            :src="sectionThree?.image"
+          ></v-img>
+        </MotionGroup>
       </div>
     </div>
     <div class="pa-16 pink-bg">
       <div>
-        <h1 class="jackfruitsHeading max-700 mx-auto">
-          {{ sectionFour?.title }}
-        </h1>
-        <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-          {{ sectionFour?.subtitle }}
-        </p>
+        <MotionGroup preset="slideVisibleBottom" :duration="1000">
+          <h1 class="jackfruitsHeading max-700 mx-auto">
+            {{ sectionFour?.title }}
+          </h1>
+        </MotionGroup>
+        <MotionGroup preset="slideVisibleBottom" :duration="1200">
+          <p class="jackfruitsTextGreen max-700 mx-auto text-center">
+            {{ sectionFour?.subtitle }}
+          </p>
+        </MotionGroup>
         <!-- <p class="jackfruitsText max-900 mx-auto text-center py-3">
           This whole fresh fruit is a true conversation starter! The largest
           tree-borne fruit in the world, jackfruit boasts a spiky green exterior
@@ -110,45 +140,53 @@
           For the adventurous eater, explore pickling or preserving the
           jackfruit for a longer-lasting taste sensation.
         </p> -->
-        <p
-          class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionFour?.description"
-        ></p>
+        <MotionGroup preset="slideVisibleBottom" :duration="1500">
+          <p
+            class="jackfruitsText max-900 mx-auto text-center py-3"
+            v-html="sectionFour?.description"
+          ></p>
+        </MotionGroup>
       </div>
       <div>
-        <v-img
-          max-height="80vh"
-          class="joinusimgCss"
-          :src="sectionFour?.image"
-        ></v-img>
+        <MotionGroup preset="slideVisibleRight" :duration="1000">
+          <v-img
+            max-height="80vh"
+            class="joinusimgCss"
+            :src="sectionFour?.image"
+          ></v-img>
+        </MotionGroup>
       </div>
     </div>
     <div class="pa-16">
       <div>
-        <h1 class="jackfruitsHeading max-700 mx-auto">
-          {{ sectionFive?.title }}
-        </h1>
-        <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-          {{ sectionFive?.subtitle_1 }}
-        </p>
-        <p
-          class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionFive?.description_1"
-        ></p>
-        <p class="jackfruitsTextGreen max-700 mx-auto text-center">
-          {{ sectionFive?.subtitle_2 }}
-        </p>
-        <p
-          class="jackfruitsText max-900 mx-auto text-center py-3"
-          v-html="sectionFive?.description_2"
-        ></p>
+        <MotionGroup preset="slideVisibleBottom" :duration="1000">
+          <h1 class="jackfruitsHeading max-700 mx-auto">
+            {{ sectionFive?.title }}
+          </h1>
+          <p class="jackfruitsTextGreen max-700 mx-auto text-center">
+            {{ sectionFive?.subtitle_1 }}
+          </p>
+          <p
+            class="jackfruitsText max-900 mx-auto text-center py-3"
+            v-html="sectionFive?.description_1"
+          ></p>
+          <p class="jackfruitsTextGreen max-700 mx-auto text-center">
+            {{ sectionFive?.subtitle_2 }}
+          </p>
+          <p
+            class="jackfruitsText max-900 mx-auto text-center py-3"
+            v-html="sectionFive?.description_2"
+          ></p>
+        </MotionGroup>
       </div>
       <div>
-        <v-img
-          max-height="80vh"
-          class="joinusimgCss"
-          :src="sectionFive?.image"
-        ></v-img>
+        <MotionGroup preset="slideVisibleLeft" :duration="1000">
+          <v-img
+            max-height="80vh"
+            class="joinusimgCss"
+            :src="sectionFive?.image"
+          ></v-img>
+        </MotionGroup>
       </div>
     </div>
   </div>

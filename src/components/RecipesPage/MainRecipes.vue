@@ -1,10 +1,16 @@
 <template>
   <div class="text-black pt-10">
     <div class="maxFooter">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionOne.title }}</h1>
-      <p class="jackfruitsText max-700 mx-auto text-center pb-10">
-        {{ sectionOne.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionOne.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText max-700 mx-auto text-center pb-10">
+          {{ sectionOne.subtitle }}
+        </p>
+      </MotionGroup>
     </div>
     <div class="pink-bg pa-16">
       <div v-for="(section, index) in sectionTwo" :key="index">
@@ -16,11 +22,15 @@
           ></v-img>
         </div>
         <div>
-          <h3 class="jackfruitsHeadingSmall">{{ section.title }}</h3>
-          <p class="jackfruitsText">Intructions:</p>
-          <ol class="jackfruitsText px-4">
-            <li v-html="section.subtitle"></li>
-          </ol>
+          <MotionGroup preset="slideVisibleBottom" :duration="1000">
+            <h3 class="jackfruitsHeadingSmall">{{ section.title }}</h3>
+          </MotionGroup>
+          <MotionGroup preset="slideVisibleBottom" :duration="1200">
+            <p class="jackfruitsText">Intructions:</p>
+            <ol class="jackfruitsText px-4">
+              <li v-html="section.subtitle"></li>
+            </ol>
+          </MotionGroup>
         </div>
       </div>
     </div>

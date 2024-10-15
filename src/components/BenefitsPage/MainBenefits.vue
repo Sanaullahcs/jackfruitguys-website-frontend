@@ -1,39 +1,54 @@
 <template>
   <div class="maxFooter py-10 text-black">
-    <h1 class="jackfruitsHeading max-700 mx-auto">
-      The Benefits of Jackfruit Guys!
-    </h1>
-    <p class="jackfruitsText max-700 mx-auto text-center">
-      Jackfruit Guys offers delicious, nutrient-rich jackfruit products that
-      boost health with essential vitamins, minerals, and fiber. Perfect for
-      versatile cooking, our jackfruit serves as a tasty plant-based meat
-      alternative. We prioritize sustainability and fair trade, supporting
-      eco-friendly farming and local communities.
-    </p>
+    <MotionGroup preset="slideVisibleBottom" :duration="1000">
+      <h1 class="jackfruitsHeading max-700 mx-auto">
+        The Benefits of Jackfruit Guys!
+      </h1>
+    </MotionGroup>
+    <MotionGroup preset="slideVisibleBottom" :duration="1300">
+      <p class="jackfruitsText max-700 mx-auto text-center">
+        Jackfruit Guys offers delicious, nutrient-rich jackfruit products that
+        boost health with essential vitamins, minerals, and fiber. Perfect for
+        versatile cooking, our jackfruit serves as a tasty plant-based meat
+        alternative. We prioritize sustainability and fair trade, supporting
+        eco-friendly farming and local communities.
+      </p>
+    </MotionGroup>
   </div>
   <div class="text-black pink-bg px-16">
     <div class="py-10">
-      <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionOne?.title }}
-      </h1>
-      <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionOne?.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1400">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionOne?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText max-700 mx-auto text-center">
+          {{ sectionOne?.subtitle }}
+        </p>
+      </MotionGroup>
     </div>
     <div>
       <v-row no-gutters>
         <v-col cols="12" lg="6" xl="6">
           <div class="pr-3">
-            <ul class="jackfruitsText" v-html="sectionOne?.description_1"></ul>
+            <MotionGroup preset="slideVisibleLeft" :duration="1000">
+              <ul
+                class="jackfruitsText"
+                v-html="sectionOne?.description_1"
+              ></ul>
+            </MotionGroup>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img
-              class="joinusimgCss"
-              max-height="70vh"
-              :src="sectionOne?.image_1"
-            ></v-img>
+            <MotionGroup preset="slideVisibleRight" :duration="1000">
+              <v-img
+                class="joinusimgCss"
+                max-height="70vh"
+                :src="sectionOne?.image_1"
+              ></v-img>
+            </MotionGroup>
           </div>
         </v-col>
       </v-row>
@@ -42,11 +57,13 @@
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img
-              class="joinusimgCss"
-              max-height="70vh"
-              :src="sectionOne?.image_2"
-            ></v-img>
+            <MotionGroup preset="slideVisibleLeft" :duration="1000">
+              <v-img
+                class="joinusimgCss"
+                max-height="70vh"
+                :src="sectionOne?.image_2"
+              ></v-img>
+            </MotionGroup>
             <!-- <p class="jackfruitsText mt-5">
               Incorporating jackfruit into your diet is a delicious way to boost
               your fiber intake, support healthy digestion, and explore a world
@@ -61,7 +78,12 @@
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div class="pr-3">
-            <ul class="jackfruitsText" v-html="sectionOne?.description_2"></ul>
+            <MotionGroup preset="slideVisibleRight" :duration="1000">
+              <ul
+                class="jackfruitsText"
+                v-html="sectionOne?.description_2"
+              ></ul>
+            </MotionGroup>
           </div>
         </v-col>
       </v-row>
@@ -69,31 +91,44 @@
   </div>
   <div class="bg-white px-16">
     <div class="py-10">
-      <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionTwo?.title }}
-      </h1>
-      <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionTwo?.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionTwo?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText max-700 mx-auto text-center">
+          {{ sectionTwo?.subtitle }}
+        </p>
+      </MotionGroup>
     </div>
     <div>
       <v-row>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <ul class="jackfruitsText" v-html="sectionTwo?.description_1"></ul>
+            <MotionGroup preset="slideVisibleLeft" :duration="1000">
+              <ul
+                class="jackfruitsText"
+                v-html="sectionTwo?.description_1"
+              ></ul>
+            </MotionGroup>
           </div>
         </v-col>
         <v-col cols="12" lg="6" xl="6">
           <div>
-            <v-img
-              class="joinusimgCss"
-              max-height="80vh"
-              :src="sectionTwo?.image_1"
-            ></v-img>
-            <p
-              class="jackfruitsText mb-16 mt-16"
-              v-html="sectionTwo?.description_2"
-            ></p>
+            <MotionGroup preset="slideVisibleRight" :duration="1000">
+              <v-img
+                class="joinusimgCss"
+                max-height="80vh"
+                :src="sectionTwo?.image_1"
+              ></v-img>
+            </MotionGroup>
+            <MotionGroup preset="slideVisibleRight" :duration="1300">
+              <p
+                class="jackfruitsText mb-16 mt-16"
+                v-html="sectionTwo?.description_2"
+              ></p>
+            </MotionGroup>
           </div>
         </v-col>
       </v-row>
@@ -133,7 +168,10 @@ export default {
       };
       try {
         const response = await HTTP.post("benefits", payload);
-        console.log("response of the about", response.data.data.BenefitsSection1);
+        console.log(
+          "response of the about",
+          response.data.data.BenefitsSection1
+        );
         this.sectionOne = response.data.data.BenefitsSection1;
         this.sectionTwo = response.data.data.BenefitsSection2;
         // this.sectionThree = response.data.data.AboutSection3;

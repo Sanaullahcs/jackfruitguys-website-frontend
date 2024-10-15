@@ -2,6 +2,7 @@
   <div class="text-black px-16 pink-bg">
     <div>
       <v-img
+        v-motion-pop-visible
         :src="sectionOne.image"
         class="text-center mx-auto"
         max-width="300px"
@@ -17,7 +18,7 @@
         <video
           v-if="sectionOne.video"
           class="d-flex justify-center mx-auto"
-          style="max-height: 80vh;width: 100%;"
+          style="max-height: 80vh; width: 100%"
           autoplay
           muted
           loop

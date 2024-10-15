@@ -1,40 +1,58 @@
 <template>
   <div class="text-black px-16">
     <div class="py-5">
-      <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionOne?.title }}
-      </h1>
-      <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionOne?.description }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionOne?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText max-700 mx-auto text-center">
+          {{ sectionOne?.description }}
+        </p>
+      </MotionGroup>
       <div class="my-6">
-        <v-img
-          class="joinusimgCss"
-          alt="images about"
-          max-height="80vh"
-          :src="sectionOne?.image"
-        ></v-img>
+        <MotionGroup preset="slideVisibleBottom" :duration="1400">
+          <v-img
+            class="joinusimgCss"
+            alt="images about"
+            max-height="80vh"
+            :src="sectionOne?.image"
+          ></v-img>
+        </MotionGroup>
       </div>
     </div>
     <div class="my-5">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionTwo?.title }}</h1>
-      <p
-        class="jackfruitsText max-700 mx-auto text-center"
-        v-html="sectionTwo?.description"
-      ></p>
-      <v-img
-        class="joinusimgCss my-6"
-        max-height="80vh"
-        :src="sectionTwo?.image"
-      ></v-img>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionTwo?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p
+          class="jackfruitsText max-700 mx-auto text-center"
+          v-html="sectionTwo?.description"
+        ></p>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1400">
+        <v-img
+          class="joinusimgCss my-6"
+          max-height="80vh"
+          :src="sectionTwo?.image"
+        ></v-img>
+      </MotionGroup>
     </div>
     <div>
-      <h1 class="jackfruitsHeading max-700 mx-auto">
-        {{ sectionThree?.title }}
-      </h1>
-      <p class="jackfruitsText max-700 mx-auto text-center">
-        {{ sectionThree?.subtitle }}
-      </p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionThree?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p class="jackfruitsText max-700 mx-auto text-center">
+          {{ sectionThree?.subtitle }}
+        </p>
+      </MotionGroup>
       <div class="mt-10">
         <v-row>
           <v-col cols="12" lg="6" xl="6"
@@ -72,34 +90,47 @@
                 crafted with care and integrity. We believe in transparency and
                 honesty in all our operations.
               </p> -->
-              <p
-                class="jackfruitsText"
-                v-html="sectionThree?.description"
-              ></p></div
-          ></v-col>
+              <MotionGroup preset="slideVisibleLeft" :duration="1000">
+                <p
+                  class="jackfruitsText"
+                  v-html="sectionThree?.description"
+                ></p>
+              </MotionGroup>
+            </div>
+          </v-col>
           <v-col cols="12" lg="6" xl="6"
             ><div>
-              <v-img
-                class="joinusimgCss"
-                max-height="80vh"
-                :src="sectionThree?.image"
-              ></v-img></div
+              <MotionGroup preset="slideVisibleRight" :duration="1000">
+                <v-img
+                  class="joinusimgCss"
+                  max-height="80vh"
+                  :src="sectionThree?.image"
+                ></v-img>
+              </MotionGroup></div
           ></v-col>
         </v-row>
       </div>
     </div>
     <div class="my-6">
-      <h1 class="jackfruitsHeading max-700 mx-auto">{{ sectionFour?.title }}</h1>
-      <p
-        class="jackfruitsText max-700 mx-auto text-center"
-        v-html="sectionFour?.description"
-      ></p>
+      <MotionGroup preset="slideVisibleBottom" :duration="1000">
+        <h1 class="jackfruitsHeading max-700 mx-auto">
+          {{ sectionFour?.title }}
+        </h1>
+      </MotionGroup>
+      <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <p
+          class="jackfruitsText max-700 mx-auto text-center"
+          v-html="sectionFour?.description"
+        ></p>
+      </MotionGroup>
       <div class="my-6">
-        <v-img
-          class="joinusimgCss"
-          max-height="80vh"
-          :src="sectionFour?.image"
-        ></v-img>
+        <MotionGroup preset="slideVisibleBottom" :duration="1400">
+          <v-img
+            class="joinusimgCss"
+            max-height="80vh"
+            :src="sectionFour?.image"
+          ></v-img>
+        </MotionGroup>
       </div>
     </div>
   </div>
