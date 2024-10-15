@@ -1,7 +1,12 @@
 <template>
   <div class="pa-16 text-black">
     <div class="text-black" v-if="blog">
-      <v-img max-height="80vh" class="joinusimgCss" :src="blog.image_1"></v-img>
+      <v-img
+        max-height="80vh"
+        max-width="800px"
+        class="joinusimgCss mx-auto"
+        :src="blog.image_1"
+      ></v-img>
       <h1 class="jackfruitsHeadingSmall">{{ blog.title }}</h1>
       <p class="jackfruitsText" v-html="blog.description_2"></p>
     </div>

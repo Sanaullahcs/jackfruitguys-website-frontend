@@ -17,7 +17,8 @@
         <div class="my-3">
           <v-img
             max-height="80vh"
-            class="joinusimgCss"
+            max-width="800px"
+            class="joinusimgCss mx-auto"
             :src="section.media"
           ></v-img>
         </div>
