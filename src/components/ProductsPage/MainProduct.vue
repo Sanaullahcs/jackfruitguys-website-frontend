@@ -107,7 +107,8 @@
         <MotionGroup preset="slideVisibleLeft" :duration="1000">
           <v-img
             max-height="80vh"
-            class="joinusimgCss"
+            max-width="800px"
+            class="joinusimgCss mx-auto"
             :src="sectionThree?.image"
           ></v-img>
         </MotionGroup>
@@ -151,7 +152,8 @@
         <MotionGroup preset="slideVisibleRight" :duration="1000">
           <v-img
             max-height="80vh"
-            class="joinusimgCss"
+            max-width="800px"
+            class="joinusimgCss mx-auto"
             :src="sectionFour?.image"
           ></v-img>
         </MotionGroup>
@@ -183,7 +185,8 @@
         <MotionGroup preset="slideVisibleLeft" :duration="1000">
           <v-img
             max-height="80vh"
-            class="joinusimgCss"
+            max-width="800px"
+            class="joinusimgCss mx-auto"
             :src="sectionFive?.image"
           ></v-img>
         </MotionGroup>
