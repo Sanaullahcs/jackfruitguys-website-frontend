@@ -1,6 +1,18 @@
 <template>
   <div class="px-16">
     <div>
+      <div class="pt-16">
+        <v-img
+          max-height="80vh"
+          class="joinusimgCss"
+          :src="sectionOne?.banner_image"
+        ></v-img>
+      </div>
+    </div>
+    <div class="py-16">
+      <Gallery :sectionTwo="sectionTwo" />
+    </div>
+    <div>
       <div class="py-5">
         <v-img
           :src="sectionOne?.footer_image"
@@ -8,14 +20,6 @@
           max-width="300px"
         ></v-img>
       </div>
-    </div>
-    <div>
-      <div>
-        <v-img :src="sectionOne?.banner_image"></v-img>
-      </div>
-    </div>
-    <div class="py-16">
-      <Gallery :sectionTwo="sectionTwo" />
     </div>
   </div>
 </template>
