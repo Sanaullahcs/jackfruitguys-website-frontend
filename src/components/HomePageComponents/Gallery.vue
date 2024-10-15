@@ -1,13 +1,20 @@
 <template>
-  <div class="stack">
-    <!-- <div class="stack__card" v-for="(card, index) in cards" :key="index">
-      <img :src="card" alt="card image" class="card-img" />
-    </div> -->
+  <div class="stack text-black">
+    <!-- {{ sectionTwo }} -->
+    <div class="stack__card" v-for="(card, index) in sectionTwo" :key="index">
+      <img :src="card.media" alt="card image" class="card-img" />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    sectionTwo: {
+      type: Array,
+      required: true, // Set to true if the prop is required
+    },
+  },
   data() {
     return {
       cards: [
@@ -24,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+.card-img {
+  width: 100%;
+}
 html {
   font-family: sans-serif;
   box-sizing: border-box;
@@ -53,7 +63,7 @@ html {
   font-size: 10rem;
 }
 
-.stack__card:nth-child(1) {
+/* .stack__card:nth-child(1) {
   background-color: #e3342f;
 }
 
@@ -71,5 +81,5 @@ html {
 
 .stack__card:nth-child(5) {
   background-color: #f6993f;
-}
+} */
 </style>

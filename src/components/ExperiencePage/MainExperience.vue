@@ -14,8 +14,8 @@
         <v-img :src="sectionOne?.banner_image"></v-img>
       </div>
     </div>
-    <div>
-      <Gallery />
+    <div class="py-16">
+      <Gallery :sectionTwo="sectionTwo" />
     </div>
   </div>
 </template>
@@ -30,9 +30,9 @@ export default {
   data() {
     return {
       sectionOne: {},
-      sectionTwo: {},
-      sectionThree: {},
-      sectionFour: {},
+      sectionTwo: [],
+      // sectionThree: {},
+      // sectionFour: {},
     };
   },
   mounted() {
@@ -49,7 +49,15 @@ export default {
         const response = await HTTP.post("experience", payload);
         console.log("response of the about", response.data.data.AboutSection1);
         this.sectionOne = response.data.data.ExperienceSection1;
-        // this.sectionTwo = response.data.data.AboutSection2;
+        this.sectionTwo = response.data.data.gallery;
+        console.log("this.sectionTwo before", this.sectionTwo);
+        this.sectionTwo = response.data.data.gallery.map((item) => {
+          return {
+            ...item,
+            media: `${APP_URL}${item.media}`, // Assuming 'image' is the key for the image path
+          };
+        });
+        console.log("this.sectionTwo after", this.sectionTwo);
         // this.sectionThree = response.data.data.AboutSection3;
         // this.sectionFour = response.data.data.AboutSection4;
         // Updating the Image with the base url
