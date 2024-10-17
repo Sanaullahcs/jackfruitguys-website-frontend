@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="chatbot-button">
-      <v-btn icon large color="white" @click="toggleChat">
+      <v-btn icon large color="white" class="borderCHatbot" @click="toggleChat">
         <v-img
           min-width="35px"
           src="../../assets/images/singleLogo.png"
@@ -137,8 +137,11 @@ export default {
       const chatBody = this.$refs.chatBody;
       this.$nextTick(() => {
         if (chatBody) {
-          const myHeight = chatBody.scrollHeight;
-          chatBody.scrollTop = myHeight;
+          // Smooth scroll to the bottom
+          chatBody.scrollTo({
+            top: chatBody.scrollHeight,
+            behavior: "smooth",
+          });
         }
       });
     },
@@ -197,7 +200,7 @@ export default {
         // require('dotenv').config();
         // Call the ChatGPT API
         let API_KEY = process.env.VUE_APP_CHATGPT_KEY;
-        console.log("API_KEY",API_KEY)
+        console.log("API_KEY", API_KEY);
         try {
           const response = await axios.post(
             "https://api.openai.com/v1/chat/completions",
@@ -213,7 +216,6 @@ export default {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${API_KEY}`, // Replace with your API key
               },
-              
             }
           );
 
@@ -384,11 +386,14 @@ export default {
   right: 20px;
   z-index: 1000;
 }
-
+.borderCHatbot {
+  border: 2px solid #9fc43c !important;
+}
 .chatbot-button v-btn {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   background-color: #4caf50;
   color: white;
+
   border-radius: 50%;
 }
 

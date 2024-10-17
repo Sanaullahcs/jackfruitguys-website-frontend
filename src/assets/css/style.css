@@ -34,8 +34,11 @@
 .prompt-field input {
   color: black;
 }
+.v-field--variant-outlined.v-field--focused .v-field__outline {
+  --v-field-border-width: 1px;
+}
 .mt-75 {
-  margin-top: 75px;
+  margin-top: 60px;
 }
 .jackfruitsHeading {
   font-family: Poppins;

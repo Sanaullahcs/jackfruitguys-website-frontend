@@ -2,7 +2,7 @@
   <div class="maxFooter py-10 text-black">
     <MotionGroup preset="slideVisibleBottom" :duration="1000">
       <h1 class="jackfruitsHeading max-700 mx-auto">
-        The Benefits of Jackfruit Guys!
+        The Benefits of Jackfruit!
       </h1>
     </MotionGroup>
     <MotionGroup preset="slideVisibleBottom" :duration="1300">

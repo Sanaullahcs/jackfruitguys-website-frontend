@@ -9,7 +9,7 @@
       <div class="d-flex justify-center pb-5">
         <v-img
           v-motion-fade-visible
-          src="@/assets/images/logo.png"
+          src="@/assets/images/hdlogo.svg"
           max-width="300px"
           min-width="300px"
           alt="logo"
@@ -309,6 +309,9 @@ export default {
           this.activeButton = "partner";
           break;
         case "/blog":
+          this.activeButton = "blog";
+          break;
+        case "/blog/:id":
           this.activeButton = "blog";
           break;
         case "/recipe":
