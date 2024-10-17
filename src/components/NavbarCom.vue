@@ -9,7 +9,7 @@
       <div class="d-flex justify-center pb-5">
         <v-img
           v-motion-fade-visible
-          src="@/assets/images/hdlogo.png"
+          src="@/assets/images/hdlogo.svg"
           max-width="300px"
           min-width="300px"
           alt="logo"
