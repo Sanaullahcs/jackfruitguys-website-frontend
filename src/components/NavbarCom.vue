@@ -3,7 +3,7 @@
     app
     color="white"
     elevation="0"
-    style="background-color: red; margin-bottom: 20px; height: 127px"
+    style="background-color: red; margin-bottom: 20px;"
   >
     <div class="w-100 mt-n10 position-relative">
       <div class="d-flex justify-center pb-5">
