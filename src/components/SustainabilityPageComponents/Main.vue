@@ -103,7 +103,7 @@
                 <MotionGroup preset="fadeVisible" :duration="1200">
                   <v-img
                     class="joinusimgCss"
-                    max-height="80vh"
+                    max-height="70vh"
                     :src="item.media"
                   ></v-img>
                 </MotionGroup>
@@ -118,7 +118,7 @@
                 <MotionGroup preset="fadeVisible" :duration="1200">
                   <v-img
                     class="joinusimgCss"
-                    max-height="80vh"
+                    max-height="70vh"
                     :src="item.media"
                   ></v-img>
                 </MotionGroup>
@@ -244,19 +244,20 @@
       </div>
     </div>
   </div>
-  <div class="background-green py-16 text-center">
+  <div class="background-green py-16 mt-6 text-center">
     <MotionGroup preset="slideVisibleBotttom" :duration="1000">
       <h3 class="lastHeading">{{ sectionFour.title }}</h3>
     </MotionGroup>
-    <MotionGroup
-      preset="slideVisibleBottom"
-      :duration="1200"
-    >
+    <MotionGroup preset="slideVisibleBottom" :duration="1200">
       <p class="jackfruitsText max-700 mx-auto">
         {{ sectionFour.subtitle }}
       </p>
     </MotionGroup>
-    <v-btn class="contactbtn my-5" elevation="0">Contact Us</v-btn>
+    <v-btn class="contactbtn my-5" elevation="0">
+      <router-link class="text-decoration-none" to="/contact"
+        ><p class="text-white">Contact Us</p></router-link
+      ></v-btn
+    >
   </div>
 </template>
 <script>
