@@ -11,7 +11,7 @@
       >
         <div @click="goToDetail(blog.id)">
           <v-img
-            min-height="80vh"
+            min-height="70vh"
             class="joinusimgCss"
             :src="blog.image_1"
           ></v-img>

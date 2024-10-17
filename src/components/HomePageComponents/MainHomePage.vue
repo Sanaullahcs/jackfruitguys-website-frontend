@@ -11,7 +11,7 @@
         "
         cols="6"
       >
-        <div class="line-height-sm pt-16 Font-Size-Large styling w-50">
+        <div class="line-height-sm pt-16 Font-Size-Large styling mr-3 w-50">
           {{ sectionOne?.section_1_title_1 }}
         </div>
       </v-col>
@@ -72,7 +72,7 @@
         <div class="d-flex justify-end align-center position-relative">
           <div style="position: absolute; right: 0; z-index: 99">
             <MotionGroup preset="slideVisibleLeft" :duration="1200"
-              ><p class="mainSectionTxt Font-Size-Large text-right">
+              ><p class="mainSectionTxt Font-Size-Large mr-3 text-right">
                 {{ sectionOne?.section_1_title_2 }}
               </p></MotionGroup
             >
@@ -109,7 +109,7 @@
             style="position: absolute; left: 0; z-index: 99; margin-top: 5%"
           >
             <MotionGroup preset="slideVisibleRight" :duration="1300">
-              <p class="mainSectionTxt Font-Size-Large mt-5">
+              <p class="mainSectionTxt Font-Size-Large ml-3 mt-5">
                 {{ sectionOne?.section_1_title_3 }}
               </p></MotionGroup
             >

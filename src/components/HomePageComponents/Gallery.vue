@@ -2,7 +2,7 @@
   <div class="stack text-black">
     <!-- {{ sectionTwo }} -->
     <div class="stack__card" v-for="(card, index) in sectionTwo" :key="index">
-      <img :src="card.media" alt="card image" class="card-img" />
+      <img :src="card.media" alt="card image" max-height="80vh" class="card-img joinusimgCss" />
     </div>
   </div>
 </template>

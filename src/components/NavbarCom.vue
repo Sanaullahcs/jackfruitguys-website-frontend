@@ -122,10 +122,19 @@
               text
               elevation="0"
               class="mainBtn"
+              :class="{ active: activeButton === 'recipe' }"
+              @click="setActive('recipe')"
+            >
+              Recipes
+            </v-btn>
+            <v-btn
+              text
+              elevation="0"
+              class="mainBtn"
               :class="{ active: activeButton === 'contact' }"
               @click="setActive('contact')"
             >
-              Contact
+              Contact Us
             </v-btn>
             <v-btn
               text
@@ -136,15 +145,7 @@
             >
               Blogs
             </v-btn>
-            <v-btn
-              text
-              elevation="0"
-              class="mainBtn"
-              :class="{ active: activeButton === 'recipe' }"
-              @click="setActive('recipe')"
-            >
-              Recipes
-            </v-btn>
+
             <v-btn
               text
               elevation="0"

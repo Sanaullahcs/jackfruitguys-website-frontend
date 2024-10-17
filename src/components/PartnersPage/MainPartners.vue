@@ -23,7 +23,7 @@
           muted
           loop
         >
-          <source :src="sectionOne.video" type="video/mp4" />
+          <source src="../../assets/images/videojackfruits.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </v-responsive>

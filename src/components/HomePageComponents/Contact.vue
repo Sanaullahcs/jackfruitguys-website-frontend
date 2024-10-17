@@ -183,8 +183,14 @@ export default {
 </script>
 
 <style scoped>
+.v-btn--disabled.v-btn--variant-elevated,
+.v-btn--disabled.v-btn--variant-flat {
+  background-color: #9fc43d !important;
+  color: white !important;  
+}
 .submit {
-  color: #9fc43d;
+  background-color: #f6ae42 !important;
+  color: white !important;
   width: 100%;
   border-radius: 0;
 }

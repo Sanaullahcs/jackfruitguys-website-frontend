@@ -18,15 +18,16 @@
       <v-col cols="12" lg="9" md="9" sm="12">
         <div class="footer-wrapper">
           <div>
-            <router-link class="text-decoration-none" to="/sustainability"
-              ><p class="footerLink">Sustainability</p></router-link
-            >
-          </div>
-          <div>
             <router-link class="text-decoration-none" to="/about"
               ><p class="footerLink">About us</p></router-link
             >
           </div>
+          <div>
+            <router-link class="text-decoration-none" to="/sustainability"
+              ><p class="footerLink">Sustainability</p></router-link
+            >
+          </div>
+
           <div>
             <router-link class="text-decoration-none" to="/benefits">
               <p class="footerLink">BENEFITS</p></router-link
@@ -53,7 +54,11 @@
               ><p class="footerLink">PARTNERS</p></router-link
             >
           </div>
-
+          <div>
+            <router-link class="text-decoration-none" to="/recipe"
+              ><p class="footerLink">Recipes</p></router-link
+            >
+          </div>
           <div>
             <router-link class="text-decoration-none" to="/contact"
               ><p class="footerLink">CONTACT</p></router-link
@@ -64,11 +69,7 @@
               ><p class="footerLink">Blogs</p></router-link
             >
           </div>
-          <div>
-            <router-link class="text-decoration-none" to="/recipe"
-              ><p class="footerLink">Recipes</p></router-link
-            >
-          </div>
+
           <div>
             <router-link class="text-decoration-none" to="/join-us"
               ><p class="footerLink">Join us</p></router-link
@@ -79,7 +80,7 @@
     </v-row>
     <div style="background: #0e9242" class="px-16 d-flex justify-space-between">
       <p class="footerText">
-        Copyright 2024, Jackfruite Guys | All rights reserved.
+        Copyright 2024, Jackfruit Guys | All rights reserved.
       </p>
       <div class="d-flex mt-4">
         <span
