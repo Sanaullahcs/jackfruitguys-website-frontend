@@ -3,13 +3,13 @@
     app
     color="white"
     elevation="0"
-    style="background-color: red; margin-bottom: 20px;"
+    style="background-color: red; margin-bottom: 20px; height: 127px"
   >
     <div class="w-100 mt-n10 position-relative">
       <div class="d-flex justify-center pb-5">
         <v-img
           v-motion-fade-visible
-          src="@/assets/images/logo.png"
+          src="@/assets/images/hdlogo.png"
           max-width="300px"
           min-width="300px"
           alt="logo"
@@ -309,6 +309,9 @@ export default {
           this.activeButton = "partner";
           break;
         case "/blog":
+          this.activeButton = "blog";
+          break;
+        case "/blog/:id":
           this.activeButton = "blog";
           break;
         case "/recipe":

@@ -14,6 +14,17 @@
     </div>
     <div class="pink-bg pa-16">
       <div v-for="(section, index) in sectionTwo" :key="index">
+        <div>
+          <MotionGroup preset="slideVisibleBottom" :duration="1000">
+            <h3 class="jackfruitsHeadingSmall">{{ section.title }}</h3>
+          </MotionGroup>
+          <MotionGroup preset="slideVisibleBottom" :duration="1200">
+            <p class="jackfruitsText">Instructions:</p>
+            <ol class="jackfruitsText px-4">
+              <li v-html="section.subtitle"></li>
+            </ol>
+          </MotionGroup>
+        </div>
         <div class="my-3">
           <v-img
             max-height="80vh"
@@ -21,17 +32,6 @@
             class="joinusimgCss mx-auto"
             :src="section.media"
           ></v-img>
-        </div>
-        <div>
-          <MotionGroup preset="slideVisibleBottom" :duration="1000">
-            <h3 class="jackfruitsHeadingSmall">{{ section.title }}</h3>
-          </MotionGroup>
-          <MotionGroup preset="slideVisibleBottom" :duration="1200">
-            <p class="jackfruitsText">Intructions:</p>
-            <ol class="jackfruitsText px-4">
-              <li v-html="section.subtitle"></li>
-            </ol>
-          </MotionGroup>
         </div>
       </div>
     </div>
