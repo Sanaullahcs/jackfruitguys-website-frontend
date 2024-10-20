@@ -15,7 +15,7 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">
-                          Discover the Benifits of Jackfruit Guys
+                          Discover the Benefits of Jackfruits
                         </p>
                         <img src="../../assets/images/add1.jpg" style=" height: 425px;object-fit: cover;"></img>
                         <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
