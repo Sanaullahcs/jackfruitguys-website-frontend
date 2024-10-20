@@ -1,7 +1,8 @@
 <template>
   <div style="background-color: #FFFFFF;">
     <!-- show-arrows="hover" -->
-    <v-carousel height="650px" hide-delimiters hide-delimiter-background>
+    <v-carousel height="650px" hide-delimiters hide-delimiter-background  cycle
+    interval="4000">
       <v-carousel-item>
         <v-sheet height="100%" style="background-color: white">
           <div
