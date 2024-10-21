@@ -22,7 +22,7 @@ const app = createApp(App);
 app.use(
   VueGtag,
   {
-    config: { id: "G-WCF0DLX13Y" }, // Replace with your Google Analytics Tracking ID
+    config: { id: " " }, // Replace with your Google Analytics Tracking ID
   },
   router // Pass the router here
 );

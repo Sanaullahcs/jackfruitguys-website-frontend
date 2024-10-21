@@ -199,7 +199,6 @@ export default {
         this.loading = true;
         // require('dotenv').config();
         // Call the ChatGPT API
-        let API_KEY = process.env.VUE_APP_CHATGPT_KEY;
         console.log("API_KEY", API_KEY);
         try {
           const response = await axios.post(

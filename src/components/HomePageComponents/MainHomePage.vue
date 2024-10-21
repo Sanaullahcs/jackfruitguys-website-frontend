@@ -11,8 +11,18 @@
         "
         cols="6"
       >
-        <div class="line-height-sm pt-16 Font-Size-Large styling mr-3 w-50">
-          {{ sectionOne?.section_1_title_1 }}
+        <div
+          style="
+            display: flex;
+            justify-content: end;
+
+            width: 100%;
+          "
+          class="line-height-sm pt-16 Font-Size-Large styling mr-3"
+        >
+          <span style="max-width: 400px; margin-left: 25%">{{
+            sectionOne?.section_1_title_1
+          }}</span>
         </div>
       </v-col>
       <v-col
@@ -31,7 +41,7 @@
           </div>
         </transition> -->
         <!-- "Organic.", "Social Projects.", "Healthy.", "Fair Trade.","Good Practice","Sustainable" -->
-        <div class="words words-1 mt-n9">
+        <div class="words words-1 mt-n9 removeMarginTopOnSmall">
           <!-- {{ sectionTwo }} -->
           <span
             v-for="(item, index) in sectionTwo"
@@ -39,7 +49,9 @@
             :class="[
               'mainSectionTxt',
               'bgTxtSet',
+              'removeMarginTopOnSmall',
               { 'mt-n6': index % 2 !== 0 },
+              { removeMarginTopOnSmall: index % 2 !== 0 },
             ]"
           >
             {{ item.text_name }}
@@ -323,8 +335,8 @@ export default {
     line-height: 40px;
   }
   .mainSectionTxt {
-    font-size: 33px !important;
-    line-height: 40px !important;
+    font-size: 44px !important;
+    line-height: 58px !important;
   }
   .sentence span {
     font-size: 20px;
@@ -334,15 +346,19 @@ export default {
 @media screen and (max-width: 480px) {
   .Font-Size-Large {
     font-size: 16vw !important;
-    line-height: 40px !important;
+    line-height: 52px !important;
+  }
+  .removeMarginTopOnSmall {
+    margin-top: 0px !important;
   }
   .words {
     font-size: 25px;
     line-height: 30px;
   }
   .mainSectionTxt {
-    font-size: 24px !important;
-    line-height: 30px !important;
+    font-size: 35px !important;
+    line-height: 36px !important;
+    margin-top: -1px !important;
   }
   .sentence span {
     font-size: 18px;
