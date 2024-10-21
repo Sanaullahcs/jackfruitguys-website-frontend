@@ -62,7 +62,7 @@
   </div>
 
   <div>
-    <div class="background-green py-16 text-center d-flex justify-space-between px-16">
+    <div class="background-green py-16 text-center d-flex justify-space-between px-16 makingFlexOnSmall">
       <h3 class="lastHeading mt-4">
         {{ sectionThree.title }}
       </h3>
@@ -124,5 +124,12 @@ export default {
   max-height: 80vh; /* Set to desired max height */
   width: 100%; /* Ensure full width */
   object-fit: cover; /* Maintain aspect ratio */
+}
+@media screen and (max-width: 680px){
+  .makingFlexOnSmall{
+    display: flex !important;
+    flex-direction: column;
+
+  }
 }
 </style>

@@ -346,7 +346,7 @@ export default {
         case "products":
           this.$router.push("/products");
           break;
-        case "blog":
+        case "blogs":
           this.$router.push("/blog");
           break;
         case "experience":
@@ -355,7 +355,7 @@ export default {
         case "presence":
           this.$router.push("/presence");
           break;
-        case "partner":
+        case "partners":
           this.$router.push("/partner");
           break;
         case "recipe":
@@ -496,5 +496,11 @@ export default {
 
 .v-divider {
   height: 30px;
+}
+@media screen and (max-width: 480px) {
+  .flag-selector {
+    left: 11px !important;
+    top: 90px !important;
+  }
 }
 </style>
