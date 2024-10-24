@@ -345,7 +345,7 @@ export default {
 
 @media screen and (max-width: 480px) {
   .Font-Size-Large {
-    font-size: 16vw !important;
+    font-size: 9vw !important;
     line-height: 52px !important;
   }
   .removeMarginTopOnSmall {
@@ -356,8 +356,8 @@ export default {
     line-height: 30px;
   }
   .mainSectionTxt {
-    font-size: 35px !important;
-    line-height: 36px !important;
+    font-size: 32px !important;
+    line-height: 42px !important;
     margin-top: -1px !important;
   }
   .sentence span {

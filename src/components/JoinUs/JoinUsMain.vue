@@ -52,7 +52,7 @@
           <div>
             <v-img
               :src="sectionTwo?.image"
-              class="max-height-image"
+              class="max-height-image mb-3"
               style="object-fit: cover;"
             ></v-img>
           </div>
