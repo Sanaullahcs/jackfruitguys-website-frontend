@@ -97,9 +97,9 @@ export default {
     console.log("this is the http code ", APP_URL);
   },
   methods: {
-    async getAboutData(language_id = 1) {
+    async getAboutData() {
       const payload = {
-        language_id: language_id || this.$route.query.language_id || 1,
+        language_id:  this.$route.query.language_id || 1,
       };
       try {
         const response = await HTTP.post("join-us", payload);

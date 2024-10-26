@@ -222,9 +222,9 @@ export default {
     },
   },
   methods: {
-    async getProducts(language_id = 1) {
+    async getProducts() {
       const payload = {
-        language_id: language_id || this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
+        language_id: this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("product", payload);

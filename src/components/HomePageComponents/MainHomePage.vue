@@ -191,8 +191,10 @@ export default {
   font-weight: 600;
 }
 .Font-Size-Large {
-  font-size: 132px !important;
-  line-height: 103px !important;
+  /* font-size: 132px !important;
+  line-height: 103px !important; */
+  font-size: 85px !important;
+  line-height: 88px !important;
 }
 .bgTxtSet {
   background-image: url(../../assets/txtbg.png);
