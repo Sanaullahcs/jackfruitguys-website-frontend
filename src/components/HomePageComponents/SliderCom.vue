@@ -19,7 +19,13 @@
                           Discover the Benefits of Jackfruits
                         </p>
                         <img src="../../assets/images/add1.jpg" style=" height: 425px;object-fit: cover;"></img>
-                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
+                        <router-link class="text-decoration-none" to="/about"
+              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              >
+
+                        <!-- <router-link class="text-decoration-none" to="/contact"
+              ><p class="footerLink">CONTACT</p></router-link
+            > -->
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
@@ -50,7 +56,9 @@
                            Explore our Jackfruit Delights Selection
                         </p>
                         <img src="../../assets/images/sliderimg2.webp" style=" height: 425px;object-fit: cover;"></img>
-                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
+                        <router-link class="text-decoration-none" to="/about"
+              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              >
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
@@ -82,7 +90,9 @@
                             Epic Xperience: Jackfruit Guys' Eventful Adventures
                         </p>
                         <img src="../../assets/images/sliderimg4.webp" style=" height: 425px;object-fit: cover;"></img>
-                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
+                        <router-link class="text-decoration-none" to="/about"
+              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              >
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
@@ -113,7 +123,9 @@
 Around the World with Jackfruit Guys: Global Presence
                         </p>
                         <img src="../../assets/images/sliderimg6.webp" style=" height: 425px;object-fit: cover;"></img>
-                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
+                        <router-link class="text-decoration-none" to="/about"
+              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              >
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
@@ -146,7 +158,9 @@ Around the World with Jackfruit Guys: Global Presence
 Global Team: Jackfruit Guys' Collaborators
                         </p>
                         <img src="../../assets/images/sliderimg8.webp" style=" height: 425px;object-fit: contain;"></img>
-                        <v-btn color="#9EC43B" class="GoBtn">GO</v-btn>
+                        <router-link class="text-decoration-none" to="/about"
+              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              >
                       </div></v-col
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"

@@ -3,13 +3,14 @@
     <div>
       <div class="pt-16">
         <v-img
-          max-height="80vh"
-          class="joinusimgCss"
+          max-height="60vh"
+          class="joinusimgCssContain"
           :src="sectionOne?.banner_image"
         ></v-img>
       </div>
     </div>
     <div class="py-16">
+      {{ sectionTwo }}
       <Gallery :sectionTwo="sectionTwo" />
     </div>
     <div>
@@ -77,3 +78,7 @@ export default {
   },
 };
 </script>
+<style>
+.joinusimgCssContain{
+  object-fit: contain !important;
+}</style>

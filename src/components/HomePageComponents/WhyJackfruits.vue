@@ -13,7 +13,11 @@
             <p class="about-txt" v-html="sectionFour?.text"></p>
           </MotionGroup>
           <MotionGroup preset="fadeVisible" :duration="1200">
-            <v-btn elevation="0" class="readmorebtn my-5">Read More</v-btn>
+            <router-link class="text-decoration-none" to="/about"
+              ><v-btn elevation="0" class="readmorebtn my-5"
+                >Read More</v-btn
+              ></router-link
+            >
           </MotionGroup>
         </div>
       </v-col>

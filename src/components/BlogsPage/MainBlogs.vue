@@ -5,13 +5,16 @@
         v-for="blog in blogs"
         :key="blog.id"
         cols="12"
-        lg="6"
-        xl="6"
+        md="6"
+        sm="12"
+        xs="12"
+        lg="4"
+        xl="4"
         style="cursor: pointer"
       >
         <div @click="goToDetail(blog.id)">
           <v-img
-            min-height="70vh"
+            min-height="50vh"
             class="joinusimgCss"
             :src="blog.image_1"
           ></v-img>

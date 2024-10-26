@@ -284,7 +284,7 @@ export default {
   position: fixed;
   bottom: 52px; /* Adjust position if necessary */
   right: 20px; /* Adjust position if necessary */
-  min-height: 360px;
+  min-height: 390px;
   /* position: relative; */
 }
 

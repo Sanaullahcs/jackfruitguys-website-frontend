@@ -497,4 +497,10 @@ export default {
 .v-divider {
   height: 30px;
 }
+@media screen and (max-width: 480px) {
+  .flag-selector {
+    left: 11px !important;
+    top: 90px !important;
+  }
+}
 </style>

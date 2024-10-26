@@ -2,7 +2,7 @@
   <div class="text-black px-16">
     <div>
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
-        <h1 class="jackfruitsHeading mx-auto max-700">
+        <h1 class="jackfruitsHeading mx-auto mt-8 max-700">
           {{ sectionOne.title }}
         </h1>
       </MotionGroup>
