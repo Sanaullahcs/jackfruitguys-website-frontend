@@ -28,7 +28,7 @@
         </video>
       </v-responsive>
 
-      <div>
+      <div class="mt-16">
         <p class="jackfruitsText pb-10" v-html="sectionOne.description"></p>
       </div>
       <!-- <div>

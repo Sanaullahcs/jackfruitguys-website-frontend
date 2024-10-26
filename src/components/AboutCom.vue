@@ -3,20 +3,23 @@
     <v-row class="mx-2 mx-md-16">
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
-       
-          <div class="about-content mx-auto">
-            <MotionGroup preset="slideVisibleLeft" :duration="1200">
+        <div class="about-content mx-auto">
+          <MotionGroup preset="slideVisibleLeft" :duration="1200">
             <h2 class="jackfruitsHeading text-left fontSize50">
               {{ sectionThree.section_3_title }}
             </h2>
-            </MotionGroup>
-            <MotionGroup preset="slideVisibleLeft" :duration="1600">
+          </MotionGroup>
+          <MotionGroup preset="slideVisibleLeft" :duration="1600">
             <p class="about-txt" v-html="sectionThree.text"></p>
-            </MotionGroup>
-            <MotionGroup preset="fadeVisible" :duration="1200">
-            <v-btn elevation="0" class="AboutUsButton">About Us</v-btn>
-            </MotionGroup>
-            <!-- <div class="position-relative mt-5 image-section">
+          </MotionGroup>
+          <MotionGroup preset="fadeVisible" :duration="1200">
+            <router-link class="text-decoration-none" to="/about"
+              ><v-btn elevation="0" class="AboutUsButton"
+                >About Us</v-btn
+              ></router-link
+            >
+          </MotionGroup>
+          <!-- <div class="position-relative mt-5 image-section">
             <v-img
               style="z-index: 2"
               src="../assets/images/about1.png"
@@ -30,7 +33,7 @@
             />
             <v-btn elevation="0" class="readmorebtn">Read More</v-btn>
           </div> -->
-          </div>
+        </div>
       </v-col>
 
       <!-- Image Section -->

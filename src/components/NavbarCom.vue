@@ -346,7 +346,7 @@ export default {
         case "products":
           this.$router.push("/products");
           break;
-        case "blogs":
+        case "blog":
           this.$router.push("/blog");
           break;
         case "experience":
@@ -355,7 +355,7 @@ export default {
         case "presence":
           this.$router.push("/presence");
           break;
-        case "partners":
+        case "partner":
           this.$router.push("/partner");
           break;
         case "recipe":
