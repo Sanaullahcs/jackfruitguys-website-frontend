@@ -76,7 +76,7 @@
     </v-row>
   </div>
   <div>
-    <v-row style="min-height: 100vh">
+    <v-row class="minHeight100">
       <v-col
         style="background: #bada54; padding: 0"
         class="dividerImg1 pt-16 pb-16"
@@ -121,7 +121,7 @@
             style="position: absolute; left: 0; z-index: 99; margin-top: 5%"
           >
             <MotionGroup preset="slideVisibleRight" :duration="1300">
-              <p class="mainSectionTxt Font-Size-Large ml-3 mt-5">
+              <p class="mainSectionTxt Font-Size-Large ml-3 mb-n11">
                 {{ sectionOne?.section_1_title_3 }}
               </p></MotionGroup
             >
@@ -333,7 +333,7 @@ export default {
 
 @media screen and (max-width: 768px) {
   .Font-Size-Large {
-    font-size: 12vw !important;
+    font-size: 9vw !important;
     line-height: 60px !important;
   }
   .words {
@@ -351,8 +351,8 @@ export default {
 
 @media screen and (max-width: 480px) {
   .Font-Size-Large {
-    font-size: 9vw !important;
-    line-height: 52px !important;
+    font-size: 8vw !important;
+    line-height: 40px !important;
   }
   .removeMarginTopOnSmall {
     margin-top: 0px !important;
@@ -365,8 +365,8 @@ export default {
     line-height: 30px;
   }
   .mainSectionTxt {
-    font-size: 32px !important;
-    line-height: 42px !important;
+    font-size: 22px !important;
+    line-height: 35px !important;
     margin-top: -1px !important;
   }
   .sentence span {

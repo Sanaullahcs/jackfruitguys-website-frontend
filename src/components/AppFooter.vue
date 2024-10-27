@@ -8,109 +8,101 @@
             class="mt-n10"
             src="../assets/images/logoFooterNew.svg"
           ></v-img>
-          <!-- <v-img
-            max-width="185px"
-            class="bg-footer-img"
-            src="../assets/images/footerimg.png"
-          ></v-img> -->
         </div>
       </v-col>
       <v-col cols="12" lg="9" md="9" sm="12">
         <div class="footer-wrapper">
           <div>
-            <router-link class="text-decoration-none" to="/about"
-              ><p class="footerLink">About us</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/about">
+              <p class="footerLink">{{ translations.about }}</p>
+            </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/sustainability"
-              ><p class="footerLink">Sustainability</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/sustainability">
+              <p class="footerLink">{{ translations.sustainability }}</p>
+            </router-link>
           </div>
-
           <div>
             <router-link class="text-decoration-none" to="/benefits">
-              <p class="footerLink">BENEFITS</p></router-link
-            >
+              <p class="footerLink">{{ translations.benefits }}</p>
+            </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/products"
-              ><p class="footerLink">Products</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/products">
+              <p class="footerLink">{{ translations.products }}</p>
+            </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/experience"
-              ><p class="footerLink">EXPERIENCE</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/experience">
+              <p class="footerLink">{{ translations.experience }}</p>
+            </router-link>
           </div>
-
           <div>
             <router-link class="text-decoration-none" to="/presence">
-              <p class="footerLink">PRESENCE</p></router-link
-            >
+              <p class="footerLink">{{ translations.presence }}</p>
+            </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/partner"
-              ><p class="footerLink">PARTNERS</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/partners">
+              <p class="footerLink">{{ translations.partners }}</p>
+            </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/recipe"
-              ><p class="footerLink">Recipes</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/recipe">
+              <p class="footerLink">{{ translations.recipe }}</p>
+            </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/contact"
-              ><p class="footerLink">CONTACT</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/contact">
+              <p class="footerLink">{{ translations.contact }}</p>
+            </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/blog"
-              ><p class="footerLink">Blogs</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/blogs">
+              <p class="footerLink">{{ translations.blogs }}</p>
+            </router-link>
           </div>
-
           <div>
-            <router-link class="text-decoration-none" to="/join-us"
-              ><p class="footerLink">Join us</p></router-link
-            >
+            <router-link class="text-decoration-none" to="/join-us">
+              <p class="footerLink">{{ translations.joinUs }}</p>
+            </router-link>
           </div>
         </div>
       </v-col>
     </v-row>
     <div style="background: #0e9242" class="px-16 d-flex justify-space-between">
       <v-row>
-        <v-col cols="6" lg="6" md="12" sm="12">
+        <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
           <p class="footerText">
             Copyright 2024, Jackfruit Guys | All rights reserved.
           </p>
         </v-col>
-        <v-col cols="6" lg="6" md="12" sm="12">
+        <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
           <div class="d-flex justify-end mt-4">
-            <span
-              ><v-img
+            <span>
+              <v-img
                 max-width="12px"
                 min-width="12px"
                 class="mx-3"
                 src="../assets/images/fb.png"
-              ></v-img
-            ></span>
-            <span
-              ><v-img
+              ></v-img>
+            </span>
+            <span>
+              <v-img
                 max-width="20px"
                 class="mx-3"
                 min-width="20px"
                 src="../assets/images/insta.png"
-              ></v-img
-            ></span>
-            <span
-              ><v-img
+              ></v-img>
+            </span>
+            <span>
+              <v-img
                 max-width="20px"
                 class="mx-3"
                 min-width="23px"
                 src="../assets/images/x.png"
-              ></v-img
-            ></span>
+              ></v-img>
+            </span>
           </div>
         </v-col>
       </v-row>
@@ -118,7 +110,107 @@
   </div>
 </template>
 
-<script setup></script>
+<script>
+import usa from "../assets/images/usa.svg";
+import fr from "../assets/images/fr.svg";
+import sp from "../assets/images/sp.svg";
+import gr from "../assets/images/gr.svg";
+
+export default {
+  name: "Footer",
+  data() {
+    return {
+      selectedLanguage: 1,
+      translations: {
+        about: "",
+        sustainability: "",
+        benefits: "",
+        products: "",
+        experience: "",
+        presence: "",
+        partners: "",
+        recipe: "",
+        contact: "",
+        blogs: "",
+        joinUs: ""
+      },
+      translationData: {
+        1: { // English
+          about: "About us",
+          sustainability: "Sustainability",
+          benefits: "Benefits",
+          products: "Products",
+          experience: "Experience",
+          presence: "Presence",
+          partners: "Partners",
+          recipe: "Recipes",
+          contact: "Contact",
+          blogs: "Blogs",
+          joinUs: "Join us"
+        },
+        2: { // French
+          about: "À propos",
+          sustainability: "Durabilité",
+          benefits: "Avantages",
+          products: "Produits",
+          experience: "Expérience",
+          presence: "Présence",
+          partners: "Partenaires",
+          recipe: "Recettes",
+          contact: "Contactez-nous",
+          blogs: "Blogs",
+          joinUs: "Rejoignez-nous"
+        },
+        3: { // German
+          about: "Über uns",
+          sustainability: "Nachhaltigkeit",
+          benefits: "Vorteile",
+          products: "Produkte",
+          experience: "Erlebnis",
+          presence: "Präsenz",
+          partners: "Partner",
+          recipe: "Rezepte",
+          contact: "Kontakt",
+          blogs: "Blogs",
+          joinUs: "Mitmachen"
+        },
+        4: { // Spanish
+          about: "Sobre nosotros",
+          sustainability: "Sostenibilidad",
+          benefits: "Beneficios",
+          products: "Productos",
+          experience: "Experiencia",
+          presence: "Presencia",
+          partners: "Socios",
+          recipe: "Recetas",
+          contact: "Contáctenos",
+          blogs: "Blogs",
+          joinUs: "Únete a nosotros"
+        }
+      }
+    };
+  },
+  mounted() {
+    this.updateLanguageFromUrl();
+  },
+  watch: {
+    $route() {
+      this.updateLanguageFromUrl();
+    }
+  },
+  methods: {
+    updateLanguageFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const langId = parseInt(params.get('language_id')) || 1;
+      this.selectedLanguage = langId;
+      this.updateTranslations();
+    },
+    updateTranslations() {
+      this.translations = this.translationData[this.selectedLanguage];
+    }
+  }
+};
+</script>
 
 <style scoped>
 .text-decoration-none {
