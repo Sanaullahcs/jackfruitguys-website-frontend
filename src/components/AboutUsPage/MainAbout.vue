@@ -7,9 +7,10 @@
         </h1>
       </MotionGroup>
       <MotionGroup preset="slideVisibleBottom" :duration="1200">
-        <p class="jackfruitsText max-700 mx-auto text-center">
-          {{ sectionOne?.description }}
-        </p>
+        <p
+          class="jackfruitsText max-700 mx-auto text-center"
+          v-html="sectionOne?.description"
+        ></p>
       </MotionGroup>
       <div class="my-6">
         <MotionGroup preset="slideVisibleBottom" :duration="1400">
@@ -168,7 +169,7 @@ export default {
   methods: {
     async getAboutData() {
       const payload = {
-        language_id:  this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
+        language_id: this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("about-us", payload);

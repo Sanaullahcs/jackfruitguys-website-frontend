@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row style="min-height: 100vh">
+    <v-row class="minHeight100">
       <v-col
         class="ma-0"
         style="
@@ -185,6 +185,9 @@ export default {
 };
 </script>
 <style scoped>
+.minHeight100 {
+  min-height: 100vh;
+}
 .styling {
   font-family: "Poppins", sans-serif;
   line-height: 73px;
@@ -353,6 +356,9 @@ export default {
   }
   .removeMarginTopOnSmall {
     margin-top: 0px !important;
+  }
+  .minHeight100 {
+    min-height: 50vh;
   }
   .words {
     font-size: 25px;

@@ -24,13 +24,13 @@
 
       <!-- Image Section -->
       <v-col cols="12" md="6" class="d-flex justify-center">
-        <MotionGroup preset="slideVisibleBottom" :duration="1200">
+        <!-- <MotionGroup preset="slideVisibleBottom" :duration="1200"> -->
           <v-img
             :src="sectionFour?.image"
             class="img-responsive ml-auto mb-n8"
             max-width="70%"
           ></v-img>
-        </MotionGroup>
+        <!-- </MotionGroup> -->
       </v-col>
     </v-row>
   </div>

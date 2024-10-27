@@ -249,7 +249,7 @@
       <h3 class="lastHeading">{{ sectionFour.title }}</h3>
     </MotionGroup>
     <MotionGroup preset="slideVisibleBottom" :duration="1200">
-      <p class="jackfruitsText max-700 mx-auto">
+      <p class="jackfruitsText max-700 px-5 mx-auto">
         {{ sectionFour.subtitle }}
       </p>
     </MotionGroup>

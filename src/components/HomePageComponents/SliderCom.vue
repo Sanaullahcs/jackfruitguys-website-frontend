@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #FFFFFF;">
+  <div style="background-color: #FFFFFF;margin-top: 6%;">
     <!-- show-arrows="hover" -->
     <v-carousel height="650px" hide-delimiters hide-delimiter-background  cycle
     interval="4000">
@@ -16,7 +16,7 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">
-                          Discover the Benefits of Jackfruits
+                          {{ translations.discover }}
                         </p>
                         <img src="../../assets/images/add1.jpg" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
@@ -53,7 +53,7 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt mt-16 pt-15">
-                           Explore our Jackfruit Delights Selection
+                          {{ translations.explore }}
                         </p>
                         <img src="../../assets/images/sliderimg2.webp" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
@@ -87,7 +87,7 @@
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">
                                                       
-                            Epic Xperience: Jackfruit Guys' Eventful Adventures
+                          {{ translations.epic }}
                         </p>
                         <img src="../../assets/images/sliderimg4.webp" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
@@ -120,7 +120,7 @@
                     <v-col cols="12" lg="6" md="12" sm="12" xs="12"
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">     
-Around the World with Jackfruit Guys: Global Presence
+                          {{ translations.around }}
                         </p>
                         <img src="../../assets/images/sliderimg6.webp" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
@@ -154,8 +154,7 @@ Around the World with Jackfruit Guys: Global Presence
                       ><div class="d-flex flex-column">
                         <p class="sliderTxt  mt-16 pt-15">
                                                       
-                            
-Global Team: Jackfruit Guys' Collaborators
+                          {{ translations.team }}
                         </p>
                         <img src="../../assets/images/sliderimg8.webp" style=" height: 425px;object-fit: contain;"></img>
                         <router-link class="text-decoration-none" to="/about"
@@ -189,8 +188,65 @@ Global Team: Jackfruit Guys' Collaborators
 <script>
 export default {
   data() {
-    return {};
+    return {
+      languageId: 1, // Default to 1 (English)
+      translations: {
+        discover: '',
+        explore: '',
+        epic: '',
+        around: '',
+        team: ''
+      },
+      translationData: {
+        1: { // English
+          discover: "Discover the Benefits of Jackfruits",
+          explore: "Explore our Jackfruit Delights Selection",
+          epic: "Epic Xperience: Jackfruit Guys' Eventful Adventures",
+          around: "Around the World with Jackfruit Guys: Global Presence",
+          team: "Global Team: Jackfruit Guys' Collaborators"
+        },
+        2: { // French
+          discover: "Découvrez les avantages du jacquier",
+          explore: "Explorez notre sélection de délices au jacquier",
+          epic: "Épique expérience: les aventures mouvementées des Jackfruit Guys",
+          around: "Autour du monde avec les Jackfruit Guys: Présence mondiale",
+          team: "Équipe mondiale: les collaborateurs des Jackfruit Guys"
+        },
+        3: { // German
+          discover: "Entdecken Sie die Vorteile von Jackfruits",
+          explore: "Entdecken Sie unsere Auswahl an Jackfruit-Delikatessen",
+          epic: "Episches Erlebnis: Jackfruit Guys' ereignisreiche Abenteuer",
+          around: "Rund um die Welt mit Jackfruit Guys: Globale Präsenz",
+          team: "Globales Team: Jackfruit Guys' Mitarbeiter"
+        },
+        4: { // Spanish
+          discover: "Descubre los beneficios del Jackfruit",
+          explore: "Explora nuestra selección de delicias de Jackfruit",
+          epic: "Experiencia épica: Las aventuras llenas de eventos de Jackfruit Guys",
+          around: "Alrededor del mundo con Jackfruit Guys: Presencia global",
+          team: "Equipo global: Colaboradores de Jackfruit Guys"
+        }
+      }
+    };
   },
+  mounted() {
+    this.updateLanguageIdFromURL();
+  },
+  watch: {
+    // Watch the URL change and update languageId accordingly
+    '$route': 'updateLanguageIdFromURL'
+  },
+  methods: {
+    updateLanguageIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const langId = parseInt(params.get('language_id')) || 1;
+      this.languageId = langId;
+      this.updateTranslations();
+    },
+    updateTranslations() {
+      this.translations = this.translationData[this.languageId];
+    }
+  }
 };
 </script>
 <style>
@@ -225,6 +281,9 @@ export default {
 @media (max-width:680px){
   .disappearing{
     display: none;
+  }
+  .sliderTxt{
+    font-size: 31px;
   }
 }
 </style>

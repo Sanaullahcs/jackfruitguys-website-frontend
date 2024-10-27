@@ -42,7 +42,7 @@
         md="6"
         class="d-flex justify-md-start justify-center align-center"
       >
-        <MotionGroup preset="slideVisibleRight" :duration="1200">
+        <!-- <MotionGroup preset="slideVisibleRight" :duration="1200"> -->
           <v-img
             :src="sectionThree.image"
             class="about-side-img joinusimgCss"
@@ -50,7 +50,7 @@
             max-width="100%"
             alt="logo"
           />
-        </MotionGroup>
+        <!-- </MotionGroup> -->
       </v-col>
     </v-row>
   </div>

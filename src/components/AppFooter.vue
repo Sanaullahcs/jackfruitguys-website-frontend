@@ -79,35 +79,41 @@
       </v-col>
     </v-row>
     <div style="background: #0e9242" class="px-16 d-flex justify-space-between">
-      <p class="footerText">
-        Copyright 2024, Jackfruit Guys | All rights reserved.
-      </p>
-      <div class="d-flex mt-4">
-        <span
-          ><v-img
-            max-width="12px"
-            min-width="12px"
-            class="mx-3"
-            src="../assets/images/fb.png"
-          ></v-img
-        ></span>
-        <span
-          ><v-img
-            max-width="20px"
-            class="mx-3"
-            min-width="20px"
-            src="../assets/images/insta.png"
-          ></v-img
-        ></span>
-        <span
-          ><v-img
-            max-width="20px"
-            class="mx-3"
-            min-width="23px"
-            src="../assets/images/x.png"
-          ></v-img
-        ></span>
-      </div>
+      <v-row>
+        <v-col cols="6" lg="6" md="12" sm="12">
+          <p class="footerText">
+            Copyright 2024, Jackfruit Guys | All rights reserved.
+          </p>
+        </v-col>
+        <v-col cols="6" lg="6" md="12" sm="12">
+          <div class="d-flex justify-end mt-4">
+            <span
+              ><v-img
+                max-width="12px"
+                min-width="12px"
+                class="mx-3"
+                src="../assets/images/fb.png"
+              ></v-img
+            ></span>
+            <span
+              ><v-img
+                max-width="20px"
+                class="mx-3"
+                min-width="20px"
+                src="../assets/images/insta.png"
+              ></v-img
+            ></span>
+            <span
+              ><v-img
+                max-width="20px"
+                class="mx-3"
+                min-width="23px"
+                src="../assets/images/x.png"
+              ></v-img
+            ></span>
+          </div>
+        </v-col>
+      </v-row>
     </div>
   </div>
 </template>
