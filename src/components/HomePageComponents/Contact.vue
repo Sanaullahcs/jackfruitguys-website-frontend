@@ -22,60 +22,49 @@
             style="background-color: #87c540"
           >
             <div class="form-section pa-6">
-              <!-- <MotionGroup preset="slideVisibleLeft" :duration="1000"> -->
               <h2 class="white--text mb-4 contact-heading">
-                We'd love to hear from you!
+                {{ translations.heading }}
               </h2>
-              <!-- </MotionGroup> -->
               <v-form ref="form" v-model="isFormValid" @submit.prevent="submit">
-                <!-- <MotionGroup preset="slideVisibleLeft" :duration="1200"> -->
                 <v-text-field
                   v-model="form.name"
-                  label="Your Name"
+                  :label="translations.name"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
                   :rules="nameRules"
                 ></v-text-field>
-                <!-- </MotionGroup> -->
-                <!-- <MotionGroup preset="slideVisibleLeft" :duration="1400"> -->
                 <v-text-field
                   v-model="form.company_name"
-                  label="Company Name"
+                  :label="translations.companyName"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
                   :rules="companyNameRules"
                 ></v-text-field>
-                <!-- </MotionGroup> -->
-                <!-- <MotionGroup preset="slideVisibleLeft" :duration="1600"> -->
                 <v-text-field
                   v-model="form.email"
-                  label="Email"
+                  :label="translations.email"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
                   :rules="emailRules"
                 ></v-text-field>
-                <!-- </MotionGroup> -->
-                <!-- <MotionGroup preset="slideVisibleLeft" :duration="1800"> -->
                 <v-text-field
                   v-model="form.phone"
-                  label="Phone"
+                  :label="translations.phone"
                   outlined
                   dense
                   class="mb-4"
                   hide-details
                   :rules="phoneRules"
                 ></v-text-field>
-                <!-- </MotionGroup> -->
-                <!-- <MotionGroup preset="slideVisibleLeft" :duration="2000"> -->
                 <v-textarea
                   v-model="form.message"
-                  label="Message"
+                  :label="translations.message"
                   outlined
                   dense
                   rows="4"
@@ -83,8 +72,6 @@
                   hide-details
                   :rules="messageRules"
                 ></v-textarea>
-                <!-- </MotionGroup> -->
-                <!-- <MotionGroup preset="slideVisibleLeft" :duration="1200"> -->
                 <v-btn
                   class="submit"
                   color="white"
@@ -94,7 +81,7 @@
                   :disabled="!isFormValid"
                   @click="submit"
                 >
-                  <span v-if="logoutText">Submit</span>
+                  <span v-if="logoutText">{{ translations.submit }}</span>
                   <span v-if="logoutLoader">
                     <v-progress-circular
                       :size="20"
@@ -103,7 +90,6 @@
                     ></v-progress-circular>
                   </span>
                 </v-btn>
-                <!-- </MotionGroup> -->
               </v-form>
             </div>
           </v-col>
@@ -132,23 +118,122 @@ export default {
       },
       // Validation Rules
       nameRules: [
-        (v) => !!v || "Name is required",
-        (v) => v.length >= 3 || "Name must be at least 3 characters",
+        (v) => !!v || this.translations.nameRequired,
+        (v) => v.length >= 3 || this.translations.nameMinLength,
       ],
-      companyNameRules: [(v) => !!v || "Company name is required"],
+      companyNameRules: [(v) => !!v || this.translations.companyNameRequired],
       emailRules: [
-        (v) => !!v || "Email is required",
-        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+        (v) => !!v || this.translations.emailRequired,
+        (v) => /.+@.+\..+/.test(v) || this.translations.emailInvalid,
       ],
       phoneRules: [
-        (v) => !!v || "Phone number is required",
-        (v) => /^\d{10,15}$/.test(v) || "Phone number must be valid",
+        (v) => !!v || this.translations.phoneRequired,
+        (v) => /^\d{10,15}$/.test(v) || this.translations.phoneInvalid,
       ],
       messageRules: [
-        (v) => !!v || "Message is required",
-        (v) => v.length >= 10 || "Message must be at least 10 characters",
+        (v) => !!v || this.translations.messageRequired,
+        (v) => v.length >= 10 || this.translations.messageMinLength,
       ],
+      languageId: 1, // Default language
+      translations: {
+        heading: '',
+        name: '',
+        companyName: '',
+        email: '',
+        phone: '',
+        message: '',
+        submit: '',
+        nameRequired: '',
+        nameMinLength: '',
+        companyNameRequired: '',
+        emailRequired: '',
+        emailInvalid: '',
+        phoneRequired: '',
+        phoneInvalid: '',
+        messageRequired: '',
+        messageMinLength: '',
+      },
+      translationData: {
+        1: { // English
+          heading: "We'd love to hear from you!",
+          name: "Your Name",
+          companyName: "Company Name",
+          email: "Email",
+          phone: "Phone",
+          message: "Message",
+          submit: "Submit",
+          nameRequired: "Name is required",
+          nameMinLength: "Name must be at least 3 characters",
+          companyNameRequired: "Company name is required",
+          emailRequired: "Email is required",
+          emailInvalid: "E-mail must be valid",
+          phoneRequired: "Phone number is required",
+          phoneInvalid: "Phone number must be valid",
+          messageRequired: "Message is required",
+          messageMinLength: "Message must be at least 10 characters",
+        },
+        2: { // French
+          heading: "Nous serions ravis de vous entendre!",
+          name: "Votre nom",
+          companyName: "Nom de l'entreprise",
+          email: "E-mail",
+          phone: "Téléphone",
+          message: "Message",
+          submit: "Soumettre",
+          nameRequired: "Le nom est requis",
+          nameMinLength: "Le nom doit comporter au moins 3 caractères",
+          companyNameRequired: "Le nom de l'entreprise est requis",
+          emailRequired: "L'e-mail est requis",
+          emailInvalid: "L'e-mail doit être valide",
+          phoneRequired: "Le numéro de téléphone est requis",
+          phoneInvalid: "Le numéro de téléphone doit être valide",
+          messageRequired: "Le message est requis",
+          messageMinLength: "Le message doit comporter au moins 10 caractères",
+        },
+        3: { // German
+          heading: "Wir würden gerne von Ihnen hören!",
+          name: "Ihr Name",
+          companyName: "Firmenname",
+          email: "E-Mail",
+          phone: "Telefon",
+          message: "Nachricht",
+          submit: "Einreichen",
+          nameRequired: "Name ist erforderlich",
+          nameMinLength: "Der Name muss mindestens 3 Zeichen enthalten",
+          companyNameRequired: "Der Firmenname ist erforderlich",
+          emailRequired: "E-Mail ist erforderlich",
+          emailInvalid: "Die E-Mail muss gültig sein",
+          phoneRequired: "Telefonnummer ist erforderlich",
+          phoneInvalid: "Die Telefonnummer muss gültig sein",
+          messageRequired: "Nachricht ist erforderlich",
+          messageMinLength: "Die Nachricht muss mindestens 10 Zeichen lang sein",
+        },
+        4: { // Spanish
+          heading: "¡Nos encantaría saber de ti!",
+          name: "Tu nombre",
+          companyName: "Nombre de la empresa",
+          email: "Correo electrónico",
+          phone: "Teléfono",
+          message: "Mensaje",
+          submit: "Enviar",
+          nameRequired: "El nombre es obligatorio",
+          nameMinLength: "El nombre debe tener al menos 3 caracteres",
+          companyNameRequired: "El nombre de la empresa es obligatorio",
+          emailRequired: "El correo electrónico es obligatorio",
+          emailInvalid: "El correo electrónico debe ser válido",
+          phoneRequired: "El número de teléfono es obligatorio",
+          phoneInvalid: "El número de teléfono debe ser válido",
+          messageRequired: "El mensaje es obligatorio",
+          messageMinLength: "El mensaje debe tener al menos 10 caracteres",
+        },
+      },
     };
+  },
+  mounted() {
+    this.updateLanguageIdFromURL();
+  },
+  watch: {
+    '$route': 'updateLanguageIdFromURL',
   },
   methods: {
     async submit() {
@@ -158,11 +243,11 @@ export default {
         try {
           const response = await HTTP.post("contacts", this.form);
           console.log("Form submitted successfully", response);
-          window.alert("Form Submitted");
+          window.alert(this.translations.submitSuccess);
           this.resetForm();
         } catch (error) {
           console.error("Error submitting the form", error);
-          window.alert("Error submitting form");
+          window.alert(this.translations.submitError);
         } finally {
           this.logoutText = true;
           this.logoutLoader = false;
@@ -178,6 +263,15 @@ export default {
         message: "",
       };
     },
+    updateLanguageIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const langId = parseInt(params.get('language_id')) || 1;
+      this.languageId = langId;
+      this.updateTranslations();
+    },
+    updateTranslations() {
+      this.translations = this.translationData[this.languageId];
+    },
   },
 };
 </script>
@@ -186,7 +280,7 @@ export default {
 .v-btn--disabled.v-btn--variant-elevated,
 .v-btn--disabled.v-btn--variant-flat {
   background-color: #9fc43d !important;
-  color: white !important;  
+  color: white !important;
 }
 .submit {
   background-color: #f6ae42 !important;
@@ -202,7 +296,7 @@ export default {
   text-align: left;
 }
 .image-section {
-  background-color: #f5f3dc; /* This color is similar to the one in your image */
+  background-color: #f5f3dc;
   height: 100%;
 }
 
@@ -224,7 +318,6 @@ export default {
   margin: 64px;
 }
 @media (max-width: 960px) {
-  /* For medium screens and smaller */
   .margin-div {
     margin: 0;
   }

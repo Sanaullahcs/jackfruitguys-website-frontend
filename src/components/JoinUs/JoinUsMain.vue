@@ -14,16 +14,15 @@
         ></p>
       </MotionGroup>
     </div>
-    
+
     <div>
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
-  <v-img
-    :src="sectionOne?.image"
-    class="joinusimgCss max-height-image"
-    style="max-height: 80vh; height: auto; object-fit: contain;"
-  ></v-img>
-</MotionGroup>
-
+        <v-img
+          :src="sectionOne?.image"
+          class="joinusimgCss max-height-image"
+          style="max-height: 80vh; height: auto; object-fit: contain"
+        ></v-img>
+      </MotionGroup>
     </div>
 
     <div class="mt-10">
@@ -47,13 +46,13 @@
             ></p>
           </div>
         </v-col>
-        
+
         <v-col cols="12" lg="6" xl="6">
           <div>
             <v-img
               :src="sectionTwo?.image"
               class="max-height-image mb-3"
-              style="object-fit: cover;"
+              style="object-fit: cover"
             ></v-img>
           </div>
         </v-col>
@@ -62,11 +61,15 @@
   </div>
 
   <div>
-    <div class="background-green py-16 text-center d-flex justify-space-between px-16 makingFlexOnSmall">
+    <div
+      class="background-green py-16 text-center d-flex justify-space-between px-16 makingFlexOnSmall"
+    >
       <h3 class="lastHeading mt-4">
         {{ sectionThree.title }}
       </h3>
-      <v-btn class="contactbtn my-5" elevation="0">Contact Us</v-btn>
+      <v-btn class="contactbtn my-5" elevation="0">
+        {{ translations.contactUs }}
+      </v-btn>
     </div>
   </div>
 </template>
@@ -82,24 +85,56 @@ export default {
       sectionTwo: {},
       sectionThree: {},
       sectionFour: {},
+      languageId: 1, // Default language ID
+      translations: {
+        contactUs: "",
+      },
+      translationData: {
+        1: {
+          // English
+          contactUs: "Contact Us",
+        },
+        2: {
+          // French
+          contactUs: "Nous contacter",
+        },
+        3: {
+          // German
+          contactUs: "Kontaktieren Sie uns",
+        },
+        4: {
+          // Spanish
+          contactUs: "Contáctenos",
+        },
+      },
     };
   },
   watch: {
     "$route.query.language_id": {
       handler(newValue) {
-        this.getAboutData(newValue);
+        this.updateLanguageIdFromURL();
+        this.getAboutData();
       },
       immediate: true,
     },
   },
   mounted() {
-    console.log("this is the http code ", HTTP);
-    console.log("this is the http code ", APP_URL);
+    this.updateLanguageIdFromURL();
+    this.getAboutData();
   },
   methods: {
+    updateLanguageIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const langId = parseInt(params.get("language_id")) || 1;
+      this.languageId = langId;
+      this.updateTranslations();
+    },
+    updateTranslations() {
+      this.translations = this.translationData[this.languageId];
+    },
     async getAboutData() {
       const payload = {
-        language_id:  this.$route.query.language_id || 1,
+        language_id: this.languageId,
       };
       try {
         const response = await HTTP.post("join-us", payload);
@@ -125,11 +160,22 @@ export default {
   width: 100%; /* Ensure full width */
   object-fit: cover; /* Maintain aspect ratio */
 }
-@media screen and (max-width: 680px){
-  .makingFlexOnSmall{
+.background-green {
+  background-color: #9fc43d;
+}
+.contactbtn {
+  background-color: #13a34c;
+  color: white;
+  font-family: Poppins;
+  font-size: 16px;
+  border-radius: 0;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (max-width: 680px) {
+  .makingFlexOnSmall {
     display: flex !important;
     flex-direction: column;
-
   }
 }
 </style>

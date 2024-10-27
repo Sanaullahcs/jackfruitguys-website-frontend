@@ -14,9 +14,9 @@
           </MotionGroup>
           <MotionGroup preset="fadeVisible" :duration="1200">
             <router-link class="text-decoration-none" to="/about"
-              ><v-btn elevation="0" class="readmorebtn my-5"
-                >Read More</v-btn
-              ></router-link
+              ><v-btn elevation="0" class="readmorebtn my-5">{{
+                translations.readMore
+              }}</v-btn></router-link
             >
           </MotionGroup>
         </div>
@@ -25,11 +25,11 @@
       <!-- Image Section -->
       <v-col cols="12" md="6" class="d-flex justify-center">
         <!-- <MotionGroup preset="slideVisibleBottom" :duration="1200"> -->
-          <v-img
-            :src="sectionFour?.image"
-            class="img-responsive ml-auto mb-n8"
-            max-width="70%"
-          ></v-img>
+        <v-img
+          :src="sectionFour?.image"
+          class="img-responsive ml-auto mb-n8"
+          max-width="70%"
+        ></v-img>
         <!-- </MotionGroup> -->
       </v-col>
     </v-row>
@@ -44,7 +44,47 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      languageId: 1, // Default language
+      translations: {
+        readMore: "",
+      },
+      translationData: {
+        1: {
+          // English
+          readMore: "Read More",
+        },
+        2: {
+          // French
+          readMore: "Lire la suite",
+        },
+        3: {
+          // German
+          readMore: "Weiterlesen",
+        },
+        4: {
+          // Spanish
+          readMore: "Leer más",
+        },
+      },
+    };
+  },
+  mounted() {
+    this.updateLanguageIdFromURL();
+  },
+  watch: {
+    $route: "updateLanguageIdFromURL",
+  },
+  methods: {
+    updateLanguageIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const langId = parseInt(params.get("language_id")) || 1;
+      this.languageId = langId;
+      this.updateTranslations();
+    },
+    updateTranslations() {
+      this.translations = this.translationData[this.languageId];
+    },
   },
 };
 </script>

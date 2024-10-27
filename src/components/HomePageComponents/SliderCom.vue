@@ -20,7 +20,7 @@
                         </p>
                         <img src="../../assets/images/add1.jpg" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
-              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
 
                         <!-- <router-link class="text-decoration-none" to="/contact"
@@ -57,7 +57,7 @@
                         </p>
                         <img src="../../assets/images/sliderimg2.webp" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
-              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
                       </div></v-col
                     >
@@ -91,7 +91,7 @@
                         </p>
                         <img src="../../assets/images/sliderimg4.webp" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
-              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
                       </div></v-col
                     >
@@ -124,7 +124,7 @@
                         </p>
                         <img src="../../assets/images/sliderimg6.webp" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
-              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
                       </div></v-col
                     >
@@ -158,7 +158,7 @@
                         </p>
                         <img src="../../assets/images/sliderimg8.webp" style=" height: 425px;object-fit: contain;"></img>
                         <router-link class="text-decoration-none" to="/about"
-              ><v-btn color="#9EC43B" class="GoBtn">GO</v-btn></router-link
+              ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
                       </div></v-col
                     >
@@ -195,38 +195,44 @@ export default {
         explore: '',
         epic: '',
         around: '',
-        team: ''
+        team: '',
+        go:''
       },
       translationData: {
-        1: { // English
-          discover: "Discover the Benefits of Jackfruits",
-          explore: "Explore our Jackfruit Delights Selection",
-          epic: "Epic Xperience: Jackfruit Guys' Eventful Adventures",
-          around: "Around the World with Jackfruit Guys: Global Presence",
-          team: "Global Team: Jackfruit Guys' Collaborators"
-        },
-        2: { // French
-          discover: "Découvrez les avantages du jacquier",
-          explore: "Explorez notre sélection de délices au jacquier",
-          epic: "Épique expérience: les aventures mouvementées des Jackfruit Guys",
-          around: "Autour du monde avec les Jackfruit Guys: Présence mondiale",
-          team: "Équipe mondiale: les collaborateurs des Jackfruit Guys"
-        },
-        3: { // German
-          discover: "Entdecken Sie die Vorteile von Jackfruits",
-          explore: "Entdecken Sie unsere Auswahl an Jackfruit-Delikatessen",
-          epic: "Episches Erlebnis: Jackfruit Guys' ereignisreiche Abenteuer",
-          around: "Rund um die Welt mit Jackfruit Guys: Globale Präsenz",
-          team: "Globales Team: Jackfruit Guys' Mitarbeiter"
-        },
-        4: { // Spanish
-          discover: "Descubre los beneficios del Jackfruit",
-          explore: "Explora nuestra selección de delicias de Jackfruit",
-          epic: "Experiencia épica: Las aventuras llenas de eventos de Jackfruit Guys",
-          around: "Alrededor del mundo con Jackfruit Guys: Presencia global",
-          team: "Equipo global: Colaboradores de Jackfruit Guys"
-        }
-      }
+  1: { // English
+    discover: "Discover the Benefits of Jackfruits",
+    explore: "Explore our Jackfruit Delights Selection",
+    epic: "Epic Xperience: Jackfruit Guys' Eventful Adventures",
+    around: "Around the World with Jackfruit Guys: Global Presence",
+    team: "Global Team: Jackfruit Guys' Collaborators",
+    go: "Go" // Added "Go" translation
+  },
+  2: { // French
+    discover: "Découvrez les avantages du jacquier",
+    explore: "Explorez notre sélection de délices au jacquier",
+    epic: "Épique expérience: les aventures mouvementées des Jackfruit Guys",
+    around: "Autour du monde avec les Jackfruit Guys: Présence mondiale",
+    team: "Équipe mondiale: les collaborateurs des Jackfruit Guys",
+    go: "Aller" // Added "Go" translation
+  },
+  3: { // German
+    discover: "Entdecken Sie die Vorteile von Jackfruits",
+    explore: "Entdecken Sie unsere Auswahl an Jackfruit-Delikatessen",
+    epic: "Episches Erlebnis: Jackfruit Guys' ereignisreiche Abenteuer",
+    around: "Rund um die Welt mit Jackfruit Guys: Globale Präsenz",
+    team: "Globales Team: Jackfruit Guys' Mitarbeiter",
+    go: "Gehen" // Added "Go" translation
+  },
+  4: { // Spanish
+    discover: "Descubre los beneficios del Jackfruit",
+    explore: "Explora nuestra selección de delicias de Jackfruit",
+    epic: "Experiencia épica: Las aventuras llenas de eventos de Jackfruit Guys",
+    around: "Alrededor del mundo con Jackfruit Guys: Presencia global",
+    team: "Equipo global: Colaboradores de Jackfruit Guys",
+    go: "Ir" // Added "Go" translation
+  }
+}
+
     };
   },
   mounted() {

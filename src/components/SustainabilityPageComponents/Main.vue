@@ -255,7 +255,7 @@
     </MotionGroup>
     <v-btn class="contactbtn my-5" elevation="0">
       <router-link class="text-decoration-none" to="/contact"
-        ><p class="text-white">Contact Us</p></router-link
+        ><p class="text-white">{{ translations.contactUs }}</p></router-link
       ></v-btn
     >
   </div>
@@ -263,6 +263,7 @@
 <script>
 import { HTTP } from "../../common/commom-http";
 import { APP_URL } from "../../common/commom-http";
+
 export default {
   data() {
     return {
@@ -270,52 +271,79 @@ export default {
       sectionTwo: {},
       sectionThree: [],
       sectionFour: {},
+      languageId: 1, // Default language set to English
+      translations: {
+        contactUs: "",
+      },
+      translationData: {
+        1: {
+          // English
+          contactUs: "Contact Us",
+        },
+        2: {
+          // French
+          contactUs: "Nous contacter",
+        },
+        3: {
+          // German
+          contactUs: "Kontaktieren Sie uns",
+        },
+        4: {
+          // Spanish
+          contactUs: "Contáctenos",
+        },
+      },
     };
   },
   mounted() {
-    console.log("this is the http code ", HTTP);
-    console.log("this is the http code ", APP_URL);
-    // this.getAboutData();
+    this.updateLanguageIdFromURL(); // Set the language ID from URL when the component is mounted
+    this.getAboutData(); // Fetch the data for sections
   },
   watch: {
-    // Watch for changes in the route (URL)
+    // Watch for changes in the route's query parameter (language_id)
     "$route.query.language_id": {
       handler(newValue) {
-        this.getAboutData(newValue);
+        this.updateLanguageIdFromURL(); // Update language ID and translations when language_id changes
+        this.getAboutData(); // Optionally, refetch data if it changes based on language
       },
-      immediate: true, // Call the handler right away
+      immediate: true, // Execute immediately when the component is loaded
     },
   },
   methods: {
+    updateLanguageIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const langId = parseInt(params.get("language_id")) || 1;
+      this.languageId = langId; // Update languageId based on URL parameter
+      this.updateTranslations(); // Update the translations according to languageId
+    },
+    updateTranslations() {
+      this.translations = this.translationData[this.languageId]; // Apply the correct translations based on the languageId
+    },
     async getAboutData() {
       const payload = {
-        language_id:  this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
+        language_id: this.languageId, // Pass the correct languageId when fetching the data
       };
       try {
         const response = await HTTP.post("sustainability", payload);
-        console.log(
-          "response of the about",
-          response.data.data.sustainabilitySection1
-        );
         this.sectionOne = response.data.data.sustainabilitySection1;
         this.sectionTwo = response.data.data.SustainabilitySection2;
         this.sectionThree = response.data.data.SustainabilitySection3;
         this.sectionFour = response.data.data.SustainabilitySection4;
-        // Updating the Image with the base url
+
+        // Update image URLs with base path
         this.sectionOne.image_1 = `${APP_URL}${this.sectionOne.image_1}`;
         this.sectionTwo.image_1 = `${APP_URL}${this.sectionTwo.image_1}`;
         this.sectionThree.forEach((section) => {
           section.media = `${APP_URL}${section.media}`;
         });
-        // this.sectionThree.image = `${APP_URL}${this.sectionThree.image}`;
-        // this.sectionFour.image = `${APP_URL}${this.sectionFour.image}`;
       } catch (error) {
-        console.log("error", error);
+        console.log("Error fetching about data", error);
       }
     },
   },
 };
 </script>
+
 <style>
 @import "../../assets/css/style.css";
 </style>

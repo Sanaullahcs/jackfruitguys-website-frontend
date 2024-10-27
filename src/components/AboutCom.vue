@@ -14,9 +14,9 @@
           </MotionGroup>
           <MotionGroup preset="fadeVisible" :duration="1200">
             <router-link class="text-decoration-none" to="/about"
-              ><v-btn elevation="0" class="AboutUsButton"
-                >About Us</v-btn
-              ></router-link
+              ><v-btn elevation="0" class="AboutUsButton">{{
+                translations.about
+              }}</v-btn></router-link
             >
           </MotionGroup>
           <!-- <div class="position-relative mt-5 image-section">
@@ -43,13 +43,13 @@
         class="d-flex justify-md-start justify-center align-center"
       >
         <!-- <MotionGroup preset="slideVisibleRight" :duration="1200"> -->
-          <v-img
-            :src="sectionThree.image"
-            class="about-side-img joinusimgCss"
-            max-height="80vh"
-            max-width="100%"
-            alt="logo"
-          />
+        <v-img
+          :src="sectionThree.image"
+          class="about-side-img joinusimgCss"
+          max-height="80vh"
+          max-width="100%"
+          alt="logo"
+        />
         <!-- </MotionGroup> -->
       </v-col>
     </v-row>
@@ -64,10 +64,52 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      languageId: 1, // Default to English
+      translations: {
+        about: "",
+      },
+      translationData: {
+        1: {
+          // English
+          about: "About Us",
+        },
+        2: {
+          // French
+          about: "À propos de nous",
+        },
+        3: {
+          // German
+          about: "Über uns",
+        },
+        4: {
+          // Spanish
+          about: "Sobre nosotros",
+        },
+      },
+    };
+  },
+  mounted() {
+    this.updateLanguageIdFromURL();
+  },
+  watch: {
+    // Watch the URL change and update languageId accordingly
+    $route: "updateLanguageIdFromURL",
+  },
+  methods: {
+    updateLanguageIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const langId = parseInt(params.get("language_id")) || 1;
+      this.languageId = langId;
+      this.updateTranslations();
+    },
+    updateTranslations() {
+      this.translations = this.translationData[this.languageId];
+    },
   },
 };
 </script>
+
 <style scoped>
 .AboutUsButton {
   background-color: #9ec43b;
