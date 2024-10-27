@@ -20,7 +20,7 @@
           "
           class="line-height-sm pt-16 Font-Size-Large styling mr-3"
         >
-          <span style="max-width: 400px; margin-left: 25%">{{
+          <span style="max-width: 443px; margin-left: 25%">{{
             sectionOne?.section_1_title_1
           }}</span>
         </div>
@@ -193,8 +193,9 @@ export default {
 .Font-Size-Large {
   /* font-size: 132px !important;
   line-height: 103px !important; */
-  font-size: 85px !important;
+  font-size: 93px !important;
   line-height: 88px !important;
+  /* text-align: end; */
 }
 .bgTxtSet {
   background-image: url(../../assets/txtbg.png);

@@ -22,13 +22,25 @@
           v-model="selectedLanguage"
           :items="languages"
           class="position-absolute flag-selector"
-          style="right: 12px; top: 15px"
+          style="right: 12px; top: 10px"
           density="compact"
           @update:modelValue="updateLanguageInUrl"
           item-title="label"
           item-value="value"
           variant="outlined"
         >
+          <!-- This part is responsible for showing the selected flag -->
+          <template v-slot:selection="{ item, props }">
+            <v-list-item :prepend-avatar="item.raw.avatar" v-bind="props">
+              {{ item.raw.title }}
+            </v-list-item>
+          </template>
+
+          <template v-slot:item="{ item, props }">
+            <v-list-item :prepend-avatar="item.raw.avatar" v-bind="props">
+              {{ item.raw.title }}
+            </v-list-item>
+          </template>
         </v-select>
       </div>
       <!-- <v-container> -->
@@ -182,17 +194,38 @@
 </template>
 
 <script>
+import usa from "../assets/images/usa.svg";
+import fr from "../assets/images/fr.svg";
+import sp from "../assets/images/sp.svg";
+import gr from "../assets/images/gr.svg";
 export default {
   name: "Navbar",
   data() {
     return {
-      selectedLanguage: "EN",
+      selectedLanguage: 1,
       languages: [
-        { label: "EN", value: 1 },
-        { label: "FR", value: 2 },
-        { label: "DE", value: 3 },
-        { label: "ES", value: 4 },
+        {
+          label: "",
+          value: 1,
+          avatar: usa,
+        },
+        {
+          label: "",
+          value: 2,
+          avatar: fr,
+        },
+        {
+          label: "",
+          value: 3,
+          avatar: gr,
+        },
+        {
+          label: "",
+          value: 4,
+          avatar: sp,
+        },
       ],
+
       activeButton: "home", // Set default active button
       drawer: false, // For mobile menu
       buttons: [
@@ -258,6 +291,7 @@ export default {
   //   }
   // },
   mounted() {
+    this.watchRouteChange();
     // Set active button when the component is mounted
     this.setActiveButton();
   },
@@ -268,6 +302,16 @@ export default {
     },
   },
   methods: {
+    watchRouteChange() {
+      this.$watch(
+        () => this.$route.path,
+        (newPath, oldPath) => {
+          if (newPath !== oldPath) {
+            this.selectedLanguage = 1;
+          }
+        }
+      );
+    },
     updateLanguageInUrl() {
       console.log("url update");
       // Update the query param in the URL with the selected language value
@@ -379,6 +423,7 @@ export default {
   max-width: 75px !important;
   min-width: 75px !important;
   font-family: "Nunito", sans-serif;
+  border: 2px solid transparent;
   padding: 0;
 }
 
@@ -388,7 +433,9 @@ export default {
 }
 
 .flag-selector .v-field {
-  height: 30px;
+  height: 0px;
+  color: white;
+  border: 2px solid transparent;
   display: flex;
 }
 .flag-selector .v-label {
