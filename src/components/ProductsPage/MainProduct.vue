@@ -109,7 +109,7 @@
             max-height="80vh"
             max-width="800px"
             class="joinusimgCss mx-auto"
-            :src="sectionThree?.image"
+            src="../../assets/images/bigjf.jpeg"
           ></v-img>
         </MotionGroup>
       </div>
@@ -181,16 +181,28 @@
           ></p>
         </MotionGroup>
       </div>
-      <div>
-        <MotionGroup preset="slideVisibleLeft" :duration="1000">
-          <v-img
-            max-height="80vh"
-            max-width="800px"
-            class="joinusimgCss mx-auto"
-            :src="sectionFive?.image"
-          ></v-img>
-        </MotionGroup>
-      </div>
+      <v-row>
+        <v-col cols="12" xl="6" lg="6" md="6" sm="12" xs="12">
+          <MotionGroup preset="slideVisibleLeft" :duration="1000">
+            <v-img
+              max-height="70vh"
+              max-width="500px"
+              class="joinusimgCss ml-auto mx-sm-auto"
+              src="../../assets/images/jfanother.jpeg"
+            ></v-img> </MotionGroup
+        ></v-col>
+        <v-col cols="12" xl="6" lg="6" md="6" sm="12" xs="12">
+          <div>
+            <MotionGroup preset="slideVisibleLeft" :duration="1000">
+              <v-img
+                max-height="70vh"
+                max-width="500px"
+                class="joinusimgCss mr-auto mx-sm-auto"
+                :src="sectionFive?.image"
+              ></v-img>
+            </MotionGroup></div
+        ></v-col>
+      </v-row>
     </div>
   </div>
 </template>

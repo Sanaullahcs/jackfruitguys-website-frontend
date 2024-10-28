@@ -22,7 +22,7 @@
           v-model="selectedLanguage"
           :items="languages"
           class="position-absolute flag-selector"
-          style="right: 12px; top: 10px"
+          style="right: 22px; top: 10px"
           density="compact"
           @update:modelValue="updateLanguageInUrl"
           item-title="label"
