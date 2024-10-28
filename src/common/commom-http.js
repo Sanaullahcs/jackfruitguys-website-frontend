@@ -15,8 +15,8 @@ if (environment === "local") {
   APP_URL = "http://192.168.0.242:8082/timestudy-backend/public/";
   IMAGE_BASE_URL = "http://192.168.0.242:8082/timestudy-backend/public/";
 } else if (environment === "prod") {
-  APP_URL = "https://backend.medicaretimestudy.com/";
-  IMAGE_BASE_URL = "https://backend.medicaretimestudy.com";
+  APP_URL = "https://admin.jackfruitguys.com/";
+  IMAGE_BASE_URL = "https://admin.jackfruitguys.com/";
 }
 
 export { IMAGE_BASE_URL, APP_URL };
