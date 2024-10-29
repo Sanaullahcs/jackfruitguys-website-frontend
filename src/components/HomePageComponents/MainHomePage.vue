@@ -96,7 +96,7 @@
           <div>
             <MotionGroup preset="slideVisibleLeft" :duration="900">
               <v-img
-              class="widthRight"
+                class="widthRight"
                 style="min-width: 199px"
                 src="../../assets/images/midimg1.png"
               ></v-img>
@@ -362,7 +362,7 @@ export default {
   .widthleft {
     min-width: 147px !important;
   }
-  .widthRight{
+  .widthRight {
     min-width: 151px !important;
   }
   .minHeight100 {
@@ -393,9 +393,13 @@ export default {
 }
 
 .mainSectionTxt {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif;
   font-size: 6.5vw;
   line-height: 120px;
+  font-weight: 600; */
+  font-family: "Poppins", sans-serif;
+  font-size: 80px;
+  line-height: 102px;
   font-weight: 600;
 }
 
