@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="py-16">
-      {{ sectionTwo }}
+      <!-- {{ sectionTwo }} -->
       <Gallery :sectionTwo="sectionTwo" />
     </div>
     <div>

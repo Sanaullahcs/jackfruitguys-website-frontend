@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const environment = process.env.environment || "local";
+const environment = process.env.environment || "prod";
 console.log("environment", environment);
 let IMAGE_BASE_URL = "";
 let APP_URL = "";

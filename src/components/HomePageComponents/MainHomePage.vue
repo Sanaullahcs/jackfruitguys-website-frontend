@@ -96,6 +96,7 @@
           <div>
             <MotionGroup preset="slideVisibleLeft" :duration="900">
               <v-img
+              class="widthRight"
                 style="min-width: 199px"
                 src="../../assets/images/midimg1.png"
               ></v-img>
@@ -111,6 +112,7 @@
           <div class="mt-16">
             <MotionGroup preset="slideVisibleRight" :duration="900">
               <v-img
+                class="widthleft"
                 style="min-width: 195px"
                 src="../../assets/images/midimg2.png"
               ></v-img>
@@ -357,8 +359,14 @@ export default {
   .removeMarginTopOnSmall {
     margin-top: 0px !important;
   }
+  .widthleft {
+    min-width: 147px !important;
+  }
+  .widthRight{
+    min-width: 151px !important;
+  }
   .minHeight100 {
-    min-height: 50vh;
+    min-height: 20vh;
   }
   .words {
     font-size: 25px;
