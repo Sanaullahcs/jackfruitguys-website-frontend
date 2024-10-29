@@ -1,6 +1,6 @@
 <template>
-  <div class="text-black px-16">
-    <div class="py-5">
+  <div class="text-black">
+    <div class="py-5 px-16">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
           {{ sectionOne?.title }}
@@ -24,7 +24,7 @@
         </MotionGroup>
       </div>
     </div>
-    <div class="my-5">
+    <div class="my-5 px-16">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
           {{ sectionTwo?.title }}
@@ -45,7 +45,8 @@
         ></v-img>
       </MotionGroup>
     </div>
-    <div>
+    <div class="pink-bg">
+      <div class="px-16">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
           {{ sectionThree?.title }}
@@ -115,7 +116,8 @@
         </v-row>
       </div>
     </div>
-    <div class="my-6">
+    </div>
+    <div class="my-6 px-16">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
           {{ sectionFour?.title }}

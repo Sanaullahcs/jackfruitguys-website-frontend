@@ -20,7 +20,7 @@
           "
           class="line-height-sm pt-16 Font-Size-Large styling mr-3"
         >
-          <span style="max-width: 443px; margin-left: 25%">{{
+          <span style="max-width: 443px; margin-left: 55%">{{
             sectionOne?.section_1_title_1
           }}</span>
         </div>
@@ -84,7 +84,7 @@
         <div class="d-flex justify-end align-center position-relative">
           <div style="position: absolute; right: 0; z-index: 99">
             <MotionGroup preset="slideVisibleLeft" :duration="1200"
-              ><p class="mainSectionTxt Font-Size-Large mr-3 text-right">
+              ><p class="mainSectionTxt Font-Size-Large mr-3 text-right ml-8">
                 {{ sectionOne?.section_1_title_2 }}
               </p></MotionGroup
             >

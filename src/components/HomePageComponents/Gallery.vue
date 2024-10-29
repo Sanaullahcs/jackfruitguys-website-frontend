@@ -17,14 +17,14 @@ export default {
   },
   data() {
     return {
-      cards: [
-        "../../assets/images/gal1.png",
-        "../../assets/images/gal2.png",
-        "../../assets/images/gal3.png",
-        "../../assets/images/gal4.png",
-        "../../assets/images/gal1.png",
-      ],
-      cardsColors: ["#E3342F", "#38C172", "#3490DC", "#F66D9B", "#F6993F"],
+      // cards: [
+      //   "../../assets/images/gal1.png",
+      //   "../../assets/images/gal2.png",
+      //   "../../assets/images/gal3.png",
+      //   "../../assets/images/gal4.png",
+      //   "../../assets/images/gal1.png",
+      // ],
+      // cardsColors: ["#E3342F", "#38C172", "#3490DC", "#F66D9B", "#F6993F"],
     };
   },
 };
