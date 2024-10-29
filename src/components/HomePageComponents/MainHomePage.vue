@@ -395,7 +395,7 @@ export default {
 .mainSectionTxt {
   font-family: "Poppins", sans-serif;
   font-size: 6.5vw;
-  line-height: 104px;
+  line-height: 120px;
   font-weight: 600;
 }
 
