@@ -33,4 +33,16 @@
   justify-content: center;
   align-items: start;
 }
+@media screen and (max-width: 480px) {
+  .main-header {
+  height: 150px;
+}
+.header-text {
+  
+  font-size: 20px;
+ 
+  line-height: 17px;
+  
+}
+}
 </style>
