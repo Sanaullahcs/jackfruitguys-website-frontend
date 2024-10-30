@@ -1,5 +1,5 @@
 <template>
-  <div style="color: black" class="mb-16 pb-16">
+  <div style="color: black" class="mb-8">
     <v-row class="mx-2 mx-md-16">
       <!-- Text Section -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center">
