@@ -26,7 +26,7 @@
   width: 12px;
   background-color: #f1f1f1;
 }
-.v-window__controls .v-window__left{
+.v-window__controls .v-window__left {
   background-color: transparent !important;
 }
 ::-ms-scrollbar-thumb {
@@ -50,6 +50,11 @@
   /* line-height: 70px; */
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .jackfruitsHeading {
+    font-size: 30px;
+  }
 }
 .jackfruitsHeadingSmall {
   font-family: Poppins;
