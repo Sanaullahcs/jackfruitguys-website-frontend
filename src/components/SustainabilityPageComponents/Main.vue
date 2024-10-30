@@ -1,5 +1,5 @@
 <template>
-  <div class="text-black px-16">
+  <div class="text-black px-8">
     <div>
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading mx-auto mt-8 max-700">

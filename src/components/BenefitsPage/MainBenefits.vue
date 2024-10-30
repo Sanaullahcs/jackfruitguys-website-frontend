@@ -15,7 +15,7 @@
       </p>
     </MotionGroup>
   </div>
-  <div class="text-black pink-bg px-16">
+  <div class="text-black pink-bg px-8">
     <div class="py-10">
       <MotionGroup preset="slideVisibleBottom" :duration="1400">
         <h1 class="jackfruitsHeading max-700 mx-auto">
@@ -89,7 +89,7 @@
       </v-row>
     </div>
   </div>
-  <div class="bg-white px-16">
+  <div class="bg-white px-8">
     <div class="py-10">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
