@@ -198,8 +198,8 @@ export default {
 .Font-Size-Large {
   /* font-size: 132px !important;
   line-height: 103px !important; */
-  font-size: 128px !important;
-  line-height: 122px !important;
+  font-size: 91px !important;
+    line-height: 87px !important;
   /* text-align: end; */
 }
 .bgTxtSet {
