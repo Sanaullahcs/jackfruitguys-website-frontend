@@ -24,7 +24,7 @@
         </MotionGroup>
       </div>
     </div>
-    <div class="my-5 px-16">
+    <div class="my-5 px-16 py-4 pink-bg">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
           {{ sectionTwo?.title }}
@@ -45,7 +45,7 @@
         ></v-img>
       </MotionGroup>
     </div>
-    <div class="pink-bg">
+    <div class="">
       <div class="px-16">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
@@ -117,7 +117,7 @@
       </div>
     </div>
     </div>
-    <div class="my-6 px-16">
+    <div class="my-6 px-16 py-4 pink-bg">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
           {{ sectionFour?.title }}
