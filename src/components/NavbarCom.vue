@@ -347,7 +347,7 @@ export default {
   font-family: poppins-semibold, poppins, sans-serif;
   overflow: hidden;
   /* font-weight: 400 !important; */
-  font-size: 12px;
+  font-size: 10px;
   background: white;
   margin-left: 4px;
   margin-top: 4px;
