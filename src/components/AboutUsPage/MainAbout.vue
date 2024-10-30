@@ -117,7 +117,7 @@
       </div>
     </div>
     </div>
-    <div class="my-6 px-16 py-4 pink-bg">
+    <div class="mt-6 px-16 py-4 pink-bg">
       <MotionGroup preset="slideVisibleBottom" :duration="1000">
         <h1 class="jackfruitsHeading max-700 mx-auto">
           {{ sectionFour?.title }}
