@@ -113,6 +113,8 @@ export default {
   font-family: Poppins;
   font-size: 13px;
   font-weight: 400;
+  max-width: 291px;
+    margin: auto;
   text-align: center;
 }
 </style>
