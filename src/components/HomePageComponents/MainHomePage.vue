@@ -198,7 +198,7 @@ export default {
 .Font-Size-Large {
   /* font-size: 132px !important;
   line-height: 103px !important; */
-  font-size: 93px !important;
+  font-size: 106px !important;
   line-height: 88px !important;
   /* text-align: end; */
 }
