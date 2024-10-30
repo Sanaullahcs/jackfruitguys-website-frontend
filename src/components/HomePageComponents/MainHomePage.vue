@@ -47,7 +47,7 @@
             v-for="(item, index) in sectionTwo"
             :key="item.id"
             :class="[
-              'mainSectionTxt',
+              'mainSectionTxtsm',
               'bgTxtSet',
               'removeMarginTopOnSmall',
               { 'mt-n6': index % 2 !== 0 },
@@ -199,7 +199,7 @@ export default {
   /* font-size: 132px !important;
   line-height: 103px !important; */
   font-size: 128px !important;
-  line-height: 98px !important;
+  line-height: 122px !important;
   /* text-align: end; */
 }
 .bgTxtSet {
@@ -353,7 +353,7 @@ export default {
 
 @media screen and (max-width: 480px) {
   .Font-Size-Large {
-    font-size: 8vw !important;
+    font-size: 10vw !important;
     line-height: 40px !important;
   }
   .removeMarginTopOnSmall {
@@ -373,9 +373,14 @@ export default {
     line-height: 30px;
   }
   .mainSectionTxt {
-    font-size: 22px !important;
+    font-size: 36px !important;
     line-height: 35px !important;
     margin-top: -1px !important;
+  }
+  .mainSectionTxtsm {
+    font-size: 28px !important;
+        line-height: 38px !important;
+        margin-top: -1px !important;
   }
   .sentence span {
     font-size: 18px;
