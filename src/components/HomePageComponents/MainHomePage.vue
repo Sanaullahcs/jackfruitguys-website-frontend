@@ -209,7 +209,7 @@ export default {
   background-size: contain;
 }
 .words {
-  font-size: 40px;
+  font-size: 72px;
   font-weight: bolder;
   text-align: left;
   letter-spacing: 3px;
