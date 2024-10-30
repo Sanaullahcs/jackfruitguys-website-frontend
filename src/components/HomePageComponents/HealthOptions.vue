@@ -111,7 +111,7 @@ export default {
 }
 .header-text {
   font-family: Poppins;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 400;
   max-width: 291px;
     margin: auto;
