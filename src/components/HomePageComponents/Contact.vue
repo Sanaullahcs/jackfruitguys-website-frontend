@@ -136,25 +136,26 @@ export default {
       ],
       languageId: 1, // Default language
       translations: {
-        heading: '',
-        name: '',
-        companyName: '',
-        email: '',
-        phone: '',
-        message: '',
-        submit: '',
-        nameRequired: '',
-        nameMinLength: '',
-        companyNameRequired: '',
-        emailRequired: '',
-        emailInvalid: '',
-        phoneRequired: '',
-        phoneInvalid: '',
-        messageRequired: '',
-        messageMinLength: '',
+        heading: "",
+        name: "",
+        companyName: "",
+        email: "",
+        phone: "",
+        message: "",
+        submit: "",
+        nameRequired: "",
+        nameMinLength: "",
+        companyNameRequired: "",
+        emailRequired: "",
+        emailInvalid: "",
+        phoneRequired: "",
+        phoneInvalid: "",
+        messageRequired: "",
+        messageMinLength: "",
       },
       translationData: {
-        1: { // English
+        1: {
+          // English
           heading: "We'd love to hear from you!",
           name: "Your Name",
           companyName: "Company Name",
@@ -172,7 +173,8 @@ export default {
           messageRequired: "Message is required",
           messageMinLength: "Message must be at least 10 characters",
         },
-        2: { // French
+        2: {
+          // French
           heading: "Nous serions ravis de vous entendre!",
           name: "Votre nom",
           companyName: "Nom de l'entreprise",
@@ -190,7 +192,8 @@ export default {
           messageRequired: "Le message est requis",
           messageMinLength: "Le message doit comporter au moins 10 caractères",
         },
-        3: { // German
+        3: {
+          // German
           heading: "Wir würden gerne von Ihnen hören!",
           name: "Ihr Name",
           companyName: "Firmenname",
@@ -206,9 +209,11 @@ export default {
           phoneRequired: "Telefonnummer ist erforderlich",
           phoneInvalid: "Die Telefonnummer muss gültig sein",
           messageRequired: "Nachricht ist erforderlich",
-          messageMinLength: "Die Nachricht muss mindestens 10 Zeichen lang sein",
+          messageMinLength:
+            "Die Nachricht muss mindestens 10 Zeichen lang sein",
         },
-        4: { // Spanish
+        4: {
+          // Spanish
           heading: "¡Nos encantaría saber de ti!",
           name: "Tu nombre",
           companyName: "Nombre de la empresa",
@@ -233,7 +238,7 @@ export default {
     this.updateLanguageIdFromURL();
   },
   watch: {
-    '$route': 'updateLanguageIdFromURL',
+    $route: "updateLanguageIdFromURL",
   },
   methods: {
     async submit() {
@@ -243,7 +248,7 @@ export default {
         try {
           const response = await HTTP.post("contacts", this.form);
           console.log("Form submitted successfully", response);
-          window.alert(this.translations.submitSuccess);
+          window.alert("Form is Submitted");
           this.resetForm();
         } catch (error) {
           console.error("Error submitting the form", error);
@@ -265,7 +270,7 @@ export default {
     },
     updateLanguageIdFromURL() {
       const params = new URLSearchParams(window.location.search);
-      const langId = parseInt(params.get('language_id')) || 1;
+      const langId = parseInt(params.get("language_id")) || 1;
       this.languageId = langId;
       this.updateTranslations();
     },
