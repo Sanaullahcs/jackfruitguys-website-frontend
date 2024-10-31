@@ -10,8 +10,8 @@
         <v-img
           v-motion-fade-visible
           src="@/assets/images/hdlogo.svg"
-          max-width="300px"
-          min-width="300px"
+          max-width="272px"
+          min-width="252px"
           alt="logo"
           contain
           class="logo"
@@ -96,12 +96,13 @@ export default {
         { label: "", value: 1, avatar: usa },
         { label: "", value: 2, avatar: fr },
         { label: "", value: 3, avatar: gr },
-        { label: "", value: 4, avatar: sp }
+        { label: "", value: 4, avatar: sp },
       ],
       activeButton: "home", // Set default active button
       drawer: false, // For mobile menu
       translationData: {
-        1: { // English
+        1: {
+          // English
           buttons: {
             home: "Home",
             about: "About Us",
@@ -114,10 +115,11 @@ export default {
             contact: "Contact Us",
             blogs: "Blogs",
             recipe: "Recipes",
-            joinUs: "Join Us"
-          }
+            joinUs: "Join Us",
+          },
         },
-        2: { // French
+        2: {
+          // French
           buttons: {
             home: "Accueil",
             about: "À propos",
@@ -130,10 +132,11 @@ export default {
             contact: "Contactez-nous",
             blogs: "Blogs",
             recipe: "Recettes",
-            joinUs: "Rejoignez-nous"
-          }
+            joinUs: "Rejoignez-nous",
+          },
         },
-        3: { // German
+        3: {
+          // German
           buttons: {
             home: "Startseite",
             about: "Über uns",
@@ -146,10 +149,11 @@ export default {
             contact: "Kontakt",
             blogs: "Blogs",
             recipe: "Rezepte",
-            joinUs: "Mitmachen"
-          }
+            joinUs: "Mitmachen",
+          },
         },
-        4: { // Spanish
+        4: {
+          // Spanish
           buttons: {
             home: "Inicio",
             about: "Sobre nosotros",
@@ -162,19 +166,21 @@ export default {
             contact: "Contáctenos",
             blogs: "Blogs",
             recipe: "Recetas",
-            joinUs: "Únete a nosotros"
-          }
-        }
-      }
+            joinUs: "Únete a nosotros",
+          },
+        },
+      },
     };
   },
   computed: {
     translatedButtons() {
-      return Object.keys(this.translationData[this.selectedLanguage].buttons).map(key => ({
+      return Object.keys(
+        this.translationData[this.selectedLanguage].buttons
+      ).map((key) => ({
         value: key,
-        label: this.translationData[this.selectedLanguage].buttons[key]
+        label: this.translationData[this.selectedLanguage].buttons[key],
       }));
-    }
+    },
   },
   mounted() {
     this.watchRouteChange();
@@ -183,7 +189,7 @@ export default {
   watch: {
     $route() {
       this.setActiveButton();
-    }
+    },
   },
   methods: {
     watchRouteChange() {
@@ -200,50 +206,49 @@ export default {
       this.$router.push({ query: { language_id: this.selectedLanguage } });
     },
     setActiveButton() {
-  const path = this.$route.path;
+      const path = this.$route.path;
 
-  switch (path) {
-    case "/":
-      this.activeButton = "home";
-      break;
-    case "/about":
-      this.activeButton = "about";
-      break;
-    case "/sustainability":
-      this.activeButton = "sustainability";
-      break;
-    case "/benefits":
-      this.activeButton = "benefits";
-      break;
-    case "/contact":
-      this.activeButton = "contact";
-      break;
-    case "/products":
-      this.activeButton = "products";
-      break;
-    case "/blogs":
-      this.activeButton = "blogs";
-      break;
-    case "/experience":
-      this.activeButton = "experience";
-      break;
-    case "/presence":
-      this.activeButton = "presence";
-      break;
-    case "/partners":  // Fix: use "/partners" instead of "/partner"
-      this.activeButton = "partners";  // Fix: use "partners" to match button value
-      break;
-    case "/recipe":
-      this.activeButton = "recipe";
-      break;
-    case "/join-us":
-      this.activeButton = "joinUs";
-      break;
-    default:
-      this.activeButton = ""; // Reset if no match
-  }
-}
-,
+      switch (path) {
+        case "/":
+          this.activeButton = "home";
+          break;
+        case "/about":
+          this.activeButton = "about";
+          break;
+        case "/sustainability":
+          this.activeButton = "sustainability";
+          break;
+        case "/benefits":
+          this.activeButton = "benefits";
+          break;
+        case "/contact":
+          this.activeButton = "contact";
+          break;
+        case "/products":
+          this.activeButton = "products";
+          break;
+        case "/blogs":
+          this.activeButton = "blogs";
+          break;
+        case "/experience":
+          this.activeButton = "experience";
+          break;
+        case "/presence":
+          this.activeButton = "presence";
+          break;
+        case "/partners": // Fix: use "/partners" instead of "/partner"
+          this.activeButton = "partners"; // Fix: use "partners" to match button value
+          break;
+        case "/recipe":
+          this.activeButton = "recipe";
+          break;
+        case "/join-us":
+          this.activeButton = "joinUs";
+          break;
+        default:
+          this.activeButton = ""; // Reset if no match
+      }
+    },
     setActive(button) {
       this.activeButton = button;
 
@@ -289,8 +294,8 @@ export default {
       }
 
       this.drawer = false; // Close drawer on selection
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
@@ -403,6 +408,11 @@ export default {
 .logo {
   max-height: 66px; /* Adjust based on needed logo size */
 }
+@media (max-width: 480px) {
+.logo{
+  margin-top: 20px;
+}
+}
 
 .v-btn {
   font-weight: bold;
@@ -422,7 +432,7 @@ export default {
 @media screen and (max-width: 480px) {
   .flag-selector {
     left: 11px !important;
-    top: 71px !important;
+    top: 80px !important;
   }
 }
 </style>

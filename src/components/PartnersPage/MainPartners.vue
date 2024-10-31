@@ -1,5 +1,5 @@
 <template>
-  <div class="text-black px-16 pink-bg">
+  <div class="text-black px-8 pink-bg">
     <div>
       <v-img
         v-motion-pop-visible
