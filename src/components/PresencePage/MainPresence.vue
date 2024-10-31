@@ -14,7 +14,11 @@
     </div>
     <div class="pink-bg pa-16">
       <div>
-        <v-row v-for="(section, index) in sectionTwo" :key="index">
+        <v-row
+          v-if="isLargeScreen"
+          v-for="(section, index) in sectionTwo"
+          :key="index"
+        >
           <!-- For even indices (0, 2, 4...), show text first, then image -->
           <template v-if="index % 2 === 0">
             <v-col cols="12" lg="6" xl="6">
@@ -69,6 +73,33 @@
             </v-col>
           </template>
         </v-row>
+        <div v-else>
+          <v-row v-for="(section, index) in sectionTwo" :key="index">
+            <v-col cols="12" lg="6" xl="6">
+              <div class="d-flex flex-column justify-center h-100 pl-3">
+                <MotionGroup preset="slideVisibleRight" :duration="1000">
+                  <h1 class="jackfruitsHeading text-left">
+                    {{ section.title }}
+                  </h1>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleRight" :duration="1200">
+                  <p class="jackfruitsText">
+                    {{ section.subtitle }}
+                  </p>
+                </MotionGroup>
+              </div>
+            </v-col>
+            <v-col cols="12" lg="6" xl="6">
+              <div>
+                <v-img
+                  class="joinusimgCss"
+                  max-height="70vh"
+                  :src="section.media"
+                ></v-img>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
 
         <!-- <v-row>
           <v-col cols="12" lg="6" xl="6"
@@ -179,12 +210,19 @@ export default {
       sectionTwo: {},
       sectionThree: {},
       sectionFour: {},
+      isLargeScreen: window.innerWidth >= 1280, // Initial check
     };
   },
   mounted() {
+    // Add event listener to watch for window resize
+    window.addEventListener("resize", this.checkScreenSize);
     console.log("this is the http code ", HTTP);
     console.log("this is the http code ", APP_URL);
     // this.getAboutData();
+  },
+  beforeDestroy() {
+    // Remove event listener when component is destroyed
+    window.removeEventListener("resize", this.checkScreenSize);
   },
   watch: {
     // Watch for changes in the route (URL)
@@ -196,9 +234,12 @@ export default {
     },
   },
   methods: {
+    checkScreenSize() {
+      this.isLargeScreen = window.innerWidth >= 1280;
+    },
     async getAboutData() {
       const payload = {
-        language_id:  this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
+        language_id: this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("persence", payload);

@@ -81,7 +81,11 @@
     </div>
     <div>
       <div>
-        <v-row v-for="(item, index) in sectionThree" :key="item.id">
+        <v-row
+          v-if="isLargeScreen"
+          v-for="(item, index) in sectionThree"
+          :key="item.id"
+        >
           <!-- If the index is even, show text first then image -->
           <template v-if="index % 2 === 0">
             <v-col cols="12" lg="6" xl="6">
@@ -140,6 +144,35 @@
             </v-col>
           </template>
         </v-row>
+        <div v-else>
+          <v-row v-for="(item, index) in sectionThree" :key="item.id">
+            <v-col cols="12" lg="6" xl="6">
+              <div class="d-flex flex-column justify-center h-100 pl-3">
+                <MotionGroup preset="slideVisibleRight" :duration="1000">
+                  <h1 class="jackfruitsHeading text-left">
+                    {{ item.title }}
+                  </h1>
+                </MotionGroup>
+                <MotionGroup preset="slideVisibleRight" :duration="1000">
+                  <p class="jackfruitsText">
+                    {{ item.subtitle }}
+                  </p>
+                </MotionGroup>
+              </div>
+            </v-col>
+            <v-col cols="12" lg="6" xl="6">
+              <div>
+                <MotionGroup preset="fadeVisible" :duration="1200">
+                  <v-img
+                    class="joinusimgCss"
+                    max-height="70vh"
+                    :src="item.media"
+                  ></v-img>
+                </MotionGroup>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
 
         <!-- <v-row>
           <v-col cols="12" lg="6" xl="6">
@@ -268,6 +301,7 @@ export default {
   data() {
     return {
       sectionOne: {},
+      isLargeScreen: window.innerWidth >= 1280, // Initial check
       sectionTwo: {},
       sectionThree: [],
       sectionFour: {},
@@ -296,8 +330,14 @@ export default {
     };
   },
   mounted() {
+    // Add event listener to watch for window resize
+    window.addEventListener("resize", this.checkScreenSize);
     this.updateLanguageIdFromURL(); // Set the language ID from URL when the component is mounted
     this.getAboutData(); // Fetch the data for sections
+  },
+  beforeDestroy() {
+    // Remove event listener when component is destroyed
+    window.removeEventListener("resize", this.checkScreenSize);
   },
   watch: {
     // Watch for changes in the route's query parameter (language_id)
@@ -310,6 +350,9 @@ export default {
     },
   },
   methods: {
+    checkScreenSize() {
+      this.isLargeScreen = window.innerWidth >= 1280;
+    },
     updateLanguageIdFromURL() {
       const params = new URLSearchParams(window.location.search);
       const langId = parseInt(params.get("language_id")) || 1;
