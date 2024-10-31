@@ -174,15 +174,22 @@ export default {
   },
   computed: {
     translatedButtons() {
-      return Object.keys(
-        this.translationData[this.selectedLanguage].buttons
-      ).map((key) => ({
+      // console.log("URL ID:", this.$route.query.language_id);
+      // this.setId(this.$route.query.language_id);
+      const languageData = this.translationData[this.selectedLanguage];
+      if (!languageData) {
+        return []; // Return an empty array if selectedLanguage data is not available
+      }
+      return Object.keys(languageData.buttons).map((key) => ({
         value: key,
-        label: this.translationData[this.selectedLanguage].buttons[key],
+        label: languageData.buttons[key],
       }));
     },
   },
   mounted() {
+    console.log("URL ID:", this.$route.query.language_id);
+    // this.selectedLanguage = this.$route.query.language_id;
+    this.setId(this.$route.query.language_id);
     this.watchRouteChange();
     this.setActiveButton();
   },
@@ -192,6 +199,10 @@ export default {
     },
   },
   methods: {
+    setId(id) {
+      this.selectedLanguage = id;
+      console.log("setting id ",id)
+    },
     watchRouteChange() {
       this.$watch(
         () => this.$route.path,
@@ -409,9 +420,9 @@ export default {
   max-height: 66px; /* Adjust based on needed logo size */
 }
 @media (max-width: 480px) {
-.logo{
-  margin-top: 20px;
-}
+  .logo {
+    margin-top: 20px;
+  }
 }
 
 .v-btn {
