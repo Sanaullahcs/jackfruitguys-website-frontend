@@ -70,8 +70,8 @@
         </div>
       </v-col>
     </v-row>
-    <div style="background: #0e9242" class="px-16 d-flex justify-space-between">
-      <v-row>
+    <div style="background: #0e9242" class="px-8 d-flex justify-space-between">
+      <v-row class="mb-3">
         <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
           <p class="footerText">
             Copyright 2024, Jackfruit Guys | All rights reserved.
@@ -132,10 +132,11 @@ export default {
         recipe: "",
         contact: "",
         blogs: "",
-        joinUs: ""
+        joinUs: "",
       },
       translationData: {
-        1: { // English
+        1: {
+          // English
           about: "About us",
           sustainability: "Sustainability",
           benefits: "Benefits",
@@ -146,9 +147,10 @@ export default {
           recipe: "Recipes",
           contact: "Contact",
           blogs: "Blogs",
-          joinUs: "Join us"
+          joinUs: "Join us",
         },
-        2: { // French
+        2: {
+          // French
           about: "À propos",
           sustainability: "Durabilité",
           benefits: "Avantages",
@@ -159,9 +161,10 @@ export default {
           recipe: "Recettes",
           contact: "Contactez-nous",
           blogs: "Blogs",
-          joinUs: "Rejoignez-nous"
+          joinUs: "Rejoignez-nous",
         },
-        3: { // German
+        3: {
+          // German
           about: "Über uns",
           sustainability: "Nachhaltigkeit",
           benefits: "Vorteile",
@@ -172,9 +175,10 @@ export default {
           recipe: "Rezepte",
           contact: "Kontakt",
           blogs: "Blogs",
-          joinUs: "Mitmachen"
+          joinUs: "Mitmachen",
         },
-        4: { // Spanish
+        4: {
+          // Spanish
           about: "Sobre nosotros",
           sustainability: "Sostenibilidad",
           benefits: "Beneficios",
@@ -185,9 +189,9 @@ export default {
           recipe: "Recetas",
           contact: "Contáctenos",
           blogs: "Blogs",
-          joinUs: "Únete a nosotros"
-        }
-      }
+          joinUs: "Únete a nosotros",
+        },
+      },
     };
   },
   mounted() {
@@ -196,19 +200,19 @@ export default {
   watch: {
     $route() {
       this.updateLanguageFromUrl();
-    }
+    },
   },
   methods: {
     updateLanguageFromUrl() {
       const params = new URLSearchParams(window.location.search);
-      const langId = parseInt(params.get('language_id')) || 1;
+      const langId = parseInt(params.get("language_id")) || 1;
       this.selectedLanguage = langId;
       this.updateTranslations();
     },
     updateTranslations() {
       this.translations = this.translationData[this.selectedLanguage];
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -249,5 +253,21 @@ export default {
   top: 70px;
   min-height: 250px;
   min-width: 129px;
+}
+@media (max-width: 780px) {
+  .footer-wrapper {
+    display: flex;
+    gap: 10px;
+    margin: 35px 0px;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .footerText {
+    font-size: 13px;
+  }
 }
 </style>
