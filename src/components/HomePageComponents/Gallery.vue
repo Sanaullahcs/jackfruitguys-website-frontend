@@ -7,16 +7,14 @@
 </template>
 
 <script>
+import gal1 from "@/assets/images/gal1.png";
+import gal2 from "@/assets/images/gal2.png";
+import gal3 from "@/assets/images/gal3.png";
+import gal4 from "@/assets/images/gal4.png";
 export default {
   data() {
     return {
-      cards: [
-        "../../assets/images/gal1.png",
-        "../../assets/images/gal2.png",
-        "../../assets/images/gal3.png",
-        "../../assets/images/gal4.png",
-        "../../assets/images/gal1.png",
-      ],
+      cards: [gal1, gal2, gal3, gal4, gal1],
       cardsColors: ["#E3342F", "#38C172", "#3490DC", "#F66D9B", "#F6993F"],
     };
   },
