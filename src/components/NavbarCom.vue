@@ -111,7 +111,7 @@ export default {
             products: "Products",
             experience: "Experience",
             presence: "Presence",
-            partners: "Partners",
+            partners: "Partner",
             contact: "Contact Us",
             blogs: "Blogs",
             recipe: "Recipes",
@@ -201,7 +201,7 @@ export default {
   methods: {
     setId(id) {
       this.selectedLanguage = id;
-      console.log("setting id ",id)
+      console.log("setting id ", id);
     },
     watchRouteChange() {
       this.$watch(
@@ -238,7 +238,7 @@ export default {
         case "/products":
           this.activeButton = "products";
           break;
-        case "/blogs":
+        case "/blog":
           this.activeButton = "blogs";
           break;
         case "/experience":
@@ -247,7 +247,7 @@ export default {
         case "/presence":
           this.activeButton = "presence";
           break;
-        case "/partners": // Fix: use "/partners" instead of "/partner"
+        case "/partner": // Fix: use "/partners" instead of "/partner"
           this.activeButton = "partners"; // Fix: use "partners" to match button value
           break;
         case "/recipe":
@@ -261,6 +261,7 @@ export default {
       }
     },
     setActive(button) {
+      console.log("button", button);
       this.activeButton = button;
 
       switch (button) {

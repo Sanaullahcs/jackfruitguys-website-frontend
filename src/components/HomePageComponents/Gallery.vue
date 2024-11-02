@@ -1,18 +1,42 @@
 <template>
   <div class="stack text-black">
-    <div
-      class="stack__card"
-      v-for="(card, index) in sectionTwo"
-      :key="index"
-      ref="cards"
-    >
-      <img
-        :src="card.media"
-        alt="card image"
-        max-height="80vh"
-        class="card-img joinusimgCss fade-in"
-      />
-    </div>
+    <v-row>
+      <v-col
+        v-for="(card, index) in sectionTwo"
+        :key="index"
+        cols="12"
+        md="3"
+        sm="12"
+      >
+        <div class="stack__card" @click="openLightbox(index)">
+          <img
+            :src="card.media"
+            style="height: 190px"
+            alt="card image"
+            class="card-img joinusimgCss"
+          />
+        </div>
+      </v-col>
+    </v-row>
+
+    <!-- Lightbox Modal -->
+    <v-dialog height="600" v-model="lightboxOpen" max-width="80%">
+      <v-card>
+        <v-card-text class="lightbox-content">
+          <v-btn class="left" icon @click="previousImage">
+            <v-icon>mdi-chevron-left</v-icon>
+          </v-btn>
+          <img
+            :src="sectionTwo[currentImageIndex].media"
+            alt="current image"
+            class="lightbox-img"
+          />
+          <v-btn class="right" icon @click="nextImage">
+            <v-icon>mdi-chevron-right</v-icon>
+          </v-btn>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -24,26 +48,31 @@ export default {
       required: true,
     },
   },
-  mounted() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-          } else {
-            entry.target.classList.remove("animate");
-          }
-        });
-      },
-      {
-        threshold: 0.1, // Trigger animation when 10% of the image is in view
+  data() {
+    return {
+      lightboxOpen: false,
+      currentImageIndex: 0,
+    };
+  },
+  methods: {
+    openLightbox(index) {
+      this.currentImageIndex = index;
+      this.lightboxOpen = true;
+    },
+    nextImage() {
+      if (this.currentImageIndex < this.sectionTwo.length - 1) {
+        this.currentImageIndex++;
+      } else {
+        this.currentImageIndex = 0; // Loop back to the first image
       }
-    );
-
-    // Observe each card image
-    this.$refs.cards.forEach((card) => {
-      observer.observe(card.querySelector("img"));
-    });
+    },
+    previousImage() {
+      if (this.currentImageIndex > 0) {
+        this.currentImageIndex--;
+      } else {
+        this.currentImageIndex = this.sectionTwo.length - 1; // Loop to the last image
+      }
+    },
   },
 };
 </script>
@@ -51,26 +80,41 @@ export default {
 <style scoped>
 .card-img {
   width: 100%;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  cursor: pointer;
+  object-fit: cover;
+}
+.stack__card {
+  display: flex;
+  justify-content: center;
 }
 
-.card-img.animate {
-  opacity: 1;
-  transform: translateY(0);
+.lightbox-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 !important;
+}
+.left {
+  position: absolute;
+  left: 10px;
+}
+.right {
+  position: absolute;
+  right: 10px;
 }
 
-html {
-  font-family: sans-serif;
-  box-sizing: border-box;
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+@media screen and (max-width: 480px) {
+  .lightbox-content .mdi-chevron-left {
+    margin-left: 20px;
+  }
+  .lightbox-content .mdi-chevron-right {
+    margin-right: 20px;
+  }
 }
 </style>

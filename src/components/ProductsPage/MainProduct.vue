@@ -186,7 +186,7 @@
           <MotionGroup preset="slideVisibleLeft" :duration="1000">
             <v-img
               max-height="70vh"
-              max-width="500px"
+              
               class="joinusimgCss ml-auto mx-sm-auto"
               src="../../assets/images/jfanother.jpeg"
             ></v-img> </MotionGroup
@@ -196,7 +196,7 @@
             <MotionGroup preset="slideVisibleLeft" :duration="1000">
               <v-img
                 max-height="70vh"
-                max-width="500px"
+             
                 class="joinusimgCss mr-auto mx-sm-auto"
                 :src="sectionFive?.image"
               ></v-img>

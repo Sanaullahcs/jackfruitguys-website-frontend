@@ -62,7 +62,7 @@
               ></v-img>
             </MotionGroup>
             <MotionGroup preset="slideVisibleLeft" :duration="1300">
-              <p class="jackfruitsText" v-html="sectionTwo.description_2"></p>
+              <p class="jackfruitsText mt-5" v-html="sectionTwo.description_2"></p>
             </MotionGroup>
             <!-- <p class="jackfruitsTextGreen">
               By opting for jackfruit, you're contributing to a more sustainable
