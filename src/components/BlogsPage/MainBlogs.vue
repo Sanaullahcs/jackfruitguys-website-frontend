@@ -54,7 +54,7 @@ export default {
   methods: {
     async getAboutData() {
       const payload = {
-        language_id:  this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
+        language_id: this.$route.query.language_id || 1, // Default to 1 if no language_id in URL
       };
       try {
         const response = await HTTP.post("blogs", payload);

@@ -1,6 +1,6 @@
 <template>
   <div class="text-black">
-    <h1 class="jackfruitsHeading mb-lg-n8 mt-8" >We're Here to Help!</h1>
+    <h1 class="jackfruitsHeading mb-lg-n8 mt-8">We're Here to Help!</h1>
     <Contact />
   </div>
 </template>
@@ -12,6 +12,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>
