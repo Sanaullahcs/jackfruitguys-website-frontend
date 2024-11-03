@@ -20,7 +20,7 @@
           "
           class="line-height-sm pt-16 Font-Size-Large styling mr-3"
         >
-          <span style="max-width: 443px; margin-left: 55%">{{
+          <span style="max-width: 443px; margin-left: 55%; text-align: end">{{
             sectionOne?.section_1_title_1
           }}</span>
         </div>
@@ -199,7 +199,7 @@ export default {
   /* font-size: 132px !important;
   line-height: 103px !important; */
   font-size: 91px !important;
-    line-height: 87px !important;
+  line-height: 87px !important;
   /* text-align: end; */
 }
 .bgTxtSet {
@@ -353,8 +353,8 @@ export default {
 
 @media screen and (max-width: 480px) {
   .Font-Size-Large {
-    font-size: 10vw !important;
-    line-height: 40px !important;
+    font-size: 8vw !important;
+    line-height: 33px !important;
   }
   .removeMarginTopOnSmall {
     margin-top: 0px !important;
@@ -379,8 +379,8 @@ export default {
   }
   .mainSectionTxtsm {
     font-size: 28px !important;
-        line-height: 38px !important;
-        margin-top: -1px !important;
+    line-height: 38px !important;
+    margin-top: -1px !important;
   }
   .sentence span {
     font-size: 18px;
