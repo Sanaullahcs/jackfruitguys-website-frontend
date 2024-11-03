@@ -188,8 +188,8 @@ export default {
   },
   mounted() {
     console.log("URL ID:", this.$route.query.language_id);
-    // this.selectedLanguage = this.$route.query.language_id;
-    this.setId(this.$route.query.language_id);
+    // this.selectedLanguage = 1;
+    this.setId(1);
     this.watchRouteChange();
     this.setActiveButton();
   },
