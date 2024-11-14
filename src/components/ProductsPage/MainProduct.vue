@@ -187,7 +187,7 @@
             <v-img
               max-height="70vh"
               class="joinusimgCss ml-auto mx-sm-auto"
-              src="../../assets/images/jfanother.jpeg"
+              src="../../assets/images/jfanother.png"
             ></v-img> </MotionGroup
         ></v-col>
         <v-col cols="12" xl="6" lg="6" md="6" sm="12" xs="12">
