@@ -12,6 +12,7 @@
         </p>
       </MotionGroup>
     </div>
+    
     <div class="pink-bg pa-16">
       <div>
         <v-row
