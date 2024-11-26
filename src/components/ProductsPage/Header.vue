@@ -15,7 +15,7 @@
     text-align: center;
   }
   .main-header {
-    background-image: url(@/assets/images/productsHeader.png);
+    background-image: url(@/assets/images/pronov.png);
     height: 350px;
     background-position: center;
     display: flex;

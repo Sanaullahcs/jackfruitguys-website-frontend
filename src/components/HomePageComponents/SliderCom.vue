@@ -18,7 +18,7 @@
                         <p class="sliderTxt  mt-16 pt-15">
                           {{ translations.discover }}
                         </p>
-                        <img src="../../assets/images/add1.jpg" style=" height: 425px;object-fit: cover;"></img>
+                        <img src="../../assets/images/nov1.png" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
               ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
@@ -37,6 +37,7 @@
                 <!-- <v-col cols="2" md="0" sm="0" xs="0"></v-col> -->
               </v-row>
             </v-container>
+            
           </div>
         </v-sheet>
       </v-carousel-item>
@@ -55,7 +56,7 @@
                         <p class="sliderTxt mt-16 pt-15">
                           {{ translations.explore }}
                         </p>
-                        <img src="../../assets/images/sliderimg2.webp" style=" height: 425px;object-fit: cover;"></img>
+                        <img src="../../assets/images/nov2.png" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
               ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
@@ -97,7 +98,7 @@
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img min-height="300px" src="../../assets/images/sliderimg5.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/sliderimg5.webp"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -122,7 +123,7 @@
                         <p class="sliderTxt  mt-16 pt-15">     
                           {{ translations.around }}
                         </p>
-                        <img src="../../assets/images/sliderimg6.png" style=" height: 425px;object-fit: cover;"></img>
+                        <img src="../../assets/images/sliderimg6.webp" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
               ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
