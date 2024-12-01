@@ -18,7 +18,7 @@
                         <p class="sliderTxt  mt-16 pt-15">
                           {{ translations.discover }}
                         </p>
-                        <img src="../../assets/images/nov1.png" style=" height: 425px;object-fit: cover;"></img>
+                        <img src="../../assets/images/dec1.png" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
               ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
@@ -30,7 +30,7 @@
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img min-height="300px" src="../../assets/images/sliderimg1.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/sliderimg1x.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -56,7 +56,7 @@
                         <p class="sliderTxt mt-16 pt-15">
                           {{ translations.explore }}
                         </p>
-                        <img src="../../assets/images/nov2.png" style=" height: 425px;object-fit: cover;"></img>
+                        <img src="../../assets/images/dec2.png" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
               ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
@@ -64,7 +64,7 @@
                     >
                     <v-col style="padding: 0;" class="disappearing" cols="12" lg="6" md="0" sm="0" xs="0"
                       ><div class="d-sm-none d-lg-block">
-                        <v-img min-height="300px" src="../../assets/images/sliderimg3.png"></v-img></div
+                        <v-img min-height="300px" src="../../assets/images/dec4.png"></v-img></div
                     ></v-col>
                   </v-row>
                 </v-col>
@@ -90,7 +90,7 @@
                                                       
                           {{ translations.epic }}
                         </p>
-                        <img src="../../assets/images/sliderimg4.png" style=" height: 425px;object-fit: cover;"></img>
+                        <img src="../../assets/images/dec3.png" style=" height: 425px;object-fit: cover;"></img>
                         <router-link class="text-decoration-none" to="/about"
               ><v-btn color="#9EC43B" class="GoBtn">{{ translations.go}}</v-btn></router-link
               >
