@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="chatbot-button">
-      <v-btn icon large color="white" class="borderCHatbot" @click="toggleChat">
+      <v-btn large :ripple="false" color="white" class="borderCHatbot" @click="toggleChat">
         <v-img
-          min-width="35px"
+         
+          class="mr-auto spacingImg jiggle-effect"
           src="../../assets/images/singleLogo.png"
         ></v-img>
+       <span class="askAi"> Ask AI</span>
       </v-btn>
       <div v-motion-slide-bottom v-if="isChatOpen" class="chatbox-wrapper">
         <div class="chat-header">
@@ -19,7 +21,7 @@
           </div>
           <div class="header-info ms-4">
             <h3>Jackfruit Guys</h3>
-            <p>AI Chatbot</p>
+            <p>Ask me Anything</p>
           </div>
         </div>
         <div class="chat-body" ref="chatBody">
@@ -317,6 +319,28 @@ export default {
 </script>
 
 <style scoped>
+@keyframes jiggle {
+  0%, 10% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  90%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+.jiggle-effect {
+  animation: jiggle 2s ease-in-out infinite; /* 3s jiggle + 3s pause */
+}
+
 .textField-Holder {
   position: relative;
   width: 100%;
@@ -462,8 +486,23 @@ export default {
   right: 20px;
   z-index: 1000;
 }
+.askAi{
+  text-transform: capitalize;
+    font-family: "Poppins";
+    /* font-family: DM Sans, sans-serif; */
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(125 160 13);
+}
+.spacingImg{
+  min-width: 40px;
+    margin-left: -22px;
+    margin-top: -11px;
+}
 .borderCHatbot {
-  border: 2px solid #9fc43c !important;
+  /* border: 1px solid #9fc43c !important; */
+  border-radius: 100px;
+  width: 90px;
 }
 .chatbot-button v-btn {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
