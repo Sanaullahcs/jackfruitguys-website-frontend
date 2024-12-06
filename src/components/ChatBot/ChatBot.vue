@@ -30,7 +30,7 @@
             :key="index"
             :class="['message', message.type]"
           >
-            <p class="chatMessage">{{ message.text }}</p>
+            <p class="chatMessage" v-html="message.text"></p>
           </div>
         </div>
 
@@ -207,7 +207,7 @@ export default {
               {
                 role: "system",
                 content:
-                  "You are a helpful assistant for Jackfruit Guys. Answer questions about jackfruit products, health benefits, recipes, and orders. For inquiries about pricing or purchasing, direct users to the contact page at https://www.jackfruitguys.com/contact, email info@jackfruitguys.com, or call +52 555 501 5010. If uncertain, advise contacting customer support.",
+                  'You are a helpful assistant for Jackfruit Guys. Answer questions about jackfruit products, health benefits, recipes, and orders. For inquiries about pricing or purchasing, direct users to the contact page at <a href="https://www.jackfruitguys.com/contact" target="_blank">Contact Page</a>, email info@jackfruitguys.com, or call +52 555 501 5010. If uncertain, advise contacting customer support.',
               },
               { role: "user", content: userMessage },
             ],
@@ -215,7 +215,7 @@ export default {
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${'API'}`,  // Replace with your actual OpenAI API key
+              Authorization: `Bearer ${'api'}`, // Replace with your actual OpenAI API key
             },
           }
         );
@@ -289,7 +289,7 @@ export default {
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${'API'}`, // Replace with your actual OpenAI API key
+              Authorization: `Bearer ${'api'}`, // Replace with your actual OpenAI API key
             },
           }
         );
