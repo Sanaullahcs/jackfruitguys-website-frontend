@@ -109,7 +109,7 @@
             max-height="80vh"
             max-width="800px"
             class="joinusimgCss mx-auto"
-            src="../../assets/images/bigjf.jpeg"
+            :src="sectionThree.image"
           ></v-img>
         </MotionGroup>
       </div>
