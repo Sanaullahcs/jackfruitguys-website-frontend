@@ -152,7 +152,6 @@ export default {
       this.isChatOpen = !this.isChatOpen;
     },
     async sendMessage() {
-      this.apiLoading = true;
 
       if (this.newMessage.trim() !== "") {
         // Push the user's message to the chat
@@ -272,6 +271,7 @@ export default {
           // Default response if no keywords match - GPT API call
         } else {
           try {
+            this.apiLoading = true;
             const gptResponse = await axios.post(
               "https://api.openai.com/v1/chat/completions",
               {
