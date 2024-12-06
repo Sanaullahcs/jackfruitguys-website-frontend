@@ -151,169 +151,175 @@ export default {
     toggleChat() {
       this.isChatOpen = !this.isChatOpen;
     },
+   
     async sendMessage() {
 
-      if (this.newMessage.trim() !== "") {
-        // Push the user's message to the chat
-        this.messages.push({ text: this.newMessage, type: "sent" });
+  if (this.newMessage.trim() !== "") {
+    // Push the user's message to the chat
+    this.messages.push({ text: this.newMessage, type: "sent" });
 
-        // Save the user's message and convert to lowercase for easier matching
-        const userMessage = this.newMessage.toLowerCase();
+    // Save the user's message and convert to lowercase for easier matching
+    const userMessage = this.newMessage.toLowerCase();
 
-        // Clear the input
-        this.newMessage = "";
+    // Clear the input
+    this.newMessage = "";
 
-        // Define specific responses for each question
-        let response = "";
+    // Check if this is the user's first message
+    if (this.messages.length === 1) {
+      this.messages.push({
+        text: "Hello! Welcome to Jackfruit Guys. I’m here to assist you with any questions about our products, recipes, health benefits, or orders. Let me know how I can help!",
+        type: "received",
+      });
+      this.apiLoading = false;
+      this.scrollToBottom();
+      return;
+    }
 
-        // General Inquiries
-        if (userMessage.includes("what is jackfruit")) {
-          response =
-            "Jackfruit is a tropical fruit known for its large size and meat-like texture, often used as a plant-based meat substitute in various dishes.";
-        } else if (userMessage.includes("where does jackfruit come from")) {
-          response =
-            "Jackfruit is native to regions in South and Southeast Asia. We source our jackfruit sustainably from tropical farms ideal for its growth.";
-        } else if (userMessage.includes("types of jackfruit")) {
-          response =
-            "We offer several varieties of jackfruit, including ripe and unripe options, as well as jackfruit flour and pre-cut pieces for convenience.";
-        } else if (userMessage.includes("health benefits of jackfruit")) {
-          response =
-            "Jackfruit is rich in vitamins A and C, fiber, and antioxidants. It supports immune health, digestion, and can be a low-calorie meat alternative.";
-        } else if (userMessage.includes("use jackfruit in cooking")) {
-          response =
-            "Jackfruit can be used in savory dishes like tacos, curries, and stir-fries, and as a meat substitute due to its texture. You can also add it to desserts when ripe.";
-        } else if (userMessage.includes("offer any recipes")) {
-          response =
-            "Yes! We have several recipes to help you cook with jackfruit, from savory dishes to desserts. Contact our sales team at +52 644 246 6071 to receive some exclusive recipes!";
-        } else if (userMessage.includes("shipping policies")) {
-          response =
-            "We offer standard and express shipping options. Shipping costs vary by location and order size. For detailed info, visit our shipping policy page or call +52 644 246 6071.";
-        } else if (userMessage.includes("return policy")) {
-          response =
-            "Our return policy allows for returns within 30 days of purchase if you are not satisfied. Contact customer support at +52 644 246 6071 for more assistance.";
-        } else if (userMessage.includes("contact customer service")) {
-          response =
-            "You can reach our customer service team via email at info@jackfruitguys.com or call us directly at +52 644 246 6071.";
+    // Define specific responses for each question
+    let response = "";
 
-          // Product-Specific Inquiries
-        } else if (userMessage.includes("jackfruit products do you offer")) {
-          response =
-            "We offer whole jackfruit, pre-cut jackfruit, jackfruit flour, and dried mango as additional options.";
-        } else if (userMessage.includes("sizes and weights")) {
-          response =
-            "Our products come in various sizes and weights to suit different needs. Contact our sales team at +52 644 246 6071 for specifics.";
-        } else if (
-          userMessage.includes("difference between ripe and unripe jackfruit")
-        ) {
-          response =
-            "Ripe jackfruit is sweet and can be used in desserts, while unripe jackfruit has a neutral taste and is ideal for savory dishes as a meat substitute.";
-        } else if (userMessage.includes("tell if a jackfruit is ripe")) {
-          response =
-            "A ripe jackfruit will have a strong, fruity aroma, a slightly soft texture, and a yellowish color on the outside.";
-        } else if (userMessage.includes("how long does jackfruit last")) {
-          response =
-            "Whole jackfruit lasts 5-7 days at room temperature. Once cut, store in the fridge and consume within 3-5 days for best quality.";
-        } else if (userMessage.includes("discounts or promotions")) {
-          response =
-            "We periodically offer promotions. For current offers, please contact our sales team at +52 644 246 6071.";
-        } else if (userMessage.includes("sourcing of your jackfruit")) {
-          response =
-            "Our jackfruit is sourced sustainably from farms in Southeast Asia, ensuring quality and freshness for every product.";
-
-          // Order-related Inquiries
-        } else if (userMessage.includes("how to place an order")) {
-          response =
-            "Orders can be placed directly on our website. For assistance, call us at +52 644 246 6071.";
-        } else if (userMessage.includes("payment methods")) {
-          response =
-            "We accept various payment methods including credit cards, PayPal, and more. For details, visit our payment page or call us at +52 644 246 6071.";
-        } else if (userMessage.includes("how long to arrive")) {
-          response =
-            "Delivery times vary by location and shipping method. Standard shipping usually takes 5-7 business days. Contact our sales team for expedited options.";
-        } else if (userMessage.includes("track my order")) {
-          response =
-            "You will receive a tracking link upon shipment. For assistance, contact customer service at +52 644 246 6071.";
-        } else if (userMessage.includes("received a damaged product")) {
-          response =
-            "We’re here to help. Please contact us immediately at +52 644 246 6071 or info@jackfruitguys.com to resolve any issues with damaged products.";
-        } else if (userMessage.includes("cancel my order")) {
-          response =
-            "Orders can be canceled within 24 hours of placement. Contact customer support at +52 644 246 6071 for assistance.";
-
-          // Advanced Inquiries
-        } else if (userMessage.includes("sustainability practices")) {
-          response =
-            "We prioritize sustainable sourcing and eco-friendly packaging. Contact sales@jackfruitguys.com for detailed information.";
-        } else if (userMessage.includes("future product offerings")) {
-          response =
-            "We are expanding our product line! Stay tuned or contact +52 644 246 6071 for future product announcements.";
-        } else if (userMessage.includes("wholesale")) {
-          response =
-            "Yes, we offer wholesale options. For bulk orders, please contact sales@jackfruitguys.com or call +52 644 246 6071.";
-        } else if (userMessage.includes("representative for bulk orders")) {
-          response =
-            "Our sales team can assist with bulk orders. Contact them at sales@jackfruitguys.com or +52 644 246 6071.";
-
-          // Open-Ended/Conversational
-        } else if (userMessage.includes("meat substitute")) {
-          response =
-            "Jackfruit is an excellent meat substitute due to its texture. We recommend our unripe jackfruit for savory dishes. Contact us at +52 644 246 6071 for more suggestions.";
-        } else if (userMessage.includes("popular ways to use jackfruit")) {
-          response =
-            "Jackfruit is popular in tacos, curries, and BBQ recipes. Try our recipes for inspiration! Call +52 644 246 6071 for exclusive recipes.";
-        } else if (userMessage.includes("never cooked with jackfruit")) {
-          response =
-            "No worries! Jackfruit is versatile. Start with simple dishes like tacos or stir-fry. Contact us for beginner-friendly recipes.";
-        } else if (userMessage.includes("favorite jackfruit recipes")) {
-          response =
-            "Our team loves jackfruit tacos and curries! For more recipes, call our sales team at +52 644 246 6071.";
-
-          // Default response if no keywords match - GPT API call
-        } else {
-          try {
-            this.apiLoading = true;
-            const gptResponse = await axios.post(
-              "https://api.openai.com/v1/chat/completions",
-              {
-                model: "gpt-4",
-                messages: [
-                  {
-                    role: "system",
-                    content: "You are a helpful assistant for Jackfruit Guys.",
-                  },
-                  { role: "user", content: userMessage },
-                ],
-              },
-              {
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${API_KEY}`, // Replace with your actual OpenAI API key
-                },
-              }
-            );
-
-            // Extract the response and add to chat
-            const chatGptMessage = gptResponse.data.choices[0].message.content;
-            this.messages.push({ text: chatGptMessage, type: "received" });
-          } catch (error) {
-            console.error("Error calling GPT API:", error);
-            this.messages.push({
-              text: "Oops! Something went wrong. Please try again.",
-              type: "received",
-            });
-          } finally {
-            this.apiLoading = false;
-            this.scrollToBottom();
-          }
-          return; // Exit the function here since the GPT API already handled the response
-        }
-
-        // Push the predefined response to the chat
-        this.messages.push({ text: response, type: "received" });
-        this.apiLoading = false;
-        this.scrollToBottom();
+    // General inquiries and product-specific responses
+    if (userMessage.includes("jackfruit")) {
+      if (userMessage.includes("what is") || userMessage.includes("tell me about")) {
+        response =
+          "Jackfruit is a tropical fruit known for its large size and meat-like texture, making it a popular plant-based meat substitute. It's versatile, delicious, and packed with nutrients!";
       }
-    },
+    }
+
+    // Check for inquiries about price or buying
+    if (userMessage.includes("price") || userMessage.includes("buy") || userMessage.includes("purchase")) {
+      response = `For inquiries about prices or purchasing, please contact us directly through our [Contact Page](https://www.jackfruitguys.com/contact), email us at info@jackfruitguys.com, or call us at +52 555 501 5010. We're here to help!`;
+    }
+
+    if (response) {
+      // If there's a predefined response, send it
+      this.messages.push({ text: response, type: "received" });
+    } else {
+      
+      // No predefined response, call ChatGPT API
+      try {
+        this.apiLoading = true;
+        const gptResponse = await axios.post(
+          "https://api.openai.com/v1/chat/completions",
+          {
+            model: "gpt-4",
+            messages: [
+              {
+                role: "system",
+                content:
+                  "You are a helpful assistant for Jackfruit Guys. Answer questions about jackfruit products, health benefits, recipes, and orders. For inquiries about pricing or purchasing, direct users to the contact page at https://www.jackfruitguys.com/contact, email info@jackfruitguys.com, or call +52 555 501 5010. If uncertain, advise contacting customer support.",
+              },
+              { role: "user", content: userMessage },
+            ],
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${'API'}`,  // Replace with your actual OpenAI API key
+            },
+          }
+        );
+
+        const chatGptMessage = gptResponse.data.choices[0].message.content;
+
+        // Determine if the response is specific enough
+        if (chatGptMessage && chatGptMessage.toLowerCase().includes("jackfruit")) {
+          this.messages.push({ text: chatGptMessage, type: "received" });
+        } else {
+          // Provide fallback contact information
+          this.messages.push({
+            text:
+              "For more specific details, please contact us through our [Contact Page](https://www.jackfruitguys.com/contact), email us at info@jackfruitguys.com, or call us at +52 555 501 5010.",
+            type: "received",
+          });
+        }
+      } catch (error) {
+        console.error("Error calling GPT API:", error);
+        this.messages.push({
+          text: "Oops! Something went wrong. Please try again or contact us at info@jackfruitguys.com.",
+          type: "received",
+        });
+      }
+    }
+
+    this.apiLoading = false;
+    this.scrollToBottom();
+  }
+
+  if (this.newMessage.trim() !== "") {
+    // Push the user's message to the chat
+    this.messages.push({ text: this.newMessage, type: "sent" });
+
+    // Save the user's message and convert to lowercase for easier matching
+    const userMessage = this.newMessage.toLowerCase();
+
+    // Clear the input
+    this.newMessage = "";
+
+    // Define specific responses for each question
+    let response = "";
+
+    // General inquiries and product-specific responses (similar to your initial structure)
+    if (userMessage.includes("jackfruit")) {
+      // Checking for specific words in user message
+      if (userMessage.includes("what is") || userMessage.includes("tell me about")) {
+        response = "Jackfruit is a tropical fruit known for its large size and meat-like texture, often used as a plant-based meat substitute.";
+      } 
+      // More conditions for predefined responses here...
+    }
+
+    if (response) {
+      // If there's a predefined response, send it
+      this.messages.push({ text: response, type: "received" });
+    } else {
+      // No predefined response, call ChatGPT API
+      try {
+        const gptResponse = await axios.post(
+          "https://api.openai.com/v1/chat/completions",
+          {
+            model: "gpt-4",
+            messages: [
+              {
+                role: "system",
+                content: "You are a helpful assistant for Jackfruit Guys. Answer questions about jackfruit products, health benefits, recipes, and orders. If uncertain, advise contacting customer support at info@jackfruitguys.com or +52 555 501 5010.",
+              },
+              { role: "user", content: userMessage },
+            ],
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${'API'}`, // Replace with your actual OpenAI API key
+            },
+          }
+        );
+
+        const chatGptMessage = gptResponse.data.choices[0].message.content;
+
+        // Determine if the response is specific enough
+        if (chatGptMessage && chatGptMessage.includes("jackfruit")) {
+          this.messages.push({ text: chatGptMessage, type: "received" });
+        } else {
+          // If the response from ChatGPT is too general, provide contact information
+          this.messages.push({
+            text: "For more specific details, please contact us at info@jackfruitguys.com or call +52 555 501 5010.",
+            type: "received",
+          });
+        }
+      } catch (error) {
+        console.error("Error calling GPT API:", error);
+        this.messages.push({
+          text: "Oops! Something went wrong. Please try again or contact info@jackfruitguys.com.",
+          type: "received",
+        });
+      }
+    }
+
+    this.apiLoading = false;
+    this.scrollToBottom();
+  }
+}
+
   },
 };
 </script>
