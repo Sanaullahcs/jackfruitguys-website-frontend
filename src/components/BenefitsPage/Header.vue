@@ -5,6 +5,15 @@
       </div>
     </div>
   </template>
+  <script>
+  export default{
+    mounted() {
+    // Scroll to the top of the page
+    console.log("scrolling to the top");
+    window.scrollTo(0, 0);
+  },
+  }
+</script>
   <style scoped>
   .header-text {
     font-family: Poppins;

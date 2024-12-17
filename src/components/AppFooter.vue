@@ -43,7 +43,7 @@
             </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/partners">
+            <router-link class="text-decoration-none" to="/partner">
               <p class="footerLink">{{ translations.partners }}</p>
             </router-link>
           </div>
@@ -58,7 +58,7 @@
             </router-link>
           </div>
           <div>
-            <router-link class="text-decoration-none" to="/blogs">
+            <router-link class="text-decoration-none" to="/blog">
               <p class="footerLink">{{ translations.blogs }}</p>
             </router-link>
           </div>
