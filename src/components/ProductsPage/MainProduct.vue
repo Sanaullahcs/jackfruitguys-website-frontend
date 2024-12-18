@@ -202,6 +202,46 @@
         ></v-col>
       </v-row>
     </div>
+    <!-- ========= this is hte static componet ============ -->
+    <div class="pa-16 pink-bg">
+      <div>
+        <MotionGroup preset="slideVisibleBottom" :duration="1000">
+          <h1 class="jackfruitsHeading max-700 mx-auto">
+            <!-- {{ sectionFour?.title }} -->
+            Dehydrated Mango
+          </h1>
+        </MotionGroup>
+        <MotionGroup preset="slideVisibleBottom" :duration="1200">
+          <p class="jackfruitsTextGreen max-700 mx-auto text-center">
+            <!-- {{ sectionFour?.subtitle }} -->
+            A Tropical Treat Packed with Nutrition
+          </p>
+        </MotionGroup>
+        <MotionGroup preset="slideVisibleBottom" :duration="1500">
+          <!-- v-html="sectionFour?.description" -->
+          <p
+            class="jackfruitsText max-900 mx-auto text-center py-3"
+            
+          >
+​
+Dehydrated mangoes are a tasty and nutritious snack made by removing moisture from fresh mangoes. This process preserves their natural sweetness and tropical flavor while extending their shelf life. They are rich in Vitamin C for immune health, Vitamin A for good vision, and fiber for digestion. Natural antioxidants help reduce inflammation.
+Dehydrated mangoes make a satisfying snack and can be added to muffins, cakes, and energy bars. They work well as a topping for yogurt, ice cream, or fruit salads, or blended into smoothies for extra flavor.
+Store them in an airtight container in a cool, dry place away from direct sunlight. Dehydrated mangoes offer a convenient way to enjoy the tropical taste of mangoes year-round while benefiting from their natural goodness.</p>
+        </MotionGroup>
+      </div>
+      <div>
+        <MotionGroup preset="slideVisibleRight" :duration="1000">
+          <v-img
+            max-height="80vh"
+            max-width="800px"
+            class="joinusimgCss mx-auto"
+            src='../../assets/images/mango.png'
+          ></v-img>
+          <!-- :src="sectionFour?.image" -->
+        </MotionGroup>
+      </div>
+    </div>
+     <!-- ===================== -->
   </div>
 </template>
 <script>
