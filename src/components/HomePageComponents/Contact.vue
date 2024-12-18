@@ -132,7 +132,7 @@ export default {
       ],
       messageRules: [
         (v) => !!v || this.translations.messageRequired,
-        (v) => v.length >= 10 || this.translations.messageMinLength,
+        (v) => v.length >= 0 || this.translations.messageMinLength,
       ],
       languageId: 1, // Default language
       translations: {
