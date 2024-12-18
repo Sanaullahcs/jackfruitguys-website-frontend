@@ -96,7 +96,7 @@
           <div>
             <MotionGroup preset="slideVisibleLeft" :duration="900">
               <v-img
-                class="widthRight"
+                class="widthRight customMargin"
                 style="min-width: 199px"
                 src="../../assets/images/midimg1.png"
               ></v-img>
@@ -113,7 +113,7 @@
             <MotionGroup preset="slideVisibleRight" :duration="900">
               <v-img
                 class="widthleft"
-                style="min-width: 195px"
+                style="min-width: 189px"
                 src="../../assets/images/midimg2.png"
               ></v-img>
             </MotionGroup>
@@ -187,6 +187,9 @@ export default {
 };
 </script>
 <style scoped>
+.customMargin{
+  /* margin-top: 10px; */
+}
 .minHeight100 {
   min-height: 100vh;
 }
@@ -360,7 +363,7 @@ export default {
     margin-top: 0px !important;
   }
   .widthleft {
-    min-width: 147px !important;
+    min-width: 144px !important;
   }
   .widthRight {
     min-width: 151px !important;
