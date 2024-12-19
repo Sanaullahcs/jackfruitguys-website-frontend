@@ -67,9 +67,11 @@
       <h3 class="lastHeading mt-4">
         {{ sectionThree.title }}
       </h3>
+      <router-link class="text-decoration-none" to="/contact">
       <v-btn class="contactbtn my-5" elevation="0">
         {{ translations.contactUs }}
       </v-btn>
+      </router-link>
     </div>
   </div>
 </template>

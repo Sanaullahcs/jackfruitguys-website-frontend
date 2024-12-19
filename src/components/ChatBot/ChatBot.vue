@@ -188,7 +188,7 @@ export default {
 
     // Check for inquiries about price or buying
     if (userMessage.includes("price") || userMessage.includes("buy") || userMessage.includes("purchase")) {
-      response = `For inquiries about prices or purchasing, please contact us directly through our [Contact Page](https://www.jackfruitguys.com/contact), email us at info@jackfruitguys.com, or call us at +52 555 501 5010. We're here to help!`;
+      response = `For inquiries about prices or purchasing, please contact us directly through our <a href="https://www.jackfruitguys.com/contact" target="_blank">Contact Page</a>, email us at info@jackfruitguys.com, or call us at +52 555 501 5010. We're here to help!`;
     }
 
     if (response) {
@@ -215,7 +215,7 @@ export default {
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${'api'}`, // Replace with your actual OpenAI API key
+              Authorization: `Bearer ${api}`, // Replace with your actual OpenAI API key
             },
           }
         );
@@ -229,7 +229,7 @@ export default {
           // Provide fallback contact information
           this.messages.push({
             text:
-              "For more specific details, please contact us through our [Contact Page](https://www.jackfruitguys.com/contact), email us at info@jackfruitguys.com, or call us at +52 555 501 5010.",
+              'For more specific details, please contact us through our <a href="https://www.jackfruitguys.com/contact" target="_blank">Contact Page</a>, email us at info@jackfruitguys.com, or call us at +52 555 501 5010',
             type: "received",
           });
         }
@@ -289,7 +289,7 @@ export default {
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${'api'}`, // Replace with your actual OpenAI API key
+              Authorization: `Bearer ${api}`, // Replace with your actual OpenAI API key
             },
           }
         );
